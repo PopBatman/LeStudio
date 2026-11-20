@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003",
+  "kind": "feature",
+  "title": "Atelier du site : pages, navigation et apparence",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003/",
+      "tests/test_figma_imports.py",
+      "tests/test_import_web.py",
+      "tests/test_figma_reader.py",
+      "tests/test_figma_mapping.py",
+      "composition/figma_mapping.py",
+      "composition/services.py",
+      "composition/validation.py",
+      "depots/figma.py",
+      "depots/imports.py",
+      "depots/models.py",
+      "depots/services.py",
+      "depots/migrations/0002_figma_review.py",
+      "depots/import_forms.py",
+      "depots/import_views.py",
+      "registre/urls.py",
+      "templates/depots/import_node.html",
+      "templates/depots/import_review.html"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lance FEAT-003 conformément au Notion et au Workflow AI ; précision « pour le moment tu simules ». Réalisation et installation Studio local.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "evidence/atelier-bureau.png",
+      "kind": "mockup",
+      "outcome": "illustrative",
+      "sha256": "dcc5df07d0dc6a389ec68535febbdb1a7dc420f71b4634058f081a8765434cde",
+      "observed_at": "2026-11-19T11:30:36.507184+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/evidence/maquettes.html",
+          "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90"
+        }
+      ],
+      "active": false
+    },
+    {
+      "path": "evidence/creation-mobile.png",
+      "kind": "mockup",
+      "outcome": "illustrative",
+      "sha256": "6f734b391bf76be0cc39d26b056188eafb1e1a8497df20e16af2dcc01bd1847f",
+      "observed_at": "2026-11-19T11:30:37.263207+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/evidence/maquettes.html",
+          "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90"
+        }
+      ],
+      "active": false
+    },
+    {
+      "path": "evidence/examen-maquettes.json",
+      "kind": "manual",
+      "outcome": "passed",
+      "sha256": "7b330ea526bcb32162eb7a7423957ac8d0464a21a5a3896a5932428470bcea7f",
+      "observed_at": "2026-11-19T11:30:38.815253+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/evidence/maquettes.html",
+          "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90"
+        }
+      ],
+      "active": false
+    },
+    {
+      "path": "evidence/fiche-bureau.png",
+      "kind": "mockup",
+      "outcome": "illustrative",
+      "sha256": "72bb4a7209945165a543f818f2556ea31cdaecfbb61b0d192fc445853a227cb3",
+      "observed_at": "2026-11-19T11:30:35.994168+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/evidence/maquettes.html",
+          "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90"
+        }
+      ],
+      "active": false
+    },
+    {
+      "path": "evidence/fiche-mobile-lecture.png",
+      "kind": "mockup",
+      "outcome": "illustrative",
+      "sha256": "e9992e4425734ee30409a2968c92466b702c3868f7eea3f52a0cb772ac8f9b8c",
+      "observed_at": "2026-11-19T11:30:36.967198+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/evidence/maquettes.html",
+          "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90"
+        }
+      ],
+      "active": false
+    },
+    {
+      "path": "evidence/maquettes.html",
+      "kind": "mockup",
+      "outcome": "illustrative",
+      "sha256": "7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "observed_at": "2026-11-19T11:30:35.472153+00:00",
+      "revision": "sha256:7e6be4b1a9c2520c9b5f3dcef736ba2e4e00be605af469ba33383208c0f4cf90",
+      "contract_sha256": "b4c64aefe71a5865546599ff3c16e1d2e5065afde0618376490c17e911c5a0dd",
+      "active": true
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "f203a3354c31d35526fe702060c1fa59648e93cb7d5868dde0f178fd865849de",
+      "observed_at": "2026-11-20T09:10:33.988685+00:00",
+      "revision": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "contract_sha256": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "inputs": [
+        {
+          "path": "tests/test_figma_imports.py",
+          "sha256": "d0f8b9b464bc48c134658a0fb0750495c65135eb23d869809b959f47eaf82174"
+        },
+        {
+          "path": "tests/test_import_web.py",
+          "sha256": "48a07ed991138af59c681ef1e41e43b709d126dda7a98aa68ab4a20387005a4a"
+        },
+        {
+          "path": "tests/test_figma_reader.py",
+          "sha256": "1d1b5e8c08ca9545fd8d6f6c8b2f9110ccdac3a585d1bba50196d9a548ab95bc"
+        },
+        {
+          "path": "tests/test_figma_mapping.py",
+          "sha256": "48ee0714f17bd5088d3d999ae7387a78901b0042585bd1b611899c5affff663e"
+        },
+        {
+          "path": "composition/figma_mapping.py",
+          "sha256": "84757310a9abc9da292baf927ed1736dcf66c70d4ddb5fdf2882681f5bad850a"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "aab4bb513b691df77e55344955b7e035fd8552847459a1265596c020252abe57"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "0003e886815fd236d66eafd89b1c7d88cb5c87a644505368763200f6c7f54f4d"
+        },
+        {
+          "path": "depots/figma.py",
+          "sha256": "06bcf6b35e2ff0c34b8fe586f27dfe4123218969c55de4f524bbac89a5362d7c"
+        },
+        {
+          "path": "depots/imports.py",
+          "sha256": "0b5e8e81e8991cb6f8386d824503072c1b6ba53debd03f66b4c58a82fe485ec8"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "3268e6bc0903c1cc83739e8e39a9a37cc341a788f119e6a6bff8647d480a58d7"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "cc0b215ac8c5974029af1dc571a279d1fc4410cb4d37f567f49768c70340d20c"
+        },
+        {
+          "path": "depots/migrations/0002_figma_review.py",
+          "sha256": "5cec88abe97b4dc3566d8d167bfdc6d20880b1150d22da7e5392904414eeb589"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/realisation-confirmation-mobile.png",
+      "sha256": "1d96e2bf1ea59bf12f73a09bcea765f9d1b8558152217d4c79fc35bec21cb8c7",
+      "observed_at": "2026-11-20T09:09:18.096564+00:00",
+      "revision": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "contract_sha256": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "inputs": [
+        {
+          "path": "depots/import_forms.py",
+          "sha256": "7c143f7af5e4ce54dcb99b9d28ee9ff91f66b7617303aba94b0da89225480c91"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "ec5391a1f8007cee01563f39264963a16898412b85fd3c626a3edf57915e5499"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "c048ac90f5e8be77356035ead9caa0f1520b824811771a0da771c77d65682182"
+        },
+        {
+          "path": "templates/depots/import_node.html",
+          "sha256": "ac210d1b6201e0f5500650cd66a09b7a7983896f7a6995e839e6a8f970e07942"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "937a2a7f3743c7504d53800de737e26ffae6099011f08208bbdfba25befe7b66"
+        },
+        {
+          "path": "composition/figma_mapping.py",
+          "sha256": "84757310a9abc9da292baf927ed1736dcf66c70d4ddb5fdf2882681f5bad850a"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "aab4bb513b691df77e55344955b7e035fd8552847459a1265596c020252abe57"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "0003e886815fd236d66eafd89b1c7d88cb5c87a644505368763200f6c7f54f4d"
+        },
+        {
+          "path": "depots/figma.py",
+          "sha256": "06bcf6b35e2ff0c34b8fe586f27dfe4123218969c55de4f524bbac89a5362d7c"
+        },
+        {
+          "path": "depots/imports.py",
+          "sha256": "0b5e8e81e8991cb6f8386d824503072c1b6ba53debd03f66b4c58a82fe485ec8"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "3268e6bc0903c1cc83739e8e39a9a37cc341a788f119e6a6bff8647d480a58d7"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "cc0b215ac8c5974029af1dc571a279d1fc4410cb4d37f567f49768c70340d20c"
+        },
+        {
+          "path": "depots/migrations/0002_figma_review.py",
+          "sha256": "5cec88abe97b4dc3566d8d167bfdc6d20880b1150d22da7e5392904414eeb589"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-realisation.txt",
+      "sha256": "2509675a5537148a2c5d9e817045d7a4e65f1a9e97c055bab2ebc0da53df6232",
+      "observed_at": "2026-11-20T09:12:36.427572+00:00",
+      "revision": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "contract_sha256": "5e4d82e799a858683fe1811eb23b0aeb8823926be2c927999de4101a10ea6db1",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003/REVIEW.md",
+          "sha256": "a3f485cebaca8b0ebed19e5bc4db6296648511e40740d9e896e88642ac145b3a"
+        }
+      ],
+      "outcome": "passed"
+    }
+  ],
+  "review": {
+    "reference": "/root/import_acceptance — REVIEW.md, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": "Lancement de FEAT-003 dans Studio local avec recette Figma simulée expressément demandée.",
+    "actions": [
+      "release"
+    ]
+  }
+}

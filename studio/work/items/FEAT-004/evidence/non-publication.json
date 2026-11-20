@@ -1,0 +1,92 @@
+{
+  "observed_at": "2026-11-20T08:51:31.489345+00:00",
+  "avant": {
+    "a": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014",
+      "reference_served_sha256": "fbf326d96694f92c8ea3e6f75ce1713c6b6d4662ebce1e759d32c332587078b2"
+    },
+    "b": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de",
+      "reference_served_sha256": "0a4faa87fc5e177c8330834722c0c6b0e8b479356656c4b7c9ee1ad709492e30"
+    },
+    "studio": [
+      [
+        "9db1ab9c-54f1-4ea3-bdaa-0c70d145e8b2",
+        1
+      ],
+      [
+        "98cc1a8d-a1db-4b91-9947-f03b421ae0f1",
+        2
+      ],
+      [
+        "55080c6f-fbae-4e0c-9242-84546d8dd074",
+        3
+      ],
+      [
+        "a07ad479-a879-41a0-8aea-3eb4c96748b2",
+        1
+      ],
+      [
+        "024b477b-5fd9-44ff-a81c-e1416ff7a5c3",
+        2
+      ],
+      [
+        "442dc489-9902-42e5-ab90-addffb8cf69f",
+        3
+      ]
+    ]
+  },
+  "après": {
+    "a": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014",
+      "reference_served_sha256": "fbf326d96694f92c8ea3e6f75ce1713c6b6d4662ebce1e759d32c332587078b2"
+    },
+    "b": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de",
+      "reference_served_sha256": "0a4faa87fc5e177c8330834722c0c6b0e8b479356656c4b7c9ee1ad709492e30"
+    },
+    "studio": [
+      [
+        "9db1ab9c-54f1-4ea3-bdaa-0c70d145e8b2",
+        1
+      ],
+      [
+        "98cc1a8d-a1db-4b91-9947-f03b421ae0f1",
+        2
+      ],
+      [
+        "55080c6f-fbae-4e0c-9242-84546d8dd074",
+        3
+      ],
+      [
+        "a07ad479-a879-41a0-8aea-3eb4c96748b2",
+        1
+      ],
+      [
+        "024b477b-5fd9-44ff-a81c-e1416ff7a5c3",
+        2
+      ],
+      [
+        "442dc489-9902-42e5-ab90-addffb8cf69f",
+        3
+      ]
+    ]
+  },
+  "site_public": "Chaque réponse de référence /internal/render et chaque rendu publié ArticlePage.serve() sont comparés sur une instance de laboratoire."
+}

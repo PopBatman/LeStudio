@@ -1,0 +1,1163 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-004",
+  "kind": "feature",
+  "title": "Aperçu du site",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-004/",
+      "engine/",
+      "composition/",
+      "raccordement/",
+      "tests/",
+      "central/",
+      "registre/",
+      "workspace/",
+      "templates/",
+      "static/ui/",
+      "docs/MOTEUR-WAGTAIL.md",
+      ".dockerignore",
+      "compose.yaml"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lance FEAT-004 conformément au Notion et au Workflow AI, 20 novembre 2026",
+    "actions": [
+      "plan",
+      "implement",
+      "review",
+      "test",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/apercu-bureau.png",
+      "sha256": "09fa0bcbfaa243746208df0fa82811c6bd6ef0ef7cf669abddb137e9e1ccff10",
+      "observed_at": "2026-11-20T08:37:04.413926+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": false
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/apercu-mobile.png",
+      "sha256": "600716c52740534eff37a532a6a798f7fd5c68f1f62047abd285288e294f3f7a",
+      "observed_at": "2026-11-20T08:37:08.028032+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": false
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/apercu-tablette.png",
+      "sha256": "1919a6ea5e4d260ad95f576206fe5d42eede4a7403650337ac0286a813b2b42a",
+      "observed_at": "2026-11-20T08:37:06.234980+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": false
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/connexion-perdue-mobile.png",
+      "sha256": "caa43544dc1420d515fa9aaaf2f4397797cee35123f55a21549592a454af9f0d",
+      "observed_at": "2026-11-20T08:37:08.105034+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": false
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "2ff39b4766065963a219a89e8fef914f7057b6c2505b01ba08bf97cbcce92b58",
+      "observed_at": "2026-11-20T08:37:09.001061+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "passed",
+      "active": false
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151",
+      "observed_at": "2026-11-20T08:37:03.265892+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": true
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/revision-perimee-mobile.png",
+      "sha256": "0260e58b3aab9d3b46e66e3ae6d9a5bd65b93fdff3b8ccc6d45bbdadc39de438",
+      "observed_at": "2026-11-20T08:37:08.078034+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/evidence/maquettes.html",
+          "sha256": "7279dc9c8d65079b1d51d359006a6253bc32916102ad104fd16578fa0deb4151"
+        }
+      ],
+      "outcome": "illustrative",
+      "active": false
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/socle.log",
+      "sha256": "a51ec0d1f41ab729429e02c4c9145c0ce2c0dfb5586cccbbb994018cba621427",
+      "observed_at": "2026-11-20T08:35:33.635262+00:00",
+      "revision": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "contract_sha256": "b98498fb66a64edc249b6599a5253f7a19f411ebfe96021d62b4bff09a6ba1a3",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/EVIDENCE.md",
+          "sha256": "8660945c5d02c1af5bb7c31c0bd92eb21572a038d7525a16fc19ff317ad00362"
+        }
+      ],
+      "outcome": "passed",
+      "active": false
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/avant-developpement.json",
+      "sha256": "ea56cbf74c2406a655e2387f51a17bb98b97d93a8a37b2cdd7f44208c5947b79",
+      "observed_at": "2026-11-20T08:45:51.683795+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/interruption-mobile.png",
+      "sha256": "5f5981a6419b62c9e0e0ada20e9a1ce2d008cd28c217f081721663cef04a9f37",
+      "observed_at": "2026-11-20T08:51:28.421325+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/navigateur.json",
+      "sha256": "b30c1523aea2c87b295299d5f50349c5d8c4ea98bc764d9d9a8983b55bd32003",
+      "observed_at": "2026-11-20T08:51:28.709333+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/non-publication.json",
+      "sha256": "6f65498ed24ae23c92fcbe3febba0838a1b6681c78b5a252043934a1a98de25c",
+      "observed_at": "2026-11-20T08:51:31.488406+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/pages-publiees.json",
+      "sha256": "4264c42f675d3368f32e7671d800465ff7e1e6221f33e64d97086861ac0728e0",
+      "observed_at": "2026-11-20T08:51:29.224347+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/peremption.json",
+      "sha256": "23456ed292b5007316572e1d845dcbf4f74a14a9cd117ea0f4f441a1da56a612",
+      "observed_at": "2026-11-20T08:53:44.196911+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        }
+      ]
+    },
+    {
+      "kind": "deployment",
+      "path": "evidence/poste-local.json",
+      "sha256": "58439d0180010824bb616d3d3d8e80ccf176bdd8e614477ce8298cc36abe64cf",
+      "observed_at": "2026-11-20T08:54:53.127754+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "compose.yaml",
+          "sha256": "63528fa4fab71da5bcc818559bd58835ea76d7ca4353259ed8b5619607e3d839"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "docs/MOTEUR-WAGTAIL.md",
+          "sha256": "493eec735a46661082d8a949b69e618d9c8d5fb8ce01494f1208405609202f93"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/rendu-mtls.json",
+      "sha256": "e67b21dc407a02299560ac6a4ef684805e91c40f596b5fa46898239c955cefb9",
+      "observed_at": "2026-11-20T08:50:37.679003+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-realisation.txt",
+      "sha256": "abd6f53005cfc8c392305b09f40a485aa4048ceef2160d839bd6affaf8f48831",
+      "observed_at": "2026-11-20T08:54:53.147755+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-004/REVIEW.md",
+          "sha256": "6e62f143ee16bd458268ae437440ccb914d5759600980bcdff35d8df2b321ff0"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/studio-mobile.png",
+      "sha256": "54767dd1bc42b37874ba351cc6f570394232e73290a822a0e5de7b87e930c992",
+      "observed_at": "2026-11-20T08:51:27.808310+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/tdd-moteur.log",
+      "sha256": "3815ca779a6cb696f4cf8ac1c84b97d2180467d35bab85f25cdd4365900f50c6",
+      "observed_at": "2026-11-20T08:54:53.136755+00:00",
+      "outcome": "failed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        }
+      ],
+      "active": false
+    },
+    {
+      "kind": "deployment",
+      "path": "evidence/tennis-ai.json",
+      "sha256": "428716474eca87d08c0e1acb84dc735d72ff6c0707be791183d7493c6a85b55e",
+      "observed_at": "2026-11-20T08:54:00.142337+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "compose.yaml",
+          "sha256": "63528fa4fab71da5bcc818559bd58835ea76d7ca4353259ed8b5619607e3d839"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "docs/MOTEUR-WAGTAIL.md",
+          "sha256": "493eec735a46661082d8a949b69e618d9c8d5fb8ce01494f1208405609202f93"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-moteur.log",
+      "sha256": "763576a1072df3b2003b47805720980ec6c2b70079dff3e29a2101a8e7ebceaa",
+      "observed_at": "2026-11-20T08:50:33.134885+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "0e6357e2e77fe23f887de858fd8d594895d78ae4998a7ebb0c59fdebeabb61f0",
+      "observed_at": "2026-11-20T08:51:23.001184+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "raccordement/transport.py",
+          "sha256": "f5ef51dc34e8f7b3610b30add454d14b8fe086ccc75039e4868f3422890722a9"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "b4e4c6b5fbb735f13ad9c7d136cf5a8249a8a1d860ef93ef685c999a2b0ebfdb"
+        },
+        {
+          "path": "composition/migrations/0005_preview_ticket.py",
+          "sha256": "59395d15bf4a710cc7553f1077ecdf60d3c907376013266f00aa3d3e13204cd3"
+        },
+        {
+          "path": "composition/management/commands/purge_apercus.py",
+          "sha256": "11425731d4aa2522bb5f8b64283be23fe830257e806f2d39cae59f05dd5db0f6"
+        },
+        {
+          "path": "tests/test_preview_cleanup.py",
+          "sha256": "82c70043278f82e0a12fb656d42cac37efb83773aeb657b14bc948d495e03f4a"
+        },
+        {
+          "path": "tests/test_preview_web.py",
+          "sha256": "50e1a97cfdc95675eb1660d7deedfd39fada6f50f44fe33aaf5324c4326b494b"
+        },
+        {
+          "path": "tests/test_preview_transport.py",
+          "sha256": "d4e3e6a947ff7853d22dd801aa9c6adcc3d23db81eee510bb2d16979e6166430"
+        },
+        {
+          "path": "tests/test_preview_bridge.py",
+          "sha256": "759e28a289521538d59e70753cb352bcbbd9d7ee3dd46c40a3092433e0f75ba1"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "767c491daac5d0c9de3d1778eb156c8c827c84197be3d758ea260c0e97fc82b0",
+      "observed_at": "2026-11-20T08:51:33.976471+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "raccordement/transport.py",
+          "sha256": "f5ef51dc34e8f7b3610b30add454d14b8fe086ccc75039e4868f3422890722a9"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "b4e4c6b5fbb735f13ad9c7d136cf5a8249a8a1d860ef93ef685c999a2b0ebfdb"
+        },
+        {
+          "path": "composition/migrations/0005_preview_ticket.py",
+          "sha256": "59395d15bf4a710cc7553f1077ecdf60d3c907376013266f00aa3d3e13204cd3"
+        },
+        {
+          "path": "composition/management/commands/purge_apercus.py",
+          "sha256": "11425731d4aa2522bb5f8b64283be23fe830257e806f2d39cae59f05dd5db0f6"
+        },
+        {
+          "path": "tests/test_preview_cleanup.py",
+          "sha256": "82c70043278f82e0a12fb656d42cac37efb83773aeb657b14bc948d495e03f4a"
+        },
+        {
+          "path": "tests/test_preview_web.py",
+          "sha256": "50e1a97cfdc95675eb1660d7deedfd39fada6f50f44fe33aaf5324c4326b494b"
+        },
+        {
+          "path": "tests/test_preview_transport.py",
+          "sha256": "d4e3e6a947ff7853d22dd801aa9c6adcc3d23db81eee510bb2d16979e6166430"
+        },
+        {
+          "path": "tests/test_preview_bridge.py",
+          "sha256": "759e28a289521538d59e70753cb352bcbbd9d7ee3dd46c40a3092433e0f75ba1"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-bureau.png",
+      "sha256": "951e4ba0b6c1fdc1f311c42e1847af0ddc82474448f072e232cffbc5c3a650ee",
+      "observed_at": "2026-11-20T08:51:27.459300+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-mobile.png",
+      "sha256": "9072abc788f59eeda6efabac81f122fb0ef236d36444b283a2a3aafe2b27a8b6",
+      "observed_at": "2026-11-20T08:51:27.767308+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-tablette.png",
+      "sha256": "34d73a7318062631fa84d2e9230bf0d3f2efd678e548337a96b52dc435b70fc5",
+      "observed_at": "2026-11-20T08:51:27.622305+00:00",
+      "outcome": "passed",
+      "contract_sha256": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "revision": "4f2f2cbc3bae285b633297bde6edf17ea267adc26b9a82eecc0799562d603ac1",
+      "inputs": [
+        {
+          "path": "registre/urls.py",
+          "sha256": "b9af0b9b161c9c694865005f9715bdc72092eb61a3945db0183dd75efbdbd666"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "789b415e4f6a5ea7950ea90ba5a51c8bbdaa551c770cba724ce7cd437c5d0e6b"
+        },
+        {
+          "path": "templates/composition/preview_prepare.html",
+          "sha256": "047759dd4109f9cc9b86f4d207f071d86f7669140ffad7ca027c93b40c8d9d56"
+        },
+        {
+          "path": "templates/composition/preview_view.html",
+          "sha256": "9447e3ca7980df1c2335a217bc927f1f5aa3f426e741fa97152e149ba10d4a5a"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "74c7d26470e671d398dc3d94df2a5d4313bf3a52530b9561a17d57de63371133"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "2d7ddd731690faef144747c028d23e1bd50de3dffa6397ec417b2ff2437dfe60"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "766016c7bf007972e73de63cff71cfcc528e0db67693fc6feb017c312f59dddc"
+        },
+        {
+          "path": "static/ui/preview.js",
+          "sha256": "4157aecd4a31a1b680bb35d51e617341df62b317535cb84a16f703d252008516"
+        },
+        {
+          "path": "static/ui/preview.css",
+          "sha256": "d8e3294cba8c8c72bf088a045859877dbed556c660a44bee3b2d47ba8515fde9"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "7d6e18ddf46963df190d34196cbc5a29042932d74e50a4899391b90af0e1b666"
+        },
+        {
+          "path": "engine/reference/preview.py",
+          "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+        },
+        {
+          "path": "engine/reference/models.py",
+          "sha256": "5dc50ecf1545cd141257fcd5b3f37b23c28c3882c3af0abbe7a4f30240f84a22"
+        },
+        {
+          "path": "engine/reference/editorial.py",
+          "sha256": "f356d71564dfd73e42b1ac0419854a9eb556fa11ef6578912ee7ec72cd987ad9"
+        },
+        {
+          "path": "engine/lab/nginx.conf",
+          "sha256": "66ea2387d022facd56a2cb1d6ae2bb29ea71a9467362897f0ee0346217a3f212"
+        },
+        {
+          "path": "engine/cmengine/urls.py",
+          "sha256": "7dc3a29ea44dde4b15b00e80b298e5296e877fbdf2b3d9ddc799df1897406459"
+        },
+        {
+          "path": "engine/cmengine/settings.py",
+          "sha256": "c28f73c21e89fac5aa3ed93d6b9c8754f21fe01ddfb5ed9e4adbb54da7b83684"
+        },
+        {
+          "path": "engine/lab/instance.yaml",
+          "sha256": "9c31895d5148c900595d5612b3c1dfb91866600b9ac2ce9cd397c7724b3dd1f9"
+        },
+        {
+          "path": "engine/reference/test_preview.py",
+          "sha256": "f5029b66691c8ae72745c01f2472ba35e4fb33c31148c7058d4b93ff020d6dec"
+        },
+        {
+          "path": "engine/.dockerignore",
+          "sha256": "2b65ea8a7afc8a138ccdc57512a48cafc0d996776a3485b0bc83ba7f6429533a"
+        },
+        {
+          "path": "engine/reference/templates/reference/composition_preview.html",
+          "sha256": "e147057eac0062f3400143d8324e3449efb9047d25ad2522b9cb762ecd8be143"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_blocks.html",
+          "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+        },
+        {
+          "path": "engine/reference/templates/reference/preview_menu.html",
+          "sha256": "a00a8a412081311505e4703262ac3c3135f099a58c2fbba7e39ab15fa24bd724"
+        },
+        {
+          "path": "engine/reference/templates/reference/article_content.html",
+          "sha256": "ec4a511ed29234f1e07e2e78f482be1081395f0b93843e5bf60674fe4404e040"
+        },
+        {
+          "path": "engine/reference/assets/preview.css",
+          "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "independent": true,
+    "reference": "/root/render_review — REVIEW.md, revue indépendante de réalisation, 20 novembre 2026"
+  },
+  "release_authorization": {
+    "reference": "Mandat de lancement FEAT-004 en local et réponse utilisateur « Activer aussi Tennis AI ».",
+    "actions": [
+      "release"
+    ]
+  }
+}

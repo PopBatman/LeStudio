@@ -1,0 +1,1969 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003-05",
+  "kind": "feature",
+  "title": "Canvas drag-and-drop et responsive",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003-05/",
+      "composition/",
+      "tests/",
+      "templates/",
+      "static/ui/",
+      "registre/urls.py",
+      "central/urls.py",
+      ".dockerignore",
+      "docs/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Mandat de développement FEAT-003-05 du 19 novembre 2026",
+    "actions": [
+      "plan",
+      "implement",
+      "review",
+      "test",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "manual",
+      "path": "evidence/contrat-v3.json",
+      "sha256": "cb4f38b966dacba2db15a1c4936105dd7f29aa35763c3618611fa8ba20f5ed4c",
+      "observed_at": "2026-11-19T12:54:45.111047+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/RESEARCH.md",
+          "sha256": "6d809bbb45f03df954536fcf4e3b9a26781177489c21dff3b6d322d266ac1215"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/erreur-mobile.png",
+      "sha256": "f0516724373d8dac78c89052585daa1251c50a940281e69d0c1575bb8a847fd8",
+      "observed_at": "2026-11-19T12:57:09.298438+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/evidence/maquettes.html",
+          "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "b7da77bac076042c64e8518a8036783db189e80b2f1224e3c50562e93f057b7b",
+      "observed_at": "2026-11-19T12:57:09.323438+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/evidence/maquettes.html",
+          "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/flux-bureau.png",
+      "sha256": "f67e1a1af7f034d3df89e12a30f38b7d175ea9b59d204569886a98c02f48a6e2",
+      "observed_at": "2026-11-19T12:57:08.958427+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/evidence/maquettes.html",
+          "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/flux-mobile.png",
+      "sha256": "87544634b33a949e09bba4a9d3c29eadff6e4ac85c4ef1eca7749817aeccd059",
+      "observed_at": "2026-11-19T12:57:09.246436+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/evidence/maquettes.html",
+          "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e",
+      "observed_at": "2026-11-19T12:57:08.598416+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/SPEC.md",
+          "sha256": "beedd5ba546bd569c5e11a59e3bb4a776817ecb5ede2077bd2d499ad4320b076"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/placement-bureau.png",
+      "sha256": "155dd773d47e29450fe8059e9e0f208b554b447435c7df019a74c13118a9ae7f",
+      "observed_at": "2026-11-19T12:57:09.175434+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/evidence/maquettes.html",
+          "sha256": "93c26654e3c5408a9ec5cecd0c54b188cc0b8be24a4b4d42dbc5918bdaf63f3e"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-canvas-bureau.png",
+      "sha256": "bf2184aa9c36129e1b01767f9b874eed68698ce20e0291e5e14c852d03b9bdc5",
+      "observed_at": "2026-11-19T13:09:02.743934+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-conflit.png",
+      "sha256": "6a2a0b455d1f3d482b8008c00122bb5d7c5cd06ab7e903393570ee0c02354c1a",
+      "observed_at": "2026-11-19T13:09:04.270980+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-erreur.png",
+      "sha256": "7fdbbdca4d2510cea5526a7d1328bec9b4cbb2bced93c95f68b7d2a39017fab4",
+      "observed_at": "2026-11-19T13:09:04.868998+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-lecture-320.png",
+      "sha256": "f7f922a0200375a39a62aed004969a53c9c1f14c1304b50bb5c7267d9bc7066f",
+      "observed_at": "2026-11-19T13:09:05.235009+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-mobile.png",
+      "sha256": "cad59d832842468971a8e7bab5fdac19c19de3cc4f0ee3140605c9a801354a11",
+      "observed_at": "2026-11-19T13:09:03.659961+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/application-orca.json",
+      "sha256": "4c8b72a7f31a053aea549237e234e9eeb55db4c7300816c1bec836db53b59258",
+      "observed_at": "2026-11-19T13:10:10.969979+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/application-tactile.json",
+      "sha256": "7e914775e1faa24706e8cee44b1053d923050e76998dddd20ebde534132d4497",
+      "observed_at": "2026-11-19T13:06:47.220869+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/clavier.json",
+      "sha256": "503916644812c69bb3e19ac3b5f772e7c431fd504683dbcb1f6bcc0aaee616d3",
+      "observed_at": "2026-11-19T13:09:09.016122+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/domain-green.log",
+      "sha256": "ff93b52e6416ae3888efea62b4e0753d6247d59df51727cc45ef86f5462889f6",
+      "observed_at": "2026-11-19T13:07:54.560889+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/domain-red.log",
+      "sha256": "01cd34d73d560e6717a6b1b94c9d63835e94c062aa1647da75d593c03742a4a4",
+      "observed_at": "2026-11-19T13:02:16.240720+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/fiche-red.log",
+      "sha256": "f014aab0ec012757a934b5f61439b8d669e2a8713b47fdff1d193d1bd04f6d0d",
+      "observed_at": "2026-11-19T13:03:18.379591+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/http-green.log",
+      "sha256": "960f763f81fa6f523c17b767b970b3c5fdb54d72a8fcfe5985a467305eb1fe86",
+      "observed_at": "2026-11-19T13:08:22.652732+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/http-red.log",
+      "sha256": "6b8d3591b2d877c0c4a3bf24c69793da05d4d5dd22cf85a8d392d7ca51aa5895",
+      "observed_at": "2026-11-19T13:02:25.726006+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/integration-green.log",
+      "sha256": "3b02669afd4df72486a8c06e7364204dd15cb8803848badc49c129ba8c37b478",
+      "observed_at": "2026-11-19T13:06:27.110265+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/navigateur.json",
+      "sha256": "a591e043439b2d691912b3d3b5d09633dee7df701e2223fa42b22f5258d1ffd9",
+      "observed_at": "2026-11-19T13:09:05.418014+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/performance.json",
+      "sha256": "65a5dce2beb7e0a4b77f8771dc7102ac1401a0a5df9db833203e4d01b3b76b05",
+      "observed_at": "2026-11-19T13:09:08.081094+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste-local.json",
+      "sha256": "ae6c3f415cd8fee47c3fb448a4ecbc2be0fcb697fe76fd3446dcd6f1cd3e5211",
+      "observed_at": "2026-11-19T13:09:51.678401+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/review.txt",
+      "sha256": "a7e7cb9a24cda50cb73aed17a3ec213e402244f524540404f9a20d602060ba70",
+      "observed_at": "2026-11-19T13:10:10.975979+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-05/REVIEW.md",
+          "sha256": "a7e7cb9a24cda50cb73aed17a3ec213e402244f524540404f9a20d602060ba70"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "64fa2ce37f849a477719de4f626d9a6fe85b68161c85cf3df9df5eb8efd5d4dd",
+      "observed_at": "2026-11-19T13:09:08.834116+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "1f9b07df06b2bbb8ffbf9c2267a1bfcb1a6a16fe40d84830e71cca18b012fc7a",
+      "observed_at": "2026-11-19T13:09:07.032063+00:00",
+      "revision": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "outcome": "passed",
+      "contract_sha256": "3f1e3b59134f6cc8f25d9d9af5053b8bd26c5ad2ca9aa56945f5c127432fdcb6",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "ae8fc3a3268b23c288eb5389894d3652723c035a6e7684f561a7258d71b1cb81"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0521628a1f48007348a6a68ba137bf79a4d8e758d7faa97e5729e37ed4e5aa0c"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "71cfe78c3351524f753e54cb10d8af624ec47dc3e532113a423251be67e9e769"
+        },
+        {
+          "path": "composition/canvas_forms.py",
+          "sha256": "0d88b989f42cb7306f96a3e4d418f8074a2a0bb729a668034feb69f5abb228cb"
+        },
+        {
+          "path": "composition/canvas_views.py",
+          "sha256": "51a70b1241f6e9fd28da1fe1848f89da4d2296a7d260247483323cf911251645"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "34cf4fdbb54c2944eaf8cb02ccd06b954973b48fa715a7d6e5815aed512dc332"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "868bb1f9ca856966b72164ece914762d0ff064cdac7667a3f9972cae9a6c0fc7"
+        },
+        {
+          "path": "composition/placement.py",
+          "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "2c71e706e0555107cc4860d3c9a7774a873362bf86562b7981a81b9aa63e44ae"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "1cd5d1139743fef055cf22c557f33bce9a89abd4a151d3a4ce4cd19078fac932"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "eba9433623de0fe052b25639e9b6509ed688c1e8ff9ac0346a9095124b70af24"
+        },
+        {
+          "path": "static/ui/canvas.css",
+          "sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0"
+        },
+        {
+          "path": "static/ui/canvas.js",
+          "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+        },
+        {
+          "path": "templates/composition/canvas_parent.html",
+          "sha256": "1bb527edc7e6e2363f39a69fb3e6d345b7610f45d353b9cd428264fc904e2022"
+        },
+        {
+          "path": "templates/composition/canvas_surface.html",
+          "sha256": "dd9caf802c1a41845770bcfe7bad76c75f893a9021f4283ffb34a7ff0f464ee4"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "ba31fdc52aff4d748432918bf5e1bc84b0ee69fdde2f0889dd9f3c20991c379f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "f12a4042dd794591cd74222f2bcf058f50d653e18fba32f3c86660da5f546ac5"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "b9e96a7261ad9cc6f8d796101b1093411f69bc46c79575273703bf57cede3dad"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "8c8672aff9ef050ae5848da4f5d7fc05d0a46745ae36078737dcb413282c656d"
+        },
+        {
+          "path": "tests/test_canvas_domain.py",
+          "sha256": "8129cd71816ef5f95f698cc385cf5e2a46464ea88285bd0972b287f2a44ee313"
+        },
+        {
+          "path": "tests/test_canvas_web.py",
+          "sha256": "ef303ec8875b3a4906b696762d59ba627d6ac671d1d73594cecb111cb3a6d528"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "b739c35e87e839ba530729429b6ada95229bf2d88b617ac6cb83fafbec53bc47"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "20c12633c3f9d0c46c6b6d43d8c1760bab3e9a549e448e769424d993dd69515e"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "5374a9729b7a7224e01b7c20e303caf43d5df367feb614931dc0acd8bd4be62b"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/canvas_release_review, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

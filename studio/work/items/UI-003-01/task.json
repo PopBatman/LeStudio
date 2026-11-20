@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "id": "UI-003-01",
+  "kind": "component",
+  "title": "Parcours UX, design system et prototype V2",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-003-01/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lance UI-003-01 conformément à Notion et au Workflow AI. Mandat limité au prototype et à sa qualification.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/parcours-figma-tablette.png",
+      "sha256": "2e504d0b7b2dd6e51df1e3bd0b4c58912acb8465adb82f365bfac91e409a94df",
+      "observed_at": "2026-11-20T10:04:46.048177+00:00",
+      "revision": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "contract_sha256": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/parcours-modele-bureau.png",
+      "sha256": "49c392b4e64aea6d2223896e67a28dfe6e43c3bab5de778801c15c85d545b330",
+      "observed_at": "2026-11-20T10:04:45.441161+00:00",
+      "revision": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "contract_sha256": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/parcours-vierge-mobile.png",
+      "sha256": "205c396401eb2036794ef4322de6bc670d74488170397643706a9923827f00cb",
+      "observed_at": "2026-11-20T10:04:45.219155+00:00",
+      "revision": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "contract_sha256": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/prototype.html",
+      "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d",
+      "observed_at": "2026-11-20T10:04:03.118011+00:00",
+      "revision": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "contract_sha256": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "outcome": "illustrative",
+      "inputs": []
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/qualification-prototype.json",
+      "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890",
+      "observed_at": "2026-11-20T10:04:46.662194+00:00",
+      "revision": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "contract_sha256": "0a488e16ae86a5f71d11033e8c9debc40b31ceae921cd397d74d6373e752d47f",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/cloture-parcours-figma-tablette.png",
+      "sha256": "928603d4ff6d56d589902a5c61582aebeeec97b6ac5d736bb486b14efef78d98",
+      "observed_at": "2026-11-20T10:07:54.208330+00:00",
+      "revision": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "contract_sha256": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        },
+        {
+          "path": "work/items/UI-003-01/evidence/qualification-prototype.json",
+          "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/cloture-parcours-modele-bureau.png",
+      "sha256": "4bd7e56ebfcf8d0055162edfdd707f4fa0124a91a4f33f006c8d57682a96eca3",
+      "observed_at": "2026-11-20T10:07:54.209330+00:00",
+      "revision": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "contract_sha256": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        },
+        {
+          "path": "work/items/UI-003-01/evidence/qualification-prototype.json",
+          "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/cloture-parcours-vierge-mobile.png",
+      "sha256": "56163f7d347c26c51556c50965a3003a6b38da95a336d888957fee5a107dd64a",
+      "observed_at": "2026-11-20T10:07:54.209330+00:00",
+      "revision": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "contract_sha256": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        },
+        {
+          "path": "work/items/UI-003-01/evidence/qualification-prototype.json",
+          "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/recette-cloture.json",
+      "sha256": "9d9f8d99ce1993a77074f13122887bbc53027b5667aa88b59fe67dab446c6d92",
+      "observed_at": "2026-11-20T10:07:54.209330+00:00",
+      "revision": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "contract_sha256": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        },
+        {
+          "path": "work/items/UI-003-01/evidence/qualification-prototype.json",
+          "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-cloture.md",
+      "sha256": "85f23eb9ebfea27f93ec09d252f74354099c908e6da590bddd3e6b7b44e2cad6",
+      "observed_at": "2026-11-20T10:07:49.335196+00:00",
+      "revision": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "contract_sha256": "4a5fb103b9af4a0b2b8c693fa128b8f72109c99a848418b806afdd9507fbd6c9",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-01/evidence/prototype.html",
+          "sha256": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d"
+        },
+        {
+          "path": "work/items/UI-003-01/evidence/qualification-prototype.json",
+          "sha256": "9474a08109522f7b7608081f5ba6092bf81c8cdce543a1d07e7e59408d3aa890"
+        },
+        {
+          "path": "work/items/UI-003-01/VISUAL-REVIEW.md",
+          "sha256": "b7ecf6cb13a5de8fdafbe7e3a1bd9ebeecb1cda6ceba793afed7e7dbbd6f6c79"
+        }
+      ],
+      "outcome": "passed"
+    }
+  ],
+  "review": {
+    "reference": "evidence/revue-cloture.md — /root/u301_closure",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": "Clôture documentaire du prototype Atlas du Sud, approbation explicite des trois parcours et de la direction artistique le 20 novembre 2026.",
+    "actions": [
+      "release"
+    ]
+  }
+}

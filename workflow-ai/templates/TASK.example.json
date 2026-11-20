@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-001",
+  "kind": "feature",
+  "title": "Exemple documentaire à remplacer",
+  "state": "DRAFT",
+  "ui_required": false,
+  "scope": {
+    "allowed_paths": [],
+    "forbidden_paths": []
+  },
+  "authorization": {
+    "reference": null,
+    "actions": []
+  },
+  "evidence": [],
+  "review": {
+    "reference": null,
+    "independent": false
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}
+

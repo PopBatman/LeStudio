@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "UI-003",
+  "kind": "component",
+  "title": "Visual Builder V2 — éditeur visuel unifié",
+  "state": "READY",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-003/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Cadrage parent UI-003 demandé le 20 novembre 2026, dossier Studio et documentation Notion.",
+    "actions": [
+      "plan",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/figma-rendu-perime-tablette.png",
+      "sha256": "7c370cced97c9273bd123ae2dd5f7cf84aa3e1cc206e42dc81dabd8c2cf721f8",
+      "observed_at": "2026-11-20T09:31:25.040967+00:00",
+      "revision": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "contract_sha256": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquette.html",
+      "sha256": "3e8319a81023113d73a1fb147bd8b23e71fb668b8df6985b85adee493434a7be",
+      "observed_at": "2026-11-20T09:31:25.041039+00:00",
+      "revision": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "contract_sha256": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/modele-bureau.png",
+      "sha256": "63b7b6989242cc622a0e0f44af1d00e18d2daee7b10026c319c15c220cbe6f9f",
+      "observed_at": "2026-11-20T09:31:25.041359+00:00",
+      "revision": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "contract_sha256": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/vierge-mobile.png",
+      "sha256": "dfc93bb2a93e67294c8c341fd53f381c70672832248f5ab6643006388e259d64",
+      "observed_at": "2026-11-20T09:31:25.041389+00:00",
+      "revision": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "contract_sha256": "3cc5630e2ad33bd56095337674b98ea1e8ed388d8aeda40ab63ce1762205fc0f",
+      "outcome": "illustrative"
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/u3_review, revue indépendante de cadrage",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

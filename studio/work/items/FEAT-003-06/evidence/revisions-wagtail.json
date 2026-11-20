@@ -1,0 +1,17 @@
+{
+  "moteur_wagtail": "7.4.4",
+  "base": "SQLite neuve en mémoire, conteneur sans réseau",
+  "ressource": "ReferencePage fictive, uniquement pour examiner les primitives de révision",
+  "routes_livrees": [
+    "internal/identity",
+    "internal/version",
+    "internal/health",
+    "internal/render"
+  ],
+  "observations": [
+    "Une page publiée sans restriction est sélectionnée par live().public().",
+    "Créer une révision non publiée change latest_revision_id et conserve live_revision_id.",
+    "Publier explicitement cette révision fait changer live_revision_id.",
+    "Poser une restriction de connexion sur un ancêtre exclut la page de la sélection publique recalculée."
+  ]
+}

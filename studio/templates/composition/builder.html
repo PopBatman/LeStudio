@@ -1,0 +1,64 @@
+{% extends 'workspace/base.html' %}
+{% load l10n %}
+{% block title %}Canvas Wagtail · {{ site.name }}{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/assets/builder.css">{% endblock %}
+{% block navigation %}<a class="cb-back" href="{% url 'registre:site' site.pk %}">← Fiche Site</a>{% endblock %}
+{% block content %}
+{% url 'registre:site-builder' site.pk as entry %}
+<section class="cb-shell" id="canvas-private" data-access="{{ entry }}" data-revision="{{ revision.id }}" data-page="{{ page.id }}" data-section="{{ selected_section.id }}" data-initial-selection="{{ initial_selection }}" data-width="{{ initial_width|default:''|unlocalize }}">
+<header class="cb-bar"><div><span class="cb-site">{{ site.name }}</span><h1>Canvas Wagtail</h1></div>
+{% if revision %}<span class="cb-revision">Brouillon R{{ revision.number }}</span>{% endif %}</header>
+{% if comparison_url %}<p class="cb-actions"><a href="{{ comparison_url }}">Comparer à la référence Figma</a></p>{% endif %}
+{% if builder_edit %}<div data-edit-enabled>{% include "composition/builder_edit.html" %}</div>{% endif %}
+{% if revision %}
+<div class="cb-layout">
+<details class="cb-panel cb-nav" open><summary>Navigation</summary><div class="cb-panel-body">
+<form method="get" action="{{ entry }}">{% if page %}<input type="hidden" name="page" value="{{ page.id }}">{% endif %}<label for="canvas-revision">Révision</label>
+<select id="canvas-revision" name="revision">{% for item in revisions %}<option value="{{ item.id }}" {% if item.number == revision.number %}selected{% endif %}>R{{ item.number }}{% if item.number == head.number %} · Dernière sauvegarde{% endif %}</option>{% endfor %}</select>
+<button>Choisir la révision</button></form>
+{% if pages %}<form method="post" id="canvas-opening" action="{{ entry }}">{% csrf_token %}
+<input type="hidden" name="revision" value="{{ revision.id }}">
+<input type="hidden" name="largeur" value="{{ initial_width|default:''|unlocalize }}">
+<input type="hidden" name="selection" value="{{ initial_selection }}">
+<label for="canvas-page">Page</label><select id="canvas-page" name="page" required>{% for item in pages %}<option value="{{ item.id }}"{% if item.id == page.id %} selected{% endif %}>{{ item.title }}</option>{% endfor %}</select>
+<button class="cb-primary">{% if available %}Afficher la page{% else %}Afficher le rendu{% endif %}</button></form>{% endif %}
+{% if available and builder_edit and initial_palette %}<details id="canvas-palette" data-sections="{% for section in page.sections %}{{ section.id }} {% endfor %}"><summary>Insérer dans la page rendue</summary>
+<label for="canvas-palette-definition">Composant à placer</label><select id="canvas-palette-definition">{% for item in initial_palette %}<option value="{{ item.id }}">{{ item.label }} · {% if item.scope == "site" %}Site{% else %}Global{% endif %} · v{{ item.version }}</option>{% endfor %}</select>
+<button type="button" id="canvas-drop-start" aria-pressed="false">Placer dans la page</button>
+<p>Glissez ce bouton ou activez-le puis touchez la destination. Échap annule. Les commandes de l’éditeur permettent aussi de choisir la position au clavier.</p></details>{% endif %}
+{% if available or structure_only or initial_selection %}<h2>Sections</h2><ul>{% for item in page.sections %}<li><a href="{{ entry }}?mode=structure&amp;revision={{ revision.id }}&amp;page={{ page.id }}&amp;selection={{ item.id }}{% if initial_width %}&amp;largeur={{ initial_width|unlocalize }}{% endif %}"{% if item.id == initial_selection %} aria-current="true"{% endif %}>Section {{ forloop.counter }} · {{ item.blocks|length }} bloc(s)</a></li>{% empty %}<li>Aucune section.</li>{% endfor %}</ul>
+<h2>Calques</h2><ul id="canvas-layers">{% for layer in layers %}
+<li style="--cb-depth:{{ layer.depth }}"><button type="button" data-block-id="{{ layer.id }}" data-parent="{{ layer.parent_id }}" data-container="{{ layer.container|yesno:'1,0' }}" data-label="{{ layer.label }}" data-renderer="{{ layer.renderer }}" data-key="{{ layer.key }}" data-version="{{ layer.version }}" aria-pressed="false"><span class="cb-layer-index">{{ forloop.counter }}.</span> {{ layer.label }}{% if layer.summary %} <small>{{ layer.summary|truncatechars:72 }}</small>{% endif %}</button></li>{% empty %}<li>Aucun bloc sur cette page.</li>{% endfor %}</ul>{% endif %}
+</div></details>
+<div class="cb-stage">
+<header class="cb-page"><h2>{{ page.title|default:'Page du site' }}</h2>{% if available %}<label for="canvas-width">Vue <select id="canvas-width">
+<option value="auto">Adaptée</option><option value="1200">Bureau · 1 200 px</option><option value="820">Tablette · 820 px</option><option value="390">Mobile · 390 px</option><option value="custom">Personnalisée</option></select></label><label for="canvas-custom-width">Largeur (px) <input id="canvas-custom-width" type="number" min="320" max="1920" step="1" placeholder="Adaptée"></label>{% endif %}</header>
+{% if missing_selection %}<p class="cb-notice">La sélection demandée est absente de cette page. Choisissez un calque.</p>{% elif selected_section %}<p>Section sélectionnée · {{ selected_section.id }} · {{ selected_section.blocks|length }} bloc(s) de premier niveau.</p>{% endif %}
+<p id="canvas-stale" class="cb-notice" {% if head.number == revision.number %}hidden{% endif %}>Vous consultez R{{ revision.number }}. Dernière sauvegarde · R<span id="canvas-head">{{ head.number }}</span>. <span id="canvas-removed" {% if head_has_page or not page %}hidden{% endif %}>Cette page est absente de la dernière sauvegarde.</span> <a id="canvas-latest" href="{{ entry }}{% if head_has_page %}?page={{ page.id }}{% endif %}">Ouvrir la dernière sauvegarde</a></p>
+{% if just_saved %}<p class="cb-notice" role="status" tabindex="-1" autofocus>Le brouillon est enregistré en R{{ revision.number }}.{% if not available %} L’aperçu pourra être préparé de nouveau.{% endif %}</p>{% endif %}
+{% if error %}<p class="cb-notice" role="alert">{{ error }}</p>{% endif %}
+<p id="canvas-status" role="status" aria-live="polite"></p>
+{% if available %}
+<p class="cb-source">Rendu Wagtail · R{{ manifest.revision_number }} <span id="canvas-size"></span></p>
+<div id="canvas-surface" data-url="{% url 'registre:builder-document' site.pk receipt.pk %}" data-instance="{{ manifest.instance_id }}" data-fingerprint="{{ receipt.fingerprint }}" data-expires="{{ expires_ms|stringformat:'d' }}" data-number="{{ revision.number|stringformat:'d' }}">
+<div id="canvas-paper"><iframe id="canvas-frame" hidden sandbox="allow-scripts" referrerpolicy="no-referrer" title="Rendu Wagtail de {{ page.title }}, révision {{ revision.number }}"></iframe><div id="canvas-outline" aria-hidden="true" hidden></div>
+{% if builder_edit %}<div id="canvas-drop-plane" hidden><span id="canvas-drop-line" hidden></span></div>{% endif %}</div>
+</div><p id="canvas-diagnostic" hidden></p>
+{% elif structure_only %}<section class="cb-fallback"><h3>Structure du brouillon</h3><p>Lecture des calques de {{ page.title }} dans la révision R{{ revision.number }}.</p></section>
+{% elif not error %}<p>Choisissez une page puis affichez son rendu Wagtail.</p>{% endif %}
+<div class="cb-actions">
+{% if page %}<a id="canvas-articles" href="{% url 'registre:site-articles' site.pk %}?page={{ page.id }}&amp;revision={{ revision.id }}{% if selected_section %}&amp;selection={{ selected_section.id }}{% endif %}">Articles Wagtail de la page</a>{% endif %}
+{% if may_manage %}<a href="{% url 'registre:site-depots' site.pk %}">Importer une remise Figma</a>{% endif %}
+{% if page and not structure_only %}<a href="{{ entry }}?mode=structure&amp;revision={{ revision.id }}&amp;page={{ page.id }}{% if initial_selection %}&amp;selection={{ initial_selection }}{% endif %}{% if initial_width %}&amp;largeur={{ initial_width|unlocalize }}{% endif %}">Lire la structure</a>{% endif %}
+{% if receipt %}<a href="{% url 'registre:preview-view' site.pk receipt.pk %}">Aperçu de référence</a>
+<form method="post" action="{{ entry }}">{% csrf_token %}<input type="hidden" name="revision" value="{{ revision.id }}"><input type="hidden" name="page" value="{{ page.id }}"><button>Actualiser le rendu</button></form>{% endif %}
+</div></div>
+<details class="cb-panel cb-inspector" open><summary>Inspecteur</summary><div class="cb-panel-body" id="canvas-inspector"><h2 id="canvas-selection">Aucun bloc sélectionné</h2>
+<dl id="canvas-properties" hidden><dt>Composant</dt><dd id="canvas-definition"></dd><dt>Identifiant de l’occurrence</dt><dd id="canvas-uuid"></dd></dl>
+<p id="canvas-selection-info" role="status" aria-live="polite"></p></div></details></div>
+{% else %}<section class="cb-empty"><h2>Aucun brouillon enregistré</h2>{% if may_manage %}<form action="{{ entry }}" method="post">{% csrf_token %}<button name="start" value="blank">Créer une page vierge</button> <button name="start" value="template">Partir du modèle</button></form><a href="{% url 'registre:site-depots' site.pk %}">Partir d’une remise Figma</a>{% endif %}</section>{% endif %}
+</section>
+<p id="canvas-closed" role="alert" hidden></p>
+{% if builder_edit %}<script src="/assets/builder-drop.js" defer></script>{% endif %}
+<script src="/assets/builder.js" defer></script>
+{% endblock %}

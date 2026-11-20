@@ -1,0 +1,23 @@
+# Bilan du cadrage du 19 novembre 2026
+
+L’inspecteur de Structure et de Canvas sait déjà enregistrer les textes, les images attribuées au site et les boutons dans une révision locale. La suite du lot porte sur l’identification du propriétaire dans l’interface et sur l’association d’un bloc à un article géré dans Wagtail. Les dépendances formelles FEAT-003-01, FEAT-003-04 et ARCH-002 sont DONE dans Notion. Le catalogue de 03 et le canvas de 05 sont également disponibles. [Spécification](SPEC.md) · [Carte Notion](https://app.notion.com/p/41d49e23bbdb813fb814de85024ce68d)
+
+Le premier incrément proposé traite un type Article explicite et compare la révision **publiée** d’une page publique à un repère immuable du brouillon. Le gestionnaire peut conserver ce repère ou confirmer son remplacement. La vérification observe la source ; l’adoption change la composition locale ; la rédaction et la publication de l’article appartiennent à Wagtail. Le mode déconnecté protège la saisie des valeurs simples. [Architecture](ARCHITECTURE.md) · [Sécurité](SECURITY.md)
+
+Deux essais indépendants de l’interface proposée ont été réalisés dans des conteneurs isolés. Côté Studio, l’édition V4 conserve l’identité et la largeur mobile du titre et refuse une image étrangère. Côté moteur, une page technique fictive a permis d’examiner les primitives de révision de Wagtail : un brouillon éditorial et sa publication ont des effets distincts sur la révision publiée ; une restriction d’ancêtre exclut la page de la lecture publique. L’API de lecture éditoriale et le résolveur central constituent des travaux de réalisation. [Preuves](EVIDENCE.md)
+
+Contributions de /root pour le parcours, les droits, le plan, les preuves et le rapprochement Notion, de /root/hybrid_contract pour l’audit du moteur et de la composition, de /root/hybrid_design pour la maquette et ses essais et de /root/hybrid_review pour la vérification indépendante. [Plan](TASKLIST.md) · [Revue visuelle](VISUAL-REVIEW.md) · [Revue indépendante](REVIEW.md)
+
+**Conclusion du cadrage : READY.** L’examen de la maquette a conduit à corriger le résultat d’une deuxième vérification après adoption. À révisions égales, l’interface indique la concordance et conserve la tête Studio. La revue indépendante est favorable au passage en développement sur mandat.
+
+## Livraison dans Studio local
+
+Dans Structure et Canvas, l’inspecteur indique où modifier le contenu. Le gestionnaire édite les valeurs simples dans le brouillon Studio. Pour un article, il vérifie la publication Wagtail du site raccordé, compare les révisions et confirme l’association ou l’adoption. Le moteur conserve la rédaction, la publication et les permissions humaines. [Guide opérateur](../../../docs/BROUILLONS.md#modifier-une-page-qui-référence-un-article-wagtail)
+
+La recette a relié deux instances Wagtail distinctes ayant chacune un article numéro 4. Dans Chromium, le gestionnaire a conservé la révision 11 pendant la comparaison. La publication 14 survenue après l’observation de 13 a imposé une nouvelle confirmation avant l’adoption. Le retrait conserve le repère historique. Orca a annoncé le résultat d’une vérification inaccessible. Le parcours en lecture a été vérifié à 320 px. Dans le second site, les essais de titre, image et bouton ont préservé menus, positions et historique. Le catalogue de recette propose un seul média attribué et l’essai image a porté sur sa sélection, son alternative et la révocation de son attribution. [Recette Studio](EVIDENCE.md) · [Qualification du moteur](evidence/moteur-qualification.md)
+
+La revue indépendante a fait corriger deux cas antérieurs au lot. Les deux vues ouvrent un bloc historique dont le champ éditorial était textuel ou absent. Une définition partagée déjà nommée article conserve sa version et le nouvel article utilise une version standard libre. [Revue](REVIEW.md)
+
+Les 155 tests Studio passent sur PostgreSQL. Sous SQLite, 145 passent et 10 sont réservés à PostgreSQL. Les cinq tests moteur passent sur PostgreSQL. Sur le poste local, la mise à niveau de Studio conserve les 16 révisions, le raccordement et le processus moteur de Tennis AI. Son dernier diagnostic n’annonce aucune capacité éditoriale. L’activation sur cette instance demande un déploiement qualifié et une nouvelle vérification. [Contrôle local](evidence/poste-local.json) · [Configuration](../../../docs/MOTEUR-WAGTAIL.md#activer-la-lecture-de-la-publication-dun-article)
+
+Réalisation par les contributeurs du domaine, du raccordement et de l’inspecteur, intégration et recette par le responsable du lot, revue indépendante par article_review. FEAT-003-07 et FEAT-003-08 restent au stade DRAFT. La publication de la composition relève de FEAT-005.

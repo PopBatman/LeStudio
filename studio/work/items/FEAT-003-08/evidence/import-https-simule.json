@@ -1,0 +1,18 @@
+{
+  "site": "5100701a-83fa-4074-8b82-843a187e051a",
+  "source": "Simulateur HTTPS sur réseau Docker interne, profil et jeton fictifs par site",
+  "version_fournisseur": "simulee-v1",
+  "premiere_revision": "3dee1c29-a261-4ba9-aed3-0eaa812cd7ff",
+  "occurrence": "714bc0c2-3d61-4de3-9d8c-a738d1dfbf51",
+  "relecture_idempotente": true,
+  "modification_atelier": 2,
+  "revision_apres_ajout": 3,
+  "chemin_ajoute": "/collection/",
+  "conservation_page_precedente": true,
+  "catalogue_avant_apres": 6,
+  "remises": [
+    "c93dc081-47b4-4a7b-8926-a50055c25476",
+    "4c97f453-e605-4cc0-a2f3-4885b10e9d7b"
+  ],
+  "date": "2026-11-20T09:09:00.064020+00:00"
+}

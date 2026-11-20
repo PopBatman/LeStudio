@@ -1,0 +1,304 @@
+{
+  "catalogue": [
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "heading",
+        "version": 1
+      },
+      "origin": "standard",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "text",
+        "version": 1
+      },
+      "origin": "standard",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "container",
+        "version": 1
+      },
+      "origin": "standard",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "image",
+        "version": 1
+      },
+      "origin": "standard",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "button",
+        "version": 1
+      },
+      "origin": "standard",
+      "variants": [
+        "primary",
+        "secondary"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "button",
+        "version": 2
+      },
+      "origin": "standard",
+      "variants": [
+        "primary",
+        "secondary"
+      ]
+    },
+    {
+      "site": "A",
+      "definition": {
+        "scope": "site",
+        "key": "signature",
+        "version": 1
+      },
+      "origin": "sur_mesure",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": "B",
+      "definition": {
+        "scope": "site",
+        "key": "signature",
+        "version": 1
+      },
+      "origin": "sur_mesure",
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "site": null,
+      "definition": {
+        "scope": "global",
+        "key": "signature-partagee",
+        "version": 1
+      },
+      "origin": "promotion_revue",
+      "variants": [
+        "default"
+      ]
+    }
+  ],
+  "sites": {
+    "A": {
+      "schema_version": 3,
+      "pages": [
+        {
+          "id": "00000000-0000-0000-0000-000000000064",
+          "parent_id": null,
+          "title": "Accueil",
+          "slug": "",
+          "sections": [
+            {
+              "id": "00000000-0000-0000-0000-000000000065",
+              "layout": {
+                "base": {
+                  "display": "stack"
+                }
+              },
+              "blocks": [
+                {
+                  "id": "00000000-0000-0000-0000-000000000066",
+                  "definition": {
+                    "scope": "global",
+                    "key": "button",
+                    "version": 1
+                  },
+                  "props": {
+                    "label": "Programme",
+                    "url": "https://programme.example.org/"
+                  },
+                  "children": [],
+                  "appearance": {
+                    "variant": "secondary",
+                    "tokens": {
+                      "gap": 8
+                    }
+                  }
+                },
+                {
+                  "id": "00000000-0000-0000-0000-000000000067",
+                  "definition": {
+                    "scope": "site",
+                    "key": "signature",
+                    "version": 1
+                  },
+                  "props": {
+                    "text": "Un atelier ouvert"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "id": "00000000-0000-0000-0000-000000000068",
+          "label": "Principal",
+          "items": [
+            {
+              "id": "00000000-0000-0000-0000-000000000069",
+              "parent_id": null,
+              "label": "Accueil",
+              "target": {
+                "kind": "page",
+                "page_id": "00000000-0000-0000-0000-000000000064"
+              },
+              "visibility": [
+                "desktop",
+                "tablet",
+                "mobile"
+              ]
+            }
+          ]
+        }
+      ],
+      "theme": {
+        "accent": "#304860",
+        "gap": 16,
+        "font": "dm-sans",
+        "components": [
+          {
+            "definition": {
+              "scope": "global",
+              "key": "button",
+              "version": 1
+            },
+            "variant": "primary",
+            "tokens": {
+              "gap": 12
+            }
+          }
+        ]
+      }
+    },
+    "B": {
+      "schema_version": 3,
+      "pages": [
+        {
+          "id": "00000000-0000-0000-0000-0000000000c8",
+          "parent_id": null,
+          "title": "Accueil",
+          "slug": "",
+          "sections": [
+            {
+              "id": "00000000-0000-0000-0000-0000000000c9",
+              "layout": {
+                "base": {
+                  "display": "stack"
+                }
+              },
+              "blocks": [
+                {
+                  "id": "00000000-0000-0000-0000-0000000000ca",
+                  "definition": {
+                    "scope": "global",
+                    "key": "button",
+                    "version": 2
+                  },
+                  "props": {
+                    "label": "Programme",
+                    "url": "https://programme.example.org/"
+                  },
+                  "children": [],
+                  "appearance": {
+                    "variant": "secondary",
+                    "tokens": {
+                      "gap": 8
+                    }
+                  }
+                },
+                {
+                  "id": "00000000-0000-0000-0000-0000000000cb",
+                  "definition": {
+                    "scope": "site",
+                    "key": "signature",
+                    "version": 1
+                  },
+                  "props": {
+                    "text": "Un atelier ouvert"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "id": "00000000-0000-0000-0000-0000000000cc",
+          "label": "Principal",
+          "items": [
+            {
+              "id": "00000000-0000-0000-0000-0000000000cd",
+              "parent_id": null,
+              "label": "Accueil",
+              "target": {
+                "kind": "page",
+                "page_id": "00000000-0000-0000-0000-0000000000c8"
+              },
+              "visibility": [
+                "desktop",
+                "tablet",
+                "mobile"
+              ]
+            }
+          ]
+        }
+      ],
+      "theme": {
+        "accent": "#803050",
+        "gap": 16,
+        "font": "dm-sans",
+        "components": [
+          {
+            "definition": {
+              "scope": "global",
+              "key": "button",
+              "version": 2
+            },
+            "variant": "primary",
+            "tokens": {
+              "gap": 12
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<p><a href="{{ request.path }}?p={{ review_page.number }}#correspondances">← Toutes les correspondances</a></p>
+<div class="rg-grid">
+<section class="rg-panel"><h2>{{ node.name }}</h2><p>{{ frame.name }} · Nœud {{ node.id }} · {{ node.type }}</p>
+{% if node.text %}<blockquote>{{ node.text }}</blockquote>{% endif %}
+<p>{{ node.reason }}</p>{% if node.type == "FRAME" or node.type == "GROUP" %}<p>Si vous écartez cette branche, écartez également ses enfants.</p>{% endif %}{% if node.gaps %}<h3>Écarts à examiner</h3><ul>{% for gap in node.gaps %}<li>{{ gap }}</li>{% endfor %}</ul>{% endif %}
+{% if node.observed %}<details><summary>Propriétés observées</summary><dl class="rg-dl">{% for key,value in node.observed.items %}<div><dt>{{ key }}</dt><dd>{{ value }}</dd></div>{% endfor %}</dl></details>{% endif %}</section>
+<section class="rg-panel"><h2>Décision de correspondance</h2>
+{% if node.candidates %}<form method="get" class="ed-pages"><input type="hidden" name="screen" value="node"><input type="hidden" name="node" value="{{ node.id }}"><input type="hidden" name="p" value="{{ review_page.number }}">
+<label>Composant interne<select name="definition" required><option value="">Choisir une définition</option>{% for opt in node.candidates %}
+<option value="{{ opt.id }}" {% if opt.id == candidate.id %}selected{% endif %}>{{ opt.label }} · {{ opt.key }} v{{ opt.version }} · {% if opt.scope == 'site' %}Site{% else %}Global{% endif %}</option>
+{% endfor %}</select></label><button class="btn">Examiner cette définition</button></form>{% else %}<p>Composant interne à concevoir. Écartez cette occurrence pour poursuivre avec les autres éléments.</p>{% endif %}
+<form method="post" class="ed-form">{% csrf_token %}<input type="hidden" name="screen" value="node"><input type="hidden" name="action" value="decision">
+<input type="hidden" name="node" value="{{ node.id }}"><input type="hidden" name="token" value="{{ analysis.token }}"><input type="hidden" name="definition" value="{{ candidate.id }}">
+{% if candidate %}<h3>{{ candidate.label }} · v{{ candidate.version }}</h3>{{ decision_form.as_p }}
+<button class="btn btn-primary" name="verdict" value="accept">Retenir cette correspondance</button>{% endif %}
+<p><button class="btn" name="verdict" value="exclude" formnovalidate>Écarter cette occurrence</button></p></form></section></div>

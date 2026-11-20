@@ -1,0 +1,12 @@
+# À inclure depuis le .gitlab-ci.yml d’un espace contenant workflow-ai/ et studio/.
+workflow_ai_verify:
+  stage: test
+  image: python:3.12-slim
+  before_script: []
+  script:
+    - python3 workflow-ai/scripts/validate_workspace.py
+    - python3 -m unittest discover -s workflow-ai/tests -v
+    - python3 workflow-ai/integrations/notion/sync.py --dry-run
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH'

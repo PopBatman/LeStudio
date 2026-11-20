@@ -1,0 +1,15 @@
+# Parcours de l’inspecteur de contenus
+
+Ouvrir la [maquette autonome](evidence/maquettes.html). Le site fictif « Atelier Papier » présente quatre blocs locaux et une référence éditoriale. La colonne de structure sert à sélectionner une occurrence. Le panneau de droite indique son propriétaire et les actions disponibles. Sur téléphone, l’inspecteur suit la structure et sa sélection reçoit le focus. La dernière zone permet de simuler les droits Studio, l’accessibilité du contenu, la capacité du moteur et la configuration de l’adresse Wagtail.
+
+| Situation | Résultat observé dans Chromium |
+|---|---|
+| Contenu local | Changer le titre, choisir un autre média affecté au site et remplir son alternative, puis rouvrir l’image. Une modification effective incrémente la révision Studio. Une destination HTTP refusée laisse la saisie et la révision en place. L’activation d’« Enregistrer le brouillon » après correction HTTPS enregistre le bouton. [Inspecteur sur bureau](evidence/contenu-bureau.png) |
+| Comparaison éditoriale | La référence initiale conserve la révision publiée 18 de la page Article 42. La vérification explicite observe la révision 24 et affiche la date de la tentative. Conserver la référence maintient le numéro du brouillon. Adopter puis confirmer modifie le repère enregistré dans Studio. Une nouvelle vérification de 24 affiche la concordance. [Comparaison sur bureau](evidence/reference-bureau.png) |
+| Moteur et droits | Simuler un moteur sans lecture éditoriale. L’état explique l’indisponibilité et le brouillon conserve son numéro. Un numéro étranger à l’exemple reçoit un état « Contenu inaccessible ». Une lecture réussie du numéro 42 suivie d’une confirmation permet de simuler la première association. [Moteur sans capacité](evidence/indisponible-mobile.png) |
+| Lecture seule | La consultation retrouve les valeurs du brouillon. Les champs locaux sont désactivés et la lecture distante ne peut pas être déclenchée. [Inspection à 320 px](evidence/lecture-mobile.png) |
+| Accès à l’administration | Quand l’adresse est configurée, une action simule l’ouverture de la connexion Wagtail. La maquette affiche l’indisponibilité dans les autres cas. Les droits éditoriaux relèvent du compte Wagtail. |
+
+Le [relevé Chromium](evidence/examen-maquettes.json) couvre les fenêtres de 1 440, 390 et 320 pixels, le saut au contenu, l’activation au clavier, le retour du focus sur l’URL en défaut et l’absence de débordement horizontal global. La police DM Sans et sa licence sont embarquées.
+
+Le prototype conserve ses valeurs en mémoire jusqu’à son rechargement. Les deux médias et le numéro de page sont des exemples fictifs. Les observations de révisions distantes, l’adresse d’administration, les droits et les changements de révision sont simulés. La recette applicative doit exercer le véritable article public et ses droits, les identités de sites et d’instances, le délai réseau, les conflits pendant une vérification et la réouverture du brouillon enregistré. Les parcours doivent aussi être éprouvés avec les technologies d’assistance sur Django. [Contrat](ARCHITECTURE.md) · [Plan](TASKLIST.md)

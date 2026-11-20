@@ -1,0 +1,28 @@
+Creating test database for alias 'default'...
+Found 2 test(s).
+System check identified no issues (0 silenced).
+EF
+======================================================================
+ERROR: test_public_article_exact_revision_and_restrictions (reference.test_preview.PreviewTests.test_public_article_exact_revision_and_restrictions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/reference/test_preview.py", line 67, in test_public_article_exact_revision_and_restrictions
+    self.assertIn('Éditorial', self.render().json()['html'])
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/client.py", line 951, in _parse_json
+    raise ValueError(
+ValueError: Content-Type header is "text/html; charset=utf-8", not "application/json"
+
+======================================================================
+FAIL: test_readonly_render_and_compatibility (reference.test_preview.PreviewTests.test_readonly_render_and_compatibility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/reference/test_preview.py", line 44, in test_readonly_render_and_compatibility
+    self.assertEqual(response.status_code, 200)
+AssertionError: 404 != 200
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.046s
+
+FAILED (failures=1, errors=1)
+Destroying test database for alias 'default'...

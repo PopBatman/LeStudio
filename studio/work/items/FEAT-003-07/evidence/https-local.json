@@ -1,0 +1,12 @@
+{
+    "environnement": "Hôte de portail dédié, TLS local avec certificat de recette, navigateur Chromium",
+    "protection_console": 404,
+    "echange_et_depot": "POST de même origine avec CSRF Django",
+    "reponse_recu_recharge": 200,
+    "version": 2,
+    "cookie_secure": true,
+    "cookie_httponly": true,
+    "cookie_samesite": "Strict",
+    "origines_contactees": 1,
+    "journaux_sans_code_cookie_url_figma_commentaire": true
+}

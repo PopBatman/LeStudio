@@ -1,0 +1,20 @@
+Found 1 test(s).
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: test_editor_services (unittest.loader._FailedTest.test_editor_services)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_editor_services
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tests/test_editor_services.py", line 7, in <module>
+    from composition.editor import creer_atelier, modifier_structure
+ModuleNotFoundError: No module named 'composition.editor'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

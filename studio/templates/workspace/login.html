@@ -1,0 +1,23 @@
+{% extends "workspace/base.html" %}
+{% block title %}Connexion{% endblock %}
+{% block content %}
+<div class="ws-access">
+  <section class="ws-form-panel" aria-labelledby="login-title">
+    <div class="ws-kicker">Accès opérateur</div>
+    <h1 id="login-title">Connexion</h1>
+    <p class="ws-intro">Connectez-vous pour ouvrir ou reprendre votre espace de travail.</p>
+    <form class="ws-form" method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      {% if form.non_field_errors %}
+        <c-alert title="Connexion refusée" variant="warning" role="alert">{{ form.non_field_errors.0 }}</c-alert>
+      {% endif %}
+      {% with username=form.username.value|default_if_none:"" %}
+        <c-field id="id_username" label="Identifiant" name="username" :value="username" :error="form.username.errors.0" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="150" required />
+      {% endwith %}
+      <c-field id="id_password" label="Mot de passe" name="password" type="password" :error="form.password.errors.0" autocomplete="current-password" required />
+      <c-button type="submit">Se connecter <span aria-hidden="true">→</span></c-button>
+    </form>
+  </section>
+  {% include "workspace/illustration.html" %}
+</div>
+{% endblock %}

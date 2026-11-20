@@ -1,0 +1,51 @@
+# Contrat du canvas et du document de composition
+
+## Point d’entrée et source de vérité
+
+Depuis l’Atelier du site, ouvrir le canvas sur la même page et, si elle existe encore, la même occurrence. Les deux modes résolvent la sélection dans la tête autorisée du site et conservent leurs liens vers la fiche. Une commande validée crée au plus une révision Studio. La sélection, le zoom, la largeur simulée, le mouvement provisoire au pointeur et les messages appartiennent à la session d’interface. Les seules données durables sont le document commun, sa provenance et l’historique déjà livrés. Un site sans brouillon utilise le parcours de création du lot 04. [Contrat de l’éditeur](../FEAT-003-04/ARCHITECTURE.md)
+
+## V4 proposée
+
+Le cadrage propose une V4 additive avec une seule nouvelle propriété optionnelle, `placement`, portée par l’occurrence de bloc, y compris un conteneur. Les sections restent dans l’ordre de leur page. La pile verticale (flux Flexbox), la grille, les colonnes et l’espacement des sections et des conteneurs gardent le contrat `layout` existant. Un parent peut ainsi contenir du flux et des superpositions. La version de définition, les valeurs de contenu, les variantes d’apparence et les surcharges de placement ont des responsabilités distinctes. Aucun identifiant supplémentaire ni table SQL nécessaire. [Validation actuelle](../../../composition/validation.py) · [Catalogue](../../../composition/appearance_contract.py)
+
+`placement` contient une base et éventuellement deux dictionnaires partiels `tablet` et `mobile`. Le bureau lit la base. Chaque autre format fusionne la base avec sa propre surcharge, champ par champ. La tablette n’intervient jamais dans le calcul du mobile. L’opérateur peut déposer ou effacer explicitement une surcharge pour un champ ou le format entier. Une valeur explicitement égale à la base peut être épinglée pour les futurs changements. Une soumission identique conserve l’état d’héritage. Le serveur élimine les dictionnaires de surcharge vides ; l’absence de placement correspond au flux naturel.
+
+| Champ | Sens et contrôle dans la V4 proposée |
+|---|---|
+| `mode` | `flow` par défaut, ou `free`. Le mode est attaché à l’occurrence et au format. |
+| `span` | Flux de grille. Entier 1 à 12, au plus le nombre de colonnes effectivement disponibles pour ce parent et ce format. Par défaut 1. |
+| `width` | Entier 1 à 100, en pourcentage de la largeur intérieure du parent. En pile, l’absence suit le flux naturel. En grille, les colonnes déterminent la largeur. En libre, la largeur est requise après héritage. |
+| `height` | Hauteur en pixels CSS, entier 1 à 4096. En flux, hauteur minimale facultative, la boîte peut grandir avec le contenu. En libre, hauteur de boîte requise après héritage. |
+| `x`, `y` | En libre, décalage depuis le coin supérieur gauche du parent, x en % entier 0 à 99 et y en pixels CSS 0 à 4095. Exiger `x + width ≤ 100` et `y + height ≤ 4096`. |
+| `z` | En libre, ordre local entier 0 à 100, par défaut 0. À égalité, le dernier frère du tableau est peint au-dessus. Chaque parent isole ses couches. |
+
+L’exemple suivant place un bloc au-dessus de ses frères sur bureau, le décale sur tablette et le remet dans le flux sur mobile. Le parent peut passer en pile sur mobile via son propre `layout.mobile`.
+
+```json
+{"placement":{"base":{"mode":"free","x":10,"width":60,"y":16,"height":112,"z":2},"tablet":{"x":5},"mobile":{"mode":"flow"}}}
+```
+
+Les dimensions implicites du flux ne doivent pas emprunter celles d’une géométrie libre héritée devenue inactive. Lors d’un changement de mode entre base et format, hériter uniquement des valeurs applicables au nouveau mode provenant d’une source de ce même mode. Ainsi le téléphone de cet exemple reprend la taille naturelle du flux. Un retour au mode libre sur un format hérite des valeurs libres de base si elles existent. Lors de la première activation du mode libre sans géométrie héritée, proposer explicitement une position et une taille valides avant confirmation. Un changement de mode dans l’inspecteur explique les propriétés qui deviennent inactives. Une édition de la base ou du parent qui invalide un format doit indiquer la combinaison fautive et proposer de la corriger avant sauvegarde. Un changement de flux ne convertit jamais silencieusement les largeurs en colonnes.
+
+Le parent réserve au minimum le plus grand `y + height` des enfants libres, en plus de la contrainte usuelle de contenir son flux (hauteur minimale égale au maximum des deux mesures). Une boîte libre dans un conteneur libre reste bornée par la boîte de son parent. Détecter et signaler le débordement réel des contenus longs, des médias ou des enfants après calcul navigateur. La maquette peut simuler ces diagnostics. Une valeur impossible à déterminer en base, telle qu’un débordement dû aux métriques de police, relève d’un avertissement mesuré sur le format concerné. Une valeur numérique ou relationnelle interdite est refusée par le service. Le calque de sélection et la commande « sélectionner dans la structure » permettent de retrouver un bloc entièrement recouvert. L’ordre de lecture et de tabulation suit les tableaux du document, indépendamment de z.
+
+## Référentiel et gestes
+
+Les formats proposés utilisent la largeur en pixels CSS de la page simulée. Mobile en dessous de 768, tablette de 768 à 1023 inclus, bureau à partir de 1024. Les trois largeurs de travail initiales sont 390, 820 et 1200. Une réduction visuelle de la surface pour l’afficher dans l’atelier conserve cette largeur logique. Vérifier 767/768 et 1023/1024 ainsi que 320 px pour l’interface opérateur. Convertir le delta du pointeur en coordonnées locales du parent en annulant le facteur visuel de zoom, arrondir aux entiers du contrat et afficher la valeur proposée.
+
+| Opération | Traduction en commande métier |
+|---|---|
+| Insérer, réordonner, changer de parent | Sélection du catalogue et commandes de structure de 04, parent et frère « avant », UUID conservé au déplacement. L’ordre structurel et le rattachement sont communs aux trois formats. L’interface le précise avant l’opération. |
+| Déplacer librement ou redimensionner | Identifier page, occurrence, format et champs modifiés. Écrire seulement le patch de ce format. En grille ajuster `span`, en pile largeur/hauteur, en libre coordonnées/dimensions. Le panneau structuré expose les mêmes commandes au clavier. |
+| Modifier une couche ou revenir à l’héritage | Choisir le z dans le contexte des frères ou effacer les clés choisies du format. Une intention ne peut réécrire les autres champs envoyés depuis un ancien formulaire. |
+| Changer de parent avec géométrie | Préciser que les pourcentages se rapporteront au nouveau parent. Pour une opération qui change aussi les coordonnées, valider structure et placement et persister leur candidat ensemble. Déplacement interdit vers soi, un descendant, une feuille, une page étrangère ou un parent indisponible. |
+
+Le mouvement dessine une proposition locale. Aucun POST pour `pointermove`. Le relâchement accepté ou la confirmation équivalente au clavier soumet une commande atomique avec base et protection CSRF. Échap, perte de capture ou sortie sans destination annulent la proposition. Un conflit conserve les champs proposés, montre la révision courante, exige une nouvelle comparaison et un enregistrement explicite. Une action effective annonce la révision et rend le focus à la sélection. En lecture seule, sélectionner et changer de format restent possibles. Un appel direct de mutation recontrôle le mandat en base.
+
+## Frontière transactionnelle et compatibilité
+
+1. Lire sous mandat les formats 1 à 4. Lire une V1/V2/V3 ou naviguer entre les modes conserve l’historique. Traiter les champs absents en mémoire. Sur une commande existante qui ne nécessite pas V4, conserver le comportement de progression du lot propriétaire. Première commande qui utilise effectivement le placement V4 : reprendre la tête verrouillée, appliquer une seule mutation, valider le document complet, append d’une révision fille. Effacer une surcharge déjà absente, redéposer à l’identique ou annuler ne crée rien.
+2. Partager la frontière de `modifier_structure`, `_writing_site`, `_current_head`, `_check_document` et `_save`. Ne jamais accepter le document entier reconstruit par le canvas comme vérité d’écriture. Revalider droits, UUID, page, parent, conteneur effectif, définitions, champs du format et plafonds. Calculer toutes les projections affectées, y compris les enfants en grille quand le nombre de colonnes change. Conserver les limites existantes (1 Mio compact, 4 Mio brut, 2 000 nœuds comptés par le validateur, profondeur de blocs 12). Aucune URL de ressource fournie au pointeur. [Écritures](../../../composition/services.py)
+3. Ouvrir le schéma et la validation d’apparence pour V4 explicitement. Vérifier `placement` avant tout chemin de conservation d’un ancien bloc opaque. Un diagnostic de média révoqué ou de définition absente laisse le contenu historique intact ; l’insertion, le remplacement de contenu et l’ajout sous un parent exigent une ressource autorisée. Étendre également la vérification de site des sources privées dans `creer_brouillon` et le circuit de copie avec renouvellement des UUID.
+4. Éliminer les rétrogradations vers 3 dans les services d’apparence et d’édition structurée, préserver les champs inconnus des formulaires ciblés lors de la fusion. Les actions Pages/Menus, Apparence et l’inspecteur structuré doivent relire une V4, modifier leur propre propriété et conserver toutes les autres. Tester le service d’enregistrement complet, le chargement d’une ancienne révision, les créations vierges et modèle, la copie privée V4 A→B refusée, la navigation et la restitution d’une version future incompatible.
+5. Servir une projection de la page sélectionnée et des versions du catalogue utiles. Rendre les composants par leurs rendus Studio livrés, liens de démonstration inertes, styles construits à partir des nombres et énumérations validés. Une chaîne CSS, une URL libre, un sélecteur ou du HTML issu du brouillon ne devient jamais un comportement exécutable. Le canvas, l’éditeur et la fiche utilisent les services de Studio. Le rendu final, la publication et les opérations moteur ont leurs propres lots.

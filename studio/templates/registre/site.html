@@ -1,0 +1,56 @@
+{% extends "registre/base.html" %}
+{% load tz %}
+{% block title %}{{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:sites' %}">← Mes sites</a>
+<header class="rg-head"><h1>{{ site.name }}</h1>{% if manage %}<a class="btn btn-primary" href="{% url 'registre:site-edit' site.pk %}">Modifier le site</a>{% endif %}</header>
+{% include "registre/feedback.html" %}
+<section class="rg-panel"><h2>Fiche du site</h2><dl class="rg-dl">
+{% if client %}<div><dt>Client</dt><dd><a href="{% url 'registre:client' client.pk %}">{{ client.display_name }}</a></dd></div>{% endif %}
+<div><dt>Domaine</dt><dd>{{ site.domain|default:"Non renseigné" }}</dd></div><div><dt>Type de site</dt><dd>{{ site.site_type|default:"Non renseigné" }}</dd></div>
+{% if site.description %}<div><dt>Description</dt><dd>{{ site.description|linebreaksbr }}</dd></div>{% endif %}
+</dl></section>
+<section class="rg-panel rg-engine"><h2>Atelier du site</h2>
+<p>{% if revision_number %}Brouillon du site · Révision {{ revision_number }}{% else %}Aucun brouillon pour ce site.{% endif %}</p>
+<p><a class="btn btn-primary" href="{% url studio_editor_route site.pk %}">{% if manage %}{% if revision_number %}Reprendre le brouillon{% else %}Créer le brouillon{% endif %}{% elif revision_number %}Consulter le brouillon{% else %}Consulter l’atelier{% endif %}</a></p>
+<nav class="rg-actions" aria-label="Composition du brouillon">{% if editor_coexistence %}<a href="{% url 'registre:site-builder' site.pk %}">Canvas Wagtail</a>{% endif %}<a href="{% url 'registre:preview' site.pk %}">Aperçu du site</a>{% if revision_number and editor_coexistence %}<a href="{% url 'registre:site-canvas' site.pk %}">Ouvrir le canvas</a>{% endif %}<a href="{% url 'registre:site-pages' site.pk %}">Pages</a><a href="{% url 'registre:site-menus' site.pk %}">Menus</a><a href="{% url 'registre:site-catalogue' site.pk %}">Bibliothèque</a><a href="{% url 'registre:site-appearance' site.pk %}">Apparence</a></nav></section>
+<section class="rg-panel rg-engine" aria-labelledby="depot-title">
+  <h2 id="depot-title">Dernier dépôt Figma</h2>
+  {% if last_deposit %}
+    <p>Invitation {{ last_deposit.invitation_id|stringformat:"s"|slice:":8" }} · Version {{ last_deposit.version }} · {% include "depots/staff_time.html" with value=last_deposit.created_at %}</p>
+  {% else %}<p>Aucune version reçue pour ce site.</p>{% endif %}
+  <p><a href="{% url 'registre:site-depots' site.pk %}">Consulter les dépôts Figma</a></p>
+</section>
+<section class="rg-panel rg-engine" aria-labelledby="engine-title">
+  <header class="rg-section">
+    <h2 id="engine-title">Moteur Wagtail</h2>
+    <c-badge :variant="connection.variant">{{ connection.status }}</c-badge>
+  </header>
+  <p class="rg-eyebrow">Historique des vérifications enregistrées par Studio.</p>
+  {% localtime off %}
+  <dl class="rg-dl">
+    <div>
+      <dt>Dernière confirmation réussie</dt>
+      <dd>{% if connection.confirmed_at %}<time datetime="{{ connection.confirmed_at|date:'c' }}">{{ connection.confirmed_at|date:"j F Y à H:i" }} (Paris)</time>{% else %}Aucune confirmation enregistrée{% endif %}</dd>
+    </div>
+    <div>
+      <dt>Dernière tentative</dt>
+      <dd>{% if connection.attempt_at %}
+        {% if connection.finished %}Terminée le{% else %}Commencée le{% endif %}
+        <time datetime="{{ connection.attempt_at|date:'c' }}">{{ connection.attempt_at|date:"j F Y à H:i" }} (Paris)</time> · {{ connection.outcome }}
+      {% else %}Aucune tentative enregistrée{% endif %}</dd>
+    </div>
+  </dl>
+  {% endlocaltime %}
+  {% if connection.details %}
+  <details>
+    <summary>Détails du raccordement</summary>
+    <dl class="rg-dl">
+      {% for label, value in connection.details %}
+        <div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </details>
+  {% endif %}
+</section>
+{% endblock %}

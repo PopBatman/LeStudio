@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-20",
+  "observations": "Commandes en lecture seule : git status, docker compose ps et manage.py shell (métadonnées uniquement). Aucun nouveau parcours moteur qualifié.",
+  "git": "Aucun dépôt Git à la racine commune ni dans studio.",
+  "docker": {
+    "project": "lestudio-local",
+    "web_image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+    "web_status": "healthy",
+    "db_status": "healthy"
+  },
+  "tennis_ai": {
+    "site": "59177d82-095d-4e5b-b095-7b73c220de4b",
+    "revision": "04fd242a-17a9-464f-8a09-ad18d58be4d4",
+    "number": 18,
+    "schema_version": 4,
+    "pages": [
+      {
+        "id": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+        "title": "Accueil",
+        "sections": 2
+      },
+      {
+        "id": "145b6d32-3a68-456a-a76b-db47fd1bf07b",
+        "title": "A propos",
+        "sections": 0
+      }
+    ]
+  },
+  "limit": "Ne prouve ni contenu image/titre choisi pour J1, ni rendu moteur actuel, ni aucun test applicatif."
+}

@@ -1,0 +1,17 @@
+{
+  "nature": "Maquette HTML autonome, données éditoriales et opérations simulées en mémoire.",
+  "navigateur": "156.0.8078.4",
+  "largeurs": [
+    1440,
+    390,
+    320
+  ],
+  "observations": [
+    "Lien de saut et sélection au clavier.",
+    "Titre, média et alternative enregistrés ; destination HTTP refusée avec focus sur la saisie ; correction HTTPS enregistrée.",
+    "Vérification des révisions publiées 18 et 24, conservation de 18 puis adoption explicite de 24, seconde vérification conforme sans nouvelle révision.",
+    "Moteur sans capacité et numéro de page inconnu, conservation de la révision Studio ; association après une lecture fructueuse et confirmation.",
+    "Lecture seule sans commande de vérification, champs locaux désactivés et absence de débordement aux largeurs capturées."
+  ],
+  "erreurs_js_ou_requetes_http": []
+}

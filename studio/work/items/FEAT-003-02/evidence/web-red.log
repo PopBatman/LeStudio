@@ -1,0 +1,29 @@
+Found 2 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+FF
+======================================================================
+FAIL: test_create_link_review_delete_and_preserve_candidate_on_conflict (tests.test_navigation_web.NavigationWebTests.test_create_link_review_delete_and_preserve_candidate_on_conflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_web.py", line 50, in test_create_link_review_delete_and_preserve_candidate_on_conflict
+    root = self.create()
+           ^^^^^^^^^^^^^
+  File "/app/tests/test_navigation_web.py", line 30, in create
+    self.assertEqual(self.client.post(self.pages, {"action": "blank"}).status_code, 302)
+AssertionError: 404 != 302
+
+======================================================================
+FAIL: test_entry_empty_permissions_and_csrf (tests.test_navigation_web.NavigationWebTests.test_entry_empty_permissions_and_csrf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_web.py", line 34, in test_entry_empty_permissions_and_csrf
+    self.assertContains(self.client.get(self.base), self.pages)
+AssertionError: False is not true : Couldn't find '/sites/69ff042a-d78f-4d92-9485-bf098594b8ba/pages/' in the following response
+b'<!doctype html>\n<html lang="fr">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>Maison des dunes \xc2\xb7 Le Studio</title>\n  <link rel="stylesheet" href="/assets/gallery.css">\n  <link rel="stylesheet" href="/assets/workspace.css">\n  <link rel="stylesheet" href="/assets/registre.css">\n</head>\n<body class="ws-page">\n  <a class="skip-link" href="#contenu">Aller au contenu</a>\n  <header class="ws-header">\n    <div class="ws-header-inner">\n      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Le Studio</span></a>\n      \n<nav class="ws-nav" aria-label="Navigation principale">\n  <a href="/">Accueil</a>\n  <a href="/clients/" >Clients</a>\n  <a href="/sites/" >Mes sites</a>\n</nav>\n\n    </div>\n  </header>\n  <main id="contenu" class="ws-main" tabindex="-1">\n    <div class="registry">\n<a class="rg-back" href="/sites/">\xe2\x86\x90 Mes sites</a>\n<header class="rg-head"><h1>Maison des dunes</h1><a class="btn btn-primary" href="/sites/69ff042a-d78f-4d92-9485-bf098594b8ba/modifier/">Modifier le site</a></header>\n\n\n<section class="rg-panel"><h2>Fiche du site</h2><dl class="rg-dl">\n\n<div><dt>Domaine</dt><dd>Non renseign\xc3\xa9</dd></div><div><dt>Type de site</dt><dd>Non renseign\xc3\xa9</dd></div>\n\n</dl></section>\n<section class="rg-panel rg-engine" aria-labelledby="engine-title">\n  <header class="rg-section">\n    <h2 id="engine-title">Moteur Wagtail</h2>\n    \n<span class="badge badge-neutral" >Non raccord\xc3\xa9</span>\n\n  </header>\n  <p class="rg-eyebrow">Historique des v\xc3\xa9rifications enregistr\xc3\xa9es par Studio.</p>\n  \n  <dl class="rg-dl">\n    <div>\n      <dt>Derni\xc3\xa8re confirmation r\xc3\xa9ussie</dt>\n      <dd>Aucune confirmation enregistr\xc3\xa9e</dd>\n    </div>\n    <div>\n      <dt>Derni\xc3\xa8re tentative</dt>\n      <dd>Aucune tentative enregistr\xc3\xa9e</dd>\n    </div>\n  </dl>\n  \n  \n  <details>\n    <summary>D\xc3\xa9tails du raccordement</summary>\n    <dl class="rg-dl">\n      \n        <div><dt>Identifiant de la fiche Site</dt><dd>69ff042a-d78f-4d92-9485-bf098594b8ba</dd></div>\n      \n    </dl>\n  </details>\n  \n</section>\n</div>\n  </main>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.016s
+
+FAILED (failures=2)
+Destroying test database for alias 'default'...

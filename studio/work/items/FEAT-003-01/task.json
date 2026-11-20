@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003-01",
+  "kind": "feature",
+  "title": "Socle de composition et brouillons",
+  "state": "DONE",
+  "ui_required": false,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003-01/",
+      "composition/",
+      "tests/",
+      "central/settings.py",
+      "Dockerfile",
+      ".dockerignore",
+      "docs/",
+      "README.md",
+      "registre/",
+      "workspace/",
+      "raccordement/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lancement de FEAT-003 le 19 novembre 2026, exécution du sous-lot READY FEAT-003-01 selon le plan Notion.",
+    "actions": [
+      "plan",
+      "implement",
+      "review",
+      "test",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "manual",
+      "path": "evidence/composition-v1.json",
+      "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3",
+      "observed_at": "2026-11-19T11:36:07.219987+00:00",
+      "revision": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26",
+      "outcome": "illustrative",
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-01/COMPOSITION.md",
+          "sha256": "d85a54f7a4dd69cca1a2822288b217f08e9d2ab18ca6560579f775af0bd8220f"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-document.json",
+      "sha256": "f6aa861579a6681a8b0fa770ce649e30dc880dee3b2430c9ce8243ff86380fb5",
+      "observed_at": "2026-11-19T11:37:15.453407+00:00",
+      "revision": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26",
+      "outcome": "passed",
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-01/COMPOSITION.md",
+          "sha256": "d85a54f7a4dd69cca1a2822288b217f08e9d2ab18ca6560579f775af0bd8220f"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/limite-finale.json",
+      "sha256": "12932465b6fa6234b566d07cb00f37bb655f37b347ea1922503df14cf914b848",
+      "observed_at": "2026-11-19T11:44:30.122702+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/migration.log",
+      "sha256": "f02784e289de80c25de40b1cf452490abdb9a961f3d6381aae7b963920b0e68f",
+      "observed_at": "2026-11-19T11:42:41.924984+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste.json",
+      "sha256": "027417646b979518628a3c8244be003309565fb0765461b26faedc40e6c2d115",
+      "observed_at": "2026-11-19T11:44:55.216343+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/qualification-postgresql.json",
+      "sha256": "8b57d087888c28d1ec8fecd832c489343f57b4054829f404cb26a149ba9cfca8",
+      "observed_at": "2026-11-19T11:42:41.923984+00:00",
+      "revision": "Recette intermédiaire de migration et de limite avant corrections de revue",
+      "outcome": "passed",
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/service-red.log",
+      "sha256": "3904621d213665ce9084e31d50af4cd95e615dd5b4f008c2792c8da9eefb0b58",
+      "observed_at": "2026-11-19T11:39:53.423935+00:00",
+      "revision": "Tests avant création du service ou du validateur",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "53683804828e8d680ef2841897d52d6949d3ba4fc866d5b747c1138bd385e6db",
+      "observed_at": "2026-11-19T11:44:27.958647+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "e5f7d6c87214c81cdd0e486e6d7132913206e34fbadeffd7df1aaebad0c215ca",
+      "observed_at": "2026-11-19T11:44:27.959647+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/validation-green.log",
+      "sha256": "0eeca18602ad9ca4062541023de42ae1adcbe7ec3a7d76952387a66f86c349b8",
+      "observed_at": "2026-11-19T11:43:31.964231+00:00",
+      "revision": "sha256:cf444970b8320df793caee1f04689036a81b5c7b476a3c4c36af080ca901a8e1",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "df34de6d2e7df7959b84f0b4ec967a546cb5f5999b90d8424381eb77970e10cc"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "11d77b74af4fef785e62bd8c77bc2059838d5b67736ef9d91af1a06cd0388b25"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "995c80fd0ce7d02cf54cde590985f2500c8d3bd0474c959ca91ea2ef9f4e337f"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "075984ff8a427fcbf62ed08f604bb758176cd293b10d0919bf2f436c879a8c56"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "c35d1bf9174dc346c5b4e590718fb478524e79b0bf0d3365ef33b66b030b9c23"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "tests/test_composition_services.py",
+          "sha256": "2887e2e112260449f09efc61f31d3bb1d37fae2395456218afa1d381a641a42e"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "4a1f8dc6862efedaaa7703fdd0d8bb8977aea44c1cd6cdb33409a44d11fb45eb"
+        },
+        {
+          "path": "work/items/FEAT-003-01/evidence/composition-v1.json",
+          "sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        }
+      ],
+      "contract_sha256": "5d190ab96db2a215a506c99e1a6d7ebeb68a77ef872b60435d118470cad8eb26"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/validation-red.log",
+      "sha256": "f32f39c56004485f0ae545ecb3be8d508167f1e52742bbe88be97e8acb08adc8",
+      "observed_at": "2026-11-19T11:40:23.680643+00:00",
+      "revision": "Tests avant création du service ou du validateur",
+      "outcome": "failed",
+      "active": false
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/composition_review, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

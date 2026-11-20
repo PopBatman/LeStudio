@@ -1,0 +1,2847 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003-07",
+  "kind": "feature",
+  "title": "Portail graphiste de dépôt Figma sécurisé",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003-07/",
+      "depots/",
+      "registre/",
+      "central/",
+      "templates/",
+      "static/ui/",
+      "tests/",
+      "docs/",
+      "Dockerfile",
+      ".dockerignore",
+      "compose.yaml",
+      "local.env.example"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Mandat utilisateur « Lance FEAT-003-07 » après cadrage READY",
+    "actions": [
+      "plan",
+      "implement",
+      "review",
+      "test",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/depot-erreur-mobile.png",
+      "sha256": "edc318620473c3194649f8fe6b1e0c3d2fe1d8136337b96fdabb602773a0edc6",
+      "observed_at": "2026-11-19T16:33:18.921026+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "fa7800bd1893e16d0b72b5364ca1195724f8d0685c6af36bdd4d9c5e909fd43f",
+      "observed_at": "2026-11-19T16:33:20.181063+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/invitation-indisponible-mobile.png",
+      "sha256": "9e421743f060f636e88e25915607285a13d510bef522ebc5bcac9976ef11e86b",
+      "observed_at": "2026-11-19T16:33:19.884054+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d",
+      "observed_at": "2026-11-19T16:33:03.125562+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/operateur-depots-bureau.png",
+      "sha256": "9598d3bfd1d4a92eadc19bc80a36cb5436920418c5f92e44d172538fdc756fa8",
+      "observed_at": "2026-11-19T16:33:19.230035+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/portail-graphiste-mobile.png",
+      "sha256": "3efa82ce31f05c0d1f868b300ceb18e344195861e442dd00cd146831df20690c",
+      "observed_at": "2026-11-19T16:33:19.453042+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/site-dernier-depot-bureau.png",
+      "sha256": "dbff3fd005a6b72ad6c17b57b360c532be2e83e18bbe0b6c05afbf074f4d7595",
+      "observed_at": "2026-11-19T16:33:19.127032+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/evidence/maquettes.html",
+          "sha256": "96b96cfdf324614b597fe40edf930937de181a526cfd3d46497654631202219d"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/tests-socle.log",
+      "sha256": "4e76d1a91e264206849d5ec37bc9133c8467303f1a2f243f84cb22ba3d342ccb",
+      "observed_at": "2026-11-19T16:32:09.723992+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/EVIDENCE.md",
+          "sha256": "9e54eb4e96aceffcc8b8a736f117251153e128a7089bfdf30cca7ca6b2f56efa"
+        }
+      ],
+      "outcome": "passed",
+      "active": false
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/app-fiche-site.png",
+      "sha256": "2a960b07c118052df8b1aed6caab368a8f66484950991a62ab754aa59531afb0",
+      "observed_at": "2026-11-19T16:48:06.984619+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/app-historique-lecture.png",
+      "sha256": "a1ccf3952b1dfd24f0defc164b0ae9d8baa134a0b042fa612f68e74eea2ab390",
+      "observed_at": "2026-11-19T16:48:07.070622+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/app-invitation-indisponible.png",
+      "sha256": "af2c6925df7e989a379e9cfb603173a03955a9d8dae9ecc2318e8613849aff02",
+      "observed_at": "2026-11-19T16:48:07.280628+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/app-portail-mobile.png",
+      "sha256": "d33917fdedfa406ff975bfb0c7746bdbdf0017db08e07b5b344991aa08b16bbf",
+      "observed_at": "2026-11-19T16:48:06.617609+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/app-recu-mobile.png",
+      "sha256": "7f79abe1f398f700e03386d1b126292f43949e01673171034c0100cc3337b159",
+      "observed_at": "2026-11-19T16:48:06.765613+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/domain-green.log",
+      "sha256": "3748e9a808f2e69ebe075c38e5981fec56b0aae80e1a23f61104e1586bae308f",
+      "observed_at": "2026-11-19T16:45:55.828910+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/domain-red.log",
+      "sha256": "e3168822b97ef9b058f8e535d6dfe0869ffdbfc198c676de704a14a74fdc5da9",
+      "observed_at": "2026-11-19T16:43:50.014386+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/https-local.json",
+      "sha256": "00439bd1ca7fa05746d6c52901e6da9bd92829008bc15ef7f3b0b1ba5e296250",
+      "observed_at": "2026-11-19T16:48:38.133505+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/journaux.json",
+      "sha256": "f8c4a5f2d7e6059375ac71bc501f7686bb73f2e59e2b0c669f68ea63e1b5ade1",
+      "observed_at": "2026-11-19T16:49:05.520285+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/lecteur-ecran.json",
+      "sha256": "90ec8390550aa38663aa2fdea9862bfae97092aeb55997faaf617bce4a3950ea",
+      "observed_at": "2026-11-19T16:49:05.521285+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/migration.json",
+      "sha256": "9e6f9b9a9a3b1e8e889501876beefc184305d00ea62e44746d05971c3d2d1a53",
+      "observed_at": "2026-11-19T16:49:05.522285+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/operateur-green.log",
+      "sha256": "875a76380cddf8643cf4ae1049c2f897f82a520e1b7c38e967ad571a3f006594",
+      "observed_at": "2026-11-19T16:46:03.578128+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/operateur-red.log",
+      "sha256": "6100e81a0036c082b5416b39e281ee5083a16f1f4076ff572e4e2f566239ee88",
+      "observed_at": "2026-11-19T16:46:03.576128+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/portail-public-green.log",
+      "sha256": "38f934160b1328c1f6c142bff7ee2aae728cb017c2ca519b0f3116c77985f65a",
+      "observed_at": "2026-11-19T16:46:20.786613+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/portail-public-red.log",
+      "sha256": "67aed62f62521ea2f5bf6df39ce76a0648fba743cfafb89016e218c674a44cc5",
+      "observed_at": "2026-11-19T16:43:57.932607+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste-local.json",
+      "sha256": "c1f0c4e1344cc4fb3b8dbe7a30ce0945841bbfc4db24e62dc1c5c6d5fd47325b",
+      "observed_at": "2026-11-19T16:50:27.134615+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/recette-navigateur.json",
+      "sha256": "591c3d84912f4172e15bb597ac391a636f81a41dc3b8c4a4b2198410cab811b0",
+      "observed_at": "2026-11-19T16:48:07.281628+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/restauration.json",
+      "sha256": "1976079d7956dcb2557d131480eac1c622bc74a9f7c04dd31d647798dfdb8330",
+      "observed_at": "2026-11-19T16:47:22.793366+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/review.txt",
+      "sha256": "91dbfaa6be9b6464c7bd5b81e9d3d5374bae872b7828e7a2802a20b6ebe5ae56",
+      "observed_at": "2026-11-19T16:50:27.140615+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-07/REVIEW.md",
+          "sha256": "91dbfaa6be9b6464c7bd5b81e9d3d5374bae872b7828e7a2802a20b6ebe5ae56"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "aadcd4d698a2ae3660fd9b5e6898542614b327accc4d696beabba06e81716892",
+      "observed_at": "2026-11-19T16:47:40.758875+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "e183ec0bc128af750e88b7c5991f41e1e1b9cc0fc4630e0528cde6c5cf337900",
+      "observed_at": "2026-11-19T16:47:37.937795+00:00",
+      "revision": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "outcome": "passed",
+      "contract_sha256": "48324a5ffc057a69dc8ecc95fc10218b60c6b93b158b2235324abb1b4c05a1f8",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "b419d7332a53defb536cb2cec1ebe854f4d92c79c21b253ac798001515331ab8"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6a1c4ea4d376156516ceefe6e86699611902380b89ba87eb8c9f2b4cca767c90"
+        },
+        {
+          "path": "central/portal.py",
+          "sha256": "8e30cda84ce8c88c79081daafc808b7e5746ab6080c01196cd0dc3380438736d"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "07c91e9520341fa04768de81664493ac26f53d410b8b7dca7380630ff06514c7"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "447938a6de0f36b0b5163edd2a3ee919f3225cb5204eb7d6759a2d69bf414b01"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "92af3e5c55ffbce881372ce91525f0e0a2fcb55a05e2b7ec60711d87056d1d6d"
+        },
+        {
+          "path": "depots/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/management/commands/purge_depots.py",
+          "sha256": "1fa39c3dbdf4046d3a15a8a417b80bd39c65cbdb8a99ac47767bccd61db08d61"
+        },
+        {
+          "path": "depots/migrations/0001_initial.py",
+          "sha256": "82070f1e4763c158384ee0bc6d5398cebf7e8a816f2277e133c0e30f730047ca"
+        },
+        {
+          "path": "depots/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e6723d93cd2fe2dd24b061462ea51fc8bc0f11ddf239d85b4619b65b768198f6"
+        },
+        {
+          "path": "depots/public.py",
+          "sha256": "644295de1a3385c24bae24bcc75bc597a1cedbbf17647300a2b950200296c6a9"
+        },
+        {
+          "path": "depots/public_urls.py",
+          "sha256": "36b3791fc1dd71a0c196076b0d1ff8fbe5841751aaf8ddd5a6f3ddb98e24870b"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "4b8e157179e390d2ba320af4b56c03d356e65f2a7766093a89e8f38b74155e23"
+        },
+        {
+          "path": "depots/staff.py",
+          "sha256": "28bdb39d7b0831dd6fc652738c411b6bf83ec8a2d205e4293ac42b9c68b531a6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "5406f68243089e3b027f8900191bb7568fc6a5ad6e06a8b004c01ac43808a5ca"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "d3c456d9cb4bb8652e6089ca12e652b1c8d2d092a686528c44ff8a332c47a848"
+        },
+        {
+          "path": "static/ui/depot-public.css",
+          "sha256": "cc82ce6cdbb31a009cb30c914b21f99c4d65c9818b57b0ab471fd58fe4701b9d"
+        },
+        {
+          "path": "static/ui/depot-public.js",
+          "sha256": "3eb627c92fcb3d2bfc2f515edef90bb49070dd51591b55a3aaa7ce1ab4aa8fbe"
+        },
+        {
+          "path": "static/ui/depot-staff.js",
+          "sha256": "0361054c9034864117d2a7dbb4a388df0a0721391d856db1494c3043b0769671"
+        },
+        {
+          "path": "templates/depots/public.html",
+          "sha256": "c2fb902b4c40fe22631f876cc2b9ba3ee343f7edc773eae64cea38f67ffe5d4e"
+        },
+        {
+          "path": "templates/depots/public_limit.html",
+          "sha256": "e136054c6277a10f8c75c4f97725e1d16e59de6758e98cb609812caf86eed874"
+        },
+        {
+          "path": "templates/depots/staff_cursor_error.html",
+          "sha256": "4f4b704b4bb0548e2e36ab6c82a36cc0a4bad016adaaf74d16829450811bc383"
+        },
+        {
+          "path": "templates/depots/staff_erase.html",
+          "sha256": "2a175da6b862bba2f4ce107585b00fc8c18abcbccd93827d70da788c366de0f3"
+        },
+        {
+          "path": "templates/depots/staff_history.html",
+          "sha256": "f242231385e6ea31f7f10426c00077b157985115692e97e012e330b6f560e37c"
+        },
+        {
+          "path": "templates/depots/staff_issued.html",
+          "sha256": "d3b1fa4101c47b572416c97bf675d8fb797706ae3352c4f2d159cfe355f96b9b"
+        },
+        {
+          "path": "templates/depots/staff_revoke.html",
+          "sha256": "dbf81cc0d670ae18f0753f486d895a319ecb75c6ed8b93d7e11709cde4160233"
+        },
+        {
+          "path": "templates/depots/staff_submission.html",
+          "sha256": "2216e289f534409407ddbc7e0175f3aabe419cdcb3d68247c542321544bad4ef"
+        },
+        {
+          "path": "templates/depots/staff_time.html",
+          "sha256": "a3be4ca44db8c0cbe9f7c7769ddac6d0b6c8ce4984d87abd4aa5e98f9b0f734b"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "e4f7a14a277cc5520a85be308db36b41d4f573ff6bcd094adf8b758a7cf2d64a"
+        },
+        {
+          "path": "tests/test_depot_public.py",
+          "sha256": "cb19261f5a4582475662a59d7cbc3a36ff3bf2c4b2091b2111777bb20fb2e857"
+        },
+        {
+          "path": "tests/test_depot_staff.py",
+          "sha256": "34dbe55104b2938e6c20a9bb2959304d87bb206743ec9dc216a00a36420d5d23"
+        },
+        {
+          "path": "tests/test_depots_domain.py",
+          "sha256": "73928aac8523bafdd687dbb63831658dcde16af301919975d97824b50d4394f1"
+        },
+        {
+          "path": "tests/test_portal_host.py",
+          "sha256": "5cb858485ac66b6326c920cf9647c5ad401ce861d48e0181cfcc0921c72e2ad6"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/depot_release_review, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

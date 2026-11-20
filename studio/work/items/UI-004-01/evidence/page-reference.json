@@ -1,0 +1,143 @@
+{
+  "site": "59177d82-095d-4e5b-b095-7b73c220de4b",
+  "revision": "04fd242a-17a9-464f-8a09-ad18d58be4d4",
+  "number": 18,
+  "schema_version": 4,
+  "page": {
+    "id": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+    "slug": "",
+    "title": "Accueil",
+    "sections": [
+      {
+        "id": "f268f311-3712-4998-921c-2fe5f54675ca",
+        "blocks": [
+          {
+            "id": "a60b3e86-bbdd-4529-a2ae-fa289dc0dc5d",
+            "props": {
+              "layout": {
+                "base": {
+                  "display": "stack"
+                }
+              }
+            },
+            "children": [
+              {
+                "id": "d4d98a35-6296-43f6-9ec3-1ce036cff5c9",
+                "props": {
+                  "url": "https://example.org/",
+                  "label": "En savoir plus"
+                },
+                "children": [],
+                "definition": {
+                  "key": "button",
+                  "scope": "global",
+                  "version": 1
+                }
+              }
+            ],
+            "definition": {
+              "key": "container",
+              "scope": "global",
+              "version": 1
+            }
+          },
+          {
+            "id": "884f1547-70f2-4abb-b075-8a3a30cf4020",
+            "props": {
+              "text": "xqqsx"
+            },
+            "children": [],
+            "definition": {
+              "key": "text",
+              "scope": "global",
+              "version": 1
+            }
+          }
+        ],
+        "layout": {
+          "base": {
+            "gap": 10,
+            "columns": 6,
+            "display": "grid"
+          }
+        }
+      },
+      {
+        "id": "e5b50d4d-bf3d-47f5-8180-bfb1a16fc78f",
+        "blocks": [
+          {
+            "id": "9532356f-1f63-4c57-a813-612a0bb11227",
+            "props": {
+              "layout": {
+                "base": {
+                  "display": "stack"
+                }
+              }
+            },
+            "children": [
+              {
+                "id": "0b7420b5-ce5f-4040-bc1e-9459201a07bc",
+                "props": {
+                  "url": "https://www.linkedin.com/feed/",
+                  "label": "Linkedin"
+                },
+                "children": [],
+                "placement": {
+                  "base": {},
+                  "tablet": {
+                    "span": 1,
+                    "height": 61
+                  }
+                },
+                "definition": {
+                  "key": "button",
+                  "scope": "global",
+                  "version": 1
+                }
+              }
+            ],
+            "placement": {
+              "base": {},
+              "tablet": {
+                "height": 137
+              }
+            },
+            "definition": {
+              "key": "container",
+              "scope": "global",
+              "version": 1
+            }
+          }
+        ],
+        "layout": {
+          "base": {
+            "gap": 0,
+            "columns": 1,
+            "display": "stack"
+          }
+        }
+      }
+    ],
+    "parent_id": null
+  },
+  "theme": {
+    "components": [
+      {
+        "tokens": {
+          "gap": 1,
+          "ink": "#A3B9C9",
+          "font": "dm-sans",
+          "accent": "#776D5A",
+          "background": "#987D7C"
+        },
+        "variant": "secondary",
+        "definition": {
+          "key": "button",
+          "scope": "global",
+          "version": 1
+        }
+      }
+    ]
+  },
+  "document_sha256": "6759473f611215bf3e09c3e3800391efe6ebf99b4859047c9181ef1ab49405bd"
+}

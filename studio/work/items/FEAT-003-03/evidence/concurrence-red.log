@@ -1,0 +1,17 @@
+Found 1 test(s).
+Using existing test database for alias 'default'...
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: test_theme_and_menu_compete_for_the_same_revision (tests.test_catalogue_concurrency.AppearanceConcurrencyTests.test_theme_and_menu_compete_for_the_same_revision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_catalogue_concurrency.py", line 17, in test_theme_and_menu_compete_for_the_same_revision
+    from composition.appearance import modifier_apparence
+ModuleNotFoundError: No module named 'composition.appearance'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.039s
+
+FAILED (errors=1)
+Preserving test database for alias 'default'...

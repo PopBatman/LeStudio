@@ -1,0 +1,18 @@
+{
+  "sante": "ok",
+  "avant": {
+    "sites": 1,
+    "revisions": 5,
+    "empreinte_revisions": "fcdbb8bdb2d7054bc12a16075dce9a5e3230cb3c24fd83b30f5932cd043faaf9",
+    "raccordements": 1
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 5,
+    "empreinte_revisions": "fcdbb8bdb2d7054bc12a16075dce9a5e3230cb3c24fd83b30f5932cd043faaf9",
+    "raccordements": 1
+  },
+  "migrations_en_attente": false,
+  "versions_globales_standard": 5,
+  "moteur_wagtail_meme_conteneur_et_demarrage": true
+}

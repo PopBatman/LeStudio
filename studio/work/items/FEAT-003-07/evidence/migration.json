@@ -1,0 +1,15 @@
+{
+  "migration": "depots.0001_initial",
+  "avant": {
+    "sites": 2,
+    "revisions": 2,
+    "empreinte_revisions": "074f4f244cfedad922a3cc6f313eb7cffa41cd513fc9417ca672f6a35284a381",
+    "raccordements": 0
+  },
+  "apres_migration_et_recette": {
+    "sites": 2,
+    "revisions": 2,
+    "empreinte_revisions": "074f4f244cfedad922a3cc6f313eb7cffa41cd513fc9417ca672f6a35284a381",
+    "raccordements": 0
+  }
+}

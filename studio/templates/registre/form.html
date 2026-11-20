@@ -1,0 +1,10 @@
+{% extends "registre/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{{ cancel }}">← Retour</a><header class="rg-head"><h1>{{ title }}</h1></header>
+<form method="post" class="rg-panel rg-editor">{% csrf_token %}
+{% if form.errors %}<div role="alert" class="rg-errors"><strong>Enregistrement impossible.</strong> {{ form.non_field_errors }}{% if conflict %}<a href="{{ request.path }}">Recharger la fiche</a>{% endif %}</div>{% endif %}
+{% for field in form %}{% if field.is_hidden %}{{ field }}{% else %}<div class="rg-field">{{ field.label_tag }}{% if not field.field.required %}<small>Facultatif</small>{% endif %}{{ field }}
+{% if field.help_text %}<p id="{{ field.auto_id }}_helptext">{{ field.help_text }}</p>{% endif %}{{ field.errors }}</div>{% endif %}{% endfor %}
+<div class="rg-actions"><c-button type="submit">Enregistrer</c-button><a href="{{ cancel }}">Annuler</a></div></form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "lecteur": "Orca 46.1",
+  "environnement": "Chromium, Xephyr et AT-SPI sur bus de session isolé",
+  "interaction": "Clavier, page fictive, format tablette, réglage de hauteur puis validation incorrecte du placement libre",
+  "enonces": [
+    "Régler le placement link.",
+    "Hauteur (px) : 0 spin button.",
+    "Enregistrement en cours…",
+    "Brouillon enregistré · Révision 8 · Tablette",
+    "Vérifiez votre saisie Position X (%) · Tablette · bloc 49150451-988a-4ba8-8e01-06343bd7c93a · Renseignez la position X pour le placement libre.",
+    "Vérifiez votre saisie",
+    "Position X (%) · Tablette · bloc 49150451-988a-4ba8-8e01-06343bd7c93a · Renseignez la position X pour le placement libre."
+  ],
+  "focus_succes": "inspecteur",
+  "focus_erreur": "ed-error"
+}

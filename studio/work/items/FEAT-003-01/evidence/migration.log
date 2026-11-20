@@ -1,0 +1,4 @@
+Operations to perform:
+  Apply all migrations: auth, composition, contenttypes, raccordement, registre, sessions
+Running migrations:
+  Applying composition.0001_initial... OK

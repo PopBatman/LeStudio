@@ -1,0 +1,60 @@
+Found 43 test(s).
+Using existing test database for alias 'default' ('test_studio_db')...
+Operations to perform:
+  Synchronize unmigrated apps: django_cotton, workspace
+  Apply all migrations: auth, contenttypes, raccordement, registre, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  No migrations to apply.
+System check identified no issues (0 silenced).
+test_creates_only_a_regular_active_operator_with_a_hashed_password (tests.test_create_operator.CreateOperatorTests.test_creates_only_a_regular_active_operator_with_a_hashed_password) ... ok
+test_existing_user_is_never_granted_access_or_reset (tests.test_create_operator.CreateOperatorTests.test_existing_user_is_never_granted_access_or_reset) ... ok
+test_failed_confirmation_or_weak_password_creates_no_user (tests.test_create_operator.CreateOperatorTests.test_failed_confirmation_or_weak_password_creates_no_user) ... ok
+test_membership_failure_rolls_back_account_creation (tests.test_create_operator.CreateOperatorTests.test_membership_failure_rolls_back_account_creation) ... ok
+test_rejects_invalid_name_without_prompting (tests.test_create_operator.CreateOperatorTests.test_rejects_invalid_name_without_prompting) ... ok
+test_expired_session_returns_to_login (tests.test_operator_access.OperatorSessionTests.test_expired_session_returns_to_login) ... ok
+test_login_refusals_share_one_error (tests.test_operator_access.OperatorSessionTests.test_login_refusals_share_one_error) ... ok
+test_login_uses_workspace_and_logout_ends_access (tests.test_operator_access.OperatorSessionTests.test_login_uses_workspace_and_logout_ends_access) ... ok
+test_removing_membership_immediately_forbids_workspace (tests.test_operator_access.OperatorSessionTests.test_removing_membership_immediately_forbids_workspace) ... ok
+test_competing_site_cannot_claim_existing_instance (tests.test_raccordement.LinkTests.test_competing_site_cannot_claim_existing_instance) ... ok
+test_expired_attempt_replaced_cannot_overwrite_new_result (tests.test_raccordement.LinkTests.test_expired_attempt_replaced_cannot_overwrite_new_result) ... ok
+test_only_current_attempt_confirms_and_revalidates_actor (tests.test_raccordement.LinkTests.test_only_current_attempt_confirms_and_revalidates_actor) ... ok
+test_success_reverification_and_identity_failure_preserves_association (tests.test_raccordement.LinkTests.test_success_reverification_and_identity_failure_preserves_association) ... ok
+test_unconnected_and_read_only (tests.test_raccordement.LinkTests.test_unconnected_and_read_only) ... ok
+test_archive_version_and_domain (tests.test_registre.RegistryTests.test_archive_version_and_domain) ... ok
+test_contacts_normalization_and_parent (tests.test_registre.RegistryTests.test_contacts_normalization_and_parent) ... ok
+test_independent_scopes_and_revocation (tests.test_registre.RegistryTests.test_independent_scopes_and_revocation) ... ok
+test_rollback_and_database_invariants (tests.test_registre.RegistryTests.test_rollback_and_database_invariants) ... ok
+test_services_reject_null_bytes_before_validation_queries (tests.test_registre.RegistryTests.test_services_reject_null_bytes_before_validation_queries) ... ok
+test_grant_requires_an_active_operator (tests.test_registre_grants.RegistryAccessCommandTests.test_grant_requires_an_active_operator) ... ok
+test_grants_only_the_requested_object_and_supports_downgrade (tests.test_registre_grants.RegistryAccessCommandTests.test_grants_only_the_requested_object_and_supports_downgrade) ... ok
+test_nominal_creation_permission_round_trip (tests.test_registre_grants.RegistryAccessCommandTests.test_nominal_creation_permission_round_trip) ... ok
+test_unknown_target_or_invalid_arguments_do_not_grant_access (tests.test_registre_grants.RegistryAccessCommandTests.test_unknown_target_or_invalid_arguments_do_not_grant_access) ... ok
+test_anonymous_and_operator_entry (tests.test_registre_web.RegistryPageTests.test_anonymous_and_operator_entry) ... ok
+test_invalid_filter_is_rejected (tests.test_registre_web.RegistryPageTests.test_invalid_filter_is_rejected) ... ok
+test_contact_validation_and_archive_preserve_site_access (tests.test_registre_web.RegistryWorkflowTests.test_contact_validation_and_archive_preserve_site_access) ... ok
+test_site_only_access_survives_edit_without_disclosing_its_owner (tests.test_registre_web.RegistryWorkflowTests.test_site_only_access_survives_edit_without_disclosing_its_owner) ... ok
+test_disabled_gallery_hides_page_and_assets (tests.test_gallery.GalleryTests.test_disabled_gallery_hides_page_and_assets) ... ok
+test_enabled_gallery_renders_and_serves_compiled_assets (tests.test_gallery.GalleryTests.test_enabled_gallery_renders_and_serves_compiled_assets) ... ok
+test_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) ... ok
+test_database_failure_returns_only_status (tests.test_health.HealthTests.test_database_failure_returns_only_status) ... ok
+test_unrecognized_host_is_rejected_before_database_access (tests.test_health.HealthTests.test_unrecognized_host_is_rejected_before_database_access) ... ok
+test_write_method_is_rejected_before_database_access (tests.test_health.HealthTests.test_write_method_is_rejected_before_database_access) ... ok
+test_anonymous_visitor_reaches_login (tests.test_operator_access.WorkspaceEntryTests.test_anonymous_visitor_reaches_login) ... ok
+test_existing_read_only_endpoints_keep_rejecting_writes (tests.test_operator_access.WorkspaceEntryTests.test_existing_read_only_endpoints_keep_rejecting_writes) ... ok
+test_login_styles_are_available_with_gallery_disabled (tests.test_operator_access.WorkspaceEntryTests.test_login_styles_are_available_with_gallery_disabled) ... ok
+test_parallel_request_observes_reservation (tests.test_raccordement.ConcurrentLinkTests.test_parallel_request_observes_reservation) ... ok
+test_two_concurrent_edits_preserve_first_successful_write (tests.test_registre.ConcurrentRegistryTests.test_two_concurrent_edits_preserve_first_successful_write) ... ok
+test_connection_timeout_has_its_own_diagnostic (tests.test_engine_transport.ContractTests.test_connection_timeout_has_its_own_diagnostic) ... ok
+test_marker_must_be_the_visible_reference (tests.test_engine_transport.ContractTests.test_marker_must_be_the_visible_reference) ... ok
+test_other_instance_and_incompatible_version (tests.test_engine_transport.ContractTests.test_other_instance_and_incompatible_version) ... ok
+test_qualified_build_and_additive_minor (tests.test_engine_transport.ContractTests.test_qualified_build_and_additive_minor) ... ok
+test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 3.630s
+
+OK
+Preserving test database for alias 'default' ('test_studio_db')...

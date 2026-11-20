@@ -1,0 +1,21 @@
+{% extends "registre/base.html" %}
+{% block title %}Invitation créée · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:site-depots' site.pk %}">← Dépôts Figma · {{ site.name }}</a>
+<header class="rg-head"><h1>Invitation créée</h1></header>
+<section class="rg-panel rg-editor" aria-labelledby="share">
+  <h2 id="share">Transmettre au graphiste</h2>
+  <p>Le lien ouvre le dépôt pour {{ site.name }} jusqu’au {% include "depots/staff_time.html" with value=invitation.expires_at %}. Il s’affiche une seule fois. Copiez-le avant de quitter cette page.</p>
+  <div class="rg-field"><label for="invitation-url">Lien d’invitation</label>
+    <input id="invitation-url" type="text" value="{{ share_url }}" readonly spellcheck="false" autocomplete="off">
+  </div>
+  <div class="rg-actions"><button type="button" class="btn btn-primary" id="copy-invitation" hidden>Copier le lien</button><span id="copy-status" role="status" aria-live="polite"></span></div>
+  <details><summary>Code de saisie manuelle</summary>
+    <p>Si le code est demandé à l’ouverture du portail, le graphiste peut le saisir dans le formulaire.</p>
+    <label for="invitation-code">Code de l’invitation</label>
+    <input id="invitation-code" type="text" value="{{ code }}" readonly spellcheck="false" autocomplete="off">
+  </details>
+  <p class="rg-actions"><a href="{% url 'registre:site-depots' site.pk %}">Retour aux dépôts</a></p>
+</section>
+<script defer src="/assets/depot-staff.js"></script>
+{% endblock %}

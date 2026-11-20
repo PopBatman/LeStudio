@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "pages": [
+    {
+      "id": "383b1f01-47e5-4db6-8757-ab5432aea51e",
+      "parent_id": null,
+      "slug": "",
+      "title": "Accueil",
+      "sections": [
+        {
+          "id": "2dd22fe1-b385-4747-b448-5b273bb94701",
+          "layout": {
+            "base": {"display": "grid", "columns": 2, "gap": 24},
+            "mobile": {"display": "stack", "columns": 1, "gap": 12}
+          },
+          "blocks": [
+            {
+              "id": "d9d57cbc-f726-4e9a-96d7-77f27a294371",
+              "definition": {"scope": "global", "key": "heading", "version": 1},
+              "props": {"text": "La maison des dunes", "level": 1},
+              "children": []
+            },
+            {
+              "id": "80dc336a-7e07-4585-9e00-ce2c83dcb0b8",
+              "definition": {"scope": "global", "key": "text", "version": 1},
+              "props": {"text": "Découvrez le programme des ateliers."},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34fc41f4-b342-4c74-8cac-589547d6c3a5",
+      "parent_id": "383b1f01-47e5-4db6-8757-ab5432aea51e",
+      "slug": "ateliers",
+      "title": "Les ateliers",
+      "sections": []
+    }
+  ],
+  "menus": [],
+  "theme": {"accent": "#235965", "gap": 16}
+}

@@ -1,0 +1,205 @@
+{
+  "observed_at": "2026-11-18T15:18:44.677915+00:00",
+  "project": "arch001-qa-2328decb7f",
+  "platform": "Linux amd64, Docker 29.6.1, Compose 5.3.1",
+  "inputs": [
+    {
+      "path": ".dockerignore",
+      "sha256": "96ecfa6b860e7b3155fafaf83ff61136b3ad6df11e60f0b3388499917c4f1cca"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "bd194a64a3b3c2d57a33af9d7e7816023a59806f1f0cf8e2affed1c8f9bbdb0c"
+    },
+    {
+      "path": ".gitlab-ci.yml",
+      "sha256": "b18b6b6ea317eed242830a2cc30aff359b3bdb513f5b03969f0d33c7f451640b"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "6f3c956996040c41ce9d9283765dbaabde2b4e3ce1f19386d0c61c5a25d06b3b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "293013a59c9ee373bde921dd4f2449cad97cbef6e9ac4b982f7e9d69bb93f8f9"
+    },
+    {
+      "path": "central/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "central/settings.py",
+      "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+    },
+    {
+      "path": "central/urls.py",
+      "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "69b7394352f29ae2761676e9dd69eae70dd88038993af7020c6252eac7f0b66a"
+    },
+    {
+      "path": "infra/init-db.sql",
+      "sha256": "f9535cc7cc88f7045e92c8d9fd95b69fc40c16ec8491185e5d97a0808cd4bde6"
+    },
+    {
+      "path": "local.env.example",
+      "sha256": "00b068a1e2da7e5249bd1742ed7d3425a503beeece5c823732dca1d3fc891846"
+    },
+    {
+      "path": "manage.py",
+      "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+    },
+    {
+      "path": "scripts/init_env.py",
+      "sha256": "56e53c20811c0e73f9cef41bdda65511ff222dd9ee400b14cf8413fc388d3038"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_health.py",
+      "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+    },
+    {
+      "path": "tests/test_settings.py",
+      "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 scripts/init_env.py",
+      "exit": 0,
+      "result": "Configuration locale créée dans .env (mode 0600)."
+    },
+    {
+      "command": "python3 scripts/init_env.py",
+      "exit": 0,
+      "result": "Le fichier .env existe déjà."
+    },
+    {
+      "command": "docker compose config --quiet",
+      "exit": 0,
+      "result": ""
+    },
+    {
+      "command": "docker compose up -d --build --wait --wait-timeout 100",
+      "exit": 0,
+      "result": " Image arch001-qa-2328decb7f-web Built \n Container arch001-qa-2328decb7f-db-1 Healthy \n Container arch001-qa-2328decb7f-db-1 Healthy \n Container arch001-qa-2328decb7f-web-1 Healthy "
+    },
+    {
+      "command": "GET http://127.0.0.1:41581/health/",
+      "status": 200,
+      "result": {
+        "status": "ok"
+      }
+    },
+    {
+      "command": "docker compose logs --no-color web",
+      "exit": 0,
+      "result": "web-1  |   Applying contenttypes.0001_initial... OK\nweb-1  |   Applying contenttypes.0002_remove_content_type_name... OK"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py migrate --noinput",
+      "exit": 0,
+      "result": "Operations to perform:\n  Apply all migrations: contenttypes\nRunning migrations:\n  No migrations to apply."
+    },
+    {
+      "command": "docker compose exec -T web python manage.py migrate --check",
+      "exit": 0,
+      "result": ""
+    },
+    {
+      "command": "docker compose exec -T web python manage.py check",
+      "exit": 0,
+      "result": "System check identified no issues (0 silenced)."
+    },
+    {
+      "command": "docker compose exec -T web python manage.py test",
+      "exit": 0,
+      "result": "Found 4 test(s).\nSystem check identified no issues (0 silenced).\n....\n----------------------------------------------------------------------\nRan 4 tests in 1.135s\n\nOK"
+    },
+    {
+      "command": "docker compose exec -T web id -u",
+      "exit": 0,
+      "result": "10001"
+    },
+    {
+      "command": "docker compose exec -T web python --version",
+      "exit": 0,
+      "result": "Python 3.12.16"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py shell -c 'from django.db import connection; import django, psycopg; c=connection.cursor(); c.execute(\"SELECT current_user, current_database(), current_setting('\"'\"'server_version'\"'\"'), rolsuper, rolcreatedb, rolcreaterole FROM pg_roles WHERE rolname=current_user\"); print(django.get_version(), psycopg.__version__, c.fetchone())'",
+      "exit": 0,
+      "result": "1 object imported automatically (use -v 2 for details).\n\n5.2.19 3.3.9 ('studio_app', 'studio_db', '17.12 (Debian 17.12-1.pgdg12+1)', False, False, False)"
+    },
+    {
+      "command": "docker compose images --format json",
+      "exit": 0,
+      "result": "[{\"ID\":\"sha256:411ec1575f2da2c0eea11f6b5dc0183542d261f80ab0c5345afb286672c0a8ad\",\"ContainerName\":\"arch001-qa-2328decb7f-web-1\",\"Repository\":\"arch001-qa-2328decb7f-web\",\"Tag\":\"latest\",\"Platform\":\"linux/amd64\",\"Size\":58307313,\"Created\":\"2026-11-18T16:16:18.422124208+01:00\",\"LastTagTime\":\"2026-11-18T15:17:55.355581738Z\"},{\"ID\":\"sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536\",\"ContainerName\":\"arch001-qa-2328decb7f-db-1\",\"Repository\":\"postgres\",\"Tag\":\"\",\"Platform\":\"linux/amd64\",\"Size\":162531455,\"Created\":\"2026-11-12T20:55:35.340320335Z\",\"LastTagTime\":\"2026-11-18T15:14:32.239743263Z\"}]"
+    },
+    {
+      "command": "docker inspect --format '{{.Name}} {{.Image}} {{json .NetworkSettings.Ports}}' 9e8a1e29bf3ad40a8c5ecb2e7e88b1f6f95e03b8fc7a37847ab5f9d9ac2300ad 0a36d001273cc8539c39c08427d73d7571d194a2f1b2dbe08c865466ce4734d6",
+      "exit": 0,
+      "result": "/arch001-qa-2328decb7f-db-1 sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536 {\"5432/tcp\":null}\n/arch001-qa-2328decb7f-web-1 sha256:411ec1575f2da2c0eea11f6b5dc0183542d261f80ab0c5345afb286672c0a8ad {\"8000/tcp\":[{\"HostIp\":\"127.0.0.1\",\"HostPort\":\"41581\"}]}"
+    },
+    {
+      "command": "docker compose stop db",
+      "exit": 0,
+      "result": "Container arch001-qa-2328decb7f-db-1 Stopping \n Container arch001-qa-2328decb7f-db-1 Stopped"
+    },
+    {
+      "command": "GET http://127.0.0.1:41581/health/",
+      "status": 503,
+      "result": {
+        "status": "unavailable"
+      }
+    },
+    {
+      "command": "docker compose up -d --wait --wait-timeout 60",
+      "exit": 0,
+      "result": "Container arch001-qa-2328decb7f-web-1 Running \n Container arch001-qa-2328decb7f-db-1 Starting \n Container arch001-qa-2328decb7f-db-1 Started \n Container arch001-qa-2328decb7f-db-1 Waiting \n Container arch001-qa-2328decb7f-db-1 Healthy \n Container arch001-qa-2328decb7f-db-1 Waiting \n Container arch001-qa-2328decb7f-web-1 Waiting \n Container arch001-qa-2328decb7f-web-1 Healthy \n Container arch001-qa-2328decb7f-db-1 Healthy"
+    },
+    {
+      "command": "GET http://127.0.0.1:41581/health/",
+      "status": 200,
+      "result": {
+        "status": "ok"
+      }
+    },
+    {
+      "command": "docker compose down",
+      "exit": 0,
+      "result": "Container arch001-qa-2328decb7f-web-1 Stopping \n Container arch001-qa-2328decb7f-web-1 Stopped \n Container arch001-qa-2328decb7f-web-1 Removing \n Container arch001-qa-2328decb7f-web-1 Removed \n Container arch001-qa-2328decb7f-db-1 Stopping \n Container arch001-qa-2328decb7f-db-1 Stopped \n Container arch001-qa-2328decb7f-db-1 Removing \n Container arch001-qa-2328decb7f-db-1 Removed \n Network arch001-qa-2328decb7f_default Removing \n Network arch001-qa-2328decb7f_default Removed"
+    },
+    {
+      "command": "docker compose up -d --wait --wait-timeout 60",
+      "exit": 0,
+      "result": "Network arch001-qa-2328decb7f_default Creating \n Network arch001-qa-2328decb7f_default Created \n Container arch001-qa-2328decb7f-db-1 Creating \n Container arch001-qa-2328decb7f-db-1 Created \n Container arch001-qa-2328decb7f-web-1 Creating \n Container arch001-qa-2328decb7f-web-1 Created \n Container arch001-qa-2328decb7f-db-1 Starting \n Container arch001-qa-2328decb7f-db-1 Started \n Container arch001-qa-2328decb7f-db-1 Waiting \n Container arch001-qa-2328decb7f-db-1 Healthy \n Container arch001-qa-2328decb7f-web-1 Starting \n Container arch001-qa-2328decb7f-web-1 Started \n Container arch001-qa-2328decb7f-web-1 Waiting \n Container arch001-qa-2328decb7f-db-1 Waiting \n Container arch001-qa-2328decb7f-db-1 Healthy \n Container arch001-qa-2328decb7f-web-1 Healthy"
+    },
+    {
+      "command": "GET http://127.0.0.1:41581/health/",
+      "status": 200,
+      "result": {
+        "status": "ok"
+      }
+    },
+    {
+      "command": "docker compose logs --no-color web",
+      "exit": 0,
+      "result": "web-1  |   Apply all migrations: contenttypes\nweb-1  | Running migrations:\nweb-1  |   No migrations to apply."
+    },
+    {
+      "command": "docker compose down --volumes --rmi local",
+      "exit": 0,
+      "result": "Nettoyage du seul projet temporaire arch001-qa-2328decb7f"
+    }
+  ]
+}

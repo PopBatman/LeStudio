@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-18T15:18:30.356860+00:00",
+  "commands": [
+    "python3 scripts/init_env.py",
+    "docker compose up -d --build --wait --wait-timeout 100",
+    "docker compose ps",
+    "GET http://127.0.0.1:8000/health/",
+    "Vérification du mode de .env par stat et du contenu de /app depuis web"
+  ],
+  "exit": 0,
+  "ps": "db Up 48 seconds (healthy) 5432/tcp\nweb Up 45 seconds (healthy) 127.0.0.1:8000->8000/tcp",
+  "http": {
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "container": "10001 ['central', 'manage.py', 'requirements.txt', 'tests']",
+  "env_mode": "0600"
+}

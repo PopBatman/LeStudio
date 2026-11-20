@@ -1,0 +1,11 @@
+{
+  "name": "lestudio-ui",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i gallery.css -o ../static/ui/gallery.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "tailwindcss": "4.3.5"
+  }
+}

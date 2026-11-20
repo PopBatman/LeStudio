@@ -1,0 +1,18 @@
+[
+  {
+    "essai": "V3 grille et adaptations indépendantes",
+    "accepte": true
+  },
+  {
+    "essai": "V3 avec placement libre",
+    "accepte": false,
+    "code": "invalid_document",
+    "message": "Valeur de composition invalide : pages[0].sections[0].blocks[0]."
+  },
+  {
+    "essai": "Même exemple annoncé V4",
+    "accepte": false,
+    "code": "incompatible_schema",
+    "message": "Version du schéma de composition incompatible."
+  }
+]

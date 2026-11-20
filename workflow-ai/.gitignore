@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.workspace/
+.venv/
+notion-export*.json
+# Les documents, tâches, décisions et preuves utiles restent versionnables.

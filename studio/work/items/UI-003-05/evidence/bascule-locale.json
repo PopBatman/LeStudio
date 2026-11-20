@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-20T16:21:08.784282+01:00",
+  "accord": "Oui, basculer Studio local vers la V2",
+  "cible": "Studio local, y compris Tennis AI",
+  "mode": "builder",
+  "image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+  "avant": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "après": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "accès": {
+    "bouton_principal": "Reprendre le brouillon",
+    "destination": "/sites/59177d82-095d-4e5b-b095-7b73c220de4b/atelier/visuel/",
+    "HTTP_authentifié": {
+      "fiche": 200,
+      "V2": 200,
+      "V1_structure": 200,
+      "V1_canvas": 200
+    }
+  },
+  "santé": "ok",
+  "conteneur_moteur_identique": true,
+  "observation": "Jusqu’au bilan de la première séance d’édition de l’opérateur."
+}

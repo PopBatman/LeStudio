@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-20T08:54:00.143407+00:00",
+  "site": "Tennis AI",
+  "capacité": "preview.v1",
+  "image": "sha256:2db6b1f778c4340dbb2f1b4c70a10542eaa4761531e43fb1e6c66ae4fb995d60",
+  "versions_wagtail_avant": {
+    "pages": 3,
+    "revisions": 1,
+    "empreinte_live": "d9245105e0d92710f927fc376d9539215e59b432d569b923a0dcb8b3c1f4f965",
+    "sites": 2
+  },
+  "versions_wagtail_apres": {
+    "pages": 3,
+    "revisions": 1,
+    "empreinte_live": "d9245105e0d92710f927fc376d9539215e59b432d569b923a0dcb8b3c1f4f965",
+    "sites": 2
+  },
+  "http": {
+    "public": {
+      "status": 200,
+      "sha256": "5402d2c222b8f151a61a80ee237a78e7a952bfc20fc355f2baebd9157f4124f4"
+    },
+    "connexion": 200
+  },
+  "rendus": [
+    {
+      "revision": 16,
+      "page": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+      "nombre_blocs": 2,
+      "instance": "7fd32577-277d-4aa4-8bab-b345bb0a17eb",
+      "html_sha256": "2a6c1237f0d13eb190057557911d931bef4f5723153bfd7d62a38120731254af"
+    },
+    {
+      "revision": 16,
+      "page": "145b6d32-3a68-456a-a76b-db47fd1bf07b",
+      "nombre_blocs": 0,
+      "instance": "7fd32577-277d-4aa4-8bab-b345bb0a17eb",
+      "html_sha256": "5940ca8acfb96cb7df9d3edb6e97faa861b1be5d14308977fd72db5c70041937"
+    }
+  ]
+}

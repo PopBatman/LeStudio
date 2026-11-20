@@ -1,0 +1,25 @@
+studio-test:
+  stage: test
+  image: python:3.12.16-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+  services:
+    - name: postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536
+      alias: db
+  variables:
+    POSTGRES_DB: studio_db
+    # Variable masquée configurée dans GitLab pour le service PostgreSQL du job.
+    POSTGRES_PASSWORD: "$STUDIO_CI_POSTGRES_PASSWORD"
+  script:
+    - test -n "$STUDIO_CI_POSTGRES_PASSWORD"
+    - apt-get update -qq && apt-get install -y -qq --no-install-recommends postgresql-client
+    - 'python -m pip install --only-binary=:all: --require-hashes -r requirements.txt'
+    - export DJANGO_SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(48))')"
+    - export STUDIO_DB_PASSWORD="$(python -c 'import secrets; print(secrets.token_urlsafe(48))')"
+    - PGPASSWORD="$POSTGRES_PASSWORD" psql -X -v ON_ERROR_STOP=1 -h db -U postgres -d studio_db -f infra/init-db.sql
+    - PGPASSWORD="$POSTGRES_PASSWORD" createdb -h db -U postgres --owner=studio_app test_studio_db
+    - unset POSTGRES_PASSWORD STUDIO_CI_POSTGRES_PASSWORD
+    - python manage.py check
+    - python manage.py migrate --noinput
+    - python manage.py migrate --check
+    - python manage.py migrate --noinput
+    - python manage.py test --keepdb --settings=central.settings
+    - python manage.py shell -c "from django.test import Client; r = Client().get('/health/', HTTP_HOST='localhost'); assert r.status_code == 200 and r.json() == {'status':'ok'}"

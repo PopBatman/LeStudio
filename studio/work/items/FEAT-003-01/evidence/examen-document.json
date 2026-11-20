@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-11-19T11:37:15.455136+00:00",
+  "fixture_sha256": "0d3ad7ec852fe67675123235cb6f62f1485475da0e12cbb41f6296b09ecbf8f3",
+  "pages": 2,
+  "sections": 1,
+  "blocs": 2,
+  "uuid_distincts": 5,
+  "octets_compacts": 843,
+  "observations": [
+    "Racine unique et parenté locale",
+    "Blocs texte et titre globaux en version 1",
+    "Disposition de base et surcharge mobile",
+    "Thème et taille dans les bornes de la proposition V1"
+  ],
+  "portee": "Contrôle du document fictif de cadrage"
+}

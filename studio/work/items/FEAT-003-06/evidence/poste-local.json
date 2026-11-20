@@ -1,0 +1,25 @@
+{
+  "avant": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte_revisions": "457f1e213b38ac3eaa565e13496d41597819ce1597f713594f7f05b706aa072a",
+    "raccordements": 1
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte_revisions": "457f1e213b38ac3eaa565e13496d41597819ce1597f713594f7f05b706aa072a",
+    "raccordements": 1
+  },
+  "meme_demarrage_moteur": true,
+  "health": {
+    "status": "ok"
+  },
+  "consultation": {
+    "fiche": 200,
+    "pages_ouvertes_canvas": 2,
+    "revision": 16
+  },
+  "capacites_editoriales_confirmees": [],
+  "reperes_articles_site_reel": 0
+}

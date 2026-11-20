@@ -1,0 +1,18 @@
+{
+  "site": "A fictif",
+  "origine": "Modèle, page longue de 17 occurrences, sous-arbre conteneur/image ; deux frères de même texte",
+  "revision_avant": 4,
+  "revision_apres": 5,
+  "gestes": [
+    "block_add",
+    "block_edit",
+    "block_edit",
+    "block_edit",
+    "block_edit",
+    "block_duplicate"
+  ],
+  "comparaison": "Aucun changement avant Enregistrer ; une seule révision après perte de réponse et rejeu du même lot ; réouverture et rendu Wagtail vérifiés ; B inchangé.",
+  "entrees": "drag HTML5 au pointeur depuis la bibliothèque, choix par calques, modification en contexte titre/texte/image/bouton, duplication profonde, annulation et rétablissement",
+  "erreurs_js": [],
+  "hotes_externes": []
+}

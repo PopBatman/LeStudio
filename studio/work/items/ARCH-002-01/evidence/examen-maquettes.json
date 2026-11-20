@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-19T10:12:15.393Z",
+  "support": "Maquette HTML avec données fictives",
+  "navigateur": "Chromium 156.0.8078.4",
+  "tailles": [
+    {
+      "largeur": 1440,
+      "hauteur": 960,
+      "scenarios": 10,
+      "mandats": 3,
+      "debordement_horizontal": false,
+      "erreurs_navigateur": [],
+      "clavier": "Lien de saut, focus visible et détails par Entrée / Espace"
+    },
+    {
+      "largeur": 390,
+      "hauteur": 844,
+      "scenarios": 10,
+      "mandats": 3,
+      "debordement_horizontal": false,
+      "erreurs_navigateur": [],
+      "clavier": "Lien de saut, focus visible et détails par Entrée / Espace"
+    },
+    {
+      "largeur": 320,
+      "hauteur": 720,
+      "scenarios": 10,
+      "mandats": 3,
+      "debordement_horizontal": false,
+      "erreurs_navigateur": [],
+      "clavier": "Lien de saut, focus visible et détails par Entrée / Espace"
+    }
+  ],
+  "captures": [
+    {
+      "fichier": "bureau-confirme.png",
+      "scenario": "confirmed",
+      "role": "manage",
+      "largeur_fenetre": 1440,
+      "zone": "contenu de la fiche"
+    },
+    {
+      "fichier": "bureau-vide.png",
+      "scenario": "empty",
+      "role": "read",
+      "largeur_fenetre": 1440,
+      "zone": "contenu de la fiche"
+    },
+    {
+      "fichier": "mobile-echec.png",
+      "scenario": "failure",
+      "role": "manage",
+      "largeur_fenetre": 390,
+      "zone": "contenu de la fiche"
+    },
+    {
+      "fichier": "mobile-lecture.png",
+      "scenario": "confirmed",
+      "role": "read",
+      "largeur_fenetre": 390,
+      "zone": "contenu de la fiche"
+    }
+  ]
+}

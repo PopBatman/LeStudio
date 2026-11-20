@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-11-20T17:23:55.944256+00:00",
+  "command": "python3 studio/work/items/UI-004-01/evidence/validate-audit.py",
+  "cwd": "/home/admincsd/Documents/LeStudio",
+  "result": "passed",
+  "exit_code": 0,
+  "checks": [
+    "révision/empreinte du site inchangées",
+    "largeurs réellement mesurées",
+    "16 tests réussis + 1 ignoré, sans faux total",
+    "référence sans réseau ni erreur",
+    "213 sources locales/image courantes",
+    "documents/consommateurs V1 et liens présents",
+    "rapport HTML attachable"
+  ],
+  "scope": "Contrôle de sincérité/cohérence des résultats de l’audit ; pas un test de nouveaux gestes produit."
+}

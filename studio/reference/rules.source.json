@@ -1,0 +1,1162 @@
+{
+  "schema_version": 1,
+  "titre": "Studio — registre documentaire des règles sources",
+  "date": "2026-11-18",
+  "nature": "registre documentaire ; ne constitue pas un moteur de contrôle",
+  "source": {
+    "fichier": "Texte collé(8).txt",
+    "sha256": "3ebb5f058ba72b1bf1fa17bafce63b3e93d8cfe291a64134951473e631bfb956",
+    "numerotation_lignes": "Lignes physiques du fichier UTF-8 fourni, base 1, lignes vides incluses"
+  },
+  "legende": {
+    "decision": {
+      "exigence exprimée": "Formulation affirmative ou interdiction présente dans la source. Ce statut rapporte l’expression utilisateur et ne certifie ni la réalisation ni la qualification.",
+      "choix conditionnel": "Adoption soumise à une option, une évaluation ou un besoin explicitement mentionné dans la source.",
+      "portée à clarifier": "Une orientation est exprimée, mais son périmètre ou sa relation à une autre formulation demande un arbitrage.",
+      "proposition source": "Formulation conservée au conditionnel dans le document utilisateur, sans promotion en décision validée."
+    },
+    "portee": {
+      "explicite dans la source": "Portée directement formulée dans la ligne ou dans un tableau associé du document.",
+      "explicite par la rubrique de la source": "Attribution déduite du titre explicite « Règles Django » ou « Règles Wagtail », sans ajout de règle métier.",
+      "déduite — proposition à discuter": "Portée proposée lors du classement ; elle ne modifie pas la formulation source."
+    },
+    "mise_en_oeuvre": "Toutes les entrées portent « non audité dans ce dossier ». Cela ne signifie ni « non implémenté » ni « implémenté ».",
+    "preuve_verification": "Toutes les entrées portent « non établie ». Aucune revue de code, commande de test ou qualification distante n’a été exécutée pour ce registre.",
+    "moyens_controle": "Tous les moyens de contrôle sont PROPOSÉS. Ils doivent être examinés et adaptés avant de devenir des critères d’acceptation ou des contrôles exécutés.",
+    "approbation": "Aucun statut VALIDATED, aucune signature ni autorisation de développement ne sont créés par ce registre."
+  },
+  "regles": [
+    {
+      "id": "LT001",
+      "formulation_source": "Python : Langage principal",
+      "ligne_source": 8,
+      "ligne_source_complete": "-> LT001 = Python : Langage principal",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "Langage principal du code applicatif de Studio et du moteur client ; le mot principal ne rend pas les autres langages interdits.",
+        "origine": "déduite — proposition à discuter"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Revue des composants applicatifs et de leurs langages, en documentant les usages de JavaScript et des outils de build sans les assimiler à un changement de langage principal.",
+      "questions": [
+        "Quels composants doivent obligatoirement être écrits en Python ?"
+      ],
+      "references_liees": [
+        "LT002",
+        "LT009",
+        "LT014"
+      ]
+    },
+    {
+      "id": "LT002",
+      "formulation_source": "Django : Backend du Studio et des sites",
+      "ligne_source": 9,
+      "ligne_source_complete": "-> LT002 = Django : Backend du Studio et des sites",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "Backend du Studio central et des sites clients.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Vérifier dans les décisions et les dépendances que ces deux backends reposent sur Django ; contrôler leurs responsabilités respectives.",
+      "questions": [
+        "Quelle frontière entre code commun du moteur et code propre au Studio central ?"
+      ],
+      "references_liees": [
+        "A002",
+        "C000",
+        "D001",
+        "D008"
+      ]
+    },
+    {
+      "id": "LT003",
+      "formulation_source": "Wagtail : CMS et constructeur de pages",
+      "ligne_source": 10,
+      "ligne_source_complete": "-> LT003 = Wagtail : CMS et constructeur de pages",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "CMS et composition de pages ; périmètre principal des instances clientes décrit par C001.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner les modèles de pages, blocs et permissions éditoriales ; vérifier que les fonctions d’infrastructure restent hors du rôle Wagtail.",
+      "questions": [
+        "Le Studio central utilisera-t-il Wagtail pour un besoin éditorial précis, ou aucunement ?"
+      ],
+      "references_liees": [
+        "A003",
+        "W000",
+        "W008",
+        "C001"
+      ]
+    },
+    {
+      "id": "LT004",
+      "formulation_source": "PostgreSQL : Stockages des données",
+      "ligne_source": 11,
+      "ligne_source_complete": "-> LT004 = PostgreSQL : Stockages des données",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "Stockage applicatif en PostgreSQL. La source ne mentionne pas d’exception locale ou de test et distingue par ailleurs le stockage de fichiers.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Comparer les configurations des environnements au choix PostgreSQL ; prévoir des tests exécutés sur cette base avant d’établir une preuve de conformité.",
+      "questions": [
+        "Quels environnements sont concernés ? Toute exception de développement doit-elle être interdite ou explicitement autorisée ?",
+        "Quelle frontière entre données applicatives et fichiers placés dans un stockage compatible S3 ?"
+      ],
+      "references_liees": [
+        "A006"
+      ]
+    },
+    {
+      "id": "LT005",
+      "formulation_source": "Tailwind CSS : Design system",
+      "ligne_source": 12,
+      "ligne_source_complete": "-> LT005 = Tailwind CSS : Design system",
+      "categorie": "Choix technologique UI",
+      "portee": {
+        "description": "Styles et système de conception des interfaces ; application au Studio et au moteur proposée à partir des deux tableaux de stack.",
+        "origine": "déduite — proposition à discuter"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner le build CSS et les règles de tokens, variantes et composants ; vérifier que les interfaces utilisent les conventions définies.",
+      "questions": [
+        "Quels tokens, variantes, états et critères d’accessibilité constituent le design system ?"
+      ],
+      "references_liees": [
+        "A004",
+        "LT006",
+        "LT007"
+      ]
+    },
+    {
+      "id": "LT006",
+      "formulation_source": "Shacdn-django : Composants UI",
+      "ligne_source": 13,
+      "ligne_source_complete": "-> LT006 = Shacdn-django : Composants UI",
+      "categorie": "Bibliothèque UI candidate",
+      "portee": {
+        "description": "Composants UI sélectionnés ; niveau d’obligation à rapprocher de A005, qui prévoit une évaluation.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "choix conditionnel",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner les composants shadcn-django envisagés, leur code copié utilisant Django Cotton et leur articulation avec la bibliothèque maison ; consigner les composants retenus, adaptés et exclus avant intégration.",
+      "questions": [
+        "Quels composants shadcn-django souhaitons-nous évaluer avant une éventuelle intégration ?",
+        "Comment les composants copiés utilisant Cotton s’articuleraient-ils avec la bibliothèque maison et quelles fonctionnalités recouvriraient-ils ?"
+      ],
+      "references_liees": [
+        "A005",
+        "LT007"
+      ]
+    },
+    {
+      "id": "LT007",
+      "formulation_source": "Django Cotton : Composants UI",
+      "ligne_source": 14,
+      "ligne_source_complete": "-> LT007 = Django Cotton : Composants UI",
+      "categorie": "Choix technologique UI",
+      "portee": {
+        "description": "Composants de templates du Studio et du moteur ; le rattachement de « à évaluer » dans A005 doit être clarifié.",
+        "origine": "déduite — proposition à discuter"
+      },
+      "statut_decision": "portée à clarifier",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Cartographier les composants réutilisables et leur responsable ; vérifier leur composition et leurs interfaces sur un exemple approuvé.",
+      "questions": [
+        "A005 impose-t-il une évaluation de Cotton aussi, ou uniquement de shadcn-django ?",
+        "Quelles responsabilités sont attribuées à Cotton et aux composants sélectionnés ?"
+      ],
+      "references_liees": [
+        "A005",
+        "LT006"
+      ]
+    },
+    {
+      "id": "LT008",
+      "formulation_source": "HTMX : Interactions serveurs",
+      "ligne_source": 15,
+      "ligne_source_complete": "-> LT008 = HTMX : Interactions serveurs",
+      "categorie": "Choix d’interaction UI",
+      "portee": {
+        "description": "Interactions avec le serveur ; le tableau du Studio retient HTMX et celui du Site Engine dit « si nécessaire ».",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "portée à clarifier",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les parcours qui nécessitent HTMX et contrôler la validation et les permissions côté serveur pour chacun.",
+      "questions": [
+        "HTMX est-il une convention obligatoire dans le Studio et une option par fonctionnalité côté site ?",
+        "Quels parcours doivent également fonctionner sans interaction HTMX ?"
+      ],
+      "references_liees": [
+        "LT002",
+        "LT009",
+        "D002"
+      ]
+    },
+    {
+      "id": "LT009",
+      "formulation_source": "Alpine.js : Interactions locales",
+      "ligne_source": 16,
+      "ligne_source_complete": "-> LT009 = Alpine.js : Interactions locales",
+      "categorie": "Choix d’interaction UI",
+      "portee": {
+        "description": "Interactions locales ; Alpine est présent dans le tableau du Studio et conditionnel dans celui du Site Engine.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "portée à clarifier",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Recenser les comportements locaux et vérifier qu’ils ne portent pas seuls une validation métier ou une autorisation.",
+      "questions": [
+        "Quelles interactions locales nécessitent Alpine ?",
+        "Quel socle JavaScript est commun et quelles dépendances sont activées selon le site ?"
+      ],
+      "references_liees": [
+        "LT008",
+        "D005",
+        "D006"
+      ]
+    },
+    {
+      "id": "LT010",
+      "formulation_source": "n8n : Automatisation et intégration",
+      "ligne_source": 17,
+      "ligne_source_complete": "-> LT010 = n8n : Automatisation et intégration",
+      "categorie": "Automatisation optionnelle",
+      "portee": {
+        "description": "Automatisation et intégration, avec caractère optionnel explicite dans A013.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "choix conditionnel",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Pour chaque besoin, documenter si n8n est utilisé, les données reçues, les droits, la reprise après erreur et la responsabilité des règles métier.",
+      "questions": [
+        "n8n sera-t-il partagé, isolé par client ou absent par défaut ?",
+        "Quels traitements restent impérativement dans le backend ?"
+      ],
+      "references_liees": [
+        "A013",
+        "D005",
+        "D008"
+      ]
+    },
+    {
+      "id": "LT011",
+      "formulation_source": "Gitlab CI/CD : Tests et déploiements",
+      "ligne_source": 18,
+      "ligne_source_complete": "-> LT011 = Gitlab CI/CD : Tests et déploiements",
+      "categorie": "Outil de livraison",
+      "portee": {
+        "description": "Tests et déploiements par GitLab CI/CD.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Vérifier le graphe des jobs, les critères de blocage, les identités et les protections du dépôt avec une pipeline d’essai.",
+      "questions": [
+        "Quels contrôles sont bloquants ?",
+        "Quels environnements et quelles actions exigent une validation humaine ?",
+        "Le tableau d’outils envisagés doit-il retenir mypy ou Pyright ?"
+      ],
+      "references_liees": [
+        "A010",
+        "A011",
+        "A012",
+        "C002"
+      ]
+    },
+    {
+      "id": "LT012",
+      "formulation_source": "Docker : Packaging et déploiement",
+      "ligne_source": 19,
+      "ligne_source_complete": "-> LT012 = Docker : Packaging et déploiement",
+      "categorie": "Packaging et exécution",
+      "portee": {
+        "description": "Packaging et déploiement des applications dans Docker.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner les fichiers de construction, l’identité de l’image livrée et les paramètres d’exécution ; qualifier l’image sur l’environnement prévu.",
+      "questions": [
+        "Quelles images, quels processus et quels volumes composent une instance ?"
+      ],
+      "references_liees": [
+        "A011",
+        "LT011"
+      ]
+    },
+    {
+      "id": "LT013",
+      "formulation_source": "Scaleway : Infrastructure cloud ",
+      "ligne_source": 20,
+      "ligne_source_complete": "-> LT013 = Scaleway : Infrastructure cloud ",
+      "categorie": "Fournisseur d’infrastructure",
+      "portee": {
+        "description": "Infrastructure cloud Scaleway ; services précis à choisir.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Faire correspondre l’inventaire d’infrastructure à la cible documentée ; qualifier accès, réseau, sauvegardes et exploitation sur les services retenus.",
+      "questions": [
+        "Quels services Scaleway, quelles régions et quelles tailles correspondent à la V1 ?",
+        "Quelles dépendances peuvent rester chez d’autres fournisseurs spécialisés ?"
+      ],
+      "references_liees": [
+        "A007",
+        "A008"
+      ]
+    },
+    {
+      "id": "LT014",
+      "formulation_source": "GSAP : Animations premium",
+      "ligne_source": 21,
+      "ligne_source_complete": "-> LT014 = GSAP : Animations premium",
+      "categorie": "Animation optionnelle",
+      "portee": {
+        "description": "Animations premium ; le tableau Site Engine prévoit CSS ou GSAP selon le projet.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "choix conditionnel",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Justifier l’usage de GSAP pour les animations retenues ; prévoir des critères de performance, de lisibilité et de réduction des animations.",
+      "questions": [
+        "Dans quels cas GSAP apporte-t-il une capacité nécessaire ?",
+        "Quels budgets d’animation et de performance seront retenus ?"
+      ],
+      "references_liees": [
+        "LT009",
+        "A004"
+      ]
+    },
+    {
+      "id": "A001",
+      "formulation_source": "Architecture : Single Codebase, Multi-Instance",
+      "ligne_source": 27,
+      "ligne_source_complete": "-> A001 = Architecture : Single Codebase, Multi-Instance",
+      "categorie": "Principe d’architecture",
+      "portee": {
+        "description": "Code commun et instances multiples. La définition de la codebase, de l’instance et des variantes est encore à préciser.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Comparer les instances à un moteur versionné commun ; examiner la stratégie d’extensions et rechercher les divergences de code propres à un client.",
+      "questions": [
+        "Single Codebase vise-t-il uniquement le moteur client ?",
+        "Les modules sont-ils inclus dans une image commune ou dans des variantes gouvernées ?",
+        "Comment le Studio central et le moteur sont-ils versionnés et répartis dans les dépôts ?"
+      ],
+      "references_liees": [
+        "A008",
+        "A009",
+        "A011",
+        "C000"
+      ]
+    },
+    {
+      "id": "A002",
+      "formulation_source": "Backend : Django",
+      "ligne_source": 28,
+      "ligne_source_complete": "-> A002 = Backend : Django",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "Backend en Django ; LT002 précise Studio et sites.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Contrôler la cohérence des composants backend et de leurs dépendances avec LT002, sans dupliquer une décision divergente.",
+      "questions": [
+        "Quelles responsabilités Django sont communes au moteur et lesquelles appartiennent seulement au Studio ?"
+      ],
+      "references_liees": [
+        "LT002",
+        "D001",
+        "D008"
+      ]
+    },
+    {
+      "id": "A003",
+      "formulation_source": "CMS : Wagtail",
+      "ligne_source": 29,
+      "ligne_source_complete": "-> A003 = CMS : Wagtail",
+      "categorie": "Choix technologique",
+      "portee": {
+        "description": "CMS Wagtail ; la localisation principalement distante reste une proposition de cadrage C001.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Vérifier les responsabilités CMS et leur affectation aux applications ; contrôler la séparation imposée par W000.",
+      "questions": [
+        "Quelle place précise pour Wagtail dans la topologie retenue ?"
+      ],
+      "references_liees": [
+        "LT003",
+        "W000",
+        "C001"
+      ]
+    },
+    {
+      "id": "A004",
+      "formulation_source": "Design : Tailwind + composants réutilisables",
+      "ligne_source": 30,
+      "ligne_source_complete": "-> A004 = Design : Tailwind + composants réutilisables",
+      "categorie": "Principe UI",
+      "portee": {
+        "description": "Tailwind et composants réutilisables pour les interfaces ; conventions communes proposées aux deux applications.",
+        "origine": "déduite — proposition à discuter"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Recenser les composants partagés, leurs variantes, leurs états et leurs usages ; vérifier leur conformité aux conventions UI définies.",
+      "questions": [
+        "Quels éléments doivent rester identiques entre Studio et thèmes clients ?",
+        "Comment un thème client peut-il varier sans modifier le moteur commun ?"
+      ],
+      "references_liees": [
+        "LT005",
+        "LT006",
+        "LT007",
+        "A005"
+      ]
+    },
+    {
+      "id": "A005",
+      "formulation_source": "Composants UI : Django Cotton, shacdn-django à évaluer",
+      "ligne_source": 31,
+      "ligne_source_complete": "-> A005 = Composants UI : Django Cotton, shacdn-django à évaluer",
+      "categorie": "Sélection de composants UI",
+      "portee": {
+        "description": "Django Cotton et shacdn-django ; l’expression « à évaluer » maintient une sélection ouverte.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "choix conditionnel",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Comparer les composants et les approches de composition envisagés ; examiner l’usage de Cotton par les composants shadcn-django candidats et documenter la sélection sans déduire leur adoption de leur présence au catalogue.",
+      "questions": [
+        "L’évaluation porte-t-elle sur le socle Cotton, sur les composants shadcn-django copiés qui l’utilisent, ou sur l’ensemble de cette approche ?",
+        "Quels composants sont adoptés, adaptés, développés en interne ou exclus ?"
+      ],
+      "references_liees": [
+        "LT006",
+        "LT007",
+        "A004"
+      ]
+    },
+    {
+      "id": "A006",
+      "formulation_source": "Base de données : PostgreSQL",
+      "ligne_source": 32,
+      "ligne_source_complete": "-> A006 = Base de données : PostgreSQL",
+      "categorie": "Choix de base de données",
+      "portee": {
+        "description": "PostgreSQL pour les bases ; aucune exception d’environnement n’est formulée.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Contrôler les configurations et exécuter les vérifications pertinentes sur PostgreSQL ; documenter les éventuels écarts sans les considérer autorisés.",
+      "questions": [
+        "Le choix s’applique-t-il également au développement et aux tests ?",
+        "Comment sont isolés bases, rôles et sauvegardes par instance ?"
+      ],
+      "references_liees": [
+        "LT004",
+        "A008"
+      ]
+    },
+    {
+      "id": "A007",
+      "formulation_source": "Infrastructure : Scaleway",
+      "ligne_source": 33,
+      "ligne_source_complete": "-> A007 = Infrastructure : Scaleway",
+      "categorie": "Fournisseur d’infrastructure",
+      "portee": {
+        "description": "Infrastructure Scaleway, en cohérence avec LT013 et les tableaux des deux applications.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Comparer l’architecture déployable et l’inventaire d’exploitation à la décision d’hébergement, puis qualifier les services sélectionnés.",
+      "questions": [
+        "Quelles fonctions sont hébergées chez Scaleway et lesquelles utilisent un prestataire externe ?"
+      ],
+      "references_liees": [
+        "LT013",
+        "A008"
+      ]
+    },
+    {
+      "id": "A008",
+      "formulation_source": "Isolation : Un serveur par client",
+      "ligne_source": 34,
+      "ligne_source_complete": "-> A008 = Isolation : Un serveur par client",
+      "categorie": "Contrainte d’isolation",
+      "portee": {
+        "description": "La source dit un serveur par client ; la conversation antérieure disait un serveur distinct par site. L’unité d’isolation doit être fixée.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "portée à clarifier",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Après arbitrage, contrôler la correspondance Client/Site/Instance/Serveur et tester les frontières d’accès aux données, secrets et opérations.",
+      "questions": [
+        "Un client peut-il avoir plusieurs sites ?",
+        "Ces sites partagent-ils un serveur ou chacun possède-t-il son serveur ?",
+        "Qu’appelle-t-on serveur dans l’offre cible : instance virtuelle, machine dédiée ou autre unité explicitement choisie ?"
+      ],
+      "references_liees": [
+        "A001",
+        "A006",
+        "A007",
+        "D007"
+      ]
+    },
+    {
+      "id": "A009",
+      "formulation_source": "Versionning : GitLab",
+      "ligne_source": 35,
+      "ligne_source_complete": "-> A009 = Versionning : GitLab",
+      "categorie": "Gestion des versions",
+      "portee": {
+        "description": "Versionnement via GitLab ; objets versionnés et organisation des dépôts à préciser.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner les dépôts, références de versions et protections ; vérifier la traçabilité entre sources, artefacts et instances.",
+      "questions": [
+        "Quels dépôts hébergent Workspace, Studio, moteur et modules ?",
+        "Comment versionner configurations, schémas et compatibilités ?"
+      ],
+      "references_liees": [
+        "A001",
+        "LT011",
+        "A010",
+        "A011"
+      ]
+    },
+    {
+      "id": "A010",
+      "formulation_source": "CI/CD : Gitlab CI/CD",
+      "ligne_source": 36,
+      "ligne_source_complete": "-> A010 = CI/CD : Gitlab CI/CD",
+      "categorie": "Chaîne de livraison",
+      "portee": {
+        "description": "CI/CD GitLab, en cohérence avec LT011.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Qualifier le graphe des jobs, les droits des runners et les conditions de promotion ; faire échouer un contrôle attendu pour vérifier son effet bloquant.",
+      "questions": [
+        "Quelles règles de branche, de validation et de cible sont applicables à la V1 ?"
+      ],
+      "references_liees": [
+        "LT011",
+        "A009",
+        "A011",
+        "A012"
+      ]
+    },
+    {
+      "id": "A011",
+      "formulation_source": "Déploiement : Images Docker versionnées",
+      "ligne_source": 37,
+      "ligne_source_complete": "-> A011 = Déploiement : Images Docker versionnées",
+      "categorie": "Artefact de déploiement",
+      "portee": {
+        "description": "Déploiements par images Docker versionnées.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Relier chaque déploiement à l’image construite et contrôlée ; proposer une identité immuable de l’artefact et vérifier qu’elle reste la même pendant sa promotion.",
+      "questions": [
+        "Comment désigner une version : tag, digest, manifeste de release ?",
+        "Quand une demande de module nécessite-t-elle une nouvelle image ?"
+      ],
+      "references_liees": [
+        "LT012",
+        "A001",
+        "A010",
+        "C002"
+      ]
+    },
+    {
+      "id": "A012",
+      "formulation_source": "Mises à jour : Progressives et controlées",
+      "ligne_source": 38,
+      "ligne_source_complete": "-> A012 = Mises à jour : Progressives et controlées",
+      "categorie": "Politique de mise à jour",
+      "portee": {
+        "description": "Mises à jour progressives et contrôlées ; population pilote, rythme et critères non définis.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "portée à clarifier",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les étapes de promotion, les critères de santé et métier, les conditions d’arrêt et de reprise ; qualifier ce parcours sur une instance de test.",
+      "questions": [
+        "Quelle instance est pilote et qui autorise la suite ?",
+        "Que faire après un échec de migration ou une vérification de santé défaillante ?",
+        "Quels changements permettent un retour arrière et lesquels demandent une procédure spécifique ?"
+      ],
+      "references_liees": [
+        "A010",
+        "A011",
+        "D007"
+      ]
+    },
+    {
+      "id": "A013",
+      "formulation_source": "Automatisation métier : n8n en option ",
+      "ligne_source": 39,
+      "ligne_source_complete": "-> A013 = Automatisation métier : n8n en option ",
+      "categorie": "Automatisation optionnelle",
+      "portee": {
+        "description": "n8n en option pour l’automatisation métier.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "choix conditionnel",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Documenter le besoin et le contrat de chaque workflow n8n retenu ; vérifier ses droits, ses erreurs et sa coexistence avec les règles backend.",
+      "questions": [
+        "Quel critère déclenche l’adoption de n8n ?",
+        "Comment gérer versions, accès et isolation des workflows ?"
+      ],
+      "references_liees": [
+        "LT010",
+        "D005",
+        "D008"
+      ]
+    },
+    {
+      "id": "D001",
+      "formulation_source": "Authentification",
+      "ligne_source": 96,
+      "ligne_source_complete": "-> D001 = Authentification",
+      "categorie": "Responsabilité applicative",
+      "portee": {
+        "description": "Authentification attribuée à Django par la rubrique « Règles Django ».",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir acteurs et parcours d’authentification, puis prévoir tests de connexion, session, récupération et accès refusé adaptés aux besoins.",
+      "questions": [
+        "Quels comptes existent dans le Studio, dans le CMS et sur les sites ?",
+        "Quelles identités sont distinctes ou fédérées ?"
+      ],
+      "references_liees": [
+        "D006",
+        "W007"
+      ]
+    },
+    {
+      "id": "D002",
+      "formulation_source": "Formulaires métier",
+      "ligne_source": 97,
+      "ligne_source_complete": "-> D002 = Formulaires métier",
+      "categorie": "Responsabilité applicative",
+      "portee": {
+        "description": "Formulaires métier attribués à Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Écrire les contraintes des champs, les règles de soumission et les erreurs attendues avant les tests et l’implémentation de chaque formulaire.",
+      "questions": [
+        "Quels formulaires appartiennent à la V1 ?",
+        "Quelles règles de validation, de conservation et de suivi s’appliquent à chacun ?"
+      ],
+      "references_liees": [
+        "D005",
+        "D006",
+        "LT008"
+      ]
+    },
+    {
+      "id": "D003",
+      "formulation_source": "Connexions API",
+      "ligne_source": 98,
+      "ligne_source_complete": "-> D003 = Connexions API",
+      "categorie": "Responsabilité d’intégration",
+      "portee": {
+        "description": "Connexions API attribuées à Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Pour chaque connecteur retenu, vérifier le contrat, les droits, les délais, l’idempotence et la reprise après erreurs à l’aide d’essais adaptés.",
+      "questions": [
+        "Quelles API sont entrantes ou sortantes ?",
+        "Quels connecteurs sont réellement nécessaires au premier lot ?"
+      ],
+      "references_liees": [
+        "D007",
+        "A013"
+      ]
+    },
+    {
+      "id": "D004",
+      "formulation_source": "Modules métier",
+      "ligne_source": 99,
+      "ligne_source_complete": "-> D004 = Modules métier",
+      "categorie": "Responsabilité modulaire",
+      "portee": {
+        "description": "Modules métier attribués à Django ; leur contrat commun n’est pas encore défini par ce libellé.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir un contrat de module puis examiner ses dépendances, versions, configuration, permissions, migrations et états de vie.",
+      "questions": [
+        "Quelle différence entre module livré, installé, activé, désactivé et retiré ?",
+        "Comment gérer les dépendances et les données d’un module désactivé ?"
+      ],
+      "references_liees": [
+        "A001",
+        "A011",
+        "C002"
+      ]
+    },
+    {
+      "id": "D005",
+      "formulation_source": "La logique métier",
+      "ligne_source": 100,
+      "ligne_source_complete": "-> D005 = La logique métier",
+      "categorie": "Responsabilité métier",
+      "portee": {
+        "description": "Logique métier attribuée à Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Décrire les invariants métier par fonctionnalité et vérifier qu’ils restent contrôlés par le backend pour les différents points d’entrée.",
+      "questions": [
+        "Quelles règles sont configurables et dans quelles limites ?",
+        "Quelle logique reste dans Django lorsqu’un workflow externe est utilisé ?"
+      ],
+      "references_liees": [
+        "D002",
+        "D004",
+        "D006",
+        "A013"
+      ]
+    },
+    {
+      "id": "D006",
+      "formulation_source": "Les autorisations",
+      "ligne_source": 101,
+      "ligne_source_complete": "-> D006 = Les autorisations",
+      "categorie": "Responsabilité de contrôle d’accès",
+      "portee": {
+        "description": "Autorisations applicatives attribuées à Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Établir la matrice acteurs/actions/ressources et prévoir des vérifications de refus, y compris sur les appels directs aux services et API concernés.",
+      "questions": [
+        "Quels rôles peuvent créer un site, activer un module, publier un contenu ou déclencher un déploiement ?",
+        "Comment limiter les identités techniques par instance et par opération ?"
+      ],
+      "references_liees": [
+        "D001",
+        "D007",
+        "W007",
+        "C002"
+      ]
+    },
+    {
+      "id": "D007",
+      "formulation_source": "Les communications entre Studio et les serveurs clients",
+      "ligne_source": 102,
+      "ligne_source_complete": "-> D007 = Les communications entre Studio et les serveurs clients",
+      "categorie": "Communication de contrôle",
+      "portee": {
+        "description": "Échanges entre Studio et serveurs clients, attribués à Django ; le tableau du Studio précise une API de contrôle authentifiée.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Documenter les commandes et réponses autorisées, l’authentification, les droits, l’audit et le comportement en cas de perte de réponse ; qualifier les scénarios d’erreur.",
+      "questions": [
+        "Quel sens de connexion est retenu ?",
+        "Quelle identité et quels droits pour chaque instance ?",
+        "Comment distinguer une commande reçue, exécutée et confirmée sans la rejouer abusivement ?"
+      ],
+      "references_liees": [
+        "A008",
+        "A012",
+        "D003",
+        "D006"
+      ]
+    },
+    {
+      "id": "D008",
+      "formulation_source": "Les traitements applicatifs.",
+      "ligne_source": 103,
+      "ligne_source_complete": "-> D008 = Les traitements applicatifs.",
+      "categorie": "Responsabilité de traitement",
+      "portee": {
+        "description": "Traitements applicatifs attribués à Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Inventorier les traitements et définir leur exécution, leurs limites de ressources, leur suivi et leur reprise ; vérifier ces contrats sur le lot retenu.",
+      "questions": [
+        "Quels traitements sont synchrones, différés ou périodiques ?",
+        "Quelles erreurs sont reprises, abandonnées ou soumises à arbitrage ?"
+      ],
+      "references_liees": [
+        "D005",
+        "LT010",
+        "A013"
+      ]
+    },
+    {
+      "id": "W000",
+      "formulation_source": "Wagtail ne doit pas devenir notre moteur de gestion d'infrastructure.",
+      "ligne_source": 109,
+      "ligne_source_complete": "-> W000 = Wagtail ne doit pas devenir notre moteur de gestion d'infrastructure.",
+      "categorie": "Interdiction de responsabilité",
+      "portee": {
+        "description": "Wagtail ne doit pas devenir le moteur de gestion d’infrastructure.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Examiner la répartition des responsabilités et les actions accessibles depuis Wagtail ; vérifier que le pilotage d’infrastructure est porté par le composant prévu et ses droits dédiés.",
+      "questions": [
+        "Quelle interface précise relie les besoins éditoriaux aux actions de gestion du Studio sans donner à Wagtail ce rôle ?"
+      ],
+      "references_liees": [
+        "C000",
+        "C001",
+        "D007"
+      ]
+    },
+    {
+      "id": "W001",
+      "formulation_source": "Pages éditoriales",
+      "ligne_source": 110,
+      "ligne_source_complete": "-> W001 = Pages éditoriales",
+      "categorie": "Responsabilité éditoriale",
+      "portee": {
+        "description": "Pages éditoriales attribuées à Wagtail.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir types de pages et règles de publication ; prévoir des vérifications de création, édition, prévisualisation et accès selon les rôles retenus.",
+      "questions": [
+        "Quels types de pages et quels parcours éditoriaux dans la V1 ?"
+      ],
+      "references_liees": [
+        "LT003",
+        "W005",
+        "W008"
+      ]
+    },
+    {
+      "id": "W002",
+      "formulation_source": "Gestion des images",
+      "ligne_source": 111,
+      "ligne_source_complete": "-> W002 = Gestion des images",
+      "categorie": "Responsabilité média",
+      "portee": {
+        "description": "Gestion des images attribuée à Wagtail.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir formats, droits, tailles et transformations autorisés ; vérifier téléversement, accès, rendu et suppression selon le contrat retenu.",
+      "questions": [
+        "Quel stockage d’images et quelles règles d’accès ?",
+        "Quelle politique s’applique aux fichiers non fiables et aux images inutilisées ?"
+      ],
+      "references_liees": [
+        "W003",
+        "W005"
+      ]
+    },
+    {
+      "id": "W003",
+      "formulation_source": "Gestion des contenus",
+      "ligne_source": 112,
+      "ligne_source_complete": "-> W003 = Gestion des contenus",
+      "categorie": "Responsabilité de contenu",
+      "portee": {
+        "description": "Gestion des contenus attribuée à Wagtail ; le périmètre recoupe W006.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les objets de contenu, leur cycle de vie et leurs droits ; relier chaque objet aux vérifications éditoriales pertinentes.",
+      "questions": [
+        "W003 et W006 doivent-ils rester deux règles distinctes ?",
+        "Quels contenus relèvent de Wagtail plutôt que de données métier Django ?"
+      ],
+      "references_liees": [
+        "W006",
+        "D005"
+      ]
+    },
+    {
+      "id": "W004",
+      "formulation_source": "Composition des pages",
+      "ligne_source": 113,
+      "ligne_source_complete": "-> W004 = Composition des pages",
+      "categorie": "Responsabilité de composition",
+      "portee": {
+        "description": "Composition des pages attribuée à Wagtail.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les blocs et assemblages permis ; vérifier les contraintes de composition, les valeurs invalides et les variations de thème prévues.",
+      "questions": [
+        "Quels blocs sont disponibles et quelles contraintes régissent leur assemblage ?"
+      ],
+      "references_liees": [
+        "W008",
+        "A004",
+        "LT007"
+      ]
+    },
+    {
+      "id": "W005",
+      "formulation_source": "Administration éditoriale",
+      "ligne_source": 114,
+      "ligne_source_complete": "-> W005 = Administration éditoriale",
+      "categorie": "Responsabilité d’administration",
+      "portee": {
+        "description": "Administration éditoriale attribuée à Wagtail.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir le périmètre de l’administration éditoriale et les permissions ; examiner les parcours des éditeurs et les actions refusées.",
+      "questions": [
+        "Qui édite et qui publie ?",
+        "Quelles actions restent réservées à l’administration du Studio ?"
+      ],
+      "references_liees": [
+        "W000",
+        "W007",
+        "D006"
+      ]
+    },
+    {
+      "id": "W006",
+      "formulation_source": "Les contenus",
+      "ligne_source": 115,
+      "ligne_source_complete": "-> W006 = Les contenus",
+      "categorie": "Responsabilité de contenu",
+      "portee": {
+        "description": "Les contenus sont attribués à Wagtail ; le libellé ne précise pas une responsabilité distincte de W003.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Faire correspondre ce libellé à un périmètre explicite ou documenter son lien avec W003, en conservant la traçabilité de l’identifiant.",
+      "questions": [
+        "S’agit-il d’un doublon de W003 ou d’une distinction entre stockage des contenus et leur gestion ?"
+      ],
+      "references_liees": [
+        "W003",
+        "W001"
+      ]
+    },
+    {
+      "id": "W007",
+      "formulation_source": "Les utilisateurs du CMS",
+      "ligne_source": 116,
+      "ligne_source_complete": "-> W007 = Les utilisateurs du CMS",
+      "categorie": "Responsabilité d’identité éditoriale",
+      "portee": {
+        "description": "Utilisateurs du CMS attribués à Wagtail, en articulation avec l’authentification et les autorisations Django.",
+        "origine": "explicite par la rubrique de la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les rôles CMS et leur relation aux comptes Django/Studio ; vérifier les permissions éditoriales et la séparation des accès aux instances.",
+      "questions": [
+        "Un utilisateur du Studio est-il automatiquement un utilisateur CMS ?",
+        "Comment déléguer, retirer et auditer les accès d’un client à son CMS ?"
+      ],
+      "references_liees": [
+        "D001",
+        "D006",
+        "W005",
+        "A008"
+      ]
+    },
+    {
+      "id": "W008",
+      "formulation_source": "Assemblage de page avec StreamField",
+      "ligne_source": 117,
+      "ligne_source_complete": "-> W008 = Assemblage de page avec StreamField",
+      "categorie": "Mécanisme de composition éditoriale",
+      "portee": {
+        "description": "Assemblage des pages avec StreamField.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir les blocs, schémas et règles de validation ; examiner leur rendu et les conséquences d’une évolution de schéma sur les contenus existants.",
+      "questions": [
+        "Quelles compatibilités et migrations pour les blocs modifiés ou supprimés ?",
+        "Comment versionner les composants utilisés par un contenu déjà publié ?"
+      ],
+      "references_liees": [
+        "W004",
+        "A001",
+        "A012"
+      ]
+    },
+    {
+      "id": "C000",
+      "formulation_source": "Notre Studio central serait une application en Django indépendante.",
+      "ligne_source": 123,
+      "ligne_source_complete": "-> C000 = Notre Studio central serait une application en Django indépendante.",
+      "categorie": "Proposition de découpage",
+      "portee": {
+        "description": "Studio central envisagé comme une application Django indépendante ; le conditionnel est conservé.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "proposition source",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Après arbitrage, comparer le découpage retenu aux responsabilités et cycles de vie attendus ; préciser l’indépendance applicative, de déploiement et de données.",
+      "questions": [
+        "Indépendante de quels composants et à quels niveaux ?",
+        "Quels objets et quelles actions appartiennent à la V1 du Studio central ?"
+      ],
+      "references_liees": [
+        "LT002",
+        "A001",
+        "D007",
+        "W000"
+      ]
+    },
+    {
+      "id": "C001",
+      "formulation_source": "Wagtail serait principalement installé sur les serveurs distants",
+      "ligne_source": 124,
+      "ligne_source_complete": "-> C001 = Wagtail serait principalement installé sur les serveurs distants",
+      "categorie": "Proposition de répartition",
+      "portee": {
+        "description": "Wagtail envisagé principalement sur les serveurs distants ; « serait » et « principalement » n’excluent pas toute exception.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "proposition source",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Après clarification, cartographier les installations Wagtail et contrôler leur rôle éditorial ainsi que leur relation au Studio.",
+      "questions": [
+        "Existe-t-il un besoin Wagtail dans le Studio central ?",
+        "Que désigne précisément « principalement » dans l’architecture cible ?"
+      ],
+      "references_liees": [
+        "LT003",
+        "A003",
+        "W000",
+        "A008"
+      ]
+    },
+    {
+      "id": "C002",
+      "formulation_source": "Ne pas laisser le générateur installer automatiquement des composants en production",
+      "ligne_source": 125,
+      "ligne_source_complete": "-> C002 = Ne pas laisser le générateur installer automatiquement des composants en production",
+      "categorie": "Interdiction de mutation de production",
+      "portee": {
+        "description": "Le générateur ne doit pas installer automatiquement des composants en production ; le terme générateur et les opérations visées doivent être précisés.",
+        "origine": "explicite dans la source"
+      },
+      "statut_decision": "exigence exprimée",
+      "mise_en_oeuvre": "non audité dans ce dossier",
+      "preuve_verification": "non établie",
+      "moyen_controle_propose": "Définir le point de passage autorisé pour les changements de code et vérifier les droits effectifs des générateurs, agents et pipelines ; prévoir un essai montrant qu’une installation directe non autorisée est refusée.",
+      "questions": [
+        "Le générateur désigne-t-il l’agent de développement, un constructeur UI ou une fonction du Studio ?",
+        "Quelles validations autorisent une livraison CI/CD ?",
+        "Comment distinguer installation de code, migrations, activation d’un module déjà livré et modification de configuration ?"
+      ],
+      "references_liees": [
+        "D004",
+        "D006",
+        "A010",
+        "A011"
+      ]
+    }
+  ],
+  "notes_techniques": [
+    {
+      "sujet": "Relation shadcn-django / Django Cotton",
+      "texte": "shadcn-django est un port non officiel de shadcn/ui ; ses composants copiés dans le projet utilisent Django Cotton. L’évaluation concerne les composants et leur articulation avec la bibliothèque maison, sans présumer de leur adoption ni opposer deux moteurs exclusifs.",
+      "source_primaire": "https://github.com/SarthakJariwala/shadcn-django",
+      "date_consultation": "2026-11-18",
+      "statut": "Contexte technique externe ; ne modifie ni la formulation ni le statut des règles sources"
+    }
+  ]
+}

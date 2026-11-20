@@ -1,0 +1,12 @@
+{
+  "initiale": 11,
+  "publicationWagtail": "a publish 302 /admin/pages/3/",
+  "troisiemePublication": "a publish 302 /admin/pages/3/",
+  "publiees": [
+    11,
+    13,
+    14
+  ],
+  "inaccessible": true,
+  "retrait": true
+}

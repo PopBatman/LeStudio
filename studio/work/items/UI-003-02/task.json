@@ -1,0 +1,1509 @@
+{
+  "schema_version": 1,
+  "id": "UI-003-02",
+  "kind": "component",
+  "title": "Canvas fidèle au rendu Wagtail",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-003-02/",
+      "composition/",
+      "tests/",
+      "static/ui/",
+      "templates/",
+      "docs/",
+      "registre/urls.py",
+      "central/urls.py",
+      ".dockerignore"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lance UI-003-02 — Canvas fidèle au rendu Wagtail conformément au Notion et au Workflow AI ; réalisation et qualification dans Studio local.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/lecture-mobile.png",
+      "sha256": "83b8528ae6e65bc00cf289572ee4de460832cc4ffb490b0f5b20463bba4eefbb",
+      "observed_at": "2026-11-20T10:17:34.749464+00:00",
+      "revision": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "contract_sha256": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-02/evidence/maquette.html",
+          "sha256": "ad596cdfa47475a4e14131c37893aa3e0c73b22a69d33b085ee53c53e9c2c110"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquette.html",
+      "sha256": "ad596cdfa47475a4e14131c37893aa3e0c73b22a69d33b085ee53c53e9c2c110",
+      "observed_at": "2026-11-20T10:17:03.493590+00:00",
+      "revision": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "contract_sha256": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "outcome": "illustrative",
+      "inputs": []
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/rendu-perime-tablette.png",
+      "sha256": "fe0cca6ad87af332b7021c779f02254fa1d72c06cca21541ede35f50b63e1266",
+      "observed_at": "2026-11-20T10:17:34.599460+00:00",
+      "revision": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "contract_sha256": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-02/evidence/maquette.html",
+          "sha256": "ad596cdfa47475a4e14131c37893aa3e0c73b22a69d33b085ee53c53e9c2c110"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/selection-bureau.png",
+      "sha256": "7bc76fa7c5c59e200d06c8a83106cff6992459b0c66fc2a43f1016f273a73bee",
+      "observed_at": "2026-11-20T10:17:34.380454+00:00",
+      "revision": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "contract_sha256": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-02/evidence/maquette.html",
+          "sha256": "ad596cdfa47475a4e14131c37893aa3e0c73b22a69d33b085ee53c53e9c2c110"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/socle-feat004.log",
+      "sha256": "5149f18927567018a36fbca12a8ec7f544e2272043a37e205744cbd49924a4b4",
+      "observed_at": "2026-11-20T10:16:43.144021+00:00",
+      "revision": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "contract_sha256": "403ce15d9b8b3f4df20ae153a6accec10215e367e3f52b0fda5894e84bba6cd0",
+      "outcome": "passed",
+      "inputs": [],
+      "active": false,
+      "superseded_reason": "Socle FEAT-004 seul au cadrage ; suites complètes de réalisation sur la nouvelle image."
+    },
+    {
+      "kind": "review",
+      "path": "evidence/avis-recette-wagtail.md",
+      "sha256": "096481fa32cdae1da6f22ca7af6cac4ca1779ebf87b0bc061ce84d137493a6d3",
+      "observed_at": "2026-11-20T10:29:24.750160+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        },
+        {
+          "path": "work/items/UI-003-02/REVIEW.md",
+          "sha256": "f1ebc301fb8aa7d4dadeafc07e3067af2cfc59b59f73c41c2e2e4874890f71a8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-bureau.png",
+      "sha256": "452ac253d65b07d9675710e88cc7edee4c36da8e216425b51fc9d21c6613b6b5",
+      "observed_at": "2026-11-20T10:26:47.970976+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-mobile.png",
+      "sha256": "42c9136d8062de200b81b3cd7f25b3f1f73b1ccae136fb5adf42583cd11e8626",
+      "observed_at": "2026-11-20T10:26:47.991977+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-repli-lecture.png",
+      "sha256": "77f56e479bff2e655874413d9b9d2ed208820efc828012b36a32a2f039458431",
+      "observed_at": "2026-11-20T10:27:41.885779+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-revision-historique.png",
+      "sha256": "4508321646754c18abcdb2e05da7642f2c40a5423310b63fb449041a8fd6a806",
+      "observed_at": "2026-11-20T10:27:40.927747+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-selection-reelle.png",
+      "sha256": "97798c1bd0fefcb8027209ba32e7d8eddd59b9f441e64f981b960593da37d7b3",
+      "observed_at": "2026-11-20T10:26:28.311313+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-site-b-bureau.png",
+      "sha256": "97727fdc5226acd553d5a6959ae95ed412c91a53b25949c8175c541bfe73da47",
+      "observed_at": "2026-11-20T10:27:11.231757+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/canvas-tablette.png",
+      "sha256": "4a0913446a7175fcda9957cbee3d3f57d8fc23b9514366b2a14e0e365e588f67",
+      "observed_at": "2026-11-20T10:26:47.984977+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/comparaison-pixels.json",
+      "sha256": "20cb2bbc1d84f3c635022d29da1d9972803776a17aec2dea251ebb154295bd85",
+      "observed_at": "2026-11-20T10:26:47.991977+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/contour-occurrences.json",
+      "sha256": "7eb7c1d9637b118fcc2c9d56ba8ee1e581651701526cec60c7d3f1a39c668c5c",
+      "observed_at": "2026-11-20T10:29:01.548404+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/non-publication.json",
+      "sha256": "c2e2e94862128ae166f84c76a43e9640bbf482e5ac1a882ecaf5f840c8fd6791",
+      "observed_at": "2026-11-20T10:26:50.198051+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/pages-publiees.json",
+      "sha256": "45115b49360af52ad1fb7f71b02fdf556b5d3aff19cf738a5e434be053315401",
+      "observed_at": "2026-11-20T10:26:50.673067+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/realisation-orca.json",
+      "sha256": "93b1915fb5978128d1b2e871280ecc31fb33c7519244f314edcff39ca4f9e3ed",
+      "observed_at": "2026-11-20T10:29:36.510542+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "deployment",
+      "path": "evidence/realisation-poste-local.json",
+      "sha256": "080218cbd3861d187fb3e787e611054c48fa5c0ea3e7b0f45b577f89c78b4f26",
+      "observed_at": "2026-11-20T10:29:07.446596+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/realisation-tests-postgresql.log",
+      "sha256": "e80e13065a6f3ec255ba7927d64b5e84d11f3cd7c6a4741726582b5ae0b9d670",
+      "observed_at": "2026-11-20T10:27:49.858044+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/realisation-tests-sqlite.log",
+      "sha256": "a3ad61852093f013e91da150031f9497032b94d13d5407c462636cd52ac8268a",
+      "observed_at": "2026-11-20T10:27:46.810943+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/recette-canvas-incidents.json",
+      "sha256": "102e3cd35db30ccfc6a86c1d3f8f4655026593d1edeae78e752a8c4db05f1bd9",
+      "observed_at": "2026-11-20T10:27:58.650335+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/recette-canvas-reel.json",
+      "sha256": "70e5f1d190732f3f7cf3ad7e5cd9dcdd45428a9f8abd9fe302a228d18e3fe3b7",
+      "observed_at": "2026-11-20T10:26:28.973335+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-realisation.md",
+      "sha256": "ffd2b9b5bb360335dfaf73ba06874f260da14eaa86b907aec62ead0e27072b1d",
+      "observed_at": "2026-11-20T10:27:58.438328+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        },
+        {
+          "path": "work/items/UI-003-02/REVIEW.md",
+          "sha256": "f1ebc301fb8aa7d4dadeafc07e3067af2cfc59b59f73c41c2e2e4874890f71a8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-bureau.png",
+      "sha256": "452ac253d65b07d9675710e88cc7edee4c36da8e216425b51fc9d21c6613b6b5",
+      "observed_at": "2026-11-20T10:26:47.970976+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-mobile.png",
+      "sha256": "42c9136d8062de200b81b3cd7f25b3f1f73b1ccae136fb5adf42583cd11e8626",
+      "observed_at": "2026-11-20T10:26:47.991977+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/wagtail-tablette.png",
+      "sha256": "4a0913446a7175fcda9957cbee3d3f57d8fc23b9514366b2a14e0e365e588f67",
+      "observed_at": "2026-11-20T10:26:47.984977+00:00",
+      "revision": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "contract_sha256": "4fd6f9f3bfc02b730db2db4bebb680f2bc3d52ff49574cdd4ef1dceee925d037",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "fc885eba651c568f757d979e800af748fdd17328a31967a54918d74aac731d65"
+        },
+        {
+          "path": "composition/preview_views.py",
+          "sha256": "4274cee9fc0e6b2bc258b000feb933a422a257dc71fe0dc5b6f3f80264315f1f"
+        },
+        {
+          "path": "composition/preview.py",
+          "sha256": "202ad4f657497ccc470e70ce2707f7aea4dae86fed301295b7b714ed30491ef6"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "708220b50afc225b73fde599f0710b3e0e0315e9d19007380f386d295c23ba03"
+        },
+        {
+          "path": "tests/test_builder_canvas.py",
+          "sha256": "68968c2355a3becdc9874c65d0381458f9e007e98e6d70331069bb05f81e1d8b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "3450d579dc82a2db32ec2c269bed1c8b4ed3d982802e3fe775a0128e4ee8d451"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "18445a96c3b5c4b46a08d5a6b1084158aa03c67ee9f7adf05da6f39a08503ca9"
+        },
+        {
+          "path": "static/ui/builder.css",
+          "sha256": "b5aacd5fc7536088b0fff631069ce0c46d4042b3491a4249e22d675e4eb8f560"
+        },
+        {
+          "path": "static/ui/builder.js",
+          "sha256": "983453c84786cb66eca230b1ab934cec92d6e0960400893f33f22d10a71e5ddb"
+        },
+        {
+          "path": "static/ui/builder-frame.js",
+          "sha256": "a0206a2effabeea079e24ed038f1fd6df8cb4c0ecb937d5360cf848a7c5f61df"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "75b9cf382538163e212cf7e34cd766982e789c7ad1a65a5ba773b1f57a396e4b"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "852bc0177b4cff91cce1fa07a961be1ce72287f60c9ed225d38fe48fbdc6c8c8"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "evidence/revue-realisation.md — /root/u302_real_review ; evidence/avis-recette-wagtail.md — /root/canvas_qual",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": "Mandat de lancement UI-003-02 dans Studio local. Livraison du canvas de consultation.",
+    "actions": [
+      "release"
+    ]
+  }
+}

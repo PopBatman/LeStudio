@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-19T10:17:40.658Z",
+  "source": "Page Django exécutée via HTTP sur base SQLite locale isolée avec fixtures fictives. Connexion réelle via le formulaire.",
+  "navigateur": "Chromium 156.0.8078.4",
+  "fenetres": [
+    [
+      1440,
+      960
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      720
+    ]
+  ],
+  "scenarios": [
+    "connected",
+    "empty",
+    "failure",
+    "checking",
+    "expired",
+    "partial",
+    "unknown",
+    "first"
+  ],
+  "mandats": [
+    "gestion",
+    "lecture",
+    "aucun"
+  ],
+  "verifications": [
+    "Parcours Mes sites → fiche par lien réel",
+    "Deux dates distinctes après échec",
+    "Détails natifs par Tabulation, Entrée et Espace ; lien de saut et focus visible",
+    "Champs autorisés par mandat et réponse HTTP 404 hors mandat",
+    "Aucun débordement horizontal, erreur navigateur ou appel à une origine externe observé"
+  ],
+  "captures": [
+    {
+      "fichier": "produit-bureau-confirme.png",
+      "scenario": "connected",
+      "mandat": "manage",
+      "fenetre": [
+        1440,
+        960
+      ]
+    },
+    {
+      "fichier": "produit-bureau-vide.png",
+      "scenario": "empty",
+      "mandat": "read",
+      "fenetre": [
+        1440,
+        960
+      ]
+    },
+    {
+      "fichier": "produit-mobile-echec.png",
+      "scenario": "failure",
+      "mandat": "manage",
+      "fenetre": [
+        390,
+        844
+      ]
+    },
+    {
+      "fichier": "produit-mobile-lecture.png",
+      "scenario": "connected",
+      "mandat": "read",
+      "fenetre": [
+        390,
+        844
+      ]
+    }
+  ]
+}

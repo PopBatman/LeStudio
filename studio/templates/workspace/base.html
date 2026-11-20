@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %} · Le Studio</title>
+  <link rel="stylesheet" href="/assets/gallery.css">
+  <link rel="stylesheet" href="/assets/workspace.css">
+  {% block styles %}{% endblock %}
+</head>
+<body class="ws-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="ws-header">
+    <div class="ws-header-inner">
+      <a class="brand" href="{% url 'workspace' %}"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Le Studio</span></a>
+      {% block navigation %}<span class="ws-local"><span class="local-dot" aria-hidden="true"></span>Studio local</span>{% endblock %}
+    </div>
+  </header>
+  <main id="contenu" class="ws-main" tabindex="-1">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "environnement": "Django HTTP et PostgreSQL du laboratoire. Fiches éphémères en transaction annulée après vérification. Fournisseur Figma simulé.",
+  "parcours": {
+    "blank": {
+      "depart": "Fiche → atelier sans brouillon → formulaire V2 → page de la R1",
+      "pages": 1,
+      "sections": 0
+    },
+    "template": {
+      "depart": "Fiche → atelier sans brouillon → formulaire V2 → page de la R1",
+      "pages": 1,
+      "sections": 1
+    },
+    "figma": {
+      "depart": "Atelier vide → remise simulée acceptée → confirmation HTTP → lien du reçu V2",
+      "statut_confirmation": 200,
+      "statut_page": 200,
+      "revision": 1,
+      "revision_precedente": null,
+      "page": "Atlas du Sud",
+      "formats": [
+        "desktop",
+        "mobile"
+      ],
+      "origine": "figma"
+    }
+  }
+}

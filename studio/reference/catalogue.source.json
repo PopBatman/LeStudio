@@ -1,0 +1,4091 @@
+{
+  "schema_version": "0.1",
+  "document_type": "inventaire_documentaire",
+  "document_status": "a_qualifier",
+  "source": {
+    "filename": "Texte collé(8).txt",
+    "original_absolute_path": "/workspace/scratch/5a2d2380133f/upload/Texte collé(8).txt",
+    "sha256": "3ebb5f058ba72b1bf1fa17bafce63b3e93d8cfe291a64134951473e631bfb956",
+    "encoding": "utf-8",
+    "line_count": 609
+  },
+  "scope": {
+    "catalogue_start_line": 216,
+    "catalogue_end_line_exclusive": 589,
+    "inventory_ids": "Repères créés pour cet inventaire ; ce ne sont pas des identifiants de modules validés.",
+    "interpretation": "Entrées et occurrences source conservées sans fusion. Toutes sont à qualifier ; leur présence ne prouve aucune disponibilité.",
+    "normalization": "Propositions séparées du texte source ; aucune proposition n’est appliquée aux libellés source.",
+    "priorities": "Aucune priorité de développement attribuée. La priorité P0 ne figure que dans la fiche illustrative source.",
+    "overlapping_views": "Les inventaires UI, externalisation et Core/Standard/Advanced sont séparés ; ils ne s’additionnent pas comme de nouveaux modules au catalogue détaillé.",
+    "counts_exclude_example_connector_mentions": true,
+    "counts_are_not_semantic_module_counts": true
+  },
+  "counts": {
+    "families": 15,
+    "functional_entries": 166,
+    "functional_full_texts_unique_exact": 166,
+    "functional_labels_unique_exact": 163,
+    "connector_occurrences_nonempty": 98,
+    "connector_labels_unique_exact": 89,
+    "connector_labels_unique_casefold": 88,
+    "empty_connector_slots": 2,
+    "ui_component_entries": 10,
+    "externalization_entries": 9,
+    "classification_entries": 9,
+    "classification_counts": {
+      "Core": 4,
+      "Standard": 3,
+      "Advanced": 2
+    },
+    "example_sheets": 1,
+    "example_fields": 17
+  },
+  "families": [
+    {
+      "inventory_id": "INV-FAM-001",
+      "source_line": 216,
+      "source_heading_text": "> Sites et Contenus",
+      "source_label": "Sites et Contenus",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-001",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 219,
+          "source_line_text": "--> Pages : Création et Administration de pages",
+          "source_text": "Pages : Création et Administration de pages",
+          "source_label": "Pages",
+          "source_description": "Création et Administration de pages",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-002",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 220,
+          "source_line_text": "--> Blog : Articles, catégories, auteurs",
+          "source_text": "Blog : Articles, catégories, auteurs",
+          "source_label": "Blog",
+          "source_description": "Articles, catégories, auteurs",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-003",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 221,
+          "source_line_text": "--> Actualités : Publications et annonces",
+          "source_text": "Actualités : Publications et annonces",
+          "source_label": "Actualités",
+          "source_description": "Publications et annonces",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-004",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 222,
+          "source_line_text": "--> Portfolio : Présentation de réalisations",
+          "source_text": "Portfolio : Présentation de réalisations",
+          "source_label": "Portfolio",
+          "source_description": "Présentation de réalisations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-005",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 223,
+          "source_line_text": "--> Galerie : Images, Vidéos, Album",
+          "source_text": "Galerie : Images, Vidéos, Album",
+          "source_label": "Galerie",
+          "source_description": "Images, Vidéos, Album",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-006",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 224,
+          "source_line_text": "--> Catalgue : Produits et Services",
+          "source_text": "Catalgue : Produits et Services",
+          "source_label": "Catalgue",
+          "source_description": "Produits et Services",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Catalogue",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-007",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 225,
+          "source_line_text": "--> Documentation : Pages techniques, guides, notices",
+          "source_text": "Documentation : Pages techniques, guides, notices",
+          "source_label": "Documentation",
+          "source_description": "Pages techniques, guides, notices",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-008",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 226,
+          "source_line_text": "--> Multilingue : Traduction des contenus",
+          "source_text": "Multilingue : Traduction des contenus",
+          "source_label": "Multilingue",
+          "source_description": "Traduction des contenus",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-009",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 227,
+          "source_line_text": "--> Recherche : Recherche interne",
+          "source_text": "Recherche : Recherche interne",
+          "source_label": "Recherche",
+          "source_description": "Recherche interne",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-010",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 228,
+          "source_line_text": "--> FAQ : Questions fréquentes",
+          "source_text": "FAQ : Questions fréquentes",
+          "source_label": "FAQ",
+          "source_description": "Questions fréquentes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-011",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 229,
+          "source_line_text": "--> Témoignages : Avis clients",
+          "source_text": "Témoignages : Avis clients",
+          "source_label": "Témoignages",
+          "source_description": "Avis clients",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-012",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 230,
+          "source_line_text": "--> SEO : Métadonnées, sitemap, redirections",
+          "source_text": "SEO : Métadonnées, sitemap, redirections",
+          "source_label": "SEO",
+          "source_description": "Métadonnées, sitemap, redirections",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-013",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 231,
+          "source_line_text": "--> Médias : Bibliothèque de fichiers ",
+          "source_text": "Médias : Bibliothèque de fichiers",
+          "source_label": "Médias",
+          "source_description": "Bibliothèque de fichiers",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-014",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 232,
+          "source_line_text": "--> Landing Pages : Pages commerciales personnalisées",
+          "source_text": "Landing Pages : Pages commerciales personnalisées",
+          "source_label": "Landing Pages",
+          "source_description": "Pages commerciales personnalisées",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-001",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 236,
+          "source_line_text": "--> Google Search Console",
+          "source_text": "Google Search Console",
+          "source_label": "Google Search Console",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-002",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 237,
+          "source_line_text": "--> Google Analytics",
+          "source_text": "Google Analytics",
+          "source_label": "Google Analytics",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-003",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 238,
+          "source_line_text": "--> Matomo",
+          "source_text": "Matomo",
+          "source_label": "Matomo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-004",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 239,
+          "source_line_text": "--> Cloudinary",
+          "source_text": "Cloudinary",
+          "source_label": "Cloudinary",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-005",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 240,
+          "source_line_text": "--> DeepL",
+          "source_text": "DeepL",
+          "source_label": "DeepL",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-006",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 241,
+          "source_line_text": "--> Youtube",
+          "source_text": "Youtube",
+          "source_label": "Youtube",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "YouTube",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-007",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 242,
+          "source_line_text": "--> Vimeo",
+          "source_text": "Vimeo",
+          "source_label": "Vimeo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-002",
+      "source_line": 245,
+      "source_heading_text": "> Communication",
+      "source_label": "Communication",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-015",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 248,
+          "source_line_text": "--> Formulaires : Constructeur de formulaires",
+          "source_text": "Formulaires : Constructeur de formulaires",
+          "source_label": "Formulaires",
+          "source_description": "Constructeur de formulaires",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-016",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 249,
+          "source_line_text": "--> Contact : Réception et suivi des messages",
+          "source_text": "Contact : Réception et suivi des messages",
+          "source_label": "Contact",
+          "source_description": "Réception et suivi des messages",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-017",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 250,
+          "source_line_text": "--> Newsletter : Collecte d'abonnées",
+          "source_text": "Newsletter : Collecte d'abonnées",
+          "source_label": "Newsletter",
+          "source_description": "Collecte d'abonnées",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-018",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 251,
+          "source_line_text": "--> E-mail transactionnel : Messages automatiques",
+          "source_text": "E-mail transactionnel : Messages automatiques",
+          "source_label": "E-mail transactionnel",
+          "source_description": "Messages automatiques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-019",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 252,
+          "source_line_text": "--> Notifications : Email, SMS, Push",
+          "source_text": "Notifications : Email, SMS, Push",
+          "source_label": "Notifications",
+          "source_description": "Email, SMS, Push",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-020",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 253,
+          "source_line_text": "--> Chat : Messagerie Client",
+          "source_text": "Chat : Messagerie Client",
+          "source_label": "Chat",
+          "source_description": "Messagerie Client",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-021",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 254,
+          "source_line_text": "--> Support : Tickets et demandes",
+          "source_text": "Support : Tickets et demandes",
+          "source_label": "Support",
+          "source_description": "Tickets et demandes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-022",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 255,
+          "source_line_text": "--> Campagnes : Campagnes de communication",
+          "source_text": "Campagnes : Campagnes de communication",
+          "source_label": "Campagnes",
+          "source_description": "Campagnes de communication",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-023",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 256,
+          "source_line_text": "--> SMS : Messages transactionnels",
+          "source_text": "SMS : Messages transactionnels",
+          "source_label": "SMS",
+          "source_description": "Messages transactionnels",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-024",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 257,
+          "source_line_text": "--> Prise de rendez-vous : Calendrier et disponibilités",
+          "source_text": "Prise de rendez-vous : Calendrier et disponibilités",
+          "source_label": "Prise de rendez-vous",
+          "source_description": "Calendrier et disponibilités",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-008",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 260,
+          "source_line_text": "--> Brevo",
+          "source_text": "Brevo",
+          "source_label": "Brevo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-009",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 261,
+          "source_line_text": "--> Mailgun",
+          "source_text": "Mailgun",
+          "source_label": "Mailgun",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-010",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 262,
+          "source_line_text": "--> Resend",
+          "source_text": "Resend",
+          "source_label": "Resend",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-011",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 263,
+          "source_line_text": "--> SendGrid",
+          "source_text": "SendGrid",
+          "source_label": "SendGrid",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-012",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 264,
+          "source_line_text": "--> Amazon SES",
+          "source_text": "Amazon SES",
+          "source_label": "Amazon SES",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-013",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 265,
+          "source_line_text": "--> Twilio ",
+          "source_text": "Twilio",
+          "source_label": "Twilio",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-014",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 266,
+          "source_line_text": "--> Calendly",
+          "source_text": "Calendly",
+          "source_label": "Calendly",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-015",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 267,
+          "source_line_text": "--> Google Calendar",
+          "source_text": "Google Calendar",
+          "source_label": "Google Calendar",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-016",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 268,
+          "source_line_text": "--> Microsoft Outlook ",
+          "source_text": "Microsoft Outlook",
+          "source_label": "Microsoft Outlook",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-017",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 269,
+          "source_line_text": "--> Zendesk",
+          "source_text": "Zendesk",
+          "source_label": "Zendesk",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-018",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 270,
+          "source_line_text": "--> Intercom",
+          "source_text": "Intercom",
+          "source_label": "Intercom",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-003",
+      "source_line": 273,
+      "source_heading_text": "> Authentification et sécurité",
+      "source_label": "Authentification et sécurité",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-025",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 276,
+          "source_line_text": "--> Login/Register : Connexion et Inscription",
+          "source_text": "Login/Register : Connexion et Inscription",
+          "source_label": "Login/Register",
+          "source_description": "Connexion et Inscription",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-026",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 277,
+          "source_line_text": "--> MFA : Authentification multifacteur",
+          "source_text": "MFA : Authentification multifacteur",
+          "source_label": "MFA",
+          "source_description": "Authentification multifacteur",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-027",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 278,
+          "source_line_text": "--> SSO : Connexion via fournisseur d'identité",
+          "source_text": "SSO : Connexion via fournisseur d'identité",
+          "source_label": "SSO",
+          "source_description": "Connexion via fournisseur d'identité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-028",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 279,
+          "source_line_text": "--> RBAC : Gestion des roles et permissions",
+          "source_text": "RBAC : Gestion des roles et permissions",
+          "source_label": "RBAC",
+          "source_description": "Gestion des roles et permissions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-029",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 280,
+          "source_line_text": "--> Audit Log : Historique des actions",
+          "source_text": "Audit Log : Historique des actions",
+          "source_label": "Audit Log",
+          "source_description": "Historique des actions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-030",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 281,
+          "source_line_text": "--> Sessions : Gestions des sessions",
+          "source_text": "Sessions : Gestions des sessions",
+          "source_label": "Sessions",
+          "source_description": "Gestions des sessions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-031",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 282,
+          "source_line_text": "--> Invitations : Invitation d'utilsateurs",
+          "source_text": "Invitations : Invitation d'utilsateurs",
+          "source_label": "Invitations",
+          "source_description": "Invitation d'utilsateurs",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-032",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 283,
+          "source_line_text": "--> API keys : Gestion de clés d'accès",
+          "source_text": "API keys : Gestion de clés d'accès",
+          "source_label": "API keys",
+          "source_description": "Gestion de clés d'accès",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-033",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 284,
+          "source_line_text": "--> Consentement : Gestion des consentements ",
+          "source_text": "Consentement : Gestion des consentements",
+          "source_label": "Consentement",
+          "source_description": "Gestion des consentements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-034",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 285,
+          "source_line_text": "--> CAPTCHA : Protection des formulaires",
+          "source_text": "CAPTCHA : Protection des formulaires",
+          "source_label": "CAPTCHA",
+          "source_description": "Protection des formulaires",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-035",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 286,
+          "source_line_text": "--> Rate Limiting : Limitation de requetes",
+          "source_text": "Rate Limiting : Limitation de requetes",
+          "source_label": "Rate Limiting",
+          "source_description": "Limitation de requetes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-036",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 287,
+          "source_line_text": "--> Security Dashboard : Suivi des évènements de sécurité",
+          "source_text": "Security Dashboard : Suivi des évènements de sécurité",
+          "source_label": "Security Dashboard",
+          "source_description": "Suivi des évènements de sécurité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-019",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 290,
+          "source_line_text": "--> Microsft Entra ID",
+          "source_text": "Microsft Entra ID",
+          "source_label": "Microsft Entra ID",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Microsoft Entra ID",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-020",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 291,
+          "source_line_text": "--> Google Identity",
+          "source_text": "Google Identity",
+          "source_label": "Google Identity",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-021",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 292,
+          "source_line_text": "--> KeyCloak",
+          "source_text": "KeyCloak",
+          "source_label": "KeyCloak",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Keycloak",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-022",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 293,
+          "source_line_text": "--> Auth0",
+          "source_text": "Auth0",
+          "source_label": "Auth0",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-023",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 294,
+          "source_line_text": "--> Okta",
+          "source_text": "Okta",
+          "source_label": "Okta",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-024",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 295,
+          "source_line_text": "--> LDAP",
+          "source_text": "LDAP",
+          "source_label": "LDAP",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-025",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 296,
+          "source_line_text": "--> Fournisseurs OIDC",
+          "source_text": "Fournisseurs OIDC",
+          "source_label": "Fournisseurs OIDC",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-026",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 297,
+          "source_line_text": "--> SAML",
+          "source_text": "SAML",
+          "source_label": "SAML",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-004",
+      "source_line": 300,
+      "source_heading_text": "> Commerce et Paiement",
+      "source_label": "Commerce et Paiement",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-037",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 303,
+          "source_line_text": "--> Catalogue e-commerce : Produits et variantes",
+          "source_text": "Catalogue e-commerce : Produits et variantes",
+          "source_label": "Catalogue e-commerce",
+          "source_description": "Produits et variantes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-038",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 304,
+          "source_line_text": "--> Panier : Gestion des achats",
+          "source_text": "Panier : Gestion des achats",
+          "source_label": "Panier",
+          "source_description": "Gestion des achats",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-039",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 305,
+          "source_line_text": "--> Commandes : Suivi des commandes",
+          "source_text": "Commandes : Suivi des commandes",
+          "source_label": "Commandes",
+          "source_description": "Suivi des commandes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-040",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 306,
+          "source_line_text": "--> Paiements : Paiement en ligne",
+          "source_text": "Paiements : Paiement en ligne",
+          "source_label": "Paiements",
+          "source_description": "Paiement en ligne",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-041",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 307,
+          "source_line_text": "--> Abonnements : Paiements récurrents",
+          "source_text": "Abonnements : Paiements récurrents",
+          "source_label": "Abonnements",
+          "source_description": "Paiements récurrents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-042",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 308,
+          "source_line_text": "--> Facturation : Factures et avoirs",
+          "source_text": "Facturation : Factures et avoirs",
+          "source_label": "Facturation",
+          "source_description": "Factures et avoirs",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-043",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 309,
+          "source_line_text": "--> Devis : Création et validation de devis",
+          "source_text": "Devis : Création et validation de devis",
+          "source_label": "Devis",
+          "source_description": "Création et validation de devis",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-044",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 310,
+          "source_line_text": "--> Promotions : Codes promotionnels ",
+          "source_text": "Promotions : Codes promotionnels",
+          "source_label": "Promotions",
+          "source_description": "Codes promotionnels",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-045",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 311,
+          "source_line_text": "--> Livraison : Expédition et suivi",
+          "source_text": "Livraison : Expédition et suivi",
+          "source_label": "Livraison",
+          "source_description": "Expédition et suivi",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-046",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 312,
+          "source_line_text": "--> Stocks : Disponibilités des produits",
+          "source_text": "Stocks : Disponibilités des produits",
+          "source_label": "Stocks",
+          "source_description": "Disponibilités des produits",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-047",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 313,
+          "source_line_text": "--> Réservations : Réservations de prestations",
+          "source_text": "Réservations : Réservations de prestations",
+          "source_label": "Réservations",
+          "source_description": "Réservations de prestations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-048",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 314,
+          "source_line_text": "--> Cartes cadeaux : Bons et cartes cadeaux",
+          "source_text": "Cartes cadeaux : Bons et cartes cadeaux",
+          "source_label": "Cartes cadeaux",
+          "source_description": "Bons et cartes cadeaux",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-027",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 317,
+          "source_line_text": "--> Stripe",
+          "source_text": "Stripe",
+          "source_label": "Stripe",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-028",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 318,
+          "source_line_text": "--> Paypal",
+          "source_text": "Paypal",
+          "source_label": "Paypal",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "PayPal",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-029",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 319,
+          "source_line_text": "--> Mollie",
+          "source_text": "Mollie",
+          "source_label": "Mollie",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-030",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 320,
+          "source_line_text": "--> Shopify",
+          "source_text": "Shopify",
+          "source_label": "Shopify",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-031",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 321,
+          "source_line_text": "--> WooCommerce",
+          "source_text": "WooCommerce",
+          "source_label": "WooCommerce",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-032",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 322,
+          "source_line_text": "--> Prestashop",
+          "source_text": "Prestashop",
+          "source_label": "Prestashop",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "PrestaShop",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-033",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 323,
+          "source_line_text": "--> Odoo",
+          "source_text": "Odoo",
+          "source_label": "Odoo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-034",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 324,
+          "source_line_text": "--> Pennylane",
+          "source_text": "Pennylane",
+          "source_label": "Pennylane",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-035",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 325,
+          "source_line_text": "--> Colissimo",
+          "source_text": "Colissimo",
+          "source_label": "Colissimo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-036",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 326,
+          "source_line_text": "--> Chronopost",
+          "source_text": "Chronopost",
+          "source_label": "Chronopost",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-037",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 327,
+          "source_line_text": "--> Sendcloud",
+          "source_text": "Sendcloud",
+          "source_label": "Sendcloud",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-005",
+      "source_line": 330,
+      "source_heading_text": "> Industrie et B2B",
+      "source_label": "Industrie et B2B",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-049",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 333,
+          "source_line_text": "--> Catalogue industriel : Machines, équipements, capacités",
+          "source_text": "Catalogue industriel : Machines, équipements, capacités",
+          "source_label": "Catalogue industriel",
+          "source_description": "Machines, équipements, capacités",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-050",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 334,
+          "source_line_text": "--> Fiches techniques : Caractéristiques et documents",
+          "source_text": "Fiches techniques : Caractéristiques et documents",
+          "source_label": "Fiches techniques",
+          "source_description": "Caractéristiques et documents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-051",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 335,
+          "source_line_text": "--> Demande de devis : Formulaires B2B",
+          "source_text": "Demande de devis : Formulaires B2B",
+          "source_label": "Demande de devis",
+          "source_description": "Formulaires B2B",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-052",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 336,
+          "source_line_text": "--> Upload de plans : PDF, DXF, STEP et autres formats autorisés",
+          "source_text": "Upload de plans : PDF, DXF, STEP et autres formats autorisés",
+          "source_label": "Upload de plans",
+          "source_description": "PDF, DXF, STEP et autres formats autorisés",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-053",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 337,
+          "source_line_text": "--> Suivi des commandes :  Status et historique",
+          "source_text": "Suivi des commandes :  Status et historique",
+          "source_label": "Suivi des commandes",
+          "source_description": "Status et historique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-054",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 338,
+          "source_line_text": "--> Espace distributeur : Accès pro",
+          "source_text": "Espace distributeur : Accès pro",
+          "source_label": "Espace distributeur",
+          "source_description": "Accès pro",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-055",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 339,
+          "source_line_text": "--> Gestion documentaire : Documents techniques",
+          "source_text": "Gestion documentaire : Documents techniques",
+          "source_label": "Gestion documentaire",
+          "source_description": "Documents techniques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-056",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 340,
+          "source_line_text": "--> Certifications : ISO, Normes, Attestations",
+          "source_text": "Certifications : ISO, Normes, Attestations",
+          "source_label": "Certifications",
+          "source_description": "ISO, Normes, Attestations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-057",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 341,
+          "source_line_text": "--> SAV : Demandes d'interventions",
+          "source_text": "SAV : Demandes d'interventions",
+          "source_label": "SAV",
+          "source_description": "Demandes d'interventions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-058",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 342,
+          "source_line_text": "--> Gestion des équipements : Référentiel de machines",
+          "source_text": "Gestion des équipements : Référentiel de machines",
+          "source_label": "Gestion des équipements",
+          "source_description": "Référentiel de machines",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-059",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 343,
+          "source_line_text": "--> Traçabilité : Historique des opérations",
+          "source_text": "Traçabilité : Historique des opérations",
+          "source_label": "Traçabilité",
+          "source_description": "Historique des opérations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-060",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 344,
+          "source_line_text": "--> Extranet : Portail clients et partenaires",
+          "source_text": "Extranet : Portail clients et partenaires",
+          "source_label": "Extranet",
+          "source_description": "Portail clients et partenaires",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-038",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 347,
+          "source_line_text": "--> Odoo",
+          "source_text": "Odoo",
+          "source_label": "Odoo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-039",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 348,
+          "source_line_text": "--> SAP",
+          "source_text": "SAP",
+          "source_label": "SAP",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-040",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 349,
+          "source_line_text": "--> Microsoft Dynamics 365",
+          "source_text": "Microsoft Dynamics 365",
+          "source_label": "Microsoft Dynamics 365",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-041",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 350,
+          "source_line_text": "--> Sage",
+          "source_text": "Sage",
+          "source_label": "Sage",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-042",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 351,
+          "source_line_text": "--> Dolibarr",
+          "source_text": "Dolibarr",
+          "source_label": "Dolibarr",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-043",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 352,
+          "source_line_text": "--> ERP internes",
+          "source_text": "ERP internes",
+          "source_label": "ERP internes",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-044",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 353,
+          "source_line_text": "--> SFTp",
+          "source_text": "SFTp",
+          "source_label": "SFTp",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "SFTP",
+            "reason": "Harmonisation de la casse proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-045",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 354,
+          "source_line_text": "--> API Rest",
+          "source_text": "API Rest",
+          "source_label": "API Rest",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "API REST",
+            "reason": "Harmonisation de la casse proposée ; les occurrences restent séparées.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-046",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 355,
+          "source_line_text": "--> SOAP",
+          "source_text": "SOAP",
+          "source_label": "SOAP",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-006",
+      "source_line": 358,
+      "source_heading_text": "> Documents et données ",
+      "source_label": "Documents et données",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-061",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 361,
+          "source_line_text": "--> Import CSV : Import de données tabulaires",
+          "source_text": "Import CSV : Import de données tabulaires",
+          "source_label": "Import CSV",
+          "source_description": "Import de données tabulaires",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-062",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 362,
+          "source_line_text": "--> Import Excel : Lecture et validation XLSX",
+          "source_text": "Import Excel : Lecture et validation XLSX",
+          "source_label": "Import Excel",
+          "source_description": "Lecture et validation XLSX",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-063",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 363,
+          "source_line_text": "--> Import XML : Pasring et normalisation",
+          "source_text": "Import XML : Pasring et normalisation",
+          "source_label": "Import XML",
+          "source_description": "Pasring et normalisation",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-064",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 364,
+          "source_line_text": "--> Import JSON : Import structuré",
+          "source_text": "Import JSON : Import structuré",
+          "source_label": "Import JSON",
+          "source_description": "Import structuré",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-065",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 365,
+          "source_line_text": "--> Export PDF : Génération de documents",
+          "source_text": "Export PDF : Génération de documents",
+          "source_label": "Export PDF",
+          "source_description": "Génération de documents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-066",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 366,
+          "source_line_text": "--> Conversion : Transformation entre formats",
+          "source_text": "Conversion : Transformation entre formats",
+          "source_label": "Conversion",
+          "source_description": "Transformation entre formats",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-067",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 367,
+          "source_line_text": "--> OCR : Extraction de texte",
+          "source_text": "OCR : Extraction de texte",
+          "source_label": "OCR",
+          "source_description": "Extraction de texte",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-068",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 368,
+          "source_line_text": "--> Validation : Controles de confirmité",
+          "source_text": "Validation : Controles de confirmité",
+          "source_label": "Validation",
+          "source_description": "Controles de confirmité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-069",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 369,
+          "source_line_text": "--> Déduplication : Détection des doublons",
+          "source_text": "Déduplication : Détection des doublons",
+          "source_label": "Déduplication",
+          "source_description": "Détection des doublons",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-070",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 370,
+          "source_line_text": "--> Synchronisation: Echanges de données",
+          "source_text": "Synchronisation: Echanges de données",
+          "source_label": "Synchronisation",
+          "source_description": "Echanges de données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-071",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 371,
+          "source_line_text": "--> Archivage : Conservation et historique",
+          "source_text": "Archivage : Conservation et historique",
+          "source_label": "Archivage",
+          "source_description": "Conservation et historique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-047",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 374,
+          "source_line_text": "--> Google drive",
+          "source_text": "Google drive",
+          "source_label": "Google drive",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Google Drive",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-048",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 375,
+          "source_line_text": "--> OneDrive",
+          "source_text": "OneDrive",
+          "source_label": "OneDrive",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-049",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 376,
+          "source_line_text": "--> SharePoint",
+          "source_text": "SharePoint",
+          "source_label": "SharePoint",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-050",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 377,
+          "source_line_text": "--> Dropbox",
+          "source_text": "Dropbox",
+          "source_label": "Dropbox",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-051",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 378,
+          "source_line_text": "--> S3",
+          "source_text": "S3",
+          "source_label": "S3",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-052",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 379,
+          "source_line_text": "--> Nextcloud",
+          "source_text": "Nextcloud",
+          "source_label": "Nextcloud",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-053",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 380,
+          "source_line_text": "--> SFTp",
+          "source_text": "SFTp",
+          "source_label": "SFTp",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "SFTP",
+            "reason": "Harmonisation de la casse proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-054",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 381,
+          "source_line_text": "--> Azure Blob Storage",
+          "source_text": "Azure Blob Storage",
+          "source_label": "Azure Blob Storage",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-007",
+      "source_line": 384,
+      "source_heading_text": "> Intelligence Artificielle",
+      "source_label": "Intelligence Artificielle",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-072",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 387,
+          "source_line_text": "--> Chatbot : Assistant conversationnel",
+          "source_text": "Chatbot : Assistant conversationnel",
+          "source_label": "Chatbot",
+          "source_description": "Assistant conversationnel",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-073",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 388,
+          "source_line_text": "--> Recherche documentaire : Recherche sémantique",
+          "source_text": "Recherche documentaire : Recherche sémantique",
+          "source_label": "Recherche documentaire",
+          "source_description": "Recherche sémantique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-074",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 389,
+          "source_line_text": "--> RAG : Réponse fondées sur des documents",
+          "source_text": "RAG : Réponse fondées sur des documents",
+          "source_label": "RAG",
+          "source_description": "Réponse fondées sur des documents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-075",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 390,
+          "source_line_text": "--> Classification : Catégorisation automatique",
+          "source_text": "Classification : Catégorisation automatique",
+          "source_label": "Classification",
+          "source_description": "Catégorisation automatique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-076",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 391,
+          "source_line_text": "--> Extraction : Extraction structurée",
+          "source_text": "Extraction : Extraction structurée",
+          "source_label": "Extraction",
+          "source_description": "Extraction structurée",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-077",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 392,
+          "source_line_text": "--> Résumé : Synthèse de documents",
+          "source_text": "Résumé : Synthèse de documents",
+          "source_label": "Résumé",
+          "source_description": "Synthèse de documents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-078",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 393,
+          "source_line_text": "--> Traduction : Traduction de contenus",
+          "source_text": "Traduction : Traduction de contenus",
+          "source_label": "Traduction",
+          "source_description": "Traduction de contenus",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-079",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 394,
+          "source_line_text": "--> Génération de contenu : Assistance éditoriale",
+          "source_text": "Génération de contenu : Assistance éditoriale",
+          "source_label": "Génération de contenu",
+          "source_description": "Assistance éditoriale",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-080",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 395,
+          "source_line_text": "--> Analyse documentaire : Traitements avancés",
+          "source_text": "Analyse documentaire : Traitements avancés",
+          "source_label": "Analyse documentaire",
+          "source_description": "Traitements avancés",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-081",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 396,
+          "source_line_text": "--> Assistant métier : Agent spécialisé",
+          "source_text": "Assistant métier : Agent spécialisé",
+          "source_label": "Assistant métier",
+          "source_description": "Agent spécialisé",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-082",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 397,
+          "source_line_text": "--> Modération : Controle des contenus",
+          "source_text": "Modération : Controle des contenus",
+          "source_label": "Modération",
+          "source_description": "Controle des contenus",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-083",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 398,
+          "source_line_text": "--> Transcription",
+          "source_text": "Transcription",
+          "source_label": "Transcription",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-055",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 402,
+          "source_line_text": "--> OpenAI",
+          "source_text": "OpenAI",
+          "source_label": "OpenAI",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-056",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 403,
+          "source_line_text": "--> Anthropiuc",
+          "source_text": "Anthropiuc",
+          "source_label": "Anthropiuc",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Anthropic",
+            "reason": "Correction probable du nom ; à confirmer.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-057",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 404,
+          "source_line_text": "--> Mistral AI",
+          "source_text": "Mistral AI",
+          "source_label": "Mistral AI",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-058",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 405,
+          "source_line_text": "--> Azure AI",
+          "source_text": "Azure AI",
+          "source_label": "Azure AI",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-059",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 406,
+          "source_line_text": "--> Ollama",
+          "source_text": "Ollama",
+          "source_label": "Ollama",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-060",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 407,
+          "source_line_text": "--> vLLM",
+          "source_text": "vLLM",
+          "source_label": "vLLM",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-061",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 408,
+          "source_line_text": "--> Hugging Face",
+          "source_text": "Hugging Face",
+          "source_label": "Hugging Face",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-008",
+      "source_line": 411,
+      "source_heading_text": "> Automatisation",
+      "source_label": "Automatisation",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-084",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 414,
+          "source_line_text": "--> Webhooks : Réception et émission d'évènements",
+          "source_text": "Webhooks : Réception et émission d'évènements",
+          "source_label": "Webhooks",
+          "source_description": "Réception et émission d'évènements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-085",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 415,
+          "source_line_text": "--> Worflows : Enchainements d'actions",
+          "source_text": "Worflows : Enchainements d'actions",
+          "source_label": "Worflows",
+          "source_description": "Enchainements d'actions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Workflows",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-086",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 416,
+          "source_line_text": "--> Shcheduler : taches programmés",
+          "source_text": "Shcheduler : taches programmés",
+          "source_label": "Shcheduler",
+          "source_description": "taches programmés",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Scheduler",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-087",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 417,
+          "source_line_text": "--> Syncrhonisation : Synchronisation entre systèmes",
+          "source_text": "Syncrhonisation : Synchronisation entre systèmes",
+          "source_label": "Syncrhonisation",
+          "source_description": "Synchronisation entre systèmes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Synchronisation",
+            "reason": "Correction orthographique proposée ; aucune fusion fonctionnelle.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-088",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 418,
+          "source_line_text": "--> Notifications évènementielles : Alertes sur les évènements",
+          "source_text": "Notifications évènementielles : Alertes sur les évènements",
+          "source_label": "Notifications évènementielles",
+          "source_description": "Alertes sur les évènements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-089",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 419,
+          "source_line_text": "--> Import automatique : Récupération périodique de données",
+          "source_text": "Import automatique : Récupération périodique de données",
+          "source_label": "Import automatique",
+          "source_description": "Récupération périodique de données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-090",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 420,
+          "source_line_text": "--> Export automatique : Transfert de fichiers",
+          "source_text": "Export automatique : Transfert de fichiers",
+          "source_label": "Export automatique",
+          "source_description": "Transfert de fichiers",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-091",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 421,
+          "source_line_text": "--> Validation automatisée : Controles métier",
+          "source_text": "Validation automatisée : Controles métier",
+          "source_label": "Validation automatisée",
+          "source_description": "Controles métier",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-092",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 422,
+          "source_line_text": "--> Approval : Circuits de validation",
+          "source_text": "Approval : Circuits de validation",
+          "source_label": "Approval",
+          "source_description": "Circuits de validation",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-093",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 423,
+          "source_line_text": "--> Event log : Historique des évènements",
+          "source_text": "Event log : Historique des évènements",
+          "source_label": "Event log",
+          "source_description": "Historique des évènements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-062",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 426,
+          "source_line_text": "--> n8n",
+          "source_text": "n8n",
+          "source_label": "n8n",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-063",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 427,
+          "source_line_text": "--> Make",
+          "source_text": "Make",
+          "source_label": "Make",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-064",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 428,
+          "source_line_text": "--> Zapier",
+          "source_text": "Zapier",
+          "source_label": "Zapier",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-065",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 429,
+          "source_line_text": "--> API REST",
+          "source_text": "API REST",
+          "source_label": "API REST",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-066",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 430,
+          "source_line_text": "--> webhooks",
+          "source_text": "webhooks",
+          "source_label": "webhooks",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-067",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 431,
+          "source_line_text": "--> connecteurs dev en python",
+          "source_text": "connecteurs dev en python",
+          "source_label": "connecteurs dev en python",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-009",
+      "source_line": 434,
+      "source_heading_text": "> CRM et relation client",
+      "source_label": "CRM et relation client",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-094",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 437,
+          "source_line_text": "--> Contacts : Gestion des prospects",
+          "source_text": "Contacts : Gestion des prospects",
+          "source_label": "Contacts",
+          "source_description": "Gestion des prospects",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-095",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 438,
+          "source_line_text": "--> CRM léger : Pipeline commercial",
+          "source_text": "CRM léger : Pipeline commercial",
+          "source_label": "CRM léger",
+          "source_description": "Pipeline commercial",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-096",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 439,
+          "source_line_text": "--> Leads : Qualification des prospects",
+          "source_text": "Leads : Qualification des prospects",
+          "source_label": "Leads",
+          "source_description": "Qualification des prospects",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-097",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 440,
+          "source_line_text": "--> Devis commerciaux : Proposition commerciales",
+          "source_text": "Devis commerciaux : Proposition commerciales",
+          "source_label": "Devis commerciaux",
+          "source_description": "Proposition commerciales",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-098",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 441,
+          "source_line_text": "--> Suivi client : Historique des échanges",
+          "source_text": "Suivi client : Historique des échanges",
+          "source_label": "Suivi client",
+          "source_description": "Historique des échanges",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-099",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 442,
+          "source_line_text": "--> Segmentation : Groupes de clients",
+          "source_text": "Segmentation : Groupes de clients",
+          "source_label": "Segmentation",
+          "source_description": "Groupes de clients",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-100",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 443,
+          "source_line_text": "--> Relances : Suivi commercial",
+          "source_text": "Relances : Suivi commercial",
+          "source_label": "Relances",
+          "source_description": "Suivi commercial",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-101",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 444,
+          "source_line_text": "--> Satisfaction : Enquete et retours",
+          "source_text": "Satisfaction : Enquete et retours",
+          "source_label": "Satisfaction",
+          "source_description": "Enquete et retours",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-102",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 445,
+          "source_line_text": "--> Fidélité : Programmes de fidélisation",
+          "source_text": "Fidélité : Programmes de fidélisation",
+          "source_label": "Fidélité",
+          "source_description": "Programmes de fidélisation",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-103",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 446,
+          "source_line_text": "--> Portail client : Accès aux informations",
+          "source_text": "Portail client : Accès aux informations",
+          "source_label": "Portail client",
+          "source_description": "Accès aux informations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-068",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 449,
+          "source_line_text": "--> HubSpot",
+          "source_text": "HubSpot",
+          "source_label": "HubSpot",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-069",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 450,
+          "source_line_text": "--> SalesForce",
+          "source_text": "SalesForce",
+          "source_label": "SalesForce",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Salesforce",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-070",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 451,
+          "source_line_text": "--> PipeDrive",
+          "source_text": "PipeDrive",
+          "source_label": "PipeDrive",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Pipedrive",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-071",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 452,
+          "source_line_text": "--> Zoho CRM",
+          "source_text": "Zoho CRM",
+          "source_label": "Zoho CRM",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-072",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 453,
+          "source_line_text": "--> Odoo",
+          "source_text": "Odoo",
+          "source_label": "Odoo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-073",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 454,
+          "source_line_text": "--> MDynamics 365",
+          "source_text": "MDynamics 365",
+          "source_label": "MDynamics 365",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Microsoft Dynamics 365",
+            "reason": "Rapprochement probable avec une autre mention ; à confirmer, sans fusion.",
+            "decision_status": "a_valider"
+          }
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-010",
+      "source_line": 457,
+      "source_heading_text": "> Statistiques et Analytics",
+      "source_label": "Statistiques et Analytics",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-104",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 460,
+          "source_line_text": "--> Analytics : Mesure d'audience",
+          "source_text": "Analytics : Mesure d'audience",
+          "source_label": "Analytics",
+          "source_description": "Mesure d'audience",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-105",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 461,
+          "source_line_text": "--> Evènements : Suivi des interactions",
+          "source_text": "Evènements : Suivi des interactions",
+          "source_label": "Evènements",
+          "source_description": "Suivi des interactions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-106",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 462,
+          "source_line_text": "--> Conversion : Suivi des objectifs",
+          "source_text": "Conversion : Suivi des objectifs",
+          "source_label": "Conversion",
+          "source_description": "Suivi des objectifs",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-107",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 463,
+          "source_line_text": "--> Dashboard : tableau de board",
+          "source_text": "Dashboard : tableau de board",
+          "source_label": "Dashboard",
+          "source_description": "tableau de board",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-108",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 464,
+          "source_line_text": "--> Rapports : Rapports périodiques",
+          "source_text": "Rapports : Rapports périodiques",
+          "source_label": "Rapports",
+          "source_description": "Rapports périodiques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-109",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 465,
+          "source_line_text": "--> Performance : Mesures techniques",
+          "source_text": "Performance : Mesures techniques",
+          "source_label": "Performance",
+          "source_description": "Mesures techniques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-110",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 466,
+          "source_line_text": "--> SEO Monitoring : Suivi du référencement",
+          "source_text": "SEO Monitoring : Suivi du référencement",
+          "source_label": "SEO Monitoring",
+          "source_description": "Suivi du référencement",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-111",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 467,
+          "source_line_text": "--> Heatmaps : Analyse des interactions",
+          "source_text": "Heatmaps : Analyse des interactions",
+          "source_label": "Heatmaps",
+          "source_description": "Analyse des interactions",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-112",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 468,
+          "source_line_text": "--> A/B testing : Expérimentations",
+          "source_text": "A/B testing : Expérimentations",
+          "source_label": "A/B testing",
+          "source_description": "Expérimentations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-113",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 469,
+          "source_line_text": "--> Business Intelligence : Indicateurs métier",
+          "source_text": "Business Intelligence : Indicateurs métier",
+          "source_label": "Business Intelligence",
+          "source_description": "Indicateurs métier",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-074",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 472,
+          "source_line_text": "--> Matomo",
+          "source_text": "Matomo",
+          "source_label": "Matomo",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-075",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 473,
+          "source_line_text": "--> Plausible ",
+          "source_text": "Plausible",
+          "source_label": "Plausible",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-076",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 474,
+          "source_line_text": "--> Google Analytics",
+          "source_text": "Google Analytics",
+          "source_label": "Google Analytics",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-077",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 475,
+          "source_line_text": "--> Search Console",
+          "source_text": "Search Console",
+          "source_label": "Search Console",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Google Search Console",
+            "reason": "Rapprochement probable avec une autre mention ; à confirmer, sans fusion.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-078",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 476,
+          "source_line_text": "--> Microsoft Clarity",
+          "source_text": "Microsoft Clarity",
+          "source_label": "Microsoft Clarity",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-079",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 477,
+          "source_line_text": "--> MEtabase",
+          "source_text": "MEtabase",
+          "source_label": "MEtabase",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Metabase",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-080",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 478,
+          "source_line_text": "--> Grafana",
+          "source_text": "Grafana",
+          "source_label": "Grafana",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-011",
+      "source_line": 481,
+      "source_heading_text": "> Réservation et activité locales",
+      "source_label": "Réservation et activité locales",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-114",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 484,
+          "source_line_text": "--> Rendez-vous : Réservations",
+          "source_text": "Rendez-vous : Réservations",
+          "source_label": "Rendez-vous",
+          "source_description": "Réservations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-115",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 485,
+          "source_line_text": "--> Planning : Gestion des disponibilités",
+          "source_text": "Planning : Gestion des disponibilités",
+          "source_label": "Planning",
+          "source_description": "Gestion des disponibilités",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-116",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 486,
+          "source_line_text": "--> Evènements : Calendrier d'évènements",
+          "source_text": "Evènements : Calendrier d'évènements",
+          "source_label": "Evènements",
+          "source_description": "Calendrier d'évènements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-117",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 487,
+          "source_line_text": "--> Billetterie : Vente de places",
+          "source_text": "Billetterie : Vente de places",
+          "source_label": "Billetterie",
+          "source_description": "Vente de places",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-118",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 488,
+          "source_line_text": "--> Restaurant : Réservation de tables",
+          "source_text": "Restaurant : Réservation de tables",
+          "source_label": "Restaurant",
+          "source_description": "Réservation de tables",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-119",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 489,
+          "source_line_text": "--> Prestations : Réservations de services",
+          "source_text": "Prestations : Réservations de services",
+          "source_label": "Prestations",
+          "source_description": "Réservations de services",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-120",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 490,
+          "source_line_text": "--> Gestion des ressources : Salles, Equipement",
+          "source_text": "Gestion des ressources : Salles, Equipement",
+          "source_label": "Gestion des ressources",
+          "source_description": "Salles, Equipement",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-121",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 491,
+          "source_line_text": "--> Annulations : Politique d'annulations",
+          "source_text": "Annulations : Politique d'annulations",
+          "source_label": "Annulations",
+          "source_description": "Politique d'annulations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-122",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 492,
+          "source_line_text": "--> Rappels : Rappels automatiques",
+          "source_text": "Rappels : Rappels automatiques",
+          "source_label": "Rappels",
+          "source_description": "Rappels automatiques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-123",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 493,
+          "source_line_text": "--> Paiement d'accompte : Paieement à la réservation",
+          "source_text": "Paiement d'accompte : Paieement à la réservation",
+          "source_label": "Paiement d'accompte",
+          "source_description": "Paieement à la réservation",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Paiement d'acompte",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-081",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 496,
+          "source_line_text": "-->  Google Calendar",
+          "source_text": "Google Calendar",
+          "source_label": "Google Calendar",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-082",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 497,
+          "source_line_text": "--> Outlook Calendar",
+          "source_text": "Outlook Calendar",
+          "source_label": "Outlook Calendar",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-083",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 498,
+          "source_line_text": "--> Calendly",
+          "source_text": "Calendly",
+          "source_label": "Calendly",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-084",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 499,
+          "source_line_text": "--> Stripe",
+          "source_text": "Stripe",
+          "source_label": "Stripe",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-085",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 500,
+          "source_line_text": "--> Systèmes de résa spécialisés",
+          "source_text": "Systèmes de résa spécialisés",
+          "source_label": "Systèmes de résa spécialisés",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-012",
+      "source_line": 503,
+      "source_heading_text": "> Localisation et présence locale",
+      "source_label": "Localisation et présence locale",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-124",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 506,
+          "source_line_text": "--> Carte : Affichage géographique",
+          "source_text": "Carte : Affichage géographique",
+          "source_label": "Carte",
+          "source_description": "Affichage géographique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-125",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 507,
+          "source_line_text": "--> Points de vente : Localisation des établissements",
+          "source_text": "Points de vente : Localisation des établissements",
+          "source_label": "Points de vente",
+          "source_description": "Localisation des établissements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-126",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 508,
+          "source_line_text": "--> Itinéraire : Accès à un commerce",
+          "source_text": "Itinéraire : Accès à un commerce",
+          "source_label": "Itinéraire",
+          "source_description": "Accès à un commerce",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-127",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 509,
+          "source_line_text": "--> Horaires : Horaires d'ouverture",
+          "source_text": "Horaires : Horaires d'ouverture",
+          "source_label": "Horaires",
+          "source_description": "Horaires d'ouverture",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-128",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 510,
+          "source_line_text": "--> Géolocalisation : Recherche géographique",
+          "source_text": "Géolocalisation : Recherche géographique",
+          "source_label": "Géolocalisation",
+          "source_description": "Recherche géographique",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-129",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 511,
+          "source_line_text": "--> Recherche de proximité : Points proches",
+          "source_text": "Recherche de proximité : Points proches",
+          "source_label": "Recherche de proximité",
+          "source_description": "Points proches",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-130",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 512,
+          "source_line_text": "--> Zones d'intervention : Secteurs géographiques",
+          "source_text": "Zones d'intervention : Secteurs géographiques",
+          "source_label": "Zones d'intervention",
+          "source_description": "Secteurs géographiques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-131",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 513,
+          "source_line_text": "--> Avis : Affichages d'avis clients",
+          "source_text": "Avis : Affichages d'avis clients",
+          "source_label": "Avis",
+          "source_description": "Affichages d'avis clients",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-086",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 516,
+          "source_line_text": "--> OpenStreetMap",
+          "source_text": "OpenStreetMap",
+          "source_label": "OpenStreetMap",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-087",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 517,
+          "source_line_text": "--> Mapbox",
+          "source_text": "Mapbox",
+          "source_label": "Mapbox",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-088",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 518,
+          "source_line_text": "--> Google Maps Platform",
+          "source_text": "Google Maps Platform",
+          "source_label": "Google Maps Platform",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-089",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 519,
+          "source_line_text": "--> Google Business Profile",
+          "source_text": "Google Business Profile",
+          "source_label": "Google Business Profile",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-090",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 520,
+          "source_line_text": "--> HERE",
+          "source_text": "HERE",
+          "source_label": "HERE",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    },
+    {
+      "inventory_id": "INV-FAM-013",
+      "source_line": 523,
+      "source_heading_text": "> Applications métier",
+      "source_label": "Applications métier",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-132",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 526,
+          "source_line_text": "--> CRUD Builder : Gestion d'entités",
+          "source_text": "CRUD Builder : Gestion d'entités",
+          "source_label": "CRUD Builder",
+          "source_description": "Gestion d'entités",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-133",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 527,
+          "source_line_text": "--> Tables : Tableaux de données",
+          "source_text": "Tables : Tableaux de données",
+          "source_label": "Tables",
+          "source_description": "Tableaux de données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-134",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 528,
+          "source_line_text": "--> Filtres : Recherche avancée",
+          "source_text": "Filtres : Recherche avancée",
+          "source_label": "Filtres",
+          "source_description": "Recherche avancée",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-135",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 529,
+          "source_line_text": "--> Dashboard métier : Indicateurs personnalisés",
+          "source_text": "Dashboard métier : Indicateurs personnalisés",
+          "source_label": "Dashboard métier",
+          "source_description": "Indicateurs personnalisés",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-136",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 530,
+          "source_line_text": "--> Workflows métier : Processus spécifiques",
+          "source_text": "Workflows métier : Processus spécifiques",
+          "source_label": "Workflows métier",
+          "source_description": "Processus spécifiques",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-137",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 531,
+          "source_line_text": "--> Import/export : 2changes de données",
+          "source_text": "Import/export : 2changes de données",
+          "source_label": "Import/export",
+          "source_description": "2changes de données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-138",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 532,
+          "source_line_text": "--> Permissions avancées : Accès par role",
+          "source_text": "Permissions avancées : Accès par role",
+          "source_label": "Permissions avancées",
+          "source_description": "Accès par role",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-139",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 533,
+          "source_line_text": "--> Historique : traçabilité ",
+          "source_text": "Historique : traçabilité",
+          "source_label": "Historique",
+          "source_description": "traçabilité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-140",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 534,
+          "source_line_text": "--> Génération documentaire : Documents métier",
+          "source_text": "Génération documentaire : Documents métier",
+          "source_label": "Génération documentaire",
+          "source_description": "Documents métier",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-141",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 535,
+          "source_line_text": "--> Notifications : Alertes applicatives",
+          "source_text": "Notifications : Alertes applicatives",
+          "source_label": "Notifications",
+          "source_description": "Alertes applicatives",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-142",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 536,
+          "source_line_text": "--> API métier : Exposition controlée de données",
+          "source_text": "API métier : Exposition controlée de données",
+          "source_label": "API métier",
+          "source_description": "Exposition controlée de données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [],
+      "empty_connector_slot_refs": [
+        "INV-VID-001"
+      ]
+    },
+    {
+      "inventory_id": "INV-FAM-014",
+      "source_line": 542,
+      "source_heading_text": "> Conformité et Confidentialité",
+      "source_label": "Conformité et Confidentialité",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-143",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 545,
+          "source_line_text": "--> Politique de confidentialité : Pages et Documents",
+          "source_text": "Politique de confidentialité : Pages et Documents",
+          "source_label": "Politique de confidentialité",
+          "source_description": "Pages et Documents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-144",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 546,
+          "source_line_text": "--> Gestion des cookies : Consentement",
+          "source_text": "Gestion des cookies : Consentement",
+          "source_label": "Gestion des cookies",
+          "source_description": "Consentement",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-145",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 547,
+          "source_line_text": "--> Export des données : Portabilité",
+          "source_text": "Export des données : Portabilité",
+          "source_label": "Export des données",
+          "source_description": "Portabilité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-146",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 548,
+          "source_line_text": "--> Suppression des données : Traitement des demandes",
+          "source_text": "Suppression des données : Traitement des demandes",
+          "source_label": "Suppression des données",
+          "source_description": "Traitement des demandes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-147",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 549,
+          "source_line_text": "--> Registre de consentement : Traçabilité",
+          "source_text": "Registre de consentement : Traçabilité",
+          "source_label": "Registre de consentement",
+          "source_description": "Traçabilité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-148",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 550,
+          "source_line_text": "--> Conservation : Polituqes de rétention",
+          "source_text": "Conservation : Polituqes de rétention",
+          "source_label": "Conservation",
+          "source_description": "Polituqes de rétention",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-149",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 551,
+          "source_line_text": "--> Journal d'audit : Historique des opérations",
+          "source_text": "Journal d'audit : Historique des opérations",
+          "source_label": "Journal d'audit",
+          "source_description": "Historique des opérations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-150",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 552,
+          "source_line_text": "--> Gestion des accès : Droits sur les données",
+          "source_text": "Gestion des accès : Droits sur les données",
+          "source_label": "Gestion des accès",
+          "source_description": "Droits sur les données",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-151",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 553,
+          "source_line_text": "--> Gestion des incidents : Déclaration et suivi",
+          "source_text": "Gestion des incidents : Déclaration et suivi",
+          "source_label": "Gestion des incidents",
+          "source_description": "Déclaration et suivi",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [],
+      "empty_connector_slot_refs": [
+        "INV-VID-002"
+      ]
+    },
+    {
+      "inventory_id": "INV-FAM-015",
+      "source_line": 559,
+      "source_heading_text": "> Exploitation et infrastructure",
+      "source_label": "Exploitation et infrastructure",
+      "qualification_status": "a_qualifier",
+      "functional_entries": [
+        {
+          "inventory_id": "INV-FON-152",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 562,
+          "source_line_text": "--> Deployment Manager : Gestion des déploiements",
+          "source_text": "Deployment Manager : Gestion des déploiements",
+          "source_label": "Deployment Manager",
+          "source_description": "Gestion des déploiements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-153",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 563,
+          "source_line_text": "--> Version Manager : Versions du moteur",
+          "source_text": "Version Manager : Versions du moteur",
+          "source_label": "Version Manager",
+          "source_description": "Versions du moteur",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-154",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 564,
+          "source_line_text": "--> Backup Manager : Sauvegardes",
+          "source_text": "Backup Manager : Sauvegardes",
+          "source_label": "Backup Manager",
+          "source_description": "Sauvegardes",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-155",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 565,
+          "source_line_text": "--> Restore Manager : Restaurations",
+          "source_text": "Restore Manager : Restaurations",
+          "source_label": "Restore Manager",
+          "source_description": "Restaurations",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-156",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 566,
+          "source_line_text": "--> Monitoring : Dispo",
+          "source_text": "Monitoring : Dispo",
+          "source_label": "Monitoring",
+          "source_description": "Dispo",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-157",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 567,
+          "source_line_text": "--> Log Viewer : Consultation des journaux",
+          "source_text": "Log Viewer : Consultation des journaux",
+          "source_label": "Log Viewer",
+          "source_description": "Consultation des journaux",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-158",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 568,
+          "source_line_text": "--> Security Scanner : Conroles de sécurité",
+          "source_text": "Security Scanner : Conroles de sécurité",
+          "source_label": "Security Scanner",
+          "source_description": "Conroles de sécurité",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-159",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 569,
+          "source_line_text": "--> Domain Manager : Domaines",
+          "source_text": "Domain Manager : Domaines",
+          "source_label": "Domain Manager",
+          "source_description": "Domaines",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-160",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 570,
+          "source_line_text": "--> SSL Manager : Certificats TLS",
+          "source_text": "SSL Manager : Certificats TLS",
+          "source_label": "SSL Manager",
+          "source_description": "Certificats TLS",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-161",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 571,
+          "source_line_text": "--> Resource Monitor : CPU, RAM, Stockage",
+          "source_text": "Resource Monitor : CPU, RAM, Stockage",
+          "source_label": "Resource Monitor",
+          "source_description": "CPU, RAM, Stockage",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-162",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 572,
+          "source_line_text": "--> Module Manager : Installation des modules",
+          "source_text": "Module Manager : Installation des modules",
+          "source_label": "Module Manager",
+          "source_description": "Installation des modules",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-163",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 573,
+          "source_line_text": "--> Concifugration Manager : Paramètrage",
+          "source_text": "Concifugration Manager : Paramètrage",
+          "source_label": "Concifugration Manager",
+          "source_description": "Paramètrage",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Configuration Manager",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-164",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 574,
+          "source_line_text": "--> Incident Manager : Gestion des incidents",
+          "source_text": "Incident Manager : Gestion des incidents",
+          "source_label": "Incident Manager",
+          "source_description": "Gestion des incidents",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-FON-165",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 575,
+          "source_line_text": "--> Updagte Managfer : MAJ",
+          "source_text": "Updagte Managfer : MAJ",
+          "source_label": "Updagte Managfer",
+          "source_description": "MAJ",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "Update Manager",
+            "reason": "Correction orthographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-FON-166",
+          "kind": "entree_fonctionnelle_source",
+          "source_line": 576,
+          "source_line_text": "--> Client Billing : Factruration de nos abonnements",
+          "source_text": "Client Billing : Factruration de nos abonnements",
+          "source_label": "Client Billing",
+          "source_description": "Factruration de nos abonnements",
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "connector_occurrences": [
+        {
+          "inventory_id": "INV-CON-091",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 579,
+          "source_line_text": "--> Gitlab",
+          "source_text": "Gitlab",
+          "source_label": "Gitlab",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": {
+            "proposed_label": "GitLab",
+            "reason": "Harmonisation typographique proposée.",
+            "decision_status": "a_valider"
+          }
+        },
+        {
+          "inventory_id": "INV-CON-092",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 580,
+          "source_line_text": "--> Scaleway",
+          "source_text": "Scaleway",
+          "source_label": "Scaleway",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-093",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 581,
+          "source_line_text": "--> DNS",
+          "source_text": "DNS",
+          "source_label": "DNS",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-094",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 582,
+          "source_line_text": "--> ACME",
+          "source_text": "ACME",
+          "source_label": "ACME",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-095",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 583,
+          "source_line_text": "--> Sentry",
+          "source_text": "Sentry",
+          "source_label": "Sentry",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-096",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 584,
+          "source_line_text": "--> Grafana",
+          "source_text": "Grafana",
+          "source_label": "Grafana",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-097",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 585,
+          "source_line_text": "--> Prometheus",
+          "source_text": "Prometheus",
+          "source_label": "Prometheus",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        },
+        {
+          "inventory_id": "INV-CON-098",
+          "kind": "occurrence_connecteur_source",
+          "source_line": 586,
+          "source_line_text": "--> Supervisor",
+          "source_text": "Supervisor",
+          "source_label": "Supervisor",
+          "source_description": null,
+          "qualification_status": "a_qualifier",
+          "availability_status": "non_etablie",
+          "normalization_proposal": null
+        }
+      ],
+      "empty_connector_slot_refs": []
+    }
+  ],
+  "empty_connector_slots": [
+    {
+      "inventory_id": "INV-VID-001",
+      "family_inventory_id": "INV-FAM-013",
+      "source_line": 539,
+      "source_line_text": "--> ",
+      "source_text": "",
+      "kind": "emplacement_connecteur_vide",
+      "qualification_status": "a_qualifier",
+      "counted_as_connector": false
+    },
+    {
+      "inventory_id": "INV-VID-002",
+      "family_inventory_id": "INV-FAM-014",
+      "source_line": 556,
+      "source_line_text": "--> ",
+      "source_text": "",
+      "kind": "emplacement_connecteur_vide",
+      "qualification_status": "a_qualifier",
+      "counted_as_connector": false
+    }
+  ],
+  "ui_components": [
+    {
+      "inventory_id": "INV-UI-001",
+      "kind": "composant_ui_source",
+      "source_line": 132,
+      "source_line_text": "-> Button",
+      "source_text": "Button",
+      "source_label": "Button",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-002",
+      "kind": "composant_ui_source",
+      "source_line": 133,
+      "source_line_text": "-> Dialog",
+      "source_text": "Dialog",
+      "source_label": "Dialog",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-003",
+      "kind": "composant_ui_source",
+      "source_line": 134,
+      "source_line_text": "-> Input",
+      "source_text": "Input",
+      "source_label": "Input",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-004",
+      "kind": "composant_ui_source",
+      "source_line": 135,
+      "source_line_text": "-> Select",
+      "source_text": "Select",
+      "source_label": "Select",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-005",
+      "kind": "composant_ui_source",
+      "source_line": 136,
+      "source_line_text": "-> Tabs",
+      "source_text": "Tabs",
+      "source_label": "Tabs",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-006",
+      "kind": "composant_ui_source",
+      "source_line": 137,
+      "source_line_text": "-> Dropdown",
+      "source_text": "Dropdown",
+      "source_label": "Dropdown",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-007",
+      "kind": "composant_ui_source",
+      "source_line": 138,
+      "source_line_text": "-> Badge",
+      "source_text": "Badge",
+      "source_label": "Badge",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-008",
+      "kind": "composant_ui_source",
+      "source_line": 139,
+      "source_line_text": "-> Toast",
+      "source_text": "Toast",
+      "source_label": "Toast",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-009",
+      "kind": "composant_ui_source",
+      "source_line": 140,
+      "source_line_text": "-> Card",
+      "source_text": "Card",
+      "source_label": "Card",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-UI-010",
+      "kind": "composant_ui_source",
+      "source_line": 141,
+      "source_line_text": "-> Table",
+      "source_text": "Table",
+      "source_label": "Table",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    }
+  ],
+  "externalization_entries": [
+    {
+      "inventory_id": "INV-EXT-001",
+      "kind": "entree_externalisation_source",
+      "source_line": 178,
+      "source_line_text": "--> Serveur e-mail : Fournisseur transactionnel externe",
+      "source_text": "Serveur e-mail : Fournisseur transactionnel externe",
+      "source_label": "Serveur e-mail",
+      "source_description": "Fournisseur transactionnel externe",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-002",
+      "kind": "entree_externalisation_source",
+      "source_line": 179,
+      "source_line_text": "--> Newsletter : Fournisseur spécialisé ou connecteur",
+      "source_text": "Newsletter : Fournisseur spécialisé ou connecteur",
+      "source_label": "Newsletter",
+      "source_description": "Fournisseur spécialisé ou connecteur",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-003",
+      "kind": "entree_externalisation_source",
+      "source_line": 180,
+      "source_line_text": "--> Authentification : Django Auth et composants éprouvés",
+      "source_text": "Authentification : Django Auth et composants éprouvés",
+      "source_label": "Authentification",
+      "source_description": "Django Auth et composants éprouvés",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-004",
+      "kind": "entree_externalisation_source",
+      "source_line": 181,
+      "source_line_text": "--> SSO : Bibilothèque OIDC/SAML maintenue",
+      "source_text": "SSO : Bibilothèque OIDC/SAML maintenue",
+      "source_label": "SSO",
+      "source_description": "Bibilothèque OIDC/SAML maintenue",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-005",
+      "kind": "entree_externalisation_source",
+      "source_line": 182,
+      "source_line_text": "--> Certificat TLS : Gestion automatisée",
+      "source_text": "Certificat TLS : Gestion automatisée",
+      "source_label": "Certificat TLS",
+      "source_description": "Gestion automatisée",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-006",
+      "kind": "entree_externalisation_source",
+      "source_line": 183,
+      "source_line_text": "--> Stockage de fichiers : Stockage S3 compatible",
+      "source_text": "Stockage de fichiers : Stockage S3 compatible",
+      "source_label": "Stockage de fichiers",
+      "source_description": "Stockage S3 compatible",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-007",
+      "kind": "entree_externalisation_source",
+      "source_line": 184,
+      "source_line_text": "--> Paiements : Prestataire de paiement",
+      "source_text": "Paiements : Prestataire de paiement",
+      "source_label": "Paiements",
+      "source_description": "Prestataire de paiement",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-008",
+      "kind": "entree_externalisation_source",
+      "source_line": 185,
+      "source_line_text": "--> Gestion des secrets : Gestionnaire sécurisé, séparé du code",
+      "source_text": "Gestion des secrets : Gestionnaire sécurisé, séparé du code",
+      "source_label": "Gestion des secrets",
+      "source_description": "Gestionnaire sécurisé, séparé du code",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    },
+    {
+      "inventory_id": "INV-EXT-009",
+      "kind": "entree_externalisation_source",
+      "source_line": 186,
+      "source_line_text": "--> Sauvegardes : Outils éprouvés avec restauration testée",
+      "source_text": "Sauvegardes : Outils éprouvés avec restauration testée",
+      "source_label": "Sauvegardes",
+      "source_description": "Outils éprouvés avec restauration testée",
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null
+    }
+  ],
+  "classification_entries": [
+    {
+      "inventory_id": "INV-CLA-001",
+      "kind": "entree_classification_source",
+      "source_line": 195,
+      "source_line_text": "--> Sécurité",
+      "source_text": "Sécurité",
+      "source_label": "Sécurité",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Core",
+      "category_source_line": 192
+    },
+    {
+      "inventory_id": "INV-CLA-002",
+      "kind": "entree_classification_source",
+      "source_line": 196,
+      "source_line_text": "--> CMS",
+      "source_text": "CMS",
+      "source_label": "CMS",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Core",
+      "category_source_line": 192
+    },
+    {
+      "inventory_id": "INV-CLA-003",
+      "kind": "entree_classification_source",
+      "source_line": 197,
+      "source_line_text": "--> Gestion des médias",
+      "source_text": "Gestion des médias",
+      "source_label": "Gestion des médias",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Core",
+      "category_source_line": 192
+    },
+    {
+      "inventory_id": "INV-CLA-004",
+      "kind": "entree_classification_source",
+      "source_line": 198,
+      "source_line_text": "--> Configuration",
+      "source_text": "Configuration",
+      "source_label": "Configuration",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Core",
+      "category_source_line": 192
+    },
+    {
+      "inventory_id": "INV-CLA-005",
+      "kind": "entree_classification_source",
+      "source_line": 204,
+      "source_line_text": "--> Contact",
+      "source_text": "Contact",
+      "source_label": "Contact",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Standard",
+      "category_source_line": 201
+    },
+    {
+      "inventory_id": "INV-CLA-006",
+      "kind": "entree_classification_source",
+      "source_line": 205,
+      "source_line_text": "--> Catalogue",
+      "source_text": "Catalogue",
+      "source_label": "Catalogue",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Standard",
+      "category_source_line": 201
+    },
+    {
+      "inventory_id": "INV-CLA-007",
+      "kind": "entree_classification_source",
+      "source_line": 206,
+      "source_line_text": "--> Connecteurs métiers",
+      "source_text": "Connecteurs métiers",
+      "source_label": "Connecteurs métiers",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Standard",
+      "category_source_line": 201
+    },
+    {
+      "inventory_id": "INV-CLA-008",
+      "kind": "entree_classification_source",
+      "source_line": 212,
+      "source_line_text": "--> SSO",
+      "source_text": "SSO",
+      "source_label": "SSO",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Advanced",
+      "category_source_line": 209
+    },
+    {
+      "inventory_id": "INV-CLA-009",
+      "kind": "entree_classification_source",
+      "source_line": 213,
+      "source_line_text": "--> Traitement documentaire",
+      "source_text": "Traitement documentaire",
+      "source_label": "Traitement documentaire",
+      "source_description": null,
+      "qualification_status": "a_qualifier",
+      "availability_status": "non_etablie",
+      "normalization_proposal": null,
+      "category_source": "Advanced",
+      "category_source_line": 209
+    }
+  ],
+  "example_sheet": {
+    "inventory_id": "INV-EX-001",
+    "kind": "exemple_de_fiche_uniquement",
+    "is_example": true,
+    "is_registered_module": false,
+    "source_heading_line": 589,
+    "source_heading_text": "> Structure d'une fiche métier d'un Register",
+    "example_identifier": "MOD-COM-001",
+    "interpretation": "Exemple de structure. P0, Standard, IDEA et les autres valeurs ne constituent ni une priorité approuvée, ni un module disponible, ni une décision d’implémentation.",
+    "fields": [
+      {
+        "source_line": 593,
+        "source_line_text": "| Identifiant             | `MOD-COM-001`                   |",
+        "source_field": "Identifiant",
+        "source_value": "`MOD-COM-001`"
+      },
+      {
+        "source_line": 594,
+        "source_line_text": "| Nom                     | Contact Form                    |",
+        "source_field": "Nom",
+        "source_value": "Contact Form"
+      },
+      {
+        "source_line": 595,
+        "source_line_text": "| Famille                 | Communication                   |",
+        "source_field": "Famille",
+        "source_value": "Communication"
+      },
+      {
+        "source_line": 596,
+        "source_line_text": "| Description             | Création de formulaires         |",
+        "source_field": "Description",
+        "source_value": "Création de formulaires"
+      },
+      {
+        "source_line": 597,
+        "source_line_text": "| Clientèle               | Commerce, artisan, industrie    |",
+        "source_field": "Clientèle",
+        "source_value": "Commerce, artisan, industrie"
+      },
+      {
+        "source_line": 598,
+        "source_line_text": "| Capacités requises      | Formulaires, e-mail             |",
+        "source_field": "Capacités requises",
+        "source_value": "Formulaires, e-mail"
+      },
+      {
+        "source_line": 599,
+        "source_line_text": "| Connecteurs compatibles | Brevo, Mailgun, SMTP            |",
+        "source_field": "Connecteurs compatibles",
+        "source_value": "Brevo, Mailgun, SMTP"
+      },
+      {
+        "source_line": 600,
+        "source_line_text": "| Type                    | Standard                        |",
+        "source_field": "Type",
+        "source_value": "Standard"
+      },
+      {
+        "source_line": 601,
+        "source_line_text": "| Exécution               | Django                          |",
+        "source_field": "Exécution",
+        "source_value": "Django"
+      },
+      {
+        "source_line": 602,
+        "source_line_text": "| Base de données         | Optionnelle selon configuration |",
+        "source_field": "Base de données",
+        "source_value": "Optionnelle selon configuration"
+      },
+      {
+        "source_line": 603,
+        "source_line_text": "| Interface               | Wagtail StreamField             |",
+        "source_field": "Interface",
+        "source_value": "Wagtail StreamField"
+      },
+      {
+        "source_line": 604,
+        "source_line_text": "| Activation no-code      | Oui, après installation         |",
+        "source_field": "Activation no-code",
+        "source_value": "Oui, après installation"
+      },
+      {
+        "source_line": 605,
+        "source_line_text": "| Sensibilité des données | Données personnelles            |",
+        "source_field": "Sensibilité des données",
+        "source_value": "Données personnelles"
+      },
+      {
+        "source_line": 606,
+        "source_line_text": "| Criticité sécurité      | Moyenne à élevée                |",
+        "source_field": "Criticité sécurité",
+        "source_value": "Moyenne à élevée"
+      },
+      {
+        "source_line": 607,
+        "source_line_text": "| Complexité              | Faible à moyenne                |",
+        "source_field": "Complexité",
+        "source_value": "Faible à moyenne"
+      },
+      {
+        "source_line": 608,
+        "source_line_text": "| Priorité                | P0                              |",
+        "source_field": "Priorité",
+        "source_value": "P0"
+      },
+      {
+        "source_line": 609,
+        "source_line_text": "| Statut                  | IDEA                            |",
+        "source_field": "Statut",
+        "source_value": "IDEA"
+      }
+    ]
+  },
+  "lexical_repetitions": {
+    "functional_labels": [
+      {
+        "label": "Notifications",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-FON-019",
+          "INV-FON-141"
+        ]
+      },
+      {
+        "label": "Conversion",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-FON-066",
+          "INV-FON-106"
+        ]
+      },
+      {
+        "label": "Evènements",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-FON-105",
+          "INV-FON-116"
+        ]
+      }
+    ],
+    "connector_labels": [
+      {
+        "label": "Google Analytics",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-002",
+          "INV-CON-076"
+        ]
+      },
+      {
+        "label": "Matomo",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-003",
+          "INV-CON-074"
+        ]
+      },
+      {
+        "label": "Calendly",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-014",
+          "INV-CON-083"
+        ]
+      },
+      {
+        "label": "Google Calendar",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-015",
+          "INV-CON-081"
+        ]
+      },
+      {
+        "label": "Stripe",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-027",
+          "INV-CON-084"
+        ]
+      },
+      {
+        "label": "Odoo",
+        "occurrences": 3,
+        "inventory_refs": [
+          "INV-CON-033",
+          "INV-CON-038",
+          "INV-CON-072"
+        ]
+      },
+      {
+        "label": "SFTp",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-044",
+          "INV-CON-053"
+        ]
+      },
+      {
+        "label": "Grafana",
+        "occurrences": 2,
+        "inventory_refs": [
+          "INV-CON-080",
+          "INV-CON-096"
+        ]
+      }
+    ],
+    "warning": "Les répétitions lexicales ne suffisent pas à décider d’une fusion métier. Conversion et Evènements ont notamment des sens différents selon leur famille."
+  },
+  "extraction_verification": {
+    "status": "verifie",
+    "scope": "Couverture et fidélité de l’extraction documentaire uniquement.",
+    "catalogue_marker_lines_expected": 266,
+    "catalogue_marker_lines_captured": 266,
+    "catalogue_line_coverage_complete": true,
+    "duplicate_source_lines_in_catalogue": 0,
+    "source_line_texts_match": true,
+    "inventory_ids_unique": true,
+    "no_semantic_merge_performed": true,
+    "no_product_validation_claim": true
+  }
+}

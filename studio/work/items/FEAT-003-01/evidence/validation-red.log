@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_composition_validation (unittest.loader._FailedTest.test_composition_validation)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_composition_validation
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/source/tests/test_composition_validation.py", line 9, in <module>
+    from composition.validation import check_document, remap_occurrence_ids
+ModuleNotFoundError: No module named 'composition.validation'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

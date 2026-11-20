@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "id": "UI-004-02",
+  "kind": "architecture",
+  "title": "T02 · Contrat des gestes et modèle de disposition",
+  "state": "PLANNED",
+  "ui_required": false,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-004-02/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Demande utilisateur du 20 novembre 2026 : « Cadre UI-004-02 — T02 · Contrat des gestes et modèle de disposition conformément au Notion et au Workflow AI ». Cadrage, revue et restitution documentaire ; aucune réalisation applicative.",
+    "actions": [
+      "plan",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "manual",
+      "path": "evidence/controles.json",
+      "sha256": "e495ad18014ec97535c4027cc44d04584c2f7c9eb77a998e7cd2f87cd9193323",
+      "observed_at": "2026-11-20T17:43:30.219079+00:00",
+      "revision": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+      "contract_sha256": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-02/evidence/check-planning.py",
+          "sha256": "913464fa1d7dca4d539328f4e86ece5161f2557f6ac78eeb335ef4e9fd68da0c"
+        },
+        {
+          "path": "work/items/UI-004-02/SPEC.md",
+          "sha256": "06d2bc599523fecf78c3fe7614ca44071264d710545d08d8fb24fcf3349e2775"
+        },
+        {
+          "path": "work/items/UI-004-02/TASKLIST.md",
+          "sha256": "b6bd646a13d3402ebb59a71729b2af7c80077f963f02ea21ce11afbf2069a8ff"
+        },
+        {
+          "path": "work/items/UI-004-02/ARCHITECTURE.md",
+          "sha256": "7ea57286dc96125dcbf432349ad413c877ad04494f1f4d4242af200cb423c5b4"
+        },
+        {
+          "path": "work/items/UI-004-02/SECURITY.md",
+          "sha256": "0a243110ec867b105b55a83f6acd92924d203bd13749949c2be8ce71305e8cdc"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-cadrage.md",
+      "sha256": "e7285c0786c27e3085011d3ccbf033a162d8b639eafe77ba488dc69cbd7e6c11",
+      "observed_at": "2026-11-20T17:43:30.219079+00:00",
+      "revision": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+      "contract_sha256": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-02/ARCHITECTURE.md",
+          "sha256": "7ea57286dc96125dcbf432349ad413c877ad04494f1f4d4242af200cb423c5b4"
+        },
+        {
+          "path": "work/items/UI-004-02/CONTRAT-PROPOSE.md",
+          "sha256": "4dd193e93e5a68eb7dcc8f872d81e5fdf84216c0bc6da03fb25d1dab81ad1788"
+        },
+        {
+          "path": "work/items/UI-004-02/EVIDENCE.md",
+          "sha256": "2a4a9db301ceaa99ff2207005466219b2559c781098265f790d18cc0d40208f3"
+        },
+        {
+          "path": "work/items/UI-004-02/REPORT.md",
+          "sha256": "5917701856d7181f527141839fdad4dfa25216af3554087007bf558d0a811e7e"
+        },
+        {
+          "path": "work/items/UI-004-02/RESEARCH.md",
+          "sha256": "54f78afd548d77a5629764f3d79b8c2d67f3e0acc6b278893b5ab544b47248d6"
+        },
+        {
+          "path": "work/items/UI-004-02/REVIEW.md",
+          "sha256": "34c20e9cabef901718e8a72f01cfff22f1b60b4288197398f68edfd3c62a6b71"
+        },
+        {
+          "path": "work/items/UI-004-02/SECURITY.md",
+          "sha256": "0a243110ec867b105b55a83f6acd92924d203bd13749949c2be8ce71305e8cdc"
+        },
+        {
+          "path": "work/items/UI-004-02/SPEC.md",
+          "sha256": "06d2bc599523fecf78c3fe7614ca44071264d710545d08d8fb24fcf3349e2775"
+        },
+        {
+          "path": "work/items/UI-004-02/TASKLIST.md",
+          "sha256": "b6bd646a13d3402ebb59a71729b2af7c80077f963f02ea21ce11afbf2069a8ff"
+        },
+        {
+          "path": "work/items/UI-004-02/VISUAL-REVIEW.md",
+          "sha256": "ba1d5fb04fa7d8f698cd07ec7b4d8bc0a94726b306ba7ad0b3bde65f8ec37ab9"
+        },
+        {
+          "path": "work/items/UI-004-02/evidence/manifest-sources.json",
+          "sha256": "6cd5ab3ad8550bca8021acec29d8f6fed1fa49a88d0fcd88dc945c6e362566fc"
+        },
+        {
+          "path": "work/items/UI-004-02/evidence/manifest-contrat.json",
+          "sha256": "aaa28d22b84a6fb83c29857ea928e8ddaf43d1b3751a47d2f4aaff64c99adc95"
+        },
+        {
+          "path": "work/items/UI-004-02/evidence/comparaison-sources-t01.json",
+          "sha256": "3f3e16c5bc39aedd11c39da41b572c1015d937f4372139502b1e09468aa4e642"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md et evidence/revue-cadrage.md — /root/t02_revue, avis indépendant final favorable au cadrage",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

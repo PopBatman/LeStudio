@@ -1,0 +1,7 @@
+<c-vars id label help="" error="" value="" type="text" />
+<div class="field">
+  <label class="field-label" for="{{ id }}">{{ label }}</label>
+  <input class="field-input" id="{{ id }}" type="{{ type }}" value="{{ value }}" aria-describedby="{% if help %}{{ id }}-help {% endif %}{{ id }}-error"{% if error %} aria-invalid="true"{% endif %} {{ attrs }}>
+  {% if help %}<p class="field-help" id="{{ id }}-help">{{ help }}</p>{% endif %}
+  <p class="field-error" id="{{ id }}-error"{% if not error %} hidden{% endif %}>{{ error }}</p>
+</div>

@@ -1,0 +1,72 @@
+{
+  "outil": "Orca sur bus AT-SPI dédié, navigateur Chromium avec accessibilité activée et affichage Xvfb",
+  "viewport": [
+    390,
+    820
+  ],
+  "site": "B fictif, page Accueil du modèle",
+  "gestes": [
+    "Afficher le rendu",
+    "Modifier la page",
+    "Rechercher Titre",
+    "Entrée sur le composant, focus dans Destination",
+    "Échap",
+    "Entrée sur le composant",
+    "Placer ici",
+    "Annuler",
+    "Rétablir",
+    "Enregistrer et recevoir le focus sur la confirmation R4"
+  ],
+  "focus_destination_verifie": true,
+  "captures_sortie_synthese": [
+    {
+      "heure_locale": "16:15:03.458431",
+      "annonce": "Afficher le rendu push button."
+    },
+    {
+      "heure_locale": "16:15:04.713812",
+      "annonce": "Modifier la page push button."
+    },
+    {
+      "heure_locale": "16:15:05.399823",
+      "annonce": "Rechercher un composant entry Titre, image…"
+    },
+    {
+      "heure_locale": "16:15:06.745296",
+      "annonce": "Destination combo box."
+    },
+    {
+      "heure_locale": "16:15:06.815305",
+      "annonce": "Choisissez le parent et la position."
+    },
+    {
+      "heure_locale": "16:15:07.561475",
+      "annonce": "Placement annulé."
+    },
+    {
+      "heure_locale": "16:15:08.793302",
+      "annonce": "Placer ici push button."
+    },
+    {
+      "heure_locale": "16:15:09.590004",
+      "annonce": "Composant inséré."
+    },
+    {
+      "heure_locale": "16:15:10.147957",
+      "annonce": "Annuler push button."
+    },
+    {
+      "heure_locale": "16:15:10.927338",
+      "annonce": "Geste annulé."
+    },
+    {
+      "heure_locale": "16:15:13.641559",
+      "annonce": "Enregistrement du brouillon…"
+    },
+    {
+      "heure_locale": "16:15:13.753028",
+      "annonce": "Le brouillon est enregistré en R4."
+    }
+  ],
+  "validation_humaine": "Les annonces sont celles du journal de sortie de synthèse Orca. Le parcours a été piloté par clavier automatisé."
+}

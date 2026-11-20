@@ -1,0 +1,45 @@
+{
+  "banc": "Image Studio locale, SQLite isolée, quatre sites fictifs, gestion authentifiée. GET de pages existantes, sans préparer de rendu Wagtail ni effectuer de modification.",
+  "observations": [
+    {
+      "schema": 1,
+      "reponses": {
+        "site-editor": 200,
+        "site-canvas": 200,
+        "site-builder": 200
+      },
+      "revision_unique": true,
+      "document_identique": true
+    },
+    {
+      "schema": 2,
+      "reponses": {
+        "site-editor": 200,
+        "site-canvas": 200,
+        "site-builder": 200
+      },
+      "revision_unique": true,
+      "document_identique": true
+    },
+    {
+      "schema": 3,
+      "reponses": {
+        "site-editor": 200,
+        "site-canvas": 200,
+        "site-builder": 200
+      },
+      "revision_unique": true,
+      "document_identique": true
+    },
+    {
+      "schema": 4,
+      "reponses": {
+        "site-editor": 200,
+        "site-canvas": 200,
+        "site-builder": 200
+      },
+      "revision_unique": true,
+      "document_identique": true
+    }
+  ]
+}

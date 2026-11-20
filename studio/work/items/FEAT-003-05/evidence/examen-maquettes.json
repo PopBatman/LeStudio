@@ -1,0 +1,32 @@
+{
+  "nature": "Maquette autonome sur données fictives, état en mémoire",
+  "navigateur": "156.0.8078.4",
+  "fenetres_px": [
+    [
+      1440,
+      960
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      760
+    ]
+  ],
+  "formats_simules_px": [
+    1200,
+    820,
+    390
+  ],
+  "observations": [
+    "Glisser le bouton devant le titre dans une grille puis vérifier le premier frère.",
+    "Changer l’ordre au clavier dans la structure et le retrouver dans le canvas.",
+    "Position libre relative au parent mise à jour par un glissement réel du pointeur.",
+    "Tablette à 45 %, mobile en flux, bureau à 60 % ; valeurs distinctes retrouvées dans trois formats.",
+    "Débordement refusé avec focus sur le résumé, saisie conservée et révision stable.",
+    "Réinitialisation d’une seule position mobile, largeur mobile et surcharge tablette préservées, réinitialisation séparée de la disposition du parent."
+  ],
+  "erreurs_js_ou_requetes_http": []
+}

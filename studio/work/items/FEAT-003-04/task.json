@@ -1,0 +1,2979 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003-04",
+  "kind": "feature",
+  "title": "Éditeur structuré et parcours de création",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003-04/",
+      "composition/",
+      "tests/",
+      "registre/",
+      "templates/",
+      "static/ui/",
+      "docs/",
+      "central/urls.py",
+      ".dockerignore"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Mandat de développement FEAT-003-04 du 19 novembre 2026",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/conflit-bureau.png",
+      "sha256": "3398b14ec0d39681c465fc5ccea35d216351fec3bfc327e2a72a50fc9d8df773",
+      "observed_at": "2026-11-19T12:38:02.339067+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/creation-mobile.png",
+      "sha256": "e5e74f09dcbc8567bf145b6d636b3610d19b84be68d050d94bb2d3ebde9ed1bf",
+      "observed_at": "2026-11-19T12:38:02.852083+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/editeur-bureau.png",
+      "sha256": "7301cda1b55b67955a849c2c89b80551940f144008bce3aa4f09cb554a320d26",
+      "observed_at": "2026-11-19T12:38:02.098060+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/erreur-mobile.png",
+      "sha256": "e1390e93721f7e1309b4ff4f238bdb90cf16719ba1aa83e4695bf35ddf50e6e5",
+      "observed_at": "2026-11-19T12:38:03.287096+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "488895118cf2f4cbff55cbe714ca57949ee226b37df9aca2bc6fd7deca63143d",
+      "observed_at": "2026-11-19T12:38:04.780140+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "passed"
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778",
+      "observed_at": "2026-11-19T12:38:01.452041+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/evidence/maquettes.html",
+          "sha256": "02214112109a804376e407435c4b6a252b340a843b2bee81f2992e069bb39778"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/template-v3.json",
+      "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2",
+      "observed_at": "2026-11-19T12:35:57.477363+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/ARCHITECTURE.md",
+          "sha256": "2d66b9e917f0fae68d3ba2b9dab3caf20c79d791250a1465882b602e789e77c2"
+        }
+      ],
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-atelier-bureau.png",
+      "sha256": "d8fcd36fbcd714531085829a26e505943ec08d0a32fed63ac2aa27701834f155",
+      "observed_at": "2026-11-19T12:48:15.360010+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-conflit-mobile.png",
+      "sha256": "4209032042b14b3dfff6776727d4650f776543f51e62ba8d211b95e8efad54f0",
+      "observed_at": "2026-11-19T12:48:15.475013+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-depart-mobile.png",
+      "sha256": "712eb4be9b67a084390a28d97d0faeb381dada886479769a12c65f54ba1b79f4",
+      "observed_at": "2026-11-19T12:48:14.364979+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-erreur-mobile.png",
+      "sha256": "a6886f401d10efdf35a0010177720000889bdb9b37ba317caacc9c465bbe7a64",
+      "observed_at": "2026-11-19T12:48:16.072032+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-lecture-320.png",
+      "sha256": "5072f35963d974301b8208059c279514b6d588bbfa81a387a5f3ae63193ed47c",
+      "observed_at": "2026-11-19T12:48:15.862025+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/application-orca.json",
+      "sha256": "19f30771f04682a734be3c97daf1c1b2b2e4ade75408498a7a49e075d475ffcc",
+      "observed_at": "2026-11-19T12:47:45.760081+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/editor-concurrency-postgres.log",
+      "sha256": "b07dff2f2a386904b063c692f9ae34e6165a80f8107aceeb556678bc61abcf35",
+      "observed_at": "2026-11-19T12:45:12.140215+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/fiche-green.log",
+      "sha256": "c07f0806cad2e2f29308ca189f80dc707a3507f293c0b19de17781320b902f7a",
+      "observed_at": "2026-11-19T12:45:52.369498+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/fiche-red.log",
+      "sha256": "92e4b83c25707650c9c4fd5ac7ff07b94212cbe44a872db977b762c503112c70",
+      "observed_at": "2026-11-19T12:44:25.838730+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/navigateur.json",
+      "sha256": "bc921ffa8a4817f66b34623faf6b47af0c15b7934e105646161ab85edf3e7b4d",
+      "observed_at": "2026-11-19T12:48:16.146034+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste-local.json",
+      "sha256": "fb12bce16e7a456cecd0d103f7142cfa77c2443c93eaa2d0317ad47c6cec3fd2",
+      "observed_at": "2026-11-19T12:48:59.709396+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/review.txt",
+      "sha256": "1f35aba68a46d494b835cf80f35f6f84f6f3ac3adb71853444ffe90ebd62401c",
+      "observed_at": "2026-11-19T12:49:12.937809+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-04/REVIEW.md",
+          "sha256": "1f35aba68a46d494b835cf80f35f6f84f6f3ac3adb71853444ffe90ebd62401c"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/services-green.log",
+      "sha256": "ef22e12261b75bda5ff1e9e6aa204e021b92ce401c584edd9f231e90f256750b",
+      "observed_at": "2026-11-19T12:44:23.737663+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/services-red.log",
+      "sha256": "910657cd4cbbc5d71117f391c343e443ef7ca3e6500383263e2168c778e193ef",
+      "observed_at": "2026-11-19T12:42:50.607646+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "296c4bb1f8bb98ce98ad50b60bfa866680153413fefb319bc641cbd3a95bf50c",
+      "observed_at": "2026-11-19T12:48:20.451169+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "a306f6b38a017f2237e14b5f951a7a1df2311abc1f0d9a9700b328ddfe742854",
+      "observed_at": "2026-11-19T12:48:18.964123+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/web-green.log",
+      "sha256": "46d05b27a3cf5226f511b46769ef2fde62b80db0b0654d7a5f70e428a4a29db9",
+      "observed_at": "2026-11-19T12:47:45.547075+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "passed",
+      "contract_sha256": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "86cf76ad5e05c76be0e3badd3fe96f1f53363007c84bf0ee4cf05b6f8b5cd61d"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "42566855e0a291dc4473cfc7e47984dfe098c3c3982326938de7a74f27c5aca1"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/appearance.py",
+          "sha256": "3e0e34c58766454e90005cf735edf17d6547ea639da1d4d15b44e676c3754641"
+        },
+        {
+          "path": "composition/appearance_contract.py",
+          "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+        },
+        {
+          "path": "composition/assets/nuancier.png",
+          "sha256": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+        },
+        {
+          "path": "composition/assets/presentation-activite-v1.json",
+          "sha256": "2438b233f3a2d1f0c918c68980dc3b29b73a9b19172761f8335f6a721e7bd8a2"
+        },
+        {
+          "path": "composition/catalogue.py",
+          "sha256": "125f68047e4abcaf4319df82f78b11e35a3f6682714c071eaf9a759947ae52a5"
+        },
+        {
+          "path": "composition/catalogue_forms.py",
+          "sha256": "8a21166117e83475faefe085be96f27074030565fe9651ae469607fb2655bc98"
+        },
+        {
+          "path": "composition/catalogue_v1.py",
+          "sha256": "f967fcd3a988e33283ab656a216ad4e286896ac47df46dbb47c4c367f8bdf307"
+        },
+        {
+          "path": "composition/catalogue_views.py",
+          "sha256": "d7b9b50cd94b49696fadfc2341cf33d9cc1abc399ad1b72b300e470682bfe7f2"
+        },
+        {
+          "path": "composition/editor.py",
+          "sha256": "d4e46011b815b86ad61e584ff4246a520b5a6a26ed6a60bf7e1d7e0a4b47a0ce"
+        },
+        {
+          "path": "composition/editor_forms.py",
+          "sha256": "a8ed8cb8930e4e25f520bc13c1180bb33cc35951ac8f965a6afb7c2c245dc355"
+        },
+        {
+          "path": "composition/editor_views.py",
+          "sha256": "bd8967fa635f4cf10c8ef551fd6c0548d399f1258ca4984c189f9fa542ffada8"
+        },
+        {
+          "path": "composition/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/management/commands/catalogue.py",
+          "sha256": "a6d83d9967cc6fc3eb7544bf950083551657c75101ce7041a497323442d8ec47"
+        },
+        {
+          "path": "composition/migrations/0001_initial.py",
+          "sha256": "aa2c57c0d27ccd5d65f3d49ca63d2c7656b451cb9bf883964d57147816195ccb"
+        },
+        {
+          "path": "composition/migrations/0002_catalogue.py",
+          "sha256": "ac7b1dd87d0e1fd955858ae7d1b8ff1df63905f342d77401145defe4e05e952c"
+        },
+        {
+          "path": "composition/migrations/0003_standard_components.py",
+          "sha256": "91669b01d7ca942298430eb1b39b8cbb1b7c9cda6663e80bfdb2292a3bc21b2e"
+        },
+        {
+          "path": "composition/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "8f4fe99e6ae519de3598f466f253a5583bb21cc14c36a4f4c5680ff5747f1ff7"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "4f92eaa555ce0bc428c0f3dce417c39d72c5d23386c24622150d0e2eac29ab2b"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "c1889946ad8b3624b8fde0d574b909a3b52a4fce0a905e7dc48a571e60816c00"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "577f13e5abfa08dc2ed72cb58c18202f21b0c6221febd4507d90afe8380362d0"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "a05a70b331e648d21daf989381c5b3200d12ae682692f921f75786d7af75dc1e"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "2db6151da24f20a819d89f42d70320dc14ea55024a0d3f74fae751430b159a05"
+        },
+        {
+          "path": "static/ui/editor.js",
+          "sha256": "9d410683d7707526d8edfa491232fc46c193575fea5692e4885d605091dff862"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "bf2c8fb0b71077355e2c9ca46bc70d90d90d1b58b022695847de6ee50f651b25"
+        },
+        {
+          "path": "templates/composition/catalogue.html",
+          "sha256": "286f0a644c0a91d2fa181edf8e8ebfbb5408eca0f7a3a3fda6a8e3298edd488e"
+        },
+        {
+          "path": "templates/composition/editor.html",
+          "sha256": "b0b119e134346fb83f2a54a9f7cc71e9c64076021ad97b02b915b6eeb801a30f"
+        },
+        {
+          "path": "templates/composition/editor_definition.html",
+          "sha256": "c7118a03bfebeac9f7b192d17204b9f37150db4f5a9bebf3d23e973baf1d5f9f"
+        },
+        {
+          "path": "templates/composition/editor_inspector.html",
+          "sha256": "9eb6988d29a9278e4554b371e144d0793ff09883faf049ba18edb13856609c52"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "7e826922312d65e47e216e5c73f5a36f1e996b4987340e689238acc7f08ae685"
+        },
+        {
+          "path": "templates/composition/sample.html",
+          "sha256": "a48d700a2979a540591394dc038d4bb17d77f5325f533168b9e7bd2b91733249"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "ee1104973aec6c0e35427deae1e7db98672e8a1404a20059920ca9cb9b72c47d"
+        },
+        {
+          "path": "tests/catalogue_fixture.py",
+          "sha256": "cc88eb4e2f1c9bb271dff302fa8ae1c187f455575c988184db2aa798b53cd4fa"
+        },
+        {
+          "path": "tests/test_appearance.py",
+          "sha256": "e02249787a4f475ee4a14bfa4c05b4795d2922675c430e0d38ee6a246236a54f"
+        },
+        {
+          "path": "tests/test_catalogue.py",
+          "sha256": "5d77f3d4687fc82290dbce0c36d20d22f19495a07c56e8825748cc2629b0d85b"
+        },
+        {
+          "path": "tests/test_catalogue_concurrency.py",
+          "sha256": "b93617e91f07f1622b535792e4caa10ab892dd835f9894de4fb97d5f627cc7f2"
+        },
+        {
+          "path": "tests/test_catalogue_web.py",
+          "sha256": "a8198cf4ecea0756a963c42336a2d9ea310b335bf2568c15158de3e97607e8be"
+        },
+        {
+          "path": "tests/test_composition_validation.py",
+          "sha256": "8279a010e08abbb13838e7fcd12e1f6c64eaf2ddccb8452e8300c3b3a1940266"
+        },
+        {
+          "path": "tests/test_editor_concurrency.py",
+          "sha256": "6e20d593b287848214d2095797a6d4eb9483ae1cd799e8c3631ca91e54dfddb6"
+        },
+        {
+          "path": "tests/test_editor_services.py",
+          "sha256": "81fde667d9d0467015a313045a79261818816575bae4fab5883a23fe1b48817b"
+        },
+        {
+          "path": "tests/test_editor_web.py",
+          "sha256": "bb2b09b8e3d5ebdf1e39508651af234657e7f1795611a984f26d8ca93e17a508"
+        },
+        {
+          "path": "tests/test_site_connection_web.py",
+          "sha256": "98ecc1508ed8c5448f91b01dc90907ad115c0b81e6e6d794a4066503e676278e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/web-red.log",
+      "sha256": "e70d9757c14f000e7d5c0e346db18ffad2c3c30efe41f232f5288f2e6e031f76",
+      "observed_at": "2026-11-19T12:43:14.570426+00:00",
+      "revision": "9b0275ae7aa5f09da403cb9b71d74a822001be182d10ffe2015e094a6800d4e4",
+      "outcome": "failed",
+      "active": false
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/structured_review, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

@@ -1,0 +1,21 @@
+<div class="cv-parent" data-parent="{{ group.id }}" data-layout="{{ group.layout.display|default:'stack' }}" data-columns="{{ group.layout.columns|default:1 }}"
+     style="--cv-cols:{{ group.layout.columns|default:1 }};--cv-gap:{{ group.layout.gap|default_if_none:0|default:0 }}px;--cv-reserved:{{ group.min_height|default:0 }}px">
+  {% for item in group.items %}
+  <article class="cv-node" data-node="{{ item.id }}" data-mode="{{ item.placement.mode|default:'flow' }}"
+       data-x="{{ item.placement.x|default:0 }}" data-y="{{ item.placement.y|default:0 }}" data-z="{{ item.placement.z|default:0 }}" data-label="{{ item.label|default:item.renderer }}"
+       style="{{ item.appearance_style }};{% if item.placement.mode == 'free' %}left:{{ item.placement.x }}%;top:{{ item.placement.y }}px;width:{{ item.placement.width }}%;height:{{ item.placement.height }}px;z-index:{{ item.placement.z|default:0 }};{% else %}{% if item.placement.width and group.layout.display != 'grid' %}width:{{ item.placement.width }}%;{% endif %}{% if item.placement.height %}min-height:{{ item.placement.height }}px;{% endif %}{% if group.layout.display == 'grid' %}grid-column:span {{ item.placement.span|default:1 }};{% endif %}{% endif %}"
+       {% if node_id == item.id %}data-selected{% endif %}>
+    <a class="cv-select" href="?page={{ page_id }}&amp;section={{ branch.id }}&amp;node={{ item.id }}&amp;format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}#inspecteur"{% if item.id == node_id %} aria-current="true"{% endif %}>
+      <span class="cv-kind">{{ item.label|default:item.renderer }}</span>
+      {% if item.renderer == 'heading' %}<strong class="cv-title">{{ item.props.text }}</strong>
+      {% elif item.renderer == 'button' %}<span class="cv-button{% if item.variant == 'secondary' %} cv-button-secondary{% endif %}">{{ item.props.label }}</span>
+      {% elif item.renderer == 'image' %}{% if item.media_url %}<img class="cv-image" src="{{ item.media_url }}" alt="{{ item.props.alt }}">{% else %}<span>Image indisponible</span>{% endif %}
+      {% elif item.renderer == 'article' %}<span>Article édité dans Wagtail</span>
+      {% elif item.renderer == 'unknown' %}<span>Composant indisponible</span>
+      {% elif not item.is_container %}<span class="cv-copy">{{ item.summary }}</span>{% endif %}
+    </a>
+    {% if item.is_container or item.items %}{% include 'composition/canvas_parent.html' with group=item %}{% endif %}
+    {% if manage %}<span class="cv-drag" aria-hidden="true" title="Déplacer">✥</span><span class="cv-resize" aria-hidden="true" title="Redimensionner">◢</span>{% endif %}
+  </article>
+  {% empty %}<span class="cv-empty">{% if manage %}Déposez un bloc ici ou sélectionnez le parent pour y insérer un composant.{% else %}Aucun bloc dans cette zone.{% endif %}</span>{% endfor %}
+</div>

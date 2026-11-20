@@ -1,0 +1,11 @@
+{
+  "base": "PostgreSQL isolé, migré depuis ARCH-002-01",
+  "sites_avant_creation": 1,
+  "revisions_apres_migration": 0,
+  "liaison_conservee": true,
+  "taille_document_octets": 1048576,
+  "blocs": 256,
+  "duree_creation_s": 0.019,
+  "duree_lecture_s": 0.007,
+  "deux_revisions_relues": true
+}

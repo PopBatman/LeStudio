@@ -1,0 +1,4 @@
+<p class="notice" role="alert" tabindex="-1" data-feedback>
+{% if retry_after %}La limite temporaire est atteinte. Réessayez dans {{ retry_after }} secondes.
+{% else %}Cette invitation a atteint son maximum de versions. Demandez une nouvelle invitation à l’équipe du site.{% endif %}
+</p>

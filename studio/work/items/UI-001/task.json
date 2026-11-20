@@ -1,0 +1,1010 @@
+{
+  "schema_version": 1,
+  "id": "UI-001",
+  "kind": "component",
+  "title": "Fondations de l’interface Studio",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "central/",
+      "templates/",
+      "static/",
+      "assets/",
+      "ui/",
+      "frontend/",
+      "requirements.txt",
+      "Dockerfile",
+      ".dockerignore",
+      ".gitignore",
+      "compose.yaml",
+      ".gitlab-ci.yml",
+      "README.md",
+      "tests/",
+      "package.json",
+      "package-lock.json",
+      "work/items/UI-001/",
+      "docs/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Instruction utilisateur du 18 novembre 2026 : Lance UI-001 — Fondations de l’interface Studio dans studio/.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/maquette.html",
+      "sha256": "a11341e80d0a47d42c2c75456f743d9ece9105300d4259c68da5ac9413c1feac",
+      "observed_at": "2026-11-18T16:24:11.024371+00:00",
+      "revision": "sha256:a11341e80d0a47d42c2c75456f743d9ece9105300d4259c68da5ac9413c1feac",
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/red.json",
+      "sha256": "a654bb096d61a9bc5be4fff1ec94e2b66e1f3b1c5205fa49ad1a3159a3fc918c",
+      "observed_at": "2026-11-18T16:25:48.664503+00:00",
+      "outcome": "failed",
+      "active": false,
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        }
+      ],
+      "revision": "sha256:639ead9d542cc0afd34f6a001e5cf929e33919c9a2d925b857c7a18afefa9231"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/django.json",
+      "sha256": "d72706fd6cbc11e22a689142bc2b32a751c55cbc1b9a979bf04d1d4fa2999065",
+      "observed_at": "2026-11-18T16:31:14.169870+00:00",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/browser.json",
+      "sha256": "2a78735d8354a43234d1600d0542fd66e119f5ba29f87f297db899760dd271d6",
+      "observed_at": "2026-11-18T16:31:14.330Z",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/evidence/parcours.cjs",
+          "sha256": "abfd53510d7d0aee8748dea93c1231da522cd6b34c0e9b7286f02e1337b88181"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/mobile.png",
+      "sha256": "71dc8b80b6c9be62f7689a2eabe976e547deb26919d205cf55627894d894ba62",
+      "observed_at": "2026-11-18T16:31:14.330Z",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/evidence/parcours.cjs",
+          "sha256": "abfd53510d7d0aee8748dea93c1231da522cd6b34c0e9b7286f02e1337b88181"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/mobile-complet.png",
+      "sha256": "15f478f2aea469c4713f0fcd671ebad217dc4cc24fb13325674501e3faa0aea6",
+      "observed_at": "2026-11-18T16:31:14.330Z",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/evidence/parcours.cjs",
+          "sha256": "abfd53510d7d0aee8748dea93c1231da522cd6b34c0e9b7286f02e1337b88181"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/desktop-complet.png",
+      "sha256": "f91d8c964bcdfb1c871a539fb8cb4037f6465ac691e5b3de74a8fec833eab272",
+      "observed_at": "2026-11-18T16:31:14.330Z",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/evidence/parcours.cjs",
+          "sha256": "abfd53510d7d0aee8748dea93c1231da522cd6b34c0e9b7286f02e1337b88181"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/desktop.png",
+      "sha256": "9fb80a3ede3117527f839d5011dad0621f8e27f3d2ffc91717f93c79aeaff6d2",
+      "observed_at": "2026-11-18T16:31:14.330Z",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/evidence/parcours.cjs",
+          "sha256": "abfd53510d7d0aee8748dea93c1231da522cd6b34c0e9b7286f02e1337b88181"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue.json",
+      "sha256": "3437930005fe69637d7f74c2b3d874b8b3072535ba77b9633f3131da8c7c29c5",
+      "observed_at": "2026-11-18T16:32:22.879098+00:00",
+      "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "8dffab3ae503ae168d22dd47e24580e0cee8c1a551a4eabdbc810792e2957bc5"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "2647f24a86a4cd26f8c6cbd7f19a0f0c673666c79ac295a8b4de4fad5b42af65"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "docs/COMPOSANTS-UI.md",
+          "sha256": "d45faf01b215a0936401cab0caaaeb84c71bb89cff6e9d65a1721a232cc60f47"
+        },
+        {
+          "path": "frontend/gallery.css",
+          "sha256": "01c13abc8673d3b88792daad67a8085024da3fce3cb8297729dca2a547ad89ac"
+        },
+        {
+          "path": "frontend/package-lock.json",
+          "sha256": "7bf6f5487ff996e7e93205ac4077c92d9785b91ed8f7e6a6bbbf27e6d6c5c0e1"
+        },
+        {
+          "path": "frontend/package.json",
+          "sha256": "67567f43a6fddc4ea85ee42b6f04af7870e08546239795483fd0dfac770be0e0"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/fonts/DM-Sans-LICENSE.txt",
+          "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+        },
+        {
+          "path": "static/ui/fonts/dm-sans-latin.woff2",
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/gallery.js",
+          "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/UI-001/REVIEW.md",
+          "sha256": "8cdf93b4e830bf6157c1a552340dafa4dbe4af9cf26fdefe628dc02f5c7e5e4d"
+        },
+        {
+          "path": "work/items/UI-001/evidence/desktop.png",
+          "sha256": "9fb80a3ede3117527f839d5011dad0621f8e27f3d2ffc91717f93c79aeaff6d2"
+        },
+        {
+          "path": "work/items/UI-001/evidence/mobile.png",
+          "sha256": "71dc8b80b6c9be62f7689a2eabe976e547deb26919d205cf55627894d894ba62"
+        }
+      ],
+      "contract_sha256": "c71cc56ba1e31132ee0dc1b1451f438ef48ac1cebf8f7c16e10c8417dc1241b2"
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/ui_review",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

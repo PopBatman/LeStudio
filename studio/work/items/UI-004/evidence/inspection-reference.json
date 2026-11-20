@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-11-20T17:02:43.475Z",
+  "cwd": "/home/admincsd/Documents/LeStudio",
+  "command": "node studio/work/items/UI-004/evidence/inspect-reference.cjs",
+  "node": "v24.19.0",
+  "browser": "156.0.8078.4",
+  "artifact": "prototype-adopte.html",
+  "sha256": "a01c59a52871ec4bf09f8ccc926749d1158ba95f2beab7c00f10470d09a74391",
+  "scope": "Ouverture et inspection du prototype Notion en mode local sans réseau ; aucune recette du produit ni de gestes intégrés.",
+  "captures": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "path": "reference-simulee-1440.png",
+      "title": "LeStudio — Prototype simulé de manipulation directe",
+      "nodes": 10,
+      "sections": 2
+    },
+    {
+      "width": 390,
+      "height": 1000,
+      "path": "reference-simulee-390.png",
+      "title": "LeStudio — Prototype simulé de manipulation directe",
+      "nodes": 10,
+      "sections": 2
+    }
+  ],
+  "page_errors": [],
+  "exit_code": 0
+}

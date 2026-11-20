@@ -1,0 +1,6 @@
+{% extends "registre/base.html" %}
+{% block title %}Page de dépôts indisponible{% endblock %}
+{% block registry %}
+<h1>Page de dépôts indisponible</h1>
+<p><a href="{% url 'registre:site-depots' site.pk %}#versions-title">Revenir aux versions les plus récentes</a></p>
+{% endblock %}

@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-11-18T16:32:22.879098+00:00",
+  "reviewer": "/root/ui_review",
+  "independent": true,
+  "revision": "sha256:ca8918925b6375d99cda579eefce8217f5571b58f6cdb99ddeedd5d9acc9ac01",
+  "report": "../REVIEW.md",
+  "verdict": "favorable",
+  "observation": "Après reconstruction, un nom de 80 W tient dans une page de 390 px. Sommaire, Échap et déplacement du focus vérifiés sur le service Compose."
+}

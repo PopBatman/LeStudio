@@ -1,0 +1,15 @@
+# Rapport de cadrage du 19 novembre 2026
+
+Les trois dépendances de la carte sont livrées. L’atelier disposera d’un point d’entrée depuis la fiche Site. Un opérateur ayant déjà créé ses pages et menus pourra reprendre son brouillon, choisir la page à remplir et y insérer des sections et des composants. Un premier modèle versionné et une page vierge constituent les deux départs disponibles proposés. L’analyse Figma nécessitera une proposition acceptée fournie par FEAT-003-08.
+
+Le cadrage réutilise le schéma V3, les services transactionnels et le catalogue du site. Il définit les commandes de composition manquantes ainsi que les tests de compatibilité avec Pages, Menus et Apparence. Le lot conserve le type UI de la carte Notion et les règles visuelles de UI-001. Le registre local utilise le type feature associé au préfixe FEAT et déclare une UI requise.
+
+Les travaux ont été répartis entre /root (parcours, sécurité, recette et rapprochement Notion), /root/editor_contract (modèle et contrat du service), /root/editor_design (prototype et essais navigateur) et /root/editor_review (revue indépendante). Les preuves du présent dossier concernent le cadrage et l’utilisation du socle existant. Le développement, la recette Django de l’éditeur et la validation humaine d’accessibilité relèvent d’étapes ultérieures. [Plan](TASKLIST.md) · [Preuves](EVIDENCE.md) · [Revue](REVIEW.md)
+
+## Réalisation livrée sur le Studio local
+
+Depuis la fiche Site, la commande **Reprendre le brouillon** ouvre la dernière révision. Les sites encore vides proposent le modèle local « Présentation d’activité » ou la page vierge. L’inspecteur permet d’insérer, modifier, déplacer et retirer des sections et des occurrences de composants. Une révision concurrente déclenche une comparaison avant une nouvelle soumission. Les consignes de prise en main sont dans le [guide opérateur](../../../docs/BROUILLONS.md).
+
+La suite complète de l’image Docker passe sur PostgreSQL (123 tests). Sur SQLite, 115 tests passent et huit contrôles propres à PostgreSQL sont ignorés. La recette sur sites fictifs a couvert les deux départs, la persistance après rechargement, l’imbrication, la validation HTTPS, la concurrence entre deux fenêtres et la lecture seule. Orca a annoncé la saisie, l’erreur et l’enregistrement. Le service web du Studio local a été reconstruit avec sa configuration de raccordement existante. Les sept révisions possèdent la même empreinte avant et après l’opération. Le moteur Wagtail a conservé son identité et son heure de démarrage. Les vues de fiche et d’atelier ont été ouvertes en lecture avec le mandat de gestion existant. [Preuves de réalisation](EVIDENCE.md)
+
+Les travaux ont été répartis entre /root (fiche, intégration, recette, mise à jour locale et documentation), /root/structured_domain (services et concurrence), /root/structured_web (vues et formulaires), /root/structured_ui (interface, clavier et Orca) et /root/structured_review (revue indépendante). Le canvas, l’origine Figma et l’application au site restent suivis par leurs lots respectifs.

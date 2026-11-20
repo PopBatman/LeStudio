@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "UI-004",
+  "kind": "component",
+  "title": "Édition par manipulation directe",
+  "state": "PLANNED",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-004/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Demande utilisateur du 20 novembre 2026 : « Cadre UI-004 — Édition par manipulation directe conformément au Notion et au Workflow AI. » Cadrage documentaire et synthèse sur la carte existante.",
+    "actions": [
+      "plan",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/prototype-adopte.html",
+      "sha256": "a01c59a52871ec4bf09f8ccc926749d1158ba95f2beab7c00f10470d09a74391",
+      "observed_at": "2026-11-20T17:05:32.689267+00:00",
+      "revision": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "contract_sha256": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-004/VISUAL-REVIEW.md",
+          "sha256": "f91a96ca788a27f42208e664e8a5796a6e05d2fcabba73c8d35f0a2a49d62e7f"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/inspection-reference.json",
+      "sha256": "b2b598116f4f3a3e24096682555dc53573ead942661594e202f294e642f645d5",
+      "observed_at": "2026-11-20T17:05:32.689267+00:00",
+      "revision": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "contract_sha256": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "work/items/UI-004/evidence/prototype-adopte.html",
+          "sha256": "a01c59a52871ec4bf09f8ccc926749d1158ba95f2beab7c00f10470d09a74391"
+        },
+        {
+          "path": "work/items/UI-004/evidence/inspect-reference.cjs",
+          "sha256": "c1c95811131bebbe639ef02dbb07cf79d0e79aa1d346239074dd7958457fbb44"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-cadrage.md",
+      "sha256": "6e07b15cacad77d9ad656bb9b98cd472c939d0130980713ae6c18756417b23da",
+      "observed_at": "2026-11-20T17:05:32.689267+00:00",
+      "revision": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "contract_sha256": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "work/items/UI-004/SPEC.md",
+          "sha256": "003ca8839d0a0441537fac3f48ceacf634f9fbd63f78e249d911fc2bc1caf260"
+        },
+        {
+          "path": "work/items/UI-004/TASKLIST.md",
+          "sha256": "aad63043934219a8c9b3ddf6915477baaed6932deb90fa573c87158935c1103d"
+        },
+        {
+          "path": "work/items/UI-004/ARCHITECTURE.md",
+          "sha256": "0654eea9a285a4cb261875892678b66ca74066366a216de0200c4b03aafcf864"
+        },
+        {
+          "path": "work/items/UI-004/SECURITY.md",
+          "sha256": "bed72c97f36c50fe0a6886d964a80f21be487ee53d8bc7070c12374112073026"
+        },
+        {
+          "path": "work/items/UI-004/VISUAL-REVIEW.md",
+          "sha256": "f91a96ca788a27f42208e664e8a5796a6e05d2fcabba73c8d35f0a2a49d62e7f"
+        },
+        {
+          "path": "work/items/UI-004/RESEARCH.md",
+          "sha256": "7ae62f3b6f308e3f15319ed107ee68f4f3dd395afab562f2c8f90939190b8b5b"
+        },
+        {
+          "path": "work/items/UI-004/REPORT.md",
+          "sha256": "4c2c2abd602faecdc952e027f196434ad3752212c2e2a09f104b77368479bc6a"
+        },
+        {
+          "path": "work/items/UI-004/EVIDENCE.md",
+          "sha256": "fc7c019e2ae44af94cd79412c39d9fb1c19b2746d64f2ec53a65d54e1aff8f93"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/revue_cadrage, revue indépendante finale du cadrage après intégration T21",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

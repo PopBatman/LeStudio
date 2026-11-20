@@ -1,0 +1,52 @@
+{
+  "chromium": "156.0.8078.4",
+  "parcours": [
+    {
+      "largeur": 1440,
+      "hauteur": 900,
+      "observations": [
+        "lien de saut actif au clavier",
+        "changement volontaire de version et de variante sur une occurrence",
+        "couleur et espacement du brouillon en mémoire",
+        "filtre des définitions locales",
+        "deux contrôles requis pour la seconde personne",
+        "version manquante et lecture seule",
+        "aucun débordement horizontal aux étapes mesurées"
+      ]
+    },
+    {
+      "largeur": 390,
+      "hauteur": 844,
+      "observations": [
+        "lien de saut actif au clavier",
+        "changement volontaire de version et de variante sur une occurrence",
+        "couleur et espacement du brouillon en mémoire",
+        "filtre des définitions locales",
+        "deux contrôles requis pour la seconde personne",
+        "version manquante et lecture seule",
+        "aucun débordement horizontal aux étapes mesurées"
+      ]
+    },
+    {
+      "largeur": 320,
+      "hauteur": 760,
+      "observations": [
+        "lien de saut actif au clavier",
+        "changement volontaire de version et de variante sur une occurrence",
+        "couleur et espacement du brouillon en mémoire",
+        "filtre des définitions locales",
+        "deux contrôles requis pour la seconde personne",
+        "version manquante et lecture seule",
+        "aucun débordement horizontal aux étapes mesurées"
+      ]
+    }
+  ],
+  "captures": [
+    "bibliotheque-bureau.png",
+    "promotion-bureau.png",
+    "apparence-mobile.png",
+    "diagnostic-mobile.png"
+  ],
+  "erreurs": [],
+  "requetes_http": []
+}

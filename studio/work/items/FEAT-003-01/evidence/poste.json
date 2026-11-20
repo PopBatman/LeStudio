@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-11-19T11:44:55.217917+00:00",
+  "sante": "ok",
+  "avant": {
+    "sites": 1,
+    "liaisons": 1
+  },
+  "apres": {
+    "sites": 1,
+    "liaisons": 1,
+    "revisions": 0,
+    "migration_appliquee": true
+  },
+  "service": "web Studio local avec complément Compose tennis-ai"
+}

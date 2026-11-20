@@ -1,0 +1,25 @@
+{
+  "sante": 200,
+  "assets": {
+    "builder-drop.js": 200,
+    "builder-edit.js": 200,
+    "builder-edit-model.js": 200,
+    "builder-edit.css": 200
+  },
+  "snapshot_avant": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "snapshot_apres": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "moteur_tennis_identique": true,
+  "image": "sha256:58e848c47b1e9b2601f768c56d608501f3716c93ddd65d554a96d63691b011ac",
+  "migrations": "migrate --check et makemigrations --check réussis",
+  "route_anonyme": "connexion"
+}

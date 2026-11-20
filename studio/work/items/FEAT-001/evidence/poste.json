@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-11-18T16:43:57.252143+00:00",
+  "origin": "http://127.0.0.1:8000",
+  "http": {
+    "/": {
+      "status": 200,
+      "destination": "http://127.0.0.1:8000/connexion/?next=/",
+      "sha256": "8724fcabf64c9d24b33e19c499c92ad50e56b20c403922093974cd85d8054df5"
+    },
+    "/connexion/": {
+      "status": 200,
+      "destination": "http://127.0.0.1:8000/connexion/",
+      "sha256": "fd97635d448755b3df5c3618d6d21731bbef1793ae7576ef70587454d7ae1eaf"
+    },
+    "/health/": {
+      "status": 200,
+      "destination": "http://127.0.0.1:8000/health/",
+      "sha256": "08e2c358ce13cb67f94ebb35b0f67c8763190a857c0db68da6eb196dfe9da46a"
+    },
+    "/ui/": {
+      "status": 200,
+      "destination": "http://127.0.0.1:8000/ui/",
+      "sha256": "f12a4fa4f863afc975b00e57d1254dd4303fce9ccc545c02bca64923dd36f8ca"
+    },
+    "/assets/workspace.css": {
+      "status": 200,
+      "destination": "http://127.0.0.1:8000/assets/workspace.css",
+      "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+    }
+  },
+  "commands": [
+    {
+      "command": "docker compose ps",
+      "exit": 0,
+      "output": "NAME                   IMAGE                                                                                             COMMAND                  SERVICE   CREATED              STATUS                        PORTS\nlestudio-local-db-1    postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536   \"docker-entrypoint.s…\"   db        About an hour ago    Up About an hour (healthy)    5432/tcp\nlestudio-local-web-1   lestudio-local-web                                                                                \"sh -ec 'python mana…\"   web       About a minute ago   Up About a minute (healthy)   127.0.0.1:8000->8000/tcp\n"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py showmigrations auth sessions",
+      "exit": 0,
+      "output": "auth\n [X] 0001_initial\n [X] 0002_alter_permission_name_max_length\n [X] 0003_alter_user_email_max_length\n [X] 0004_alter_user_username_opts\n [X] 0005_alter_user_last_login_null\n [X] 0006_require_contenttypes_0002\n [X] 0007_alter_validators_add_error_messages\n [X] 0008_alter_user_username_max_length\n [X] 0009_alter_user_last_name_max_length\n [X] 0010_alter_group_name_max_length\n [X] 0011_update_proxy_permissions\n [X] 0012_alter_user_first_name_max_length\nsessions\n [X] 0001_initial\n"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py migrate --check",
+      "exit": 0,
+      "output": ""
+    }
+  ]
+}

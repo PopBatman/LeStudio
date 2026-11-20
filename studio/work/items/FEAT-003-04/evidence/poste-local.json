@@ -1,0 +1,20 @@
+{
+  "sante": {
+    "status": "ok"
+  },
+  "controle_anonyme": 302,
+  "avant": {
+    "sites": 1,
+    "revisions": 7,
+    "empreinte_revisions": "42d1c1ad2e3e288ef2ae9b89a693cd8161a0c91a533d4422ee8cde28ae59edf1",
+    "raccordements": 1
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 7,
+    "empreinte_revisions": "42d1c1ad2e3e288ef2ae9b89a693cd8161a0c91a533d4422ee8cde28ae59edf1",
+    "raccordements": 1
+  },
+  "instance_moteur_identique": true,
+  "migrations_en_attente": false
+}

@@ -1,0 +1,20 @@
+{
+  "nature": "Maquette HTML autonome sur données fictives",
+  "navigateur": "Chromium 156.0.8078.4",
+  "largeurs": [
+    1280,
+    320
+  ],
+  "scenarios": [
+    "navigation clavier et focus du premier choix manquant",
+    "rejet du seul bloc et blocage de la confirmation vide",
+    "correction du composant et de sa couleur, conservation des choix après retour",
+    "création en révision 1",
+    "ajout simulé à une révision existante 4, résultat 5",
+    "réponse générique sans métadonnées privées",
+    "source passée de R17 à R18, analyse et décisions à reprendre avant confirmation"
+  ],
+  "debordements_sur_captures": 0,
+  "requetes_http": 0,
+  "erreurs_javascript": 0
+}

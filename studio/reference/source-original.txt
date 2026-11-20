@@ -1,0 +1,609 @@
+
+
+## Règles techniques 
+
+> Règles langage techniques 
+
+```txt
+-> LT001 = Python : Langage principal
+-> LT002 = Django : Backend du Studio et des sites
+-> LT003 = Wagtail : CMS et constructeur de pages
+-> LT004 = PostgreSQL : Stockages des données
+-> LT005 = Tailwind CSS : Design system
+-> LT006 = Shacdn-django : Composants UI
+-> LT007 = Django Cotton : Composants UI
+-> LT008 = HTMX : Interactions serveurs
+-> LT009 = Alpine.js : Interactions locales
+-> LT010 = n8n : Automatisation et intégration
+-> LT011 = Gitlab CI/CD : Tests et déploiements
+-> LT012 = Docker : Packaging et déploiement
+-> LT013 = Scaleway : Infrastructure cloud 
+-> LT014 = GSAP : Animations premium
+```
+
+> Règles architectures 
+
+```txt
+-> A001 = Architecture : Single Codebase, Multi-Instance
+-> A002 = Backend : Django
+-> A003 = CMS : Wagtail
+-> A004 = Design : Tailwind + composants réutilisables
+-> A005 = Composants UI : Django Cotton, shacdn-django à évaluer
+-> A006 = Base de données : PostgreSQL
+-> A007 = Infrastructure : Scaleway
+-> A008 = Isolation : Un serveur par client
+-> A009 = Versionning : GitLab
+-> A010 = CI/CD : Gitlab CI/CD
+-> A011 = Déploiement : Images Docker versionnées
+-> A012 = Mises à jour : Progressives et controlées
+-> A013 = Automatisation métier : n8n en option 
+```
+## Les étapes de notre Wokflow
+
+```
+             STUDIO
+                │
+                ▼
+     Demande d'installation
+                │
+                ▼
+         Validation du module
+                │
+                ▼
+           GITLAB CI/CD
+                │
+      ┌─────────┼──────────┐
+      │         │          │
+      ▼         ▼          ▼
+    Tests    Sécurité     Build
+      │         │          │
+      └─────────┼──────────┘
+                │
+                ▼
+       Image Docker validée
+                │
+                ▼
+         Déploiement client
+                │
+                ▼
+      Vérification de santé
+                │
+                ▼
+           STUDIO
+       Module opérationnel
+```
+
+## Les étapes de notre pipeline CI/CD
+
+|Étape|Outils envisagés|Objectif|
+|---|---|---|
+|Lint|Ruff|Qualité du code|
+|Typage|mypy ou Pyright|Détecter certaines incohérences|
+|Tests|pytest + pytest-django|Vérifier le fonctionnement|
+|Sécurité Python|Bandit|Détecter certains usages risqués|
+|Audit dépendances|pip-audit|Vulnérabilités connues|
+|Détection des secrets|Gitleaks|Prévenir les fuites|
+|Analyse des conteneurs|Trivy|Contrôler les images|
+|Build|Docker|Construire l'application|
+|Publication|GitLab Container Registry|Stocker les images|
+|Déploiement|GitLab CI/CD|Livrer une version validée|
+|Vérification|Health checks|Contrôler la mise en service|
+## Règles métier :
+
+> Règles Django :
+
+``` txt
+-> D001 = Authentification
+-> D002 = Formulaires métier
+-> D003 = Connexions API
+-> D004 = Modules métier
+-> D005 = La logique métier
+-> D006 = Les autorisations
+-> D007 = Les communications entre Studio et les serveurs clients
+-> D008 = Les traitements applicatifs.
+```
+
+> Règles Wagtail :
+
+``` txt
+-> W000 = Wagtail ne doit pas devenir notre moteur de gestion d'infrastructure.
+-> W001 = Pages éditoriales
+-> W002 = Gestion des images
+-> W003 = Gestion des contenus
+-> W004 = Composition des pages
+-> W005 = Administration éditoriale
+-> W006 = Les contenus
+-> W007 = Les utilisateurs du CMS
+-> W008 = Assemblage de page avec StreamField
+```
+
+> Règles de Cadrage : 
+
+```txt
+-> C000 = Notre Studio central serait une application en Django indépendante.
+-> C001 = Wagtail serait principalement installé sur les serveurs distants
+-> C002 = Ne pas laisser le générateur installer automatiquement des composants en production
+```
+
+
+> Liste des composants que l'on peut développer en masse
+
+```txt
+-> Button
+-> Dialog
+-> Input
+-> Select
+-> Tabs
+-> Dropdown
+-> Badge
+-> Toast
+-> Card
+-> Table
+```
+
+## Studio central
+
+|Composant|Technologie|
+|---|---|
+|Backend|Django|
+|Interface|Django Templates + HTMX + Alpine|
+|UI|Tailwind + Django Cotton + composants shadcn-django sélectionnés|
+|Base de données|PostgreSQL|
+|Catalogue de modules|Django, développement maison|
+|Orchestration des déploiements|Intégration GitLab|
+|Communication avec les serveurs|API de contrôle authentifiée|
+|Monitoring|Scaleway Cockpit ou équivalent|
+|Hébergement|Scaleway|
+
+## Site Engine
+|Composant|Technologie|
+|---|---|
+|Backend|Django|
+|CMS|Wagtail|
+|Frontend|Django Templates|
+|Design|Tailwind|
+|Composants|Django Cotton + bibliothèque maison|
+|Interactions|HTMX + Alpine si nécessaire|
+|Animations|CSS / GSAP selon le projet|
+|Base de données|PostgreSQL|
+|Modules métier|Applications Django versionnées|
+|Exécution|Docker|
+|Infrastructure|Instance Scaleway indépendante|
+
+## Modules externes
+
+> Liste des modules à externaliser
+
+```txt
+--> Serveur e-mail : Fournisseur transactionnel externe
+--> Newsletter : Fournisseur spécialisé ou connecteur
+--> Authentification : Django Auth et composants éprouvés
+--> SSO : Bibilothèque OIDC/SAML maintenue
+--> Certificat TLS : Gestion automatisée
+--> Stockage de fichiers : Stockage S3 compatible
+--> Paiements : Prestataire de paiement
+--> Gestion des secrets : Gestionnaire sécurisé, séparé du code
+--> Sauvegardes : Outils éprouvés avec restauration testée
+```
+
+
+## Modules Internes
+
+> Modules Core
+
+```txt
+--> Sécurité
+--> CMS
+--> Gestion des médias
+--> Configuration
+```
+
+> Modules Standard
+
+```txt
+--> Contact
+--> Catalogue
+--> Connecteurs métiers
+```
+
+> Modules Advanced
+
+```txt
+--> SSO
+--> Traitement documentaire
+```
+
+> Sites et Contenus
+
+```txt
+--> Pages : Création et Administration de pages
+--> Blog : Articles, catégories, auteurs
+--> Actualités : Publications et annonces
+--> Portfolio : Présentation de réalisations
+--> Galerie : Images, Vidéos, Album
+--> Catalgue : Produits et Services
+--> Documentation : Pages techniques, guides, notices
+--> Multilingue : Traduction des contenus
+--> Recherche : Recherche interne
+--> FAQ : Questions fréquentes
+--> Témoignages : Avis clients
+--> SEO : Métadonnées, sitemap, redirections
+--> Médias : Bibliothèque de fichiers 
+--> Landing Pages : Pages commerciales personnalisées
+
+
+Connecteurs :
+--> Google Search Console
+--> Google Analytics
+--> Matomo
+--> Cloudinary
+--> DeepL
+--> Youtube
+--> Vimeo
+```
+
+> Communication
+
+```txt
+--> Formulaires : Constructeur de formulaires
+--> Contact : Réception et suivi des messages
+--> Newsletter : Collecte d'abonnées
+--> E-mail transactionnel : Messages automatiques
+--> Notifications : Email, SMS, Push
+--> Chat : Messagerie Client
+--> Support : Tickets et demandes
+--> Campagnes : Campagnes de communication
+--> SMS : Messages transactionnels
+--> Prise de rendez-vous : Calendrier et disponibilités
+
+Connecteurs :
+--> Brevo
+--> Mailgun
+--> Resend
+--> SendGrid
+--> Amazon SES
+--> Twilio 
+--> Calendly
+--> Google Calendar
+--> Microsoft Outlook 
+--> Zendesk
+--> Intercom
+```
+
+> Authentification et sécurité
+
+```txt
+--> Login/Register : Connexion et Inscription
+--> MFA : Authentification multifacteur
+--> SSO : Connexion via fournisseur d'identité
+--> RBAC : Gestion des roles et permissions
+--> Audit Log : Historique des actions
+--> Sessions : Gestions des sessions
+--> Invitations : Invitation d'utilsateurs
+--> API keys : Gestion de clés d'accès
+--> Consentement : Gestion des consentements 
+--> CAPTCHA : Protection des formulaires
+--> Rate Limiting : Limitation de requetes
+--> Security Dashboard : Suivi des évènements de sécurité
+
+Connecteurs :
+--> Microsft Entra ID
+--> Google Identity
+--> KeyCloak
+--> Auth0
+--> Okta
+--> LDAP
+--> Fournisseurs OIDC
+--> SAML
+```
+
+> Commerce et Paiement
+
+```txt
+--> Catalogue e-commerce : Produits et variantes
+--> Panier : Gestion des achats
+--> Commandes : Suivi des commandes
+--> Paiements : Paiement en ligne
+--> Abonnements : Paiements récurrents
+--> Facturation : Factures et avoirs
+--> Devis : Création et validation de devis
+--> Promotions : Codes promotionnels 
+--> Livraison : Expédition et suivi
+--> Stocks : Disponibilités des produits
+--> Réservations : Réservations de prestations
+--> Cartes cadeaux : Bons et cartes cadeaux
+
+Connecteurs :
+--> Stripe
+--> Paypal
+--> Mollie
+--> Shopify
+--> WooCommerce
+--> Prestashop
+--> Odoo
+--> Pennylane
+--> Colissimo
+--> Chronopost
+--> Sendcloud
+```
+
+> Industrie et B2B
+
+```txt
+--> Catalogue industriel : Machines, équipements, capacités
+--> Fiches techniques : Caractéristiques et documents
+--> Demande de devis : Formulaires B2B
+--> Upload de plans : PDF, DXF, STEP et autres formats autorisés
+--> Suivi des commandes :  Status et historique
+--> Espace distributeur : Accès pro
+--> Gestion documentaire : Documents techniques
+--> Certifications : ISO, Normes, Attestations
+--> SAV : Demandes d'interventions
+--> Gestion des équipements : Référentiel de machines
+--> Traçabilité : Historique des opérations
+--> Extranet : Portail clients et partenaires
+
+Connecteurs :
+--> Odoo
+--> SAP
+--> Microsoft Dynamics 365
+--> Sage
+--> Dolibarr
+--> ERP internes
+--> SFTp
+--> API Rest
+--> SOAP
+```
+
+> Documents et données 
+
+```txt
+--> Import CSV : Import de données tabulaires
+--> Import Excel : Lecture et validation XLSX
+--> Import XML : Pasring et normalisation
+--> Import JSON : Import structuré
+--> Export PDF : Génération de documents
+--> Conversion : Transformation entre formats
+--> OCR : Extraction de texte
+--> Validation : Controles de confirmité
+--> Déduplication : Détection des doublons
+--> Synchronisation: Echanges de données
+--> Archivage : Conservation et historique
+
+Connecteurs :
+--> Google drive
+--> OneDrive
+--> SharePoint
+--> Dropbox
+--> S3
+--> Nextcloud
+--> SFTp
+--> Azure Blob Storage
+```
+
+> Intelligence Artificielle
+
+```txt
+--> Chatbot : Assistant conversationnel
+--> Recherche documentaire : Recherche sémantique
+--> RAG : Réponse fondées sur des documents
+--> Classification : Catégorisation automatique
+--> Extraction : Extraction structurée
+--> Résumé : Synthèse de documents
+--> Traduction : Traduction de contenus
+--> Génération de contenu : Assistance éditoriale
+--> Analyse documentaire : Traitements avancés
+--> Assistant métier : Agent spécialisé
+--> Modération : Controle des contenus
+--> Transcription
+
+
+Connecteurs :
+--> OpenAI
+--> Anthropiuc
+--> Mistral AI
+--> Azure AI
+--> Ollama
+--> vLLM
+--> Hugging Face
+```
+
+> Automatisation
+
+```txt
+--> Webhooks : Réception et émission d'évènements
+--> Worflows : Enchainements d'actions
+--> Shcheduler : taches programmés
+--> Syncrhonisation : Synchronisation entre systèmes
+--> Notifications évènementielles : Alertes sur les évènements
+--> Import automatique : Récupération périodique de données
+--> Export automatique : Transfert de fichiers
+--> Validation automatisée : Controles métier
+--> Approval : Circuits de validation
+--> Event log : Historique des évènements
+
+Connecteurs :
+--> n8n
+--> Make
+--> Zapier
+--> API REST
+--> webhooks
+--> connecteurs dev en python
+```
+
+> CRM et relation client
+
+```txt
+--> Contacts : Gestion des prospects
+--> CRM léger : Pipeline commercial
+--> Leads : Qualification des prospects
+--> Devis commerciaux : Proposition commerciales
+--> Suivi client : Historique des échanges
+--> Segmentation : Groupes de clients
+--> Relances : Suivi commercial
+--> Satisfaction : Enquete et retours
+--> Fidélité : Programmes de fidélisation
+--> Portail client : Accès aux informations
+
+Connecteurs :
+--> HubSpot
+--> SalesForce
+--> PipeDrive
+--> Zoho CRM
+--> Odoo
+--> MDynamics 365
+```
+
+> Statistiques et Analytics
+
+```txt
+--> Analytics : Mesure d'audience
+--> Evènements : Suivi des interactions
+--> Conversion : Suivi des objectifs
+--> Dashboard : tableau de board
+--> Rapports : Rapports périodiques
+--> Performance : Mesures techniques
+--> SEO Monitoring : Suivi du référencement
+--> Heatmaps : Analyse des interactions
+--> A/B testing : Expérimentations
+--> Business Intelligence : Indicateurs métier
+
+Connecteurs :
+--> Matomo
+--> Plausible 
+--> Google Analytics
+--> Search Console
+--> Microsoft Clarity
+--> MEtabase
+--> Grafana
+```
+
+> Réservation et activité locales
+
+```txt
+--> Rendez-vous : Réservations
+--> Planning : Gestion des disponibilités
+--> Evènements : Calendrier d'évènements
+--> Billetterie : Vente de places
+--> Restaurant : Réservation de tables
+--> Prestations : Réservations de services
+--> Gestion des ressources : Salles, Equipement
+--> Annulations : Politique d'annulations
+--> Rappels : Rappels automatiques
+--> Paiement d'accompte : Paieement à la réservation
+
+Connecteurs :
+-->  Google Calendar
+--> Outlook Calendar
+--> Calendly
+--> Stripe
+--> Systèmes de résa spécialisés
+```
+
+> Localisation et présence locale
+
+```txt
+--> Carte : Affichage géographique
+--> Points de vente : Localisation des établissements
+--> Itinéraire : Accès à un commerce
+--> Horaires : Horaires d'ouverture
+--> Géolocalisation : Recherche géographique
+--> Recherche de proximité : Points proches
+--> Zones d'intervention : Secteurs géographiques
+--> Avis : Affichages d'avis clients
+
+Connecteurs :
+--> OpenStreetMap
+--> Mapbox
+--> Google Maps Platform
+--> Google Business Profile
+--> HERE
+```
+
+> Applications métier
+
+```txt
+--> CRUD Builder : Gestion d'entités
+--> Tables : Tableaux de données
+--> Filtres : Recherche avancée
+--> Dashboard métier : Indicateurs personnalisés
+--> Workflows métier : Processus spécifiques
+--> Import/export : 2changes de données
+--> Permissions avancées : Accès par role
+--> Historique : traçabilité 
+--> Génération documentaire : Documents métier
+--> Notifications : Alertes applicatives
+--> API métier : Exposition controlée de données
+
+Connecteurs :
+--> 
+```
+
+> Conformité et Confidentialité
+
+```txt
+--> Politique de confidentialité : Pages et Documents
+--> Gestion des cookies : Consentement
+--> Export des données : Portabilité
+--> Suppression des données : Traitement des demandes
+--> Registre de consentement : Traçabilité
+--> Conservation : Polituqes de rétention
+--> Journal d'audit : Historique des opérations
+--> Gestion des accès : Droits sur les données
+--> Gestion des incidents : Déclaration et suivi
+
+Connecteurs :
+--> 
+```
+
+> Exploitation et infrastructure
+
+```txt
+--> Deployment Manager : Gestion des déploiements
+--> Version Manager : Versions du moteur
+--> Backup Manager : Sauvegardes
+--> Restore Manager : Restaurations
+--> Monitoring : Dispo
+--> Log Viewer : Consultation des journaux
+--> Security Scanner : Conroles de sécurité
+--> Domain Manager : Domaines
+--> SSL Manager : Certificats TLS
+--> Resource Monitor : CPU, RAM, Stockage
+--> Module Manager : Installation des modules
+--> Concifugration Manager : Paramètrage
+--> Incident Manager : Gestion des incidents
+--> Updagte Managfer : MAJ
+--> Client Billing : Factruration de nos abonnements
+
+Connecteurs :
+--> Gitlab
+--> Scaleway
+--> DNS
+--> ACME
+--> Sentry
+--> Grafana
+--> Prometheus
+--> Supervisor
+```
+
+> Structure d'une fiche métier d'un Register
+
+| Champ                   | Exemple                         |
+| ----------------------- | ------------------------------- |
+| Identifiant             | `MOD-COM-001`                   |
+| Nom                     | Contact Form                    |
+| Famille                 | Communication                   |
+| Description             | Création de formulaires         |
+| Clientèle               | Commerce, artisan, industrie    |
+| Capacités requises      | Formulaires, e-mail             |
+| Connecteurs compatibles | Brevo, Mailgun, SMTP            |
+| Type                    | Standard                        |
+| Exécution               | Django                          |
+| Base de données         | Optionnelle selon configuration |
+| Interface               | Wagtail StreamField             |
+| Activation no-code      | Oui, après installation         |
+| Sensibilité des données | Données personnelles            |
+| Criticité sécurité      | Moyenne à élevée                |
+| Complexité              | Faible à moyenne                |
+| Priorité                | P0                              |
+| Statut                  | IDEA                            |

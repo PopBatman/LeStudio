@@ -1,0 +1,17 @@
+{
+  "site_fictif": "8fce4096-2f26-4c60-872c-d4400218fa66",
+  "selection_tactile": "5d5a1460-5ab3-447e-a5a4-7b55e1d189b4",
+  "page_vide_autre_page": "fa80897c-52a3-4f1c-92e2-b67c614bb3f3",
+  "ancienne_tete": 4,
+  "nouvelle_tete": 5,
+  "page_absente_de_la_tete": true,
+  "recu_expire": 410,
+  "repli_autorise": "17 calques, aucun iframe",
+  "retrait_media": 409,
+  "site_revoque": {
+    "document": 404,
+    "structure": 404,
+    "bloc_prive_masque_dans_onglet": true
+  },
+  "note": "Révision ajoutée et page supprimée intentionnellement après le contrôle de non-publication, uniquement dans la fixture A."
+}

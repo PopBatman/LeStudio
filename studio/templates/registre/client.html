@@ -1,0 +1,15 @@
+{% extends "registre/base.html" %}
+{% block title %}{{ client.display_name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:clients' %}{% if client.archived_at %}?etat=archives{% endif %}">← Clients {% if client.archived_at %}archivés{% endif %}</a>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ client.get_client_type_display }}</p><h1>{{ client.display_name }}</h1></div><c-badge>{% if client.archived_at %}Archivé{% else %}Actif{% endif %}</c-badge></header>
+{% include "registre/feedback.html" %}
+{% if manage %}<div class="rg-actions">{% if client.archived_at %}<a class="btn btn-secondary" href="{% url 'registre:restore' client.pk %}">Réactiver le client</a>{% else %}<a class="btn btn-secondary" href="{% url 'registre:client-edit' client.pk %}">Modifier le client</a><a href="{% url 'registre:archive' client.pk %}">Archiver le client</a>{% endif %}</div>{% endif %}
+<div class="rg-grid">
+<section class="rg-panel"><div class="rg-section"><h2>Contacts</h2>{% if manage and not client.archived_at %}<a href="{% url 'registre:contact-new' client.pk %}">Ajouter un contact</a>{% endif %}</div>
+{% for c in contacts %}<article class="rg-row"><h3>{{ c.display_name }}</h3><p>{{ c.role }}</p>{% if c.email %}<p>{{ c.email }}</p>{% endif %}{% if c.phone %}<p>{{ c.phone }}</p>{% endif %}{% if manage and not client.archived_at %}<a href="{% url 'registre:contact-edit' client.pk c.pk %}" aria-label="Modifier le contact {{ c.display_name }}">Modifier le contact</a>{% endif %}</article>{% empty %}<p class="rg-row">Aucun contact enregistré.</p>{% endfor %}
+</section>
+<section class="rg-panel"><div class="rg-section"><h2>Sites</h2>{% if manage and not client.archived_at %}<a href="{% url 'registre:site-new' client.pk %}">Créer un site</a>{% endif %}</div>
+{% for site in sites %}<article class="rg-row"><h3><a href="{% url 'registre:site' site.pk %}">{{ site.name }}</a></h3><p>{{ site.domain|default:"Domaine non renseigné" }}</p></article>{% empty %}<p class="rg-row">Aucun site accessible.</p>{% endfor %}
+</section></div>
+{% endblock %}

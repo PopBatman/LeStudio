@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title><style>{{ css|safe }}</style></head>
+<body>{% if cover %}<img class="theme-media" alt="" src="{{ cover }}">{% endif %}
+{% for menu in menus %}<nav aria-label="{{ menu.label }}"><ul>{% include "reference/preview_menu.html" with items=menu.items only %}</ul></nav>{% endfor %}
+<main aria-label="{{ page.title }}">
+{% for section in page.sections %}<section id="n{{ section.id }}">{% include "reference/preview_blocks.html" with blocks=section.blocks only %}</section>{% endfor %}
+</main></body></html>

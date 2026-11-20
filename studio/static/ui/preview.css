@@ -1,0 +1,10 @@
+.preview-panel {min-width: 0}
+.preview-formats {margin-bottom: .8rem}
+.preview-formats button[aria-pressed="true"] {background: #204637; color: #fff}
+.preview-scroll {max-width: 100%; overflow: auto; border: 1px solid #b8c5bf; background: #e9eeeb; border-radius: 6px}
+.preview-scroll iframe {display: block; width: 1200px; max-width: none; height: clamp(400px, 65vh, 900px); margin: 0 auto; border: 0; background: white}
+.registry dd {overflow-wrap: anywhere}
+@media (max-width: 420px) {
+  .preview-scroll {width: 100vw; max-width: none; margin-left: calc(50% - 50vw); border-inline: 0; border-radius: 0}
+}
+.preview-scroll iframe[hidden] {display: none}

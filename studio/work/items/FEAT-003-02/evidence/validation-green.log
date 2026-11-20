@@ -1,0 +1,21 @@
+test_copy_preserves_forward_references_external_urls_and_order (tests.test_navigation_validation.NavigationValidationTests.test_copy_preserves_forward_references_external_urls_and_order) ... ok
+test_count_and_depth_boundaries (tests.test_navigation_validation.NavigationValidationTests.test_count_and_depth_boundaries) ... ok
+test_external_destination_policy (tests.test_navigation_validation.NavigationValidationTests.test_external_destination_policy) ... ok
+test_integrity_errors_report_invalid_document (tests.test_navigation_validation.NavigationValidationTests.test_integrity_errors_report_invalid_document) ... ok
+test_exact_compact_utf8_byte_limit (tests.test_composition_validation.CompositionValidationTests.test_exact_compact_utf8_byte_limit) ... ok
+test_exact_page_and_node_limits (tests.test_composition_validation.CompositionValidationTests.test_exact_page_and_node_limits) ... ok
+test_fixture_round_trip_and_external_ids (tests.test_composition_validation.CompositionValidationTests.test_fixture_round_trip_and_external_ids) ... ok
+test_keys_exact_types_and_version (tests.test_composition_validation.CompositionValidationTests.test_keys_exact_types_and_version) ... ok
+test_oversized_document_rejected_before_resolving_definitions (tests.test_composition_validation.CompositionValidationTests.test_oversized_document_rejected_before_resolving_definitions) ... ok
+test_oversized_raw_rejected_before_parser_and_scope_resolution (tests.test_composition_validation.CompositionValidationTests.test_oversized_raw_rejected_before_parser_and_scope_resolution) ... ok
+test_page_and_block_depth_limits (tests.test_composition_validation.CompositionValidationTests.test_page_and_block_depth_limits) ... ok
+test_raw_syntax_and_encoding_errors (tests.test_composition_validation.CompositionValidationTests.test_raw_syntax_and_encoding_errors) ... ok
+test_responsive_overrides_are_independent (tests.test_composition_validation.CompositionValidationTests.test_responsive_overrides_are_independent) ... ok
+test_scoped_reference_providers_and_safe_errors (tests.test_composition_validation.CompositionValidationTests.test_scoped_reference_providers_and_safe_errors) ... ok
+test_tree_validation_allows_forward_parents_but_not_cycles_or_slug_collisions (tests.test_composition_validation.CompositionValidationTests.test_tree_validation_allows_forward_parents_but_not_cycles_or_slug_collisions) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.140s
+
+OK
+Fixture V2 de cadrage et copie validées.

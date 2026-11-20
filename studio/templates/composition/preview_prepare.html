@@ -1,0 +1,22 @@
+{% extends "registre/base.html" %}
+{% block title %}Aperçu du site · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{{ return_url }}">← {% if origin == 'editor' or origin == 'canvas' %}Retour à l’atelier{% else %}Retour à la fiche Site{% endif %}</a>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ site.name }}</p><h1>Aperçu du site</h1></div></header>
+{% if error %}<p class="rg-errors" role="alert" tabindex="-1" autofocus>{{ error }}</p>{% endif %}
+{% if head %}
+<section class="rg-panel"><h2>Préparer une révision enregistrée</h2>
+<p>Les modifications en cours de saisie restent dans l’atelier. Pour les examiner, enregistrez-les avant de préparer l’aperçu.</p>
+<form method="get" class="ed-pages"><input type="hidden" name="origine" value="{{ origin }}">
+{% if page %}<input type="hidden" name="page" value="{{ page.id }}">{% endif %}
+<label>Révision à examiner<select name="revision">
+{% for row in revisions %}<option value="{{ row.id }}" {% if row.id|stringformat:'s' == revision.id %}selected{% endif %}>Révision {{ row.number }}{% if row.number == head.number %} · Dernière sauvegarde{% endif %}</option>{% endfor %}
+</select></label><button class="btn">Choisir cette révision</button></form>
+{% if pages %}<form method="post" class="ed-pages" data-preview-prepare>{% csrf_token %}
+<input type="hidden" name="revision" value="{{ revision.id }}"><input type="hidden" name="origine" value="{{ origin }}">
+<label>Page de la révision {{ revision.number }}<select name="page" required>{% if not page %}<option value="" selected disabled>Choisir une page</option>{% endif %}{% for item in pages %}<option value="{{ item.id }}" {% if item.id == page.id %}selected{% endif %}>{{ item.title }}</option>{% endfor %}</select></label>
+<button class="btn btn-primary">Préparer l’aperçu de R{{ revision.number }}</button></form>
+<p>L’aperçu privé expire après dix minutes.</p>{% endif %}</section>
+{% else %}<section class="rg-panel"><h2>Aucun brouillon enregistré</h2><a href="{% url studio_editor_route site.pk %}">Ouvrir l’atelier</a></section>{% endif %}
+<p id="preview-status" role="status" aria-live="polite"></p><script src="/assets/preview.js" defer></script>
+{% endblock %}

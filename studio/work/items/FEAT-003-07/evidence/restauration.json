@@ -1,0 +1,26 @@
+{
+  "moteur": "PostgreSQL 17 isolé, données fictives",
+  "sauvegarde": "pg_dump -Fc et pg_restore dans une seconde base dédiée, sans connexion HTTP",
+  "avant_rejeu_restauré": {
+    "versions_stockees_avec_contenu": [
+      1,
+      2,
+      3
+    ],
+    "versions_consultables": [
+      3,
+      1
+    ],
+    "signal": 3
+  },
+  "après_effacement_ciblé_et_purge": {
+    "versions_stockees_avec_contenu": [
+      3
+    ],
+    "versions_consultables": [
+      3
+    ],
+    "signal": 3
+  },
+  "égalité_avec_la_source_après_deux_rejeux": true
+}

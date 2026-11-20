@@ -1,0 +1,11 @@
+{
+  "navigateur": "156.0.8078.4",
+  "checks": [
+    "Déplacement de flux au pointeur, Échap sans POST, un seul POST au dépôt et ordre après recharge.",
+    "Placement libre, position et taille modifiées par la poignée, conservation après enregistrement.",
+    "Texte modifié dans Structure, retrouvé dans Canvas avec la sélection par UUID.",
+    "Surcharge mobile rétablie champ par champ, conflit comparé et résolu, erreur de largeur conservée.",
+    "Lecture seule, largeur opérateur 320 px et transitions 767/768, 1023/1024."
+  ],
+  "erreurs": []
+}

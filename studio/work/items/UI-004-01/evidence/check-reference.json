@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-11-20T17:22:32.045Z",
+  "command": "node studio/work/items/UI-004-01/evidence/check-reference.cjs",
+  "node": "v24.19.0",
+  "browser": "156.0.8078.4",
+  "result": "passed",
+  "assertions": [
+    "contenu initial R18 identique",
+    "largeur mobile 390",
+    "variante longue locale >100 caractères",
+    "onglets et bouton accessibles via Enter",
+    "aucune requête réseau",
+    "aucune erreur JS"
+  ],
+  "errors": [],
+  "network": [],
+  "scope": "Rapport de référence simulé ; pas un test du nouvel éditeur"
+}

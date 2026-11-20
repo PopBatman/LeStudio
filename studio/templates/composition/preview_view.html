@@ -1,0 +1,31 @@
+{% extends "registre/base.html" %}
+{% load tz %}
+{% block title %}Aperçu de {{ page.title }} · R{{ revision.number }}{% endblock %}
+{% block styles %}{{ block.super }}<link rel="stylesheet" href="/assets/preview.css">{% endblock %}
+{% block registry %}
+<form method="post" action="{% url 'registre:preview-close' site.pk receipt.pk %}">{% csrf_token %}<input type="hidden" name="origine" value="{{ origin }}"><button class="btn">Fermer et revenir {% if origin == 'editor' or origin == 'canvas' %}à l’atelier{% else %}à la fiche Site{% endif %}</button></form>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ site.name }} · Brouillon enregistré R{{ revision.number }}</p><h1>Aperçu de {{ page.title }}</h1></div></header>
+{% timezone "Europe/Paris" %}<p>Préparé à <time datetime="{{ receipt.created_at|date:'c' }}">{{ receipt.created_at|date:"H:i:s" }}</time> · Expire à <time datetime="{{ receipt.expires_at|date:'c' }}">{{ receipt.expires_at|date:"H:i:s" }}</time> (Paris)</p>{% endtimezone %}
+<p id="preview-stale" role="status" {% if revision.number == head.number %}hidden{% endif %}>Une sauvegarde plus récente existe · R<span id="preview-head">{{ head.number }}</span>. Vous examinez toujours R{{ revision.number }}. {% if not head_has_page %}La page a été supprimée de la dernière sauvegarde.{% endif %} <a href="{% url 'registre:preview' site.pk %}?origine={{ origin|urlencode }}&amp;page={{ page.id }}">Examiner la dernière sauvegarde</a></p>
+{% if error %}<p class="rg-errors" role="alert">{{ error }}</p>{% endif %}
+<p id="preview-status" role="status" aria-live="polite"></p>
+<form method="post" action="{% url 'registre:preview' site.pk %}" data-preview-prepare {% if available %}hidden{% endif %} id="preview-retry">{% csrf_token %}
+<input type="hidden" name="revision" value="{{ revision.pk }}"><input type="hidden" name="page" value="{{ page.id }}"><input type="hidden" name="origine" value="{{ origin }}"><button class="btn">Repréparer R{{ revision.number }}</button></form>
+{% if available %}
+<section class="rg-panel preview-panel" id="preview-panel" data-expires="{{ expires_ms|stringformat:'d' }}" data-revision="{{ revision.number|stringformat:'d' }}" aria-label="Page rendue par Wagtail">
+<div class="rg-actions preview-formats" role="group" aria-label="Format d’affichage"><button type="button" class="btn" data-width="1200" aria-pressed="true">Bureau</button><button type="button" class="btn" data-width="820" aria-pressed="false">Tablette</button><button type="button" class="btn" data-width="390" aria-pressed="false">Mobile</button></div>
+<div class="preview-scroll" tabindex="0" role="region" aria-label="Zone de visualisation défilante"><iframe id="preview-frame" title="Rendu Wagtail" sandbox="" referrerpolicy="no-referrer" src="{% url 'registre:preview-document' site.pk receipt.pk %}"></iframe></div>
+</section>
+<details class="rg-panel"><summary>Provenance du rendu</summary><dl class="rg-dl"><div><dt>Instance Wagtail</dt><dd>{{ manifest.instance_id }}</dd></div><div><dt>Moteur</dt><dd>{{ manifest.engine_version }} · Wagtail {{ manifest.wagtail_version }}</dd></div>
+<div><dt>Révision Studio</dt><dd>R{{ revision.number }} · {{ revision.pk }}</dd></div>
+<div><dt>Composants</dt><dd>{% for item in manifest.definitions %}{{ item.key }} v{{ item.version }}{% if not forloop.last %}, {% endif %}{% empty %}Aucun{% endfor %}</dd></div>
+<div><dt>Articles publics</dt><dd>{% for key,item in manifest.articles.items %}Page {{ item.page_id }} · révision {{ item.published_revision_id }}{% if not forloop.last %}, {% endif %}{% empty %}Aucun{% endfor %}</dd></div>
+<div><dt>Médias</dt><dd>{% for key,digest in manifest.media.items %}{{ key }} · {{ digest }}{% if not forloop.last %}<br>{% endif %}{% empty %}Aucun{% endfor %}</dd></div></dl></details>
+{% endif %}
+<section class="rg-panel"><h2>Comparer les révisions</h2><p>Version active inconnue.</p>
+{% if parent %}<p>R{{ parent.number }} → R{{ revision.number }}</p><ul>{% for change in changes %}<li>{{ change }}</li>{% endfor %}</ul>
+{% if previous_page %}<form method="post" action="{% url 'registre:preview' site.pk %}" data-preview-prepare>{% csrf_token %}<input type="hidden" name="revision" value="{{ parent.id }}"><input type="hidden" name="page" value="{{ page.id }}"><input type="hidden" name="origine" value="{{ origin }}"><button class="btn">Examiner la même page en R{{ parent.number }}</button></form>{% endif %}
+{% else %}<p>Cette première révision n’a pas de révision précédente.</p>{% endif %}</section>
+<form class="ed-pages" method="get" action="{% url 'registre:preview' site.pk %}"><input type="hidden" name="revision" value="{{ revision.pk }}"><input type="hidden" name="origine" value="{{ origin }}"><label>Pages de R{{ revision.number }}<select name="page">{% for item in revision.document.pages %}<option value="{{ item.id }}" {% if item.id == page.id %}selected{% endif %}>{{ item.title }}</option>{% endfor %}</select></label><button class="btn">Choisir une page</button></form>
+<script src="/assets/preview.js" defer></script>
+{% endblock %}

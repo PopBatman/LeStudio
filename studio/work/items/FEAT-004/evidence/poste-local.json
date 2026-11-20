@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-20T08:54:53.128249+00:00",
+  "avant": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "après": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "entrée_privée": "http://127.0.0.1:8000/sites/59177d82-095d-4e5b-b095-7b73c220de4b/apercu/",
+  "connexion_requise": true,
+  "santé": "ok",
+  "migration": "composition.0005_preview_ticket",
+  "purge": "exécution de purge_apercus dans le worker local confirmée"
+}

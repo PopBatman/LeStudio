@@ -1,0 +1,102 @@
+{
+  "observed_at": "2026-11-20T17:40:27.414575+00:00",
+  "git": "absent ; fichiers identifiés par SHA-256",
+  "files": [
+    {
+      "path": "studio/project/PROJECT.md",
+      "sha256": "0996f461f87aafc2950e692fc1ff543d963c4e34820ddab09cee7131774fe07d"
+    },
+    {
+      "path": "studio/docs/ARCHITECTURE-CONTRACTS.md",
+      "sha256": "5ae871940a45b990d05c5aa4037d963bafb496226308704daf414343d4523c00"
+    },
+    {
+      "path": "workflow-ai/AGENTS.md",
+      "sha256": "756e135c6e12b150e5c2a50e3cab2b7b3c5743837955627c64525c5af99a9f73"
+    },
+    {
+      "path": "workflow-ai/scripts/workflow.py",
+      "sha256": "e19b71b845becdcca4273cfc2ad68d04be1eae3a5ae94d00efd3924990d4c358"
+    },
+    {
+      "path": "studio/composition/validation.py",
+      "sha256": "0003e886815fd236d66eafd89b1c7d88cb5c87a644505368763200f6c7f54f4d"
+    },
+    {
+      "path": "studio/composition/placement.py",
+      "sha256": "71ffad7a4767727c9c4d917647b54c7f5aa7986cda30d54b66921443a8cfea5f"
+    },
+    {
+      "path": "studio/composition/canvas_format.py",
+      "sha256": "441023541d6bbeb920c51f2d406c175babf52a8666b0a2b8bdc10251b6d4a276"
+    },
+    {
+      "path": "studio/composition/builder_batch.py",
+      "sha256": "65f86a641db935574c387a5ab05578ab003ed5578e0137cf087ebe03e2f9525f"
+    },
+    {
+      "path": "studio/composition/editor.py",
+      "sha256": "aa1d5b4da170658f5253a93f9a483cfe188712f6679f80f389e9e7bdbfcf962f"
+    },
+    {
+      "path": "studio/composition/appearance_contract.py",
+      "sha256": "6a671a0c447bd6597c2b8401d403699596008712af5a1ca68bf3fcc399a79e4f"
+    },
+    {
+      "path": "studio/composition/services.py",
+      "sha256": "aab4bb513b691df77e55344955b7e035fd8552847459a1265596c020252abe57"
+    },
+    {
+      "path": "studio/composition/figma_mapping.py",
+      "sha256": "84757310a9abc9da292baf927ed1736dcf66c70d4ddb5fdf2882681f5bad850a"
+    },
+    {
+      "path": "studio/composition/catalogue.py",
+      "sha256": "ad99cc50c50d0b72c38e72e0fb9dcc54e733fb7184e81eff555b76c6d22d0cf3"
+    },
+    {
+      "path": "studio/static/ui/builder-edit-model.js",
+      "sha256": "581fedd926f2bdfbba4796e5feae7cedc39d025452f6f87dc43f727fc006c148"
+    },
+    {
+      "path": "studio/static/ui/canvas.js",
+      "sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0"
+    },
+    {
+      "path": "studio/static/ui/builder-frame.js",
+      "sha256": "1f2d3fd20e936e4b2cc49b8620eef72e8a54926937805f084e3c76710763b607"
+    },
+    {
+      "path": "studio/engine/reference/preview.py",
+      "sha256": "1fff0d03c6396b5c530ba39b397068a1b96cf24d964c5fd1d1da7cc93939e10e"
+    },
+    {
+      "path": "studio/engine/reference/assets/preview.css",
+      "sha256": "07e9ffa9d0dc26138d1d50a2baa7a9091d2bee81c148343a514e424339e65137"
+    },
+    {
+      "path": "studio/engine/reference/templates/reference/preview_blocks.html",
+      "sha256": "fef25c7be212dc792134eaaf7b271808c7fd5d5d017c95d89b20604922529bd2"
+    },
+    {
+      "path": "studio/work/items/UI-004-01/REPORT.md",
+      "sha256": "bcfdbf8ff41ff529608f234d5f9a131d61e67f34d96f0e03658fd6f774d77a5d"
+    },
+    {
+      "path": "studio/work/items/UI-004-01/REFERENCE-PRODUIT.md",
+      "sha256": "c0fbd435e5065734d72ec224096b0207520246827041bfcfba4fc96ee1667ef5"
+    },
+    {
+      "path": "studio/work/items/UI-004-01/DECISION-FRONTEND.md",
+      "sha256": "5ed28a607c62a2110f1b8ce394d4f13af0165f3ef932bd28bb09346e13488df6"
+    },
+    {
+      "path": "studio/work/items/UI-004-01/evidence/page-reference.json",
+      "sha256": "3ea077173e8ca174e60029b8592f105bc220918ddd334c174cba31c98dabdadb"
+    },
+    {
+      "path": "studio/work/items/UI-004/evidence/prototype-adopte.html",
+      "sha256": "a01c59a52871ec4bf09f8ccc926749d1158ba95f2beab7c00f10470d09a74391"
+    }
+  ]
+}

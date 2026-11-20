@@ -1,0 +1,109 @@
+{
+  "banc": "Copie PostgreSQL éphémère du banc isolé. Même base entre les quatre installations, même session HTTP et moteurs raccordés du banc.",
+  "date": "2026-11-20T15:16:05.753698+00:00",
+  "site": "4b655e86-d925-4e5f-ae10-91aa5ed27be0",
+  "page": "761f3abc-3119-4e9b-a50e-8d8a44ad71e4",
+  "occurrence": "0e3057f7-1b54-4bb5-aef3-8130a661ab40",
+  "avant": [
+    {
+      "uuid": "37e33e53-8dde-4cb3-ab8c-e2c1a0bf330d",
+      "parent": "None",
+      "numero": 1,
+      "sha256": "6925bd9608488e23183d317cdc2d9f94106c8d115799a18962e76005010f8fd7"
+    },
+    {
+      "uuid": "2f00f3a8-83cb-4a01-946e-4a8345ee6478",
+      "parent": "37e33e53-8dde-4cb3-ab8c-e2c1a0bf330d",
+      "numero": 2,
+      "sha256": "2da2cac14900b2317519f599a0d1a7e5878007165fd9fe644d38c7d87fbf4afc"
+    },
+    {
+      "uuid": "a31cb5c7-16fa-4731-910a-d3c9dbc53637",
+      "parent": "2f00f3a8-83cb-4a01-946e-4a8345ee6478",
+      "numero": 3,
+      "sha256": "e0d8d10bbbe0e78a008944e2a8ee42cc21cd4be8aa5730f18aa63c20905e1ccc"
+    },
+    {
+      "uuid": "0b9f27ca-b208-45ab-a764-cbf2a3fa4172",
+      "parent": "a31cb5c7-16fa-4731-910a-d3c9dbc53637",
+      "numero": 4,
+      "sha256": "b3238fc88a16ae1b8cf6fdc3ca9812bcf8d56ff666d23df2c4e812c7fe66b005"
+    }
+  ],
+  "après": [
+    {
+      "uuid": "37e33e53-8dde-4cb3-ab8c-e2c1a0bf330d",
+      "parent": "None",
+      "numero": 1,
+      "sha256": "6925bd9608488e23183d317cdc2d9f94106c8d115799a18962e76005010f8fd7"
+    },
+    {
+      "uuid": "2f00f3a8-83cb-4a01-946e-4a8345ee6478",
+      "parent": "37e33e53-8dde-4cb3-ab8c-e2c1a0bf330d",
+      "numero": 2,
+      "sha256": "2da2cac14900b2317519f599a0d1a7e5878007165fd9fe644d38c7d87fbf4afc"
+    },
+    {
+      "uuid": "a31cb5c7-16fa-4731-910a-d3c9dbc53637",
+      "parent": "2f00f3a8-83cb-4a01-946e-4a8345ee6478",
+      "numero": 3,
+      "sha256": "e0d8d10bbbe0e78a008944e2a8ee42cc21cd4be8aa5730f18aa63c20905e1ccc"
+    },
+    {
+      "uuid": "0b9f27ca-b208-45ab-a764-cbf2a3fa4172",
+      "parent": "a31cb5c7-16fa-4731-910a-d3c9dbc53637",
+      "numero": 4,
+      "sha256": "b3238fc88a16ae1b8cf6fdc3ca9812bcf8d56ff666d23df2c4e812c7fe66b005"
+    },
+    {
+      "uuid": "409ee368-677c-400d-a306-51db233c8a0b",
+      "parent": "0b9f27ca-b208-45ab-a764-cbf2a3fa4172",
+      "numero": 5,
+      "sha256": "7f6c1563e9de76d39f5613700b3b57a121c558318edac01ba278036ac1b1b1a5"
+    }
+  ],
+  "installations": [
+    {
+      "mode": "coexistence",
+      "image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+      "secondes": 1.78
+    },
+    {
+      "mode": "builder",
+      "image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+      "secondes": 2.22
+    },
+    {
+      "mode": "compatibility",
+      "image": "sha256:4a35eb52992890f8d566d178b20f2beb3c516a805276ef8945fe2c4618aaa6e8",
+      "secondes": 2.06
+    },
+    {
+      "mode": "coexistence",
+      "image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+      "secondes": 2.11
+    }
+  ],
+  "exclus_image_retrait": [
+    "composition/editor_views.py",
+    "composition/canvas_views.py",
+    "composition/canvas_forms.py",
+    "static/ui/editor.js",
+    "static/ui/canvas.js",
+    "static/ui/canvas.css",
+    "templates/composition/editor.html",
+    "templates/composition/editor_article.html",
+    "templates/composition/editor_definition.html",
+    "templates/composition/editor_inspector.html",
+    "templates/composition/editor_observation.html",
+    "templates/composition/canvas_parent.html",
+    "templates/composition/canvas_surface.html"
+  ],
+  "preuves": [
+    "CTA et santé à chaque étape",
+    "sauvegarde V2, rejeu identique et conflit V1",
+    "signet et refus du POST après retrait physique",
+    "rendu privé Wagtail et écran Articles sur image allégée",
+    "ancienne interface réinstallée, nouvelle tête relue à l’identique"
+  ]
+}

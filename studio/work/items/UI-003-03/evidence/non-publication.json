@@ -1,0 +1,136 @@
+{
+  "observed_at": "2026-11-20T13:15:39.365108+00:00",
+  "avant": {
+    "a": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014",
+      "reference_served_sha256": "fbf326d96694f92c8ea3e6f75ce1713c6b6d4662ebce1e759d32c332587078b2"
+    },
+    "b": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de",
+      "reference_served_sha256": "0a4faa87fc5e177c8330834722c0c6b0e8b479356656c4b7c9ee1ad709492e30"
+    },
+    "studio": [
+      [
+        "4b6e7c3d-d6e5-46c0-8955-2c55316c7a21",
+        1
+      ],
+      [
+        "06eee60c-804e-451a-9d2e-a1e2b805b517",
+        2
+      ],
+      [
+        "d98c8ffe-c8bc-4108-8d8c-62699d7ad170",
+        3
+      ],
+      [
+        "d4056d8a-c39b-46a1-a997-f96960fcfb1f",
+        4
+      ],
+      [
+        "8c451dba-b92e-49b9-894c-61a30bc2f6e3",
+        5
+      ],
+      [
+        "766d23f4-dddb-4995-9f56-705237c06556",
+        1
+      ],
+      [
+        "9c3011e4-d308-4da0-807b-f51809b2690d",
+        2
+      ],
+      [
+        "90aa64fc-ea5b-4b01-9c0f-455881062ffb",
+        3
+      ],
+      [
+        "582b97da-6f1f-4f2b-ab43-d0f63f798c4c",
+        4
+      ]
+    ]
+  },
+  "après": {
+    "a": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014",
+      "reference_served_sha256": "fbf326d96694f92c8ea3e6f75ce1713c6b6d4662ebce1e759d32c332587078b2"
+    },
+    "b": {
+      "revision_count": 2,
+      "renditions": 0,
+      "article_live": 2,
+      "reference_live": 1,
+      "published_article_sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de",
+      "reference_served_sha256": "0a4faa87fc5e177c8330834722c0c6b0e8b479356656c4b7c9ee1ad709492e30"
+    },
+    "studio": [
+      [
+        "4b6e7c3d-d6e5-46c0-8955-2c55316c7a21",
+        1
+      ],
+      [
+        "06eee60c-804e-451a-9d2e-a1e2b805b517",
+        2
+      ],
+      [
+        "d98c8ffe-c8bc-4108-8d8c-62699d7ad170",
+        3
+      ],
+      [
+        "d4056d8a-c39b-46a1-a997-f96960fcfb1f",
+        4
+      ],
+      [
+        "8c451dba-b92e-49b9-894c-61a30bc2f6e3",
+        5
+      ],
+      [
+        "8581d870-aab0-4ef4-8e74-45a66aa73593",
+        6
+      ],
+      [
+        "766d23f4-dddb-4995-9f56-705237c06556",
+        1
+      ],
+      [
+        "9c3011e4-d308-4da0-807b-f51809b2690d",
+        2
+      ],
+      [
+        "90aa64fc-ea5b-4b01-9c0f-455881062ffb",
+        3
+      ],
+      [
+        "582b97da-6f1f-4f2b-ab43-d0f63f798c4c",
+        4
+      ],
+      [
+        "a00552a3-ef86-4ca3-b0fd-71c7994277c7",
+        5
+      ],
+      [
+        "c9fb9b51-fea5-4820-b7ab-7e7e1ee2d193",
+        6
+      ],
+      [
+        "27ede616-f7b8-4fbe-950c-0f7709f939b3",
+        7
+      ],
+      [
+        "d87e4fd9-e0be-4a11-9af2-e441f4ff8d59",
+        8
+      ]
+    ]
+  },
+  "site_public": "Chaque réponse de référence /internal/render et chaque rendu publié ArticlePage.serve() sont comparés sur une instance de laboratoire."
+}

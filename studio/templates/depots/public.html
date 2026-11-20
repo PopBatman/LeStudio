@@ -1,0 +1,74 @@
+{% load tz %}<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="same-origin">
+  <title>{% if screen == 'form' %}Déposer une maquette{% elif screen == 'receipt' %}Version reçue{% elif screen == 'entry' %}Invitation de dépôt{% elif screen == 'unavailable' %}Invitation indisponible{% else %}Dépôt de maquette{% endif %} · Le Studio</title>
+  <link rel="stylesheet" href="/assets/depot-public.css">
+  <script defer src="/assets/depot-public.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header><div class="bar"><span class="brand">Le Studio</span><span>Portail de dépôt</span></div></header>
+<main id="contenu" tabindex="-1">
+{% if screen == 'entry' %}
+  <h1>Ouvrir une invitation</h1>
+  <p>Ouvrez le lien transmis par l’équipe du site ou saisissez son code d’invitation.</p>
+  <form id="exchange" method="post" action="{% url 'depot_public:entry' %}" class="panel">
+    {% csrf_token %}
+    <label for="invite-code">Code d’invitation</label>
+    <input id="invite-code" name="code" type="password" autocomplete="off" spellcheck="false" required maxlength="128">
+    <button>Ouvrir le dépôt</button>
+  </form>
+{% elif screen == 'form' %}
+  <p class="context">{{ invitation.site.name }} · Invitation de dépôt</p>
+  <h1>Déposer une maquette</h1>
+  <p>Transmettez votre lien Figma à l’équipe du site. Une seule déclinaison suffit.</p>
+  <section class="panel" aria-labelledby="version-title">
+    <h2 id="version-title">Nouvelle version</h2>
+    <p>Invitation valable jusqu’au {{ invitation.expires_at|timezone:"Europe/Paris"|date:"j F Y à H:i" }} (heure de Paris).</p>
+    {% if limit %}{% include "depots/public_limit.html" %}{% endif %}
+    <form method="post" action="{% url 'depot_public:deposit' %}" novalidate>
+      {% csrf_token %}<input type="hidden" name="request_id" value="{{ request_id }}">
+      <label for="figma-url">Lien de la maquette Figma</label>
+      <input type="url" id="figma-url" name="figma_url" value="{{ figma_url }}" required maxlength="2048"
+             spellcheck="false" autocomplete="off" aria-describedby="url-help{% if errors.figma_url %} url-error{% endif %}"{% if errors.figma_url %} aria-invalid="true"{% endif %}>
+      <small id="url-help">Lien vers un fichier ou un design Figma.</small>
+      {% if errors.figma_url %}<p role="alert" class="error" id="url-error">{{ errors.figma_url|join:" " }}</p>{% endif %}
+      <label for="comment">Commentaire (facultatif)</label>
+      <textarea id="comment" name="comment" rows="4" maxlength="2000" aria-describedby="comment-help{% if errors.comment %} comment-error{% endif %}"{% if errors.comment %} aria-invalid="true"{% endif %}>{{ comment }}</textarea>
+      <small id="comment-help">2 000 caractères maximum. Évitez les informations personnelles.</small>
+      {% if errors.comment %}<p role="alert" class="error" id="comment-error">{{ errors.comment|join:" " }}</p>{% endif %}
+      <button>Transmettre la version</button>
+    </form>
+  </section>
+  <details><summary>Utilisation des données de dépôt</summary>
+    <p>Le lien et le commentaire permettent à l’équipe habilitée de retrouver vos versions dans Studio. Les remises sont conservées jusqu’à 90 jours. Le dépôt ne modifie pas les droits de partage du fichier Figma.</p>
+    <p>Pour une demande d’effacement, {% if contact %}contactez {{ contact }}.{% else %}contactez la personne qui vous a transmis l’invitation.{% endif %}</p>
+  </details>
+{% elif screen == 'receipt' %}
+  <h1 tabindex="-1" data-feedback>Version reçue</h1>
+  <section class="panel">
+    <p class="notice" role="status">Version {{ submission.version }} reçue le {{ submission.created_at|timezone:"Europe/Paris"|date:"j F Y à H:i" }} (heure de Paris).</p>
+    <p>L’équipe du site peut consulter le dépôt dans Studio.</p>
+    <a class="action" href="{% url 'depot_public:deposit' %}">Déposer une autre version</a>
+  </section>
+{% elif screen == 'limited' %}
+  <h1 tabindex="-1" data-feedback>Réessayer plus tard</h1>
+  {% include "depots/public_limit.html" %}
+  <a href="{% url 'depot_public:entry' %}">Revenir à l’invitation</a>
+{% elif screen == 'missing_receipt' %}
+  <h1 tabindex="-1" data-feedback>Reçu indisponible</h1>
+  <p>Ce reçu est indisponible pour cette invitation.</p>
+  <a href="{% url 'depot_public:deposit' %}">Revenir au dépôt</a>
+{% elif screen == 'conflict' %}
+  <h1 tabindex="-1" data-feedback>Formulaire de dépôt à rouvrir</h1>
+  <p>Vérifiez l’invitation que vous souhaitez utiliser, puis rouvrez son lien pour préparer une nouvelle version.</p>
+{% else %}
+  <h1 tabindex="-1" data-feedback>Invitation indisponible</h1>
+  <p>Demandez une nouvelle invitation à la personne qui vous a transmis le lien.</p>
+{% endif %}
+</main>
+</body>
+</html>

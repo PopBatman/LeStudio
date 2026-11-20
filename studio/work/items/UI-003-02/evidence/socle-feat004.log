@@ -1,0 +1,11 @@
+Image Studio sha256:f8f6a2baa1fb68f15f293586071ba054a3dd70cc5c068273d31c954110862444 · SQLite en mémoire · conteneur jetable sans réseau
+manage.py test tests.test_preview_bridge tests.test_preview_web tests.test_preview_cleanup tests.test_preview_transport --settings=central.test_settings
+Creating test database for alias 'default'...
+Found 13 test(s).
+System check identified no issues (0 silenced).
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.139s
+
+OK
+Destroying test database for alias 'default'...

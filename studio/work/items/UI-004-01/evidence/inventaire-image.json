@@ -1,0 +1,204 @@
+{
+  "agent": "/root/t01_inventaire",
+  "scope": "Lecture seule : comparaison de 20 fichiers représentatifs entre workspace et conteneur web installé. Aucun test applicatif, aucun secret et aucune modification du produit.",
+  "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "results": {
+    "workspace": {
+      "command": [
+        "/usr/bin/python3",
+        "-c",
+        "from pathlib import Path; import hashlib,json,sys; names=['composition/editor_views.py', 'composition/editor_forms.py', 'composition/canvas_views.py', 'composition/canvas_forms.py', 'composition/editor_navigation.py', 'composition/builder_views.py', 'composition/builder_batch.py', 'static/ui/editor.js', 'static/ui/canvas.js', 'static/ui/canvas.css', 'static/ui/builder.js', 'static/ui/builder.css', 'static/ui/builder-frame.js', 'static/ui/builder-edit-model.js', 'static/ui/builder-edit.js', 'static/ui/builder-edit.css', 'static/ui/builder-drop.js', 'templates/composition/editor.html', 'templates/composition/builder.html', 'templates/composition/builder_edit.html']; root=Path(sys.argv[1]); print(json.dumps({n:hashlib.sha256((root/n).read_bytes()).hexdigest() if (root/n).is_file() else None for n in names},sort_keys=True))",
+        "studio"
+      ],
+      "cwd": "/home/admincsd/Documents/LeStudio",
+      "observed_at": "2026-11-20T17:13:29.991703+00:00",
+      "exit_code": 0,
+      "stdout": "{\"composition/builder_batch.py\": \"65f86a641db935574c387a5ab05578ab003ed5578e0137cf087ebe03e2f9525f\", \"composition/builder_views.py\": \"cb37bf16efabfa97f3324a60d99e779289e29d1befeb2d0d13ffc396f9b304a6\", \"composition/canvas_forms.py\": \"1dec9144f2b7701a17b319397c3c5261ac6764ea577a0753b1ca662d7b2b814c\", \"composition/canvas_views.py\": \"ed19e3b3ad1d0ad4c1115248c68651868a0c5e1ad9daeae9f04e00bdd3563833\", \"composition/editor_forms.py\": \"0f7d70a65d1af9b6addda413b0397583dc66a2e4a7019f0f0cef023577e04846\", \"composition/editor_navigation.py\": \"fe54f3f26505efccb77cd018f77f4a0c3f7a55c4d7cdab575bcd0f8a12de0e6a\", \"composition/editor_views.py\": \"232e109fbead702f10f857a9ca38d29364664ab92d06a732043056674cbfbd50\", \"static/ui/builder-drop.js\": \"69f85d6e5e01ca0c7790fd266c7ad8fe871b02b3e6acf9e0de6d0e962cbea588\", \"static/ui/builder-edit-model.js\": \"581fedd926f2bdfbba4796e5feae7cedc39d025452f6f87dc43f727fc006c148\", \"static/ui/builder-edit.css\": \"bb1281202fd6a382d9bfe8663fc1d0b12717e81082e91db63d2f8668858d464a\", \"static/ui/builder-edit.js\": \"09906b8d5c2e95e54101ff5720f74047c2369775e51fd730a73888898e970438\", \"static/ui/builder-frame.js\": \"1f2d3fd20e936e4b2cc49b8620eef72e8a54926937805f084e3c76710763b607\", \"static/ui/builder.css\": \"d8cb0ae948660a68655bfc419affb5452aa378744bd4d90002f9e66c275bed12\", \"static/ui/builder.js\": \"6d83ace1e4cb8c3973586b12c8515871ea08fb78117467c9fa29861f12cdeb33\", \"static/ui/canvas.css\": \"b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0\", \"static/ui/canvas.js\": \"2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0\", \"static/ui/editor.js\": \"72f743ebc695395b9723ae35494d22cc58d07bd84b41f64ad48c2ad117c702ab\", \"templates/composition/builder.html\": \"35a257206d68fa65586baa85c2ba7383efdda4db244a74cf95dc522c4d7a4402\", \"templates/composition/builder_edit.html\": \"019828ab88904c0411df25b7f6dbdf598de7ddb867e9658e58e6694e83c32909\", \"templates/composition/editor.html\": \"457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72\"}\n",
+      "stderr": ""
+    },
+    "image": {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "studio/compose.yaml",
+        "exec",
+        "-T",
+        "web",
+        "python",
+        "-c",
+        "from pathlib import Path; import hashlib,json,sys; names=['composition/editor_views.py', 'composition/editor_forms.py', 'composition/canvas_views.py', 'composition/canvas_forms.py', 'composition/editor_navigation.py', 'composition/builder_views.py', 'composition/builder_batch.py', 'static/ui/editor.js', 'static/ui/canvas.js', 'static/ui/canvas.css', 'static/ui/builder.js', 'static/ui/builder.css', 'static/ui/builder-frame.js', 'static/ui/builder-edit-model.js', 'static/ui/builder-edit.js', 'static/ui/builder-edit.css', 'static/ui/builder-drop.js', 'templates/composition/editor.html', 'templates/composition/builder.html', 'templates/composition/builder_edit.html']; root=Path(sys.argv[1]); print(json.dumps({n:hashlib.sha256((root/n).read_bytes()).hexdigest() if (root/n).is_file() else None for n in names},sort_keys=True))",
+        "/app"
+      ],
+      "cwd": "/home/admincsd/Documents/LeStudio",
+      "observed_at": "2026-11-20T17:13:30.130516+00:00",
+      "exit_code": 0,
+      "stdout": "{\"composition/builder_batch.py\": \"65f86a641db935574c387a5ab05578ab003ed5578e0137cf087ebe03e2f9525f\", \"composition/builder_views.py\": \"cb37bf16efabfa97f3324a60d99e779289e29d1befeb2d0d13ffc396f9b304a6\", \"composition/canvas_forms.py\": \"1dec9144f2b7701a17b319397c3c5261ac6764ea577a0753b1ca662d7b2b814c\", \"composition/canvas_views.py\": \"ed19e3b3ad1d0ad4c1115248c68651868a0c5e1ad9daeae9f04e00bdd3563833\", \"composition/editor_forms.py\": \"0f7d70a65d1af9b6addda413b0397583dc66a2e4a7019f0f0cef023577e04846\", \"composition/editor_navigation.py\": \"fe54f3f26505efccb77cd018f77f4a0c3f7a55c4d7cdab575bcd0f8a12de0e6a\", \"composition/editor_views.py\": \"232e109fbead702f10f857a9ca38d29364664ab92d06a732043056674cbfbd50\", \"static/ui/builder-drop.js\": \"69f85d6e5e01ca0c7790fd266c7ad8fe871b02b3e6acf9e0de6d0e962cbea588\", \"static/ui/builder-edit-model.js\": \"581fedd926f2bdfbba4796e5feae7cedc39d025452f6f87dc43f727fc006c148\", \"static/ui/builder-edit.css\": \"bb1281202fd6a382d9bfe8663fc1d0b12717e81082e91db63d2f8668858d464a\", \"static/ui/builder-edit.js\": \"09906b8d5c2e95e54101ff5720f74047c2369775e51fd730a73888898e970438\", \"static/ui/builder-frame.js\": \"1f2d3fd20e936e4b2cc49b8620eef72e8a54926937805f084e3c76710763b607\", \"static/ui/builder.css\": \"d8cb0ae948660a68655bfc419affb5452aa378744bd4d90002f9e66c275bed12\", \"static/ui/builder.js\": \"6d83ace1e4cb8c3973586b12c8515871ea08fb78117467c9fa29861f12cdeb33\", \"static/ui/canvas.css\": \"b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0\", \"static/ui/canvas.js\": \"2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0\", \"static/ui/editor.js\": \"72f743ebc695395b9723ae35494d22cc58d07bd84b41f64ad48c2ad117c702ab\", \"templates/composition/builder.html\": \"35a257206d68fa65586baa85c2ba7383efdda4db244a74cf95dc522c4d7a4402\", \"templates/composition/builder_edit.html\": \"019828ab88904c0411df25b7f6dbdf598de7ddb867e9658e58e6694e83c32909\", \"templates/composition/editor.html\": \"457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72\"}\n",
+      "stderr": ""
+    }
+  },
+  "files": [
+    {
+      "path": "composition/editor_views.py",
+      "workspace_sha256": "232e109fbead702f10f857a9ca38d29364664ab92d06a732043056674cbfbd50",
+      "image_sha256": "232e109fbead702f10f857a9ca38d29364664ab92d06a732043056674cbfbd50",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/editor_forms.py",
+      "workspace_sha256": "0f7d70a65d1af9b6addda413b0397583dc66a2e4a7019f0f0cef023577e04846",
+      "image_sha256": "0f7d70a65d1af9b6addda413b0397583dc66a2e4a7019f0f0cef023577e04846",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/canvas_views.py",
+      "workspace_sha256": "ed19e3b3ad1d0ad4c1115248c68651868a0c5e1ad9daeae9f04e00bdd3563833",
+      "image_sha256": "ed19e3b3ad1d0ad4c1115248c68651868a0c5e1ad9daeae9f04e00bdd3563833",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/canvas_forms.py",
+      "workspace_sha256": "1dec9144f2b7701a17b319397c3c5261ac6764ea577a0753b1ca662d7b2b814c",
+      "image_sha256": "1dec9144f2b7701a17b319397c3c5261ac6764ea577a0753b1ca662d7b2b814c",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/editor_navigation.py",
+      "workspace_sha256": "fe54f3f26505efccb77cd018f77f4a0c3f7a55c4d7cdab575bcd0f8a12de0e6a",
+      "image_sha256": "fe54f3f26505efccb77cd018f77f4a0c3f7a55c4d7cdab575bcd0f8a12de0e6a",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/builder_views.py",
+      "workspace_sha256": "cb37bf16efabfa97f3324a60d99e779289e29d1befeb2d0d13ffc396f9b304a6",
+      "image_sha256": "cb37bf16efabfa97f3324a60d99e779289e29d1befeb2d0d13ffc396f9b304a6",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "composition/builder_batch.py",
+      "workspace_sha256": "65f86a641db935574c387a5ab05578ab003ed5578e0137cf087ebe03e2f9525f",
+      "image_sha256": "65f86a641db935574c387a5ab05578ab003ed5578e0137cf087ebe03e2f9525f",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/editor.js",
+      "workspace_sha256": "72f743ebc695395b9723ae35494d22cc58d07bd84b41f64ad48c2ad117c702ab",
+      "image_sha256": "72f743ebc695395b9723ae35494d22cc58d07bd84b41f64ad48c2ad117c702ab",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/canvas.js",
+      "workspace_sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0",
+      "image_sha256": "2956bb20d53c6c019948788d25125a12c26a4001487efb1629034f2e501277f0",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/canvas.css",
+      "workspace_sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0",
+      "image_sha256": "b1e4a164de1698650e8b55773c627d1fd86461b353b7583c288d836de3ad14d0",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder.js",
+      "workspace_sha256": "6d83ace1e4cb8c3973586b12c8515871ea08fb78117467c9fa29861f12cdeb33",
+      "image_sha256": "6d83ace1e4cb8c3973586b12c8515871ea08fb78117467c9fa29861f12cdeb33",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder.css",
+      "workspace_sha256": "d8cb0ae948660a68655bfc419affb5452aa378744bd4d90002f9e66c275bed12",
+      "image_sha256": "d8cb0ae948660a68655bfc419affb5452aa378744bd4d90002f9e66c275bed12",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder-frame.js",
+      "workspace_sha256": "1f2d3fd20e936e4b2cc49b8620eef72e8a54926937805f084e3c76710763b607",
+      "image_sha256": "1f2d3fd20e936e4b2cc49b8620eef72e8a54926937805f084e3c76710763b607",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder-edit-model.js",
+      "workspace_sha256": "581fedd926f2bdfbba4796e5feae7cedc39d025452f6f87dc43f727fc006c148",
+      "image_sha256": "581fedd926f2bdfbba4796e5feae7cedc39d025452f6f87dc43f727fc006c148",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder-edit.js",
+      "workspace_sha256": "09906b8d5c2e95e54101ff5720f74047c2369775e51fd730a73888898e970438",
+      "image_sha256": "09906b8d5c2e95e54101ff5720f74047c2369775e51fd730a73888898e970438",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder-edit.css",
+      "workspace_sha256": "bb1281202fd6a382d9bfe8663fc1d0b12717e81082e91db63d2f8668858d464a",
+      "image_sha256": "bb1281202fd6a382d9bfe8663fc1d0b12717e81082e91db63d2f8668858d464a",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "static/ui/builder-drop.js",
+      "workspace_sha256": "69f85d6e5e01ca0c7790fd266c7ad8fe871b02b3e6acf9e0de6d0e962cbea588",
+      "image_sha256": "69f85d6e5e01ca0c7790fd266c7ad8fe871b02b3e6acf9e0de6d0e962cbea588",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "templates/composition/editor.html",
+      "workspace_sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72",
+      "image_sha256": "457c7e18e3f141bee4ddd1161f7b83e59aec2aa8ef21d19e45cce90ac52eaa72",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "templates/composition/builder.html",
+      "workspace_sha256": "35a257206d68fa65586baa85c2ba7383efdda4db244a74cf95dc522c4d7a4402",
+      "image_sha256": "35a257206d68fa65586baa85c2ba7383efdda4db244a74cf95dc522c4d7a4402",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    },
+    {
+      "path": "templates/composition/builder_edit.html",
+      "workspace_sha256": "019828ab88904c0411df25b7f6dbdf598de7ddb867e9658e58e6694e83c32909",
+      "image_sha256": "019828ab88904c0411df25b7f6dbdf598de7ddb867e9658e58e6694e83c32909",
+      "present_workspace": true,
+      "present_image": true,
+      "same": true
+    }
+  ],
+  "all_present_and_identical": true,
+  "limit": "Échantillon borné de 20 fichiers ; ne prouve pas l’inventaire intégral de l’image ni l’absence future de ressources exclusives. T21 doit vérifier le nouvel artefact et les fichiers servis après nettoyage."
+}

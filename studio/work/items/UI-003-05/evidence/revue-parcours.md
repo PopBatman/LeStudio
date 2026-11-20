@@ -1,0 +1,31 @@
+# Recette du Visual Builder sur le produit
+
+Le 20 novembre 2026, Chromium a ouvert Studio et les rendus privés de deux moteurs Wagtail de laboratoire. Le site A a démarré avec une page vierge. Le site B a démarré avec le modèle Présentation d’activité, puis reçu la page Atlas du Sud depuis une remise Figma simulée. Un lecteur du site A et deux gestionnaires ont servi aux essais de droits et de concurrence. Les données d’un client réel ne sont pas intervenues.
+
+## Examiner les trois parcours
+
+Le PDF contient neuf comparaisons, dans l’ordre vierge, modèle, Figma. Pour chaque origine, les pages montrent successivement le bureau (1 440 × 960), la tablette (820 × 1 060) puis le mobile (390 × 844). Chaque paire ouvre le même UUID et la même révision. La colonne de gauche montre l’éditeur structuré, celle de droite le canvas et son rendu Wagtail. Sur mobile la capture du canvas fait défiler la page jusqu’au rendu. Dans le navigateur, le bouton **Modifier la page** se trouve plus haut. [Planches à agrandir](comparatif-produit.pdf) · [Relevés de Chromium](comparaison-navigateur.json)
+
+| Départ | Ce que montre la réalisation |
+| --- | --- |
+| Vierge, A R2 | Sur bureau, le calque indique l’absence de bloc et la feuille de rendu est blanche. Sur mobile le canevas blanc occupe l’essentiel du premier écran une fois le rendu atteint. Le geste d’ajout demande de revenir aux commandes d’édition. [Vue bureau](produit-vierge-bureau.png) |
+| Modèle, B R3 | La sélection « Accueil » affiche le titre « Bienvenue à l’atelier » et sa description. La tablette conserve les calques à gauche du texte rendu. [Vue bureau](produit-modele-bureau.png) |
+| Figma, B R3 | La page « Atlas du Sud » reprend le titre « Les chemins du Sud », sa description et l’article Wagtail associé. Le lien de comparaison est disponible en tête du canvas. Sur mobile, la lecture des textes du rendu tient dans la largeur de la fenêtre. [Vue bureau](produit-figma-bureau.png) |
+
+Les neuf parcours ont donné un rendu Wagtail aux largeurs logiques de 1 200, 820 ou 390 px. La page Studio a conservé une largeur égale à celle de la fenêtre dans chacun des cas. Chromium a relevé zéro exception JavaScript et zéro hôte externe. Le jugement sur la direction artistique et l’équivalence des gestes appartient à l’opérateur qui examine ces vues.
+
+## Parcours observés
+
+| Tâche | Résultat et pièce de recette |
+| --- | --- |
+| Créer ou reprendre | Les départs vierge et modèle donnent chacun une R1, avec respectivement zéro et une section. La confirmation HTTP d’une remise Figma sur un atelier vide donne également une R1 et un lien vers sa page. Ces trois essais ont utilisé des fiches temporaires dans une transaction PostgreSQL annulée après lecture. Les captures du site B portent sur un ajout Figma à un brouillon existant. [Démarrages](demarrages.json) |
+| Section, disposition et remplacement | Sur le site A, insertion et ordre des sections, demande de confirmation avec le descendant nommé, édition historique et remplacement Texte → Titre à UUID constant ont été contrôlés. Les largeurs intermédiaires et la taille en flux sont mesurées sur le rendu. [Gestes et mesures](realisation-gestes-v2.json) |
+| Signet, historique et sites | Le signet B a retrouvé son bloc et sa largeur de 455 px, y compris après la préparation du rendu. L’historique a conservé sa sélection en lecture et un mauvais UUID a donné le repli prévu. Le lecteur du site A peut ouvrir son atelier et reçoit 404 sur celui de B. [Signet](signet-canvas.json) · [Droits](conflit-et-droits.json) |
+| Article | La vérification de l’article du moteur B a laissé R2 en place. Sa confirmation a créé R3 et l’article a été rendu dans Atlas du Sud. Le retour depuis la Bibliothèque et les cas de changement de publication sont détaillés dans la revue d’intégration. [Article](article-wagtail.json) · [Revue](revue-integration.md) |
+| Conflit et révocation | Deux gestionnaires ont ouvert R2. Une section ajoutée par le premier dans V1 a créé R3. V2 a conservé la proposition locale du second après conflit. Après retrait de sa gestion, sa nouvelle tentative a laissé R3 en place. [Conflit](conflit-et-droits.json) · [Écran mobile](produit-conflit-mobile.png) |
+| Réponse perdue et panne moteur | Le navigateur a coupé la réponse après l’écriture réelle. Le rejeu a repris la même clé et les mêmes commandes, avec une seule R8 créée. Un reçu expiré et son document ont renvoyé 410. La passerelle arrêtée a empêché le rendu suivant. Après redémarrage, Wagtail a rendu le titre attendu. [Rejeu et reprise](rejeu-expiration-indisponibilite.json) |
+| Référence Figma | Une image témoin privée du site A a été affichée, puis l’action de retour a rouvert l’édition de la même page. Après purge de la remise de laboratoire, la vue a retiré le contenu privé et l’ancienne image a renvoyé 404. La tête de brouillon a conservé son UUID. [Témoin et purge](temoin-figma-purge.json) |
+| Clavier et synthèse vocale | À 390 px, Entrée a placé le focus dans le sélecteur de destination. Échap a annulé le placement. Orca a produit les annonces d’insertion, d’annulation et de sauvegarde. Une première recette avait relevé la perte de confirmation après la redirection vers un rendu réussi. Après correction, la confirmation reçoit le focus et Orca annonce « Le brouillon est enregistré en R4. ». Les annonces proviennent de la sortie de synthèse du processus Orca. [Parcours et annonces](orca-clavier.json) |
+| Données publiques | Les deux articles publics ont répondu HTTP 200 avec les mêmes empreintes avant et après la recette. Le nombre de révisions et de renditions Wagtail et les révisions publiées ont conservé leur valeur. Les nouvelles révisions de brouillon appartiennent à Studio. [HTTP public](pages-publiees.json) · [États Wagtail et Studio](non-publication.json) |
+
+La page longue à deux textes identiques, le redimensionnement libre, le refus des cycles, la duplication récursive et le contenu des images et des boutons ont une recette navigateur enregistrée en UI-003-03. Ils complètent les gestes spécifiques à la migration rejoués ci-dessus. [Page longue](../../UI-003-03/evidence/realisation-modele.json) · [Placement et cycle](../../UI-003-03/evidence/realisation-responsive.json)

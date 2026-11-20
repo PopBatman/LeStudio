@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-11-20T17:12:55.474Z",
+  "command": "node studio/work/items/UI-004-01/evidence/audit-browser.cjs",
+  "node": "v24.19.0",
+  "steps": [
+    {
+      "action": "Ouvrir aperçu installé",
+      "result": "iframe Wagtail visible",
+      "revision": 18,
+      "url": "http://127.0.0.1:8000/sites/<id>/atelier/visuel/<id>/"
+    }
+  ],
+  "errors": [],
+  "blocked_writes": [],
+  "context": {
+    "site": "59177d82-095d-4e5b-b095-7b73c220de4b",
+    "operator": 1,
+    "revision": "04fd242a-17a9-464f-8a09-ad18d58be4d4",
+    "number": 18,
+    "page": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+    "title": "Accueil",
+    "document_sha256": "6759473f611215bf3e09c3e3800391efe6ebf99b4859047c9181ef1ab49405bd"
+  },
+  "browser": "156.0.8078.4",
+  "result": "failed",
+  "failure": "locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#canvas-layers button[data-renderer=\"heading\"]').first()\u001b[22m\n",
+  "session_cleanup": true,
+  "finished_at": "2026-11-20T17:13:27.239Z"
+}

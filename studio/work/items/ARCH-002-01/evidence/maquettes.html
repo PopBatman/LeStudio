@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquettes · Fiche Site · Le Studio</title>
+  <link rel="stylesheet" href="../../../../static/ui/gallery.css">
+  <link rel="stylesheet" href="../../../../static/ui/workspace.css">
+  <link rel="stylesheet" href="../../../../static/ui/registre.css">
+  <style>
+    .preview-controls {max-width:65rem;margin:0 auto;padding:1rem;border:1px dashed var(--color-line);border-radius:.65rem;background:var(--color-paper)}
+    .preview-controls summary, .engine details summary {font-weight:650;cursor:pointer}
+    .preview-controls label {display:block;font-size:.9rem;margin-top:.6rem}
+    .preview-controls select {width:min(100%,32rem);display:block;background:white;border:1px solid var(--color-muted);padding:.5rem;border-radius:.25rem}
+    .preview-controls p,.engine .note {color:var(--color-muted);font-size:.9rem}
+    .ws-nav span {display:inline-block}
+    .engine {margin-top:1rem}
+    .engine header {display:flex;align-items:center;justify-content:space-between;gap:.65rem;flex-wrap:wrap}
+    .engine .badge {white-space:normal}
+    .engine .note {margin-top:.6rem}
+    .engine details {margin-top:1rem;border-top:1px solid var(--color-line);padding-top:.75rem}
+    .engine summary {padding:.3rem 0}
+    .engine .rg-dl div {grid-template-columns:minmax(12rem,1fr) 2fr}
+    .engine dd,.rg-dl dd {margin:0}
+    .mono {font: .9rem var(--font-mono)}
+    footer {padding:0 1rem 2rem}
+    @media(max-width:640px){.engine .rg-dl div {grid-template-columns:minmax(0,1fr);gap:.25rem}.ws-header-inner {gap:.4rem;flex-wrap:wrap}.ws-nav{flex-wrap:wrap}}
+  </style>
+</head>
+<body class="ws-page">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <header class="ws-header">
+    <div class="ws-header-inner">
+      <span class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Le Studio</span></span>
+      <div class="ws-nav"><span>Accueil</span><span>Clients</span><span>Mes sites</span></div>
+    </div>
+  </header>
+  <main class="ws-main" id="contenu" tabindex="-1"><div class="registry" id="screen"></div></main>
+  <footer>
+    <details class="preview-controls" open>
+      <summary>Parcours de la maquette</summary>
+      <p>Données fictives. Choisir l’état et le mandat pour examiner la fiche.</p>
+      <label for="scenario">Scénario</label>
+      <select id="scenario">
+        <option value="confirmed">Raccordement confirmé</option><option value="empty">Site sans liaison</option>
+        <option value="failure">Échec après confirmation</option><option value="first">Première tentative en échec</option>
+        <option value="checking">Vérification en cours</option><option value="expired">Tentative expirée</option>
+        <option value="incompatible">Version incompatible</option><option value="identity">Identité non conforme</option>
+        <option value="partial">Confirmation avec version non renseignée</option><option value="unknown">Diagnostic inconnu</option>
+      </select>
+      <label for="role">Mandat sur la fiche</label>
+      <select id="role"><option value="manage">Gestion</option><option value="read">Lecture</option><option value="none">Aucun mandat</option></select>
+      <a href="#contenu">Revenir à la fiche</a>
+    </details>
+  </footer>
+  <script>
+    const scenarios = {
+      confirmed: ['Raccordement confirmé', 'success', true, 'Réussie', ''],
+      empty: ['Non raccordé', 'neutral', false, '', ''],
+      failure: ['Dernière vérification en échec', 'warning', true, 'Échec de communication', 'communication'],
+      first: ['Dernière vérification en échec', 'warning', false, 'Échec de la vérification', 'invalid_profile'],
+      checking: ['Vérification en cours', 'neutral', true, 'En cours', ''],
+      expired: ['Dernière vérification expirée', 'warning', false, 'Délai de la tentative écoulé', 'attempt_expired'],
+      incompatible: ['Dernière vérification en échec', 'warning', true, 'Version incompatible', 'incompatible'],
+      identity: ['Dernière vérification en échec', 'warning', false, 'Identité non conforme', 'identity'],
+      partial: ['Raccordement confirmé', 'success', true, 'Réussie', ''],
+      unknown: ['Résultat indéterminé', 'neutral', true, 'Résultat indisponible', '']
+    };
+    const successTime = '<time datetime="2026-11-12T08:24:00Z">12 novembre 2026 à 09 h 24 (Paris)</time>';
+    const laterTime = '<time datetime="2026-11-13T15:08:00Z">13 novembre 2026 à 16 h 08 (Paris)</time>';
+    const row = (name, value) => '<div><dt>' + name + '</dt><dd>' + value + '</dd></div>';
+    const mono = value => '<span class="mono">' + value + '</span>';
+    function draw() {
+      const state = document.getElementById('scenario').value;
+      const role = document.getElementById('role').value;
+      const screen = document.getElementById('screen');
+      if (role === 'none') {
+        screen.innerHTML = '<div class="rg-panel"><h1>Fiche introuvable</h1><p>Cette fiche ne figure pas dans votre espace accessible.</p></div>';
+        return;
+      }
+      const [status, variant, confirmed, issue, diagnostic] = scenarios[state];
+      const finished = state !== 'checking' && state !== 'expired';
+      const stamp = state === 'confirmed' || state === 'partial' ? successTime : laterTime;
+      let rows = row('Dernière confirmation réussie', confirmed ? successTime : 'Aucune confirmation enregistrée');
+      rows += row('Dernière tentative', state === 'empty' ? 'Aucune tentative enregistrée' :
+        (finished ? 'Terminée le ' : 'Commencée le ') + stamp + ' · ' + issue);
+      let data = '';
+      if (confirmed) {
+        data += row('Version Wagtail', state === 'partial' ? 'Non renseignée' : '7.4.4');
+        data += row('Version du moteur', '1.0.0');
+        data += row('Version du contrat API', '1.0');
+      }
+      if (role === 'manage') {
+        data += row('Identifiant de la fiche Site', mono('12d47a81-5681-43fb-89c8-69a2353fb124'));
+        if (confirmed) {
+          data += row('Instance Wagtail confirmée', mono('ac011014-213b-4e97-a6db-7d2362731c90'));
+          data += row('Profil confirmé', mono('atelier-du-chenal'));
+        }
+        if (diagnostic) data += row('Code de diagnostic', mono(diagnostic));
+      }
+      const details = data ? '<details><summary>Détails du raccordement</summary><dl class="rg-dl">' + data + '</dl></details>' : '';
+      const edit = role === 'manage' ? '<span class="btn btn-primary">Modifier le site</span>' : '';
+      screen.innerHTML = '<span class="rg-back">← Mes sites</span><header class="rg-head"><h1>Atelier du Chenal</h1>' + edit + '</header>' +
+        '<section class="rg-panel"><h2>Fiche du site</h2><dl class="rg-dl">' + row('Domaine', 'Non renseigné') + row('Type de site', 'Site vitrine') + '</dl></section>' +
+        '<section class="rg-panel engine"><header><h2>Moteur Wagtail</h2><span class="badge badge-' + variant + '">' + status + '</span></header>' +
+        '<p class="note">Historique des vérifications enregistrées par Studio.</p><dl class="rg-dl">' + rows + '</dl>' + details + '</section>';
+    }
+    const controls = ['scenario', 'role'];
+    const params = new URLSearchParams(location.search);
+    for (const id of controls) {
+      const select = document.getElementById(id);
+      if ([...select.options].some(option => option.value === params.get(id))) select.value = params.get(id);
+      select.addEventListener('change', draw);
+    }
+    draw();
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Django==5.2.19
+wagtail==7.4.4
+psycopg[binary]==3.3.9
+gunicorn>=24,<27

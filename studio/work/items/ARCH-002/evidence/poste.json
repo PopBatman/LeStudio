@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-11-19T08:13:00.875306+00:00",
+  "compose_project": "lestudio-local",
+  "services": {
+    "web": "healthy",
+    "db": "healthy"
+  },
+  "health": {
+    "status": "ok"
+  },
+  "migration": "[X] raccordement.0001_initial",
+  "migrate_check_exit": 0
+}

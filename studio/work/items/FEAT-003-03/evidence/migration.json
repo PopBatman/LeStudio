@@ -1,0 +1,36 @@
+{
+  "avant": {
+    "sites": 2,
+    "revisions": 2,
+    "empreinte_revisions": "03a875627ec6f5602efcdb9b1853f1384a3d7be5ed4225f955c3123d71b4f740",
+    "raccordements": 0
+  },
+  "apres": {
+    "sites": 2,
+    "revisions": 2,
+    "empreinte_revisions": "03a875627ec6f5602efcdb9b1853f1384a3d7be5ed4225f955c3123d71b4f740",
+    "versions_initiales": [
+      [
+        "button",
+        1
+      ],
+      [
+        "container",
+        1
+      ],
+      [
+        "heading",
+        1
+      ],
+      [
+        "image",
+        1
+      ],
+      [
+        "text",
+        1
+      ]
+    ]
+  },
+  "source": "Base PostgreSQL isolée initialisée par l’image FEAT-003-02 avec deux sites fictifs, migrations appliquées deux fois"
+}

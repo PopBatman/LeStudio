@@ -1,0 +1,25 @@
+{
+  "sante": {
+    "status": "ok"
+  },
+  "anonyme": 302,
+  "lecture": {
+    "fiche": 200,
+    "pages_ouvertes_canvas": 2,
+    "revision": 11
+  },
+  "avant": {
+    "sites": 1,
+    "revisions": 11,
+    "empreinte_revisions": "e690c1155cdd8b5654cb4f50a0d9cd535da351cad441586944b079befa07ab45",
+    "raccordements": 1
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 11,
+    "empreinte_revisions": "e690c1155cdd8b5654cb4f50a0d9cd535da351cad441586944b079befa07ab45",
+    "raccordements": 1
+  },
+  "instance_moteur_identique": true,
+  "migrations_en_attente": false
+}

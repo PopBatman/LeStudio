@@ -1,0 +1,7 @@
+<div class="lib-sample {% if preview.system_font %}lib-system{% endif %}" style="--sample-accent:{{ preview.accent }};--sample-bg:{{ preview.background }};--sample-ink:{{ preview.ink }};--sample-gap:{{ preview.gap }}px">
+{% if tab == "appearance" %}{% if preview.media %}<img src="{% url 'registre:site-media' site.pk preview.media.id %}" alt="{{ preview.media.label }}">{% endif %}<strong>Bienvenue à l’atelier</strong><span>Un exemple de votre palette et de votre typographie.</span><span class="lib-button">Découvrir</span>
+{% elif chosen.renderer == "button" %}<span class="lib-button {% if preview.variant == 'secondary' %}lib-outline{% endif %}">Découvrir</span>
+{% elif chosen.renderer == "image" %}{% if preview.media %}<img src="{% url 'registre:site-media' site.pk preview.media.id %}" alt="{{ preview.media.label }}">{% else %}<span>Aucun média disponible pour cet exemple.</span>{% endif %}
+{% elif chosen.renderer == "container" %}<div class="lib-box">Contenu du conteneur</div>
+{% elif chosen.renderer == "heading" %}<strong>Bienvenue à l’atelier</strong>
+{% else %}<span>Découvrez les projets de notre atelier.</span>{% endif %}</div>

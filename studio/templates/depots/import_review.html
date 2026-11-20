@@ -1,0 +1,51 @@
+{% extends "registre/base.html" %}
+{% block title %}Import Figma · Remise {{ row.version }} · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:depot-submission' site.pk row.pk %}">← Revenir à la remise {{ row.version }}</a>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ site.name }} · Remise Studio {{ row.version }}</p>
+<h1>{% if analysis.state == 'applied' %}Import enregistré{% elif screen == 'node' and node %}Examiner une correspondance{% elif analysis.state == 'review' and screen == 'summary' %}Vérifier l’import{% elif analysis.state == 'review' and screen == 'destinations' %}Pages et formats{% else %}Import Figma{% endif %}</h1></div></header>
+{% if error %}<div class="rg-errors" role="alert" tabindex="-1" autofocus><p>{{ error }}</p><a href="{{ request.path }}">Revenir à la revue de la remise</a></div>{% endif %}
+{% if analysis.version %}<p>Version Figma observée <strong>{{ analysis.version }}</strong>{% if analysis.inventory.observed_at %} · Lecture du {{ analysis.inventory.observed_at }}{% endif %}</p>{% endif %}
+{% if analysis.state == 'applied' %}
+<section class="rg-panel"><h2>Brouillon · Révision {{ analysis.result_revision.number }}</h2>
+<ul>{% for page in imported_pages %}<li><a href="{% url 'registre:site-builder' site.pk %}?revision={{ analysis.result_revision_id }}&amp;page={{ page.id }}">{{ page.title }} · Ouvrir dans le Visual Builder</a></li>{% endfor %}</ul>
+<a href="{% url studio_editor_route site.pk %}">Retrouver le brouillon du site</a></section>
+{% elif analysis.state == 'inventory' %}
+<section class="rg-panel"><h2>Choisir les frames</h2><p>Sélectionnez de une à huit frames à examiner.</p>
+<form method="post">{% csrf_token %}<input type="hidden" name="action" value="select"><input type="hidden" name="token" value="{{ analysis.token }}">
+<fieldset class="ed-choices"><legend>Frames disponibles dans la remise</legend>{% for frame in analysis.inventory.frames %}
+<label><input type="checkbox" name="frame" value="{{ frame.id }}"><span><strong>{{ frame.name }}</strong><small>{{ frame.page }} · Nœud {{ frame.id }}</small></span></label>
+{% empty %}<p>Aucune frame disponible. Vérifiez la sélection du lien déposé.</p>{% endfor %}</fieldset>
+{% if analysis.inventory.frames %}<div class="rg-actions"><button class="btn btn-primary">Analyser les frames sélectionnées</button></div>{% endif %}</form></section>
+{% elif analysis.state == 'review' %}
+{% if screen == 'node' and node %}{% include "depots/import_node.html" %}
+{% elif screen == 'destinations' %}
+<section class="rg-panel"><h2>Associer les frames aux pages du site</h2><p>Pour chaque page, choisissez une frame de base. Les formats absents suivront les règles d’héritage de Studio.</p>
+<form method="post">{% csrf_token %}<input type="hidden" name="action" value="destinations"><input type="hidden" name="screen" value="destinations"><input type="hidden" name="token" value="{{ analysis.token }}">
+{% for frame,form in frame_forms %}<section class="rg-row ed-form"><h3>{{ frame.name }} · {{ frame.id }}</h3>{{ form.as_p }}</section>{% endfor %}
+<div class="rg-actions"><button class="btn btn-primary">Enregistrer les destinations</button><a href="{{ request.path }}">Revenir à la revue</a></div></form></section>
+{% elif screen == 'summary' %}
+<section class="rg-panel"><h2>{% if analysis.base_revision_id %}Ajouter des pages au brouillon{% else %}Créer le premier brouillon{% endif %}</h2>
+{% if head %}<p>Révision de départ · R{{ analysis.base_revision.number|default:"—" }}. Dernière sauvegarde du site · R{{ head.number }}. Les pages existantes, menus et réglages du thème sont conservés.</p>{% endif %}
+<ul>{% for item in dest_rows %}<li><strong>{{ item.title }}</strong> · {{ item.frame }} · {{ item.format_label }}{% if item.base %} · frame de base{% endif %}{% if item.home %} · accueil{% elif item.slug %} · segment /{{ item.slug }}/{% endif %}{% if item.parent %} · sous {{ item.parent }}{% endif %}
+{% if item.absent %}<p>Formats absents · {{ item.absent|join:", " }}. Héritage du placement Studio.</p>{% endif %}</li>{% empty %}<li>Choisissez les destinations des frames.</li>{% endfor %}</ul>
+<p>{{ accepted }} correspondance{{ accepted|pluralize }} retenue{{ accepted|pluralize }} · {{ excluded }} écartée{{ excluded|pluralize }} · {{ missing }} à décider.</p>
+<p>Les valeurs intégrées seront conservées dans l’historique du brouillon, y compris après effacement de la remise.</p>
+<div class="rg-actions"><a href="{{ request.path }}">Revoir les correspondances</a><a href="?screen=destinations">Revoir les destinations</a></div>
+{% if not missing and accepted and dest_rows %}<form method="post">{% csrf_token %}<input type="hidden" name="action" value="confirm"><input type="hidden" name="screen" value="summary"><input type="hidden" name="token" value="{{ analysis.token }}"><button class="btn btn-primary">Confirmer l’intégration au brouillon</button></form>{% endif %}</section>
+{% else %}
+<section class="rg-panel"><header class="rg-section"><h2 id="correspondances">Correspondances à examiner</h2><a href="?screen=destinations">Choisir les pages et formats</a></header>
+<p>{{ accepted }} retenue{{ accepted|pluralize }} · {{ excluded }} écartée{{ excluded|pluralize }} · {{ missing }} à décider.</p>
+{% for prop in review_page %}<article class="rg-row"><h3><a href="?screen=node&amp;node={{ prop.id|urlencode }}&amp;p={{ review_page.number }}">{{ prop.name }}</a></h3>
+<p>{{ prop.type }} · {% if prop.decision.action == 'exclude' %}Écartée{% elif prop.decision.action == 'correct' %}Corrigée{% elif prop.decision.action == 'accept' %}Acceptée{% else %}À décider{% endif %}</p>
+<p>{{ prop.reason }}</p>{% if prop.gaps %}<p>{{ prop.gaps|join:" · " }}</p>{% endif %}</article>{% endfor %}
+{% if review_page.has_other_pages %}<nav class="rg-actions" aria-label="Pages des correspondances">{% if review_page.has_previous %}<a href="?p={{ review_page.previous_page_number }}">Précédentes</a>{% endif %}Page {{ review_page.number }} sur {{ review_page.paginator.num_pages }}{% if review_page.has_next %}<a href="?p={{ review_page.next_page_number }}">Suivantes</a>{% endif %}</nav>{% endif %}
+<div class="rg-actions"><a class="btn btn-primary" href="?screen=summary">Examiner le résultat</a></div></section>
+{% endif %}{% else %}
+<section class="rg-panel"><h2>Lecture de la maquette</h2>{% if analysis.error and not error %}<p role="alert">{{ analysis.error }}</p>{% endif %}
+{% if analysis.retry_at %}<p>Nouvel essai possible après {{ analysis.retry_at }}.</p>{% endif %}
+<p>Studio lira les frames autorisées pour ce site. Vous choisirez les pages et les composants à intégrer au brouillon.</p>
+<form method="post">{% csrf_token %}<input type="hidden" name="action" value="start"><button class="btn btn-primary">Analyser la maquette</button></form></section>
+{% endif %}
+{% if analysis.state == 'review' or analysis.state == 'inventory' %}<details class="rg-panel"><summary>Recommencer la lecture</summary><p>Une nouvelle analyse remplace les choix en cours.</p><form method="post">{% csrf_token %}<input type="hidden" name="action" value="start"><button class="btn">Relire depuis Figma</button></form></details>{% endif %}
+{% endblock %}

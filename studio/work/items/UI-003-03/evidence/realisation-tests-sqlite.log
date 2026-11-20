@@ -1,0 +1,10 @@
+Image Studio sha256:58e848c47b1e9b2601f768c56d608501f3716c93ddd65d554a96d63691b011ac
+Found 225 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+........................................................................................................................................................................sssssssssssss...........ss...............................
+----------------------------------------------------------------------
+Ran 225 tests in 6.776s
+
+OK (skipped=15)
+Destroying test database for alias 'default'...

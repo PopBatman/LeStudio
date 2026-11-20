@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "pages": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "parent_id": null,
+      "slug": "",
+      "title": "Accueil",
+      "sections": [
+        {
+          "id": "00000000-0000-4000-8000-000000000002",
+          "layout": {
+            "base": {
+              "display": "stack"
+            }
+          },
+          "blocks": [
+            {
+              "id": "00000000-0000-4000-8000-000000000003",
+              "definition": {
+                "scope": "global",
+                "key": "heading",
+                "version": 1
+              },
+              "props": {
+                "text": "Bienvenue à l’atelier",
+                "level": 1
+              },
+              "children": []
+            },
+            {
+              "id": "00000000-0000-4000-8000-000000000004",
+              "definition": {
+                "scope": "global",
+                "key": "text",
+                "version": 1
+              },
+              "props": {
+                "text": "Découvrez notre activité et nos réalisations."
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "menus": [],
+  "theme": {}
+}

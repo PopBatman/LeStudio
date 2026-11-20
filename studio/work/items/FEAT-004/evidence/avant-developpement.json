@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-20T08:45:51.684421+00:00",
+  "environnement": "laboratoire privé, ancien moteur ARCH-002",
+  "avant": {
+    "version": {
+      "site_id": "10b38342-5add-4a8f-a289-9f2e17ac5738",
+      "instance_id": "05de840e-f0c6-4768-bdad-cbc53da84455",
+      "contract_major": 1,
+      "contract_minor": 0,
+      "engine_version": "1.0.0",
+      "wagtail_version": "7.4.4",
+      "image_digest": "sha256:0850616d25a5d9e7fdb98ffbcd57d91735ea622efc317c375e3648bd7ceec80a"
+    },
+    "preview_http": 404
+  },
+  "observation": "La préparation attendue est absente sur cette image."
+}

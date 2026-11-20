@@ -1,0 +1,13 @@
+# UI-003-02 · Cadrage du 20 novembre 2026
+Le canvas doit permettre à l’opérateur de désigner un bloc directement dans la page de son site, de le retrouver dans les calques et de savoir quelle révision il consulte. Le contrat reprend le moteur et les reçus de FEAT-004 et la direction artistique approuvée en UI-003-01.
+
+La première étape de développement consiste à comparer deux présentations du même document Wagtail à largeur identique. L’aperçu FEAT-004 sert de témoin. Une surface distincte de canvas, isolée, porterait le mécanisme de sélection. Le passage à l’intégration exige que ce mécanisme conserve l’identité, les droits et la fidélité du rendu. Le choix d’un bloc reste une action de consultation.
+
+La [spécification](SPEC.md) donne les scénarios opérateur et le [plan de recette](TASKLIST.md) couvre les deux sites fictifs, la comparaison des images, la péremption et l’absence de publication. Les [contrats techniques](ARCHITECTURE.md) et [de sécurité](SECURITY.md) détaillent le pont envisagé et son repli. La [maquette](evidence/maquette.html) illustre les états. Les [pièces du cadrage](EVIDENCE.md) distinguent les observations sur le socle et les preuves encore à produire au développement.
+
+## Livraison sur Studio local · 20 novembre 2026
+Depuis la fiche Site ou l’atelier, **Canvas Wagtail** ouvre le choix de révision et de page. **Afficher le rendu** prépare un reçu privé. La page rendue, les calques et l’inspecteur partagent les UUID des occurrences. Le contrôle de largeur, le repli **Lire la structure** et le lien vers l’aperçu de référence sont disponibles. Les opérateurs disposant du mandat de lecture peuvent consulter ce canvas.
+
+Sur deux instances Wagtail fictives raccordées, la recette a vérifié la sélection, l’isolement des reçus et l’état public avant/après. La comparaison des pixels du canvas et de l’aperçu du même reçu sur les trois formats n’a révélé aucun écart. Les 17 occurrences de la page comparée conservent le même texte, la même géométrie et le même ordre. L’expiration, la suppression d’une page dans la nouvelle tête, le retrait d’un média et la révocation des droits ont été exercés. Le délai de détection des changements dans un onglet actif dépend du contrôle périodique de 15 secondes et de la réponse du serveur.
+
+L’image Studio installée passe les 216 tests PostgreSQL. Sur SQLite, 202 tests passent et 14 sont réservés à PostgreSQL. Les commandes de contrôle des migrations sont passées. L’installation conserve les 16 révisions, le raccordement local et l’instance Tennis AI. Le [guide opérateur](../../../docs/MOTEUR-WAGTAIL.md#sélectionner-un-bloc-dans-le-canvas-wagtail) décrit l’accès et les commandes.

@@ -1,0 +1,173 @@
+{
+  "observed_at": "2026-11-18T13:36:40.252393+00:00",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "package_file_count_without_manifest": 94,
+  "checks": {
+    "dry_run_no_changes": true,
+    "original_instructions_preserved": true,
+    "sentinel_preserved": true,
+    "second_install_idempotent": true,
+    "installed_validation": true,
+    "arch_planning_pass": true,
+    "arch_implementation_expected_refusal": true,
+    "notion_dry_run_no_state": true,
+    "new_component_requires_ui": true,
+    "new_incomplete_task_refused": true
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "install.py",
+        "--target",
+        "<test-temp>/projet Studio"
+      ],
+      "cwd": "<package>",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"mode\": \"dry-run\",\n  \"version\": \"1.0.0\",\n  \"target\": \"<test-temp>/projet Studio\",\n  \"writes\": 97,\n  \"unchanged\": 0,\n  \"files\": [\n    \"<test-temp>/projet Studio/workflow-ai/.gitignore\",\n    \"<test-temp>/projet Studio/workflow-ai/AGENTS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/CHANGELOG.md\",\n    \"<test-temp>/projet Studio/workflow-ai/CLAUDE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/README.md\",\n    \"<test-temp>/projet Studio/workflow-ai/VERSION\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/architect.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/developer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/devops.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/domain-analyst.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/orchestrator.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/qa.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/release-manager.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/researcher.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/reviewer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/security.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/ui-designer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/ARCHITECTURE-CONTRACTS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/CAPABILITIES.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/FIRST-ARCHITECTURE-LOT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/INDEX.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/INSTALLATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/MCP-ET-OUTILS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/MEMORY-MODEL.md\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/DELIVERY-REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/tests.json\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/tests.log\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/AGENT-PERMISSIONS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/DOCUMENT-CONSISTENCY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/EXECUTION-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/QUALITY-GATES.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/SECURITY-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/TESTING-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/install.py\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/gitlab/README.md\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/gitlab/workflow-ai.gitlab-ci.yml\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/ADAPTER.md\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/config.example.json\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/pages.reference.json\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/sync.py\",\n    \"<test-temp>/projet Studio/workflow-ai/project/DECISIONS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/PROJECT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/SESSION-SCOPE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/STACK.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/CATALOGUE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/REGLES-SOURCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/catalogue.source.json\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/rules.source.json\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/source-original.txt\",\n    \"<test-temp>/projet Studio/workflow-ai/scripts/validate_workspace.py\",\n    \"<test-temp>/projet Studio/workflow-ai/scripts/workflow.py\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/ADR.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/ARCHITECTURE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/COMPONENT-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/CONNECTOR-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/DELEGATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/EVIDENCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/FEATURE-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/IMPLEMENTATION-REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/MANDATE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REIMPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/RESEARCH.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/SECURITY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/TASK.example.json\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/TASKLIST.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/VISUAL-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_install.py\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_notion_sync.py\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_workflow.py\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/ARCHITECTURE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/EVIDENCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/RESEARCH.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/SECURITY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/TASKLIST.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/task.json\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/COMPONENT-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/CONNECTOR-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-CAPITALISATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-DEVELOPPEMENT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-DISCOVERY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-PLANNING.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-RAPPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-REIMPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-RELEASE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-TDD.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-VISUAL-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/MANIFEST.json\",\n    \"<test-temp>/projet Studio/AGENTS.md\",\n    \"<test-temp>/projet Studio/CLAUDE.md\"\n  ]\n}\nAucun accès réseau, paquet Python, configuration de runtime ou code Studio installé.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "install.py",
+        "--target",
+        "<test-temp>/projet Studio",
+        "--apply"
+      ],
+      "cwd": "<package>",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"mode\": \"applied\",\n  \"version\": \"1.0.0\",\n  \"target\": \"<test-temp>/projet Studio\",\n  \"writes\": 97,\n  \"unchanged\": 0,\n  \"files\": [\n    \"<test-temp>/projet Studio/workflow-ai/.gitignore\",\n    \"<test-temp>/projet Studio/workflow-ai/AGENTS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/CHANGELOG.md\",\n    \"<test-temp>/projet Studio/workflow-ai/CLAUDE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/README.md\",\n    \"<test-temp>/projet Studio/workflow-ai/VERSION\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/architect.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/developer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/devops.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/domain-analyst.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/orchestrator.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/qa.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/release-manager.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/researcher.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/reviewer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/security.md\",\n    \"<test-temp>/projet Studio/workflow-ai/agents/ui-designer.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/ARCHITECTURE-CONTRACTS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/CAPABILITIES.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/FIRST-ARCHITECTURE-LOT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/INDEX.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/INSTALLATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/MCP-ET-OUTILS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/docs/MEMORY-MODEL.md\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/DELIVERY-REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/tests.json\",\n    \"<test-temp>/projet Studio/workflow-ai/evidence/tests.log\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/AGENT-PERMISSIONS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/DOCUMENT-CONSISTENCY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/EXECUTION-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/QUALITY-GATES.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/SECURITY-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/governance/TESTING-POLICY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/install.py\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/gitlab/README.md\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/gitlab/workflow-ai.gitlab-ci.yml\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/ADAPTER.md\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/config.example.json\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/pages.reference.json\",\n    \"<test-temp>/projet Studio/workflow-ai/integrations/notion/sync.py\",\n    \"<test-temp>/projet Studio/workflow-ai/project/DECISIONS.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/PROJECT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/SESSION-SCOPE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/project/STACK.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/CATALOGUE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/REGLES-SOURCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/catalogue.source.json\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/rules.source.json\",\n    \"<test-temp>/projet Studio/workflow-ai/reference/source-original.txt\",\n    \"<test-temp>/projet Studio/workflow-ai/scripts/validate_workspace.py\",\n    \"<test-temp>/projet Studio/workflow-ai/scripts/workflow.py\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/ADR.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/ARCHITECTURE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/COMPONENT-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/CONNECTOR-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/DELEGATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/EVIDENCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/FEATURE-SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/IMPLEMENTATION-REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/MANDATE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REIMPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/RESEARCH.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/SECURITY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/TASK.example.json\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/TASKLIST.md\",\n    \"<test-temp>/projet Studio/workflow-ai/templates/VISUAL-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_install.py\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_notion_sync.py\",\n    \"<test-temp>/projet Studio/workflow-ai/tests/test_workflow.py\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/ARCHITECTURE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/EVIDENCE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/REPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/RESEARCH.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/SECURITY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/SPEC.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/TASKLIST.md\",\n    \"<test-temp>/projet Studio/workflow-ai/work/items/ARCH-001/task.json\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/COMPONENT-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/CONNECTOR-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-CAPITALISATION.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-DEVELOPPEMENT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-DISCOVERY.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-PLANNING.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-RAPPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-REIMPORT.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-RELEASE.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-TDD.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-VISUAL-REVIEW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/workflows/FEATURE-WORKFLOW.md\",\n    \"<test-temp>/projet Studio/workflow-ai/MANIFEST.json\",\n    \"<test-temp>/projet Studio/AGENTS.md\",\n    \"<test-temp>/projet Studio/CLAUDE.md\"\n  ]\n}\nAucun accès réseau, paquet Python, configuration de runtime ou code Studio installé.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "install.py",
+        "--target",
+        "<test-temp>/projet Studio",
+        "--apply"
+      ],
+      "cwd": "<package>",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"mode\": \"applied\",\n  \"version\": \"1.0.0\",\n  \"target\": \"<test-temp>/projet Studio\",\n  \"writes\": 0,\n  \"unchanged\": 97,\n  \"files\": []\n}\nAucun accès réseau, paquet Python, configuration de runtime ou code Studio installé.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/validate_workspace.py",
+        "--json"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"scope\": \"structure, JSON, schéma des tâches et cibles des liens locaux\",\n  \"notice\": \"Aucune preuve d’exécution, autorisation, connexion distante ou conformité de Studio n’est établie par ce contrôle.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/workflow.py",
+        "status"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"tasks\": [\n    {\n      \"id\": \"ARCH-001\",\n      \"kind\": \"architecture\",\n      \"title\": \"Fondations locales du Studio central\",\n      \"state\": \"DRAFT\",\n      \"ui_required\": false\n    }\n  ],\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/workflow.py",
+        "check",
+        "--id",
+        "ARCH-001",
+        "--phase",
+        "planning"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"task\": \"ARCH-001\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"DRAFT\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 0,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/workflow.py",
+        "check",
+        "--id",
+        "ARCH-001",
+        "--phase",
+        "implementation"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "",
+      "stderr": "{\"status\": \"FAIL\", \"error\": \"Référence de mandat et action 'implement' requises ; aucun accord n’est déduit du statut.\", \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/integrations/notion/sync.py",
+        "--dry-run"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"mode\": \"dry-run\",\n  \"network_calls\": 0,\n  \"documents\": [\n    {\n      \"id\": \"studio-project\",\n      \"title\": \"Studio — projet\",\n      \"path\": \"project/PROJECT.md\",\n      \"source_sha256\": \"5574726ec99ecff8cfff065ee8a4f69533d4fd9c3d574528f685513d71e46787\",\n      \"projection_sha256\": \"088a324b95efbdf88fb1b604025db0b83231f04a00cc13bcef4392fe59d38ffc\"\n    },\n    {\n      \"id\": \"studio-scope\",\n      \"title\": \"Studio — mandat de session\",\n      \"path\": \"project/SESSION-SCOPE.md\",\n      \"source_sha256\": \"001180c33bb9e5a2f051c33ac7978af90bcfffda8a5a32dfbdfbc1c68365cc52\",\n      \"projection_sha256\": \"af46bf0b2a076754f2605e38721262d66f70d5cd61a9de1f7ca49de89509a1f8\"\n    },\n    {\n      \"id\": \"studio-decisions\",\n      \"title\": \"Studio — décisions\",\n      \"path\": \"project/DECISIONS.md\",\n      \"source_sha256\": \"26d7e44d41061d62857a415c24278ee5dfee5e0689348d429ae3f38f343699df\",\n      \"projection_sha256\": \"3fac1e09cc84cdb186948fa1ec7d602c5a7b51cb9717db0e374ce3b2b2ed4c8b\"\n    },\n    {\n      \"id\": \"studio-stack\",\n      \"title\": \"Studio — direction technologique\",\n      \"path\": \"project/STACK.md\",\n      \"source_sha256\": \"ae961a3c2cfdd0dfb250bbb7a42479a38a91588a781ef95a434ffa89ff2bcffc\",\n      \"projection_sha256\": \"75368bf968b622991870f77b8680993c64474cfeb221aef56b9bc8b49ea7bcf0\"\n    },\n    {\n      \"id\": \"architecture-contracts\",\n      \"title\": \"Studio — contrats feature, connecteur et UI\",\n      \"path\": \"docs/ARCHITECTURE-CONTRACTS.md\",\n      \"source_sha256\": \"5ae871940a45b990d05c5aa4037d963bafb496226308704daf414343d4523c00\",\n      \"projection_sha256\": \"aa3ea2f37923cfe2c7a6c0b59c5235d7922a025bbfa0cb96c4ebb736e9b3668a\"\n    },\n    {\n      \"id\": \"workflow-installation\",\n      \"title\": \"Workflow AI — installation\",\n      \"path\": \"docs/INSTALLATION.md\",\n      \"source_sha256\": \"de4fe81f4f7bfcb551833a1696fb779fd64179d12d77ae2091c714e7f173ccca\",\n      \"projection_sha256\": \"a3c3ab686b29c3bcab6173949ea76eb5f404cf479ab36343441f262b1358ccee\"\n    },\n    {\n      \"id\": \"workflow-capabilities\",\n      \"title\": \"Workflow AI — capacités réelles\",\n      \"path\": \"docs/CAPABILITIES.md\",\n      \"source_sha256\": \"8edc10c6a0794bd4baa377a6be9ec68071c8af0622547600fa95c73678b05d91\",\n      \"projection_sha256\": \"5689ec72b0f991096c7db0ec5b0f1883cb8f50019a56235703c5779320845afb\"\n    },\n    {\n      \"id\": \"workflow-memory\",\n      \"title\": \"Workflow AI — mémoire\",\n      \"path\": \"docs/MEMORY-MODEL.md\",\n      \"source_sha256\": \"75f423a9b7aa9d0795fbbd9251cdef53aee3fe0b0e0f220fac515f812d0baf53\",\n      \"projection_sha256\": \"7789336e17fe84a22044c1c69abb65fac302911b32b388377dedb6920fd4b4b7\"\n    },\n    {\n      \"id\": \"workflow-common\",\n      \"title\": \"Workflow AI — cycle commun\",\n      \"path\": \"workflows/FEATURE-WORKFLOW.md\",\n      \"source_sha256\": \"ac0e940de73752452bd8e5824a02542b2a80d2153c9d9ea0034a0ba0816b2c46\",\n      \"projection_sha256\": \"d2f15ac1268085b8aea28fce102c255b01adacc7c1872516ae93767e4ee09c25\"\n    },\n    {\n      \"id\": \"workflow-planning\",\n      \"title\": \"Workflow AI — planification\",\n      \"path\": \"workflows/FEATURE-PLANNING.md\",\n      \"source_sha256\": \"af62bc1122963c6b81ac25d2fd5826ab33d02c7bb28904227335a34471fc36d9\",\n      \"projection_sha256\": \"2be8ba0067d400db2b8a563999a8dce5cee6208c0b3971335f182df964a2acfc\"\n    },\n    {\n      \"id\": \"workflow-tdd\",\n      \"title\": \"Workflow AI — TDD\",\n      \"path\": \"workflows/FEATURE-TDD.md\",\n      \"source_sha256\": \"a6d4771b53e3649c1b3ecbdff103b896aa1a43bd2da16f51d5fe7fa3bfd5a519\",\n      \"projection_sha256\": \"ccd3a247ed3d0c323e12f8ad4ae5715cbc2270520001a74f997f360b7cf0e662\"\n    },\n    {\n      \"id\": \"workflow-visual\",\n      \"title\": \"Workflow AI — revue visuelle\",\n      \"path\": \"workflows/FEATURE-VISUAL-REVIEW.md\",\n      \"source_sha256\": \"c93af4e20a900e8903124402d69e0e476f85bc0e69c052e99d2841ef421ef753\",\n      \"projection_sha256\": \"a806734eef6c8751783fe16cf2c9ddeceafefae2731a64f004efb6970a8d9374\"\n    },\n    {\n      \"id\": \"workflow-connectors\",\n      \"title\": \"Workflow AI — connecteurs\",\n      \"path\": \"workflows/CONNECTOR-WORKFLOW.md\",\n      \"source_sha256\": \"4953e1a32e713a8fa21dea16e549c85ad1083a74927aafc77838f772463ef6f9\",\n      \"projection_sha256\": \"55500072558cc68dcc30913bb3660b7d14a5db5a21bd9826a011f83248b50095\"\n    },\n    {\n      \"id\": \"workflow-components\",\n      \"title\": \"Workflow AI — composants UX/UI\",\n      \"path\": \"workflows/COMPONENT-WORKFLOW.md\",\n      \"source_sha256\": \"82cb7a1be738497b46d0fda94d38ae4a0c97b9114aa178896e5f3a7141254038\",\n      \"projection_sha256\": \"66650a812bb3d1f40cece7cb69774597bf300b62b91c578c4a4ee0be40885c56\"\n    },\n    {\n      \"id\": \"governance-execution\",\n      \"title\": \"Workflow AI — exécution\",\n      \"path\": \"governance/EXECUTION-POLICY.md\",\n      \"source_sha256\": \"097c3d2880ca0aab086a2b46139301bbfaf40d5e5665af81dad86a05abd1c19e\",\n      \"projection_sha256\": \"b7759476e0035079eabf848be32225175569069f09b6e5d7cd6fa7f1a7d13419\"\n    },\n    {\n      \"id\": \"governance-permissions\",\n      \"title\": \"Workflow AI — permissions\",\n      \"path\": \"governance/AGENT-PERMISSIONS.md\",\n      \"source_sha256\": \"fefd0d78d079a1192fd7556255545c35868c7f058637a2a09842ca291628641b\",\n      \"projection_sha256\": \"f150837570b4c0d73dc95b681badb299e166acb0233f35b7a904f3658eb3e169\"\n    },\n    {\n      \"id\": \"governance-quality\",\n      \"title\": \"Workflow AI — contrôles qualité\",\n      \"path\": \"governance/QUALITY-GATES.md\",\n      \"source_sha256\": \"050b47c0eba4ba636998b0524f379f6d0793715a8efb0a5fbc5899fa40d3a9b6\",\n      \"projection_sha256\": \"d043663c96b10a6a7a988a93e3e7ee77f8811f209199efb5e45ab6c0e4007984\"\n    },\n    {\n      \"id\": \"governance-testing\",\n      \"title\": \"Workflow AI — stratégie de test\",\n      \"path\": \"governance/TESTING-POLICY.md\",\n      \"source_sha256\": \"8bc8cca34b2d0d372b26c8ac88cc39f4acf9fe6f6532b8c7862216debc8b4592\",\n      \"projection_sha256\": \"d92d92bfba93a3508751f406681e450143dfdba1bee8e7ae724891dde55373b9\"\n    },\n    {\n      \"id\": \"governance-security\",\n      \"title\": \"Workflow AI — sécurité\",\n      \"path\": \"governance/SECURITY-POLICY.md\",\n      \"source_sha256\": \"0ec48f8be4ef8de0c13534e2f2fba0418e5772dc2e55160a6b9fbdf74fae7bdb\",\n      \"projection_sha256\": \"566c321be8b02c07b0e5c49e2f95d797859f6dbf5af8009920c55b65727e245f\"\n    },\n    {\n      \"id\": \"governance-consistency\",\n      \"title\": \"Workflow AI — concordance documentaire\",\n      \"path\": \"governance/DOCUMENT-CONSISTENCY.md\",\n      \"source_sha256\": \"3e6db00308c10efc6ba70bc65eea22aeff9b0c154ea38581b90ab6e7693c7330\",\n      \"projection_sha256\": \"206383d266abac437da1027aee1704b3c04a1ea5a2b1e6cbe9357a372287cdde\"\n    },\n    {\n      \"id\": \"architecture-first-lot\",\n      \"title\": \"Studio — premier lot d’architecture\",\n      \"path\": \"docs/FIRST-ARCHITECTURE-LOT.md\",\n      \"source_sha256\": \"9e6ab6c169f7fc81d5f1630f635cb6d657e181c9d7108fbaf6d6c5042ec9f091\",\n      \"projection_sha256\": \"62bde39c0ae71c11cbe112a47963acbf6c0727b91c89bb4c3989a2b862ef4632\"\n    },\n    {\n      \"id\": \"arch-001-spec\",\n      \"title\": \"ARCH-001 — spécification\",\n      \"path\": \"work/items/ARCH-001/SPEC.md\",\n      \"source_sha256\": \"1b80eed02847ab3b4e31a0742fa9d25fb29dc5391464e27ac0bdcb0800e279aa\",\n      \"projection_sha256\": \"060a451d27439866afe7b06ac1a242102f931ab3651dc32d1a8aebded990c841\"\n    },\n    {\n      \"id\": \"arch-001-tasklist\",\n      \"title\": \"ARCH-001 — tasklist\",\n      \"path\": \"work/items/ARCH-001/TASKLIST.md\",\n      \"source_sha256\": \"b7185c49aa3d2ad0ed6aa1892f6305754108f263a5b879a2c0911ae6d5e9f8da\",\n      \"projection_sha256\": \"2ef3a54361407d89f7d79eda986b04601d58320daeace7cd6af5f34d715289f8\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/workflow.py",
+        "new",
+        "--id",
+        "UI-101",
+        "--kind",
+        "component",
+        "--title",
+        "Composant de vérification"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"created\": \"<test-temp>/projet Studio/workflow-ai/work/items/UI-101\",\n  \"state\": \"DRAFT\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "workflow-ai/scripts/workflow.py",
+        "check",
+        "--id",
+        "UI-101",
+        "--phase",
+        "planning"
+      ],
+      "cwd": "<test-temp>/projet Studio",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "",
+      "stderr": "{\"status\": \"FAIL\", \"error\": \"Document vide ou encore à compléter : SPEC.md\", \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"}\n"
+    }
+  ]
+}

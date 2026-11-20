@@ -1,0 +1,21 @@
+# Bilan du cadrage du 19 novembre 2026
+
+L’entrée proposée est **Atelier du site → Canvas**. Pour un site qui possède déjà des pages, l’opérateur choisit la page et compose son brouillon existant. La sélection et la révision le suivent entre les vues **Structure** et **Canvas**. Les deux dépendances du Kanban, FEAT-003-03 et FEAT-003-04, sont livrées. [Spécification](SPEC.md) · [Carte Notion](https://app.notion.com/p/41d49e23bbdb81e386a3ef5f4bf26492)
+
+Le cadrage propose de conserver le flux actuel et d’ajouter le placement libre facultatif sur les occurrences dans une V4 du document. Le flux détermine la place dans la lecture. Le niveau de superposition décrit l’ordre visuel dans le parent. Une surcharge tablette ou mobile remplace uniquement les valeurs désignées pour ce format. Les dimensions, seuils, unités et bornes sont des choix de conception de ce cadrage. [Contrat technique](ARCHITECTURE.md)
+
+L’essai sur le validateur livré confirme où s’arrête la V3. L’ouverture du format V4 devra aussi couvrir la reprise du brouillon, les panneaux spécialisés, les vérifications de source par site et les conflits entre deux propositions. La recette prévoit un contrôle de persistance et de performance sur Django, ainsi que des parcours avec pointeur, clavier et écran tactile. [Existant et essai du validateur](RESEARCH.md) · [Plan](TASKLIST.md)
+
+Le dossier utilise le type local feature associé au préfixe FEAT et déclare une interface requise, en accord avec le type UI de la carte Notion. Les pièces sont limitées au cadrage. Contributions de /root pour le périmètre, la sécurité, le plan et le rapprochement Notion, de /root/canvas_contract pour l’architecture et la vérification du validateur, de /root/canvas_design pour le prototype et son examen et de /root/canvas_review pour la revue indépendante. [Revue visuelle](VISUAL-REVIEW.md) · [Preuves](EVIDENCE.md) · [Revue indépendante](REVIEW.md)
+
+**Conclusion du cadrage : READY.** La maquette a été parcourue au pointeur et au clavier. La revue a fait corriger le retour à l’héritage puis vérifié qu’effacer la position mobile d’un bloc conserve son niveau de superposition. Le prochain mandat peut engager le développement selon la tasklist.
+
+## Réalisation disponible sur le Studio local
+
+La fiche Site ouvre directement le canvas du brouillon. Les deux modes partagent les sélections et les commandes serveur. Une modification effective de placement écrit une révision V4. Le chargement d’une page existante préserve sa version et les contenus historiques. Le déplacement, le redimensionnement, le changement de parent, la grille et les surcharges par format sont disponibles au pointeur ou par les formulaires de l’inspecteur. [Guide opérateur](../../../docs/BROUILLONS.md)
+
+La suite de l’image Docker a passé 137 tests sur PostgreSQL ; 128 passent sur SQLite et neuf contrôles dépendants de PostgreSQL y sont ignorés. La recette Chromium a vérifié dépôt, annulation, réouverture, placement libre entre les deux éditeurs et restauration d’une seule surcharge. Un essai tactile Chromium a permis de corriger une annulation intempestive du geste à la prise de capture du pointeur. Un essai avec Orca a confirmé les annonces de révision, format et erreur. La revue indépendante a fait corriger l’ouverture des anciens conteneurs incompatibles. Les [mesures](evidence/performance.json) détaillent trois ouvertures, sélections et dépôts sur une petite page puis sur une page de 2 000 nœuds. Elles décrivent le poste de recette.
+
+Seul le service web Studio a été reconstruit sur le poste avec sa configuration de raccordement existante. Le contrôle a ouvert les pages de Tennis AI en lecture et vérifié l’identité des onze révisions avant et après l’opération, ainsi que le maintien de l’instance moteur. [Preuves locales](evidence/poste-local.json)
+
+Contributions de /root pour l’intégration fiche, le conditionnement, les mesures, la recette, la mise à jour locale et le rapprochement Notion, de /root/canvas_domain_impl pour le contrat V4 et ses commandes, de /root/canvas_http_impl pour les vues et formulaires, de /root/canvas_ui_impl pour la surface et les gestes et de /root/canvas_release_review pour la revue indépendante. [Preuves](EVIDENCE.md) · [Revue](REVIEW.md)

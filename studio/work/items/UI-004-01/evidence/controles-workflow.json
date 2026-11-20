@@ -1,0 +1,66 @@
+[
+  {
+    "observed_at": "2026-11-20T17:23:56.050465+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "studio/work/items/UI-004-01/evidence/workflow-child.py",
+      "check",
+      "--id",
+      "UI-004-01",
+      "--phase",
+      "planning"
+    ],
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004-01\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"REVIEWED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 9,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "observed_at": "2026-11-20T17:23:56.076980+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "studio/work/items/UI-004-01/evidence/workflow-child.py",
+      "check",
+      "--id",
+      "UI-004-01",
+      "--phase",
+      "implementation"
+    ],
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004-01\",\n  \"phase\": \"implementation\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"REVIEWED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\",\n    \"ARCHITECTURE.md\",\n    \"SECURITY.md\",\n    \"VISUAL-REVIEW.md\"\n  ],\n  \"evidence_checked\": 9,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "observed_at": "2026-11-20T17:23:56.104798+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "studio/work/items/UI-004-01/evidence/workflow-child.py",
+      "check",
+      "--id",
+      "UI-004-01",
+      "--phase",
+      "verification"
+    ],
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004-01\",\n  \"phase\": \"verification\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"REVIEWED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\",\n    \"ARCHITECTURE.md\",\n    \"SECURITY.md\",\n    \"VISUAL-REVIEW.md\",\n    \"REPORT.md\"\n  ],\n  \"evidence_checked\": 9,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "observed_at": "2026-11-20T17:23:56.133035+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "studio/work/items/UI-004-01/evidence/workflow-child.py",
+      "check",
+      "--id",
+      "UI-004-01",
+      "--phase",
+      "release"
+    ],
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004-01\",\n  \"phase\": \"release\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"REVIEWED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\",\n    \"ARCHITECTURE.md\",\n    \"SECURITY.md\",\n    \"VISUAL-REVIEW.md\",\n    \"REPORT.md\",\n    \"REVIEW.md\"\n  ],\n  \"evidence_checked\": 9,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+    "stderr": ""
+  }
+]

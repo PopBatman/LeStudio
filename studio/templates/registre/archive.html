@@ -1,0 +1,8 @@
+{% extends "registre/base.html" %}
+{% block title %}{% if archived %}Archiver{% else %}Réactiver{% endif %} le client{% endblock %}{% block registry %}
+<header class="rg-head"><h1>{% if archived %}Archiver{% else %}Réactiver{% endif %} le client</h1></header>
+<form method="post" class="rg-panel rg-editor">{% csrf_token %}{{ form.version }}
+<h2>{{ client.display_name }}</h2><p>{% if archived %}La fiche quittera la liste des clients actifs. Ses sites et leurs accès seront conservés.{% else %}La fiche réapparaîtra dans la liste des clients actifs et pourra être modifiée.{% endif %}</p>
+{{ form.non_field_errors }}{% if conflict %}<a href="{{ request.path }}">Recharger la fiche</a>{% endif %}
+<div class="rg-actions"><c-button type="submit">{% if archived %}Confirmer l’archivage{% else %}Confirmer la réactivation{% endif %}</c-button><a href="{% url 'registre:client' client.pk %}">Annuler</a></div></form>
+{% endblock %}

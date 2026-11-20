@@ -1,0 +1,65 @@
+{% extends 'workspace/base.html' %}
+{% load l10n %}
+{% block title %}Comparer à la référence · {{ page.title }}{% endblock %}
+{% block styles %}<link rel="stylesheet" href="/assets/figma-compare.css">{% endblock %}
+{% block navigation %}<a href="{{ canvas_url }}">← Canvas Wagtail</a>{% endblock %}
+{% block content %}
+<section id="fc-private" class="fc-shell" data-access="{{ access_url }}" data-state="{{ access_state }}" data-expires="{{ expires_ms|unlocalize }}">
+<header class="fc-head">
+<div><p class="fc-site">{{ site.name }} / Atelier</p><h1>Comparer la composition</h1>
+<p>{{ page.title }} · Brouillon R{{ revision.number }}{% if provenance.version %} · Source {{ provenance.version }}{% endif %}</p></div>
+<nav class="fc-formats" aria-label="Format de comparaison">{% for f in formats %}<a href="{{ f.url }}" {% if f.selected %}aria-current="page"{% endif %}>{{ f.label }}</a>{% endfor %}</nav>
+</header>
+{% if error %}<p class="fc-notice" role="alert">{{ error }}</p>{% endif %}
+{% if message %}<p class="fc-notice" role="status">{{ message }}</p>{% endif %}
+<div class="fc-main"><div class="fc-composition">
+<div id="fc-switch" class="fc-switch" hidden aria-label="Vue affichée"><button type="button" data-view="reference" aria-controls="fc-reference" aria-pressed="true">Référence</button><button type="button" data-view="render" aria-controls="fc-render" aria-pressed="false">Rendu Wagtail</button></div>
+<div class="fc-pair" data-width="{{ width|unlocalize }}">
+<section id="fc-reference" class="fc-pane"><header><h2>Référence Figma</h2><small>{% if frame %}{{ frame.label|default:frame.name }}{% endif %}</small></header>
+{% if reference_url %}<div class="fc-surface"><img class="fc-raster" src="{{ reference_url }}" alt="Export PNG déclaré de la frame {{ frame.label|default:frame.name }}"></div>
+{% else %}<p class="fc-empty">{% if frame %}Aucun export PNG déclaré pour cette frame.{% elif provenance.detail_available %}Référence absente pour ce format.{% else %}Provenance détaillée indisponible pour cette page.{% endif %}</p>{% endif %}
+</section>
+<section id="fc-render" class="fc-pane"><header><h2>Rendu Wagtail</h2><small>R{{ revision.number }} · {{ width|unlocalize }} px</small></header>
+{% if document_url %}<div class="fc-surface fc-framebox" data-width="{{ width|unlocalize }}"><iframe title="Rendu privé de {{ page.title }} à {{ width|unlocalize }} pixels" src="{{ document_url }}" sandbox="" referrerpolicy="no-referrer" width="{{ width|unlocalize }}" height="800"></iframe></div>
+{% else %}<p class="fc-empty">{{ render_error|default:"Préparez le rendu privé de cette révision pour examiner la page." }}</p><form method="post" class="fc-prepare">{% csrf_token %}<button name="action" value="prepare">Préparer le rendu Wagtail</button></form>{% endif %}</section>
+</div>
+<details class="fc-detail" {% if not reference_url and upload_allowed %}open{% endif %}><summary>Provenance et export PNG</summary>
+{% if provenance.import_number %}<p>Import confirmé en R{{ provenance.import_number }} par {{ provenance.author|default:"Auteur indisponible" }}{% if provenance.submission_number %} · Remise {{ provenance.submission_number }}{% endif %}.</p>{% endif %}
+{% if frame %}<p>{{ frame.label|default:frame.name }} · {{ frame.id }} · {{ provenance.version }}{% if frame.width %} · Frame {{ frame.width|unlocalize }} × {{ frame.height|unlocalize }} px{% endif %}</p>{% endif %}
+{% if frame and not frame.width %}<p>Largeur logique de frame inconnue. Une nouvelle remise avec des dimensions attestées permettra de valider un écart.</p>{% endif %}
+{% if reference %}<p>Export privé · {{ reference.width|unlocalize }} × {{ reference.height|unlocalize }} px{% if reference.author %} · Déclaré par {{ reference.author }}{% endif %}{% if reference.created_at %} · {{ reference.created_at|date:"d/m/Y H:i" }}{% endif %}</p>{% endif %}
+{% if frames|length > 1 %}<nav aria-label="Frames disponibles">{% for f in frames %}<a href="{{ f.url }}">{{ f.label|default:f.name }}</a> {% endfor %}</nav>{% endif %}
+{% if upload_allowed %}<form id="fc-upload" method="post" enctype="multipart/form-data">{% csrf_token %}
+<input type="hidden" name="action" value="attach"><input type="hidden" name="version" value="{{ provenance.version }}"><input type="hidden" name="format" value="{{ frame.format }}"><input type="hidden" name="previous_reference" value="{{ reference.pk }}">
+<label>Export PNG de la frame <input name="image" type="file" required accept="image/png"></label><img id="fc-file-preview" hidden alt="Export PNG sélectionné avant confirmation">
+<label class="fc-check"><input type="checkbox" name="confirmed" value="1" required>J’atteste que cet export correspond à la frame {{ frame.label|default:frame.name }}, version {{ provenance.version }}.</label><button type="submit">{% if reference %}Remplacer l’export{% else %}Joindre l’export{% endif %}</button></form>{% endif %}
+</details>
+{% if frame %}<details class="fc-detail"><summary>Correspondances confirmées</summary>
+{% if frame.section_id %}<p>Frame {{ frame.label|default:frame.name }} → {{ page.title }} · section {{ frame.section_id }}</p>{% endif %}
+<ul class="fc-rows">{% for row in frame.rows %}<li><strong>{{ row.name }}</strong> <small>{{ row.node_id }}</small>{% if row.definition %}<p>{{ row.definition.scope }} · {{ row.definition.key }} v{{ row.definition.version }}</p>{% endif %}
+{% if row.decision %}<p>{% if row.decision == "exclude" %}Exclu{% elif row.decision == "correct" %}Correspondance corrigée{% else %}Correspondance acceptée{% endif %}</p>{% endif %}
+{% if row.reason %}<p>{{ row.reason }}</p>{% endif %}
+{% if row.variant %}<p>Variante · {{ row.variant }}</p>{% endif %}
+{% for token in row.token_rows %}<p>{{ token.name }} · Observé {{ token.observed|default_if_none:"—" }} · Retenu {{ token.value|default_if_none:"Écarté" }}</p>{% endfor %}
+{% for gap in row.gaps %}<p>{{ gap }}</p>{% endfor %}
+{% if row.task %}<p class="fc-task">Tâche interne · {{ row.task.label|default:row.name }} · {{ row.task.status|default:"À instruire" }}</p>{% endif %}
+{% if row.edit_url %}<a href="{{ row.edit_url }}">Retrouver {{ row.name }} dans l’atelier</a>{% elif row.occurrence %}<small>Occurrence absente de la page affichée.</small>{% endif %}
+</li>{% empty %}<li>Détails de correspondance indisponibles.</li>{% endfor %}</ul></details>{% endif %}
+{% if provenance.local_blocks %}<details class="fc-detail"><summary>Ajouts locaux</summary><ul>{% for item in provenance.local_blocks %}<li>{{ item.label|default:item }}</li>{% endfor %}</ul></details>{% endif %}
+<a class="fc-edit" href="{{ edit_url|default:canvas_url }}">{% if edit_url %}Modifier dans l’atelier{% else %}Consulter cette révision dans le canvas{% endif %}</a>
+</div>
+<aside class="fc-side"><h2>Écarts de la page</h2><p id="fc-current" class="fc-state" role="status">{{ current_state|default:"Comparaison à préparer" }}</p>
+{% if targets %}<form method="get" class="fc-target-form">
+{% if frame %}<input type="hidden" name="frame" value="{{ frame.id }}">{% endif %}<input type="hidden" name="format" value="{{ format }}">{% if ticket %}<input type="hidden" name="ticket" value="{{ ticket }}">{% endif %}
+<label>Élément examiné <select name="target" id="fc-target">{% for t in targets %}<option value="{{ t.id }}" {% if target == t.id %}selected{% endif %}>{{ t.label }}</option>{% endfor %}</select></label><button>Examiner cet élément</button></form>{% endif %}
+{% if decision_allowed %}<form method="post" id="fc-decision">{% csrf_token %}<input type="hidden" name="action" value="decide"><input type="hidden" name="key" value="{{ form_key }}"><input type="hidden" name="reference" value="{{ reference.pk }}"><input type="hidden" name="ticket" value="{{ ticket }}"><input type="hidden" name="width" value="{{ width|unlocalize }}"><input type="hidden" name="previous" id="fc-previous" value="{{ previous }}">
+<input type="hidden" name="target" value="{{ target }}">
+<label>Décision <select name="kind"><option value="correct">À corriger</option><option value="accepted" {% if draft_kind == "accepted" %}selected{% endif %}>Accepter cet écart</option><option value="matched" {% if draft_kind == "matched" %}selected{% endif %}>Aucun écart constaté</option></select></label>
+<label>Constat et motif <textarea name="note" rows="3" maxlength="1000">{{ draft_note|default:"" }}</textarea></label>
+<label class="fc-check"><input type="checkbox" name="confirmed" value="1" required>Je confirme ma décision pour R{{ revision.number }}, {{ frame.label|default:frame.name }}, à {{ width|unlocalize }} px.</label><button class="fc-primary">Consigner la décision</button></form>
+{% else %}<p>Une décision requiert la dernière révision enregistrée, sa référence et un rendu privé valide au format choisi.</p>{% endif %}
+<details class="fc-history" {% if history %}open{% endif %}><summary>Historique des décisions</summary>
+<ol>{% for d in history %}<li><strong>{{ d.label }}</strong> · R{{ d.number }}<p>{{ d.note }}</p><small>{{ d.frame_name }} · source {{ d.reference_version }} · {{ d.format }} {{ d.width|unlocalize }} px · {{ d.target_label }} · {{ d.author|default:"Auteur indisponible" }} · {{ d.created_at|date:"d/m/Y H:i" }}</small><details><summary>Preuve examinée</summary><p>Export {{ d.reference_id }}</p><p>Empreinte du PNG · {{ d.reference_digest }}</p><p>Instance Wagtail · {{ d.instance_id }}</p><p>Empreinte du rendu · {{ d.render_digest }}</p></details></li>{% empty %}<li>Aucune décision consignée.</li>{% endfor %}</ol>{% if history_prev %}<a href="{{ history_prev }}">Décisions plus récentes</a>{% endif %} {% if history_next %}<a href="{{ history_next }}">Décisions plus anciennes</a>{% endif %}</details></aside>
+</div></section><p id="fc-closed" hidden role="alert"></p>
+<script src="/assets/figma-compare.js" defer></script>
+{% endblock %}

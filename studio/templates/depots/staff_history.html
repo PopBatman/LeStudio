@@ -1,0 +1,47 @@
+{% extends "registre/base.html" %}
+{% block title %}Dépôts Figma · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:site' site.pk %}">← Fiche Site · {{ site.name }}</a>
+<header class="rg-head"><h1>Dépôts Figma</h1>{% if not manage %}<c-badge>Lecture seule</c-badge>{% endif %}</header>
+{% if request.GET.resultat == 'revoquee' %}<p class="rg-feedback" role="status">L’invitation a été révoquée.</p>{% endif %}
+{% if request.GET.resultat == 'efface' %}<p class="rg-feedback" role="status">Le lien et le commentaire du dépôt ont été effacés.</p>{% endif %}
+<section class="rg-panel" aria-labelledby="invitations-title">
+  <header class="rg-section">
+    <h2 id="invitations-title">Invitations</h2>
+    {% if manage %}<form method="post" action="{% url 'registre:depot-invite' site.pk %}">{% csrf_token %}
+      <button class="btn btn-primary">Créer une invitation de 7 jours</button>
+    </form>{% endif %}
+  </header>
+  {% for invitation in invitations %}
+  <article class="rg-row">
+    <h3>Invitation {{ invitation.id|stringformat:"s"|slice:":8" }}</h3>
+    <p>Créée le {% include "depots/staff_time.html" with value=invitation.created_at %}</p>
+    {% if invitation.revoked_at %}<p>Révoquée le {% include "depots/staff_time.html" with value=invitation.revoked_at %}</p>
+    {% elif invitation.active %}
+      <p>Active jusqu’au {% include "depots/staff_time.html" with value=invitation.expires_at %}</p>
+      {% if manage %}<a href="{% url 'registre:depot-revoke' site.pk invitation.id %}">Révoquer l’invitation {{ invitation.id|stringformat:"s"|slice:":8" }}</a>{% endif %}
+    {% else %}<p>Expirée le {% include "depots/staff_time.html" with value=invitation.expires_at %}</p>{% endif %}
+  </article>
+  {% empty %}<p>Aucune invitation créée pour ce site.</p>{% endfor %}
+  {% if invitations.has_other_pages %}
+    <nav class="rg-actions" aria-label="Pages des invitations">
+      {% if invitations.has_previous %}<a href="?invitations={{ invitations.previous_page_number }}#invitations-title">Invitations précédentes</a>{% endif %}
+      <span>Page {{ invitations.number }} sur {{ invitations.paginator.num_pages }}</span>
+      {% if invitations.has_next %}<a href="?invitations={{ invitations.next_page_number }}#invitations-title">Invitations suivantes</a>{% endif %}
+    </nav>
+  {% endif %}
+</section>
+<section class="rg-panel rg-engine" aria-labelledby="versions-title">
+  <h2 id="versions-title">Versions reçues</h2>
+  {% for row in submissions %}
+  <article class="rg-row">
+    <h3><a href="{% url 'registre:depot-submission' site.pk row.pk %}">Version {{ row.version }} · Invitation {{ row.invitation_id|stringformat:"s"|slice:":8" }}</a></h3>
+    <p>Déposée le {% include "depots/staff_time.html" with value=row.created_at %}</p>
+  </article>
+  {% empty %}<p>Aucune version sur cette page.</p>{% endfor %}
+  <nav class="rg-actions" aria-label="Pages des versions">
+    {% if request.GET.cursor %}<a href="{% url 'registre:site-depots' site.pk %}#versions-title">Versions les plus récentes</a>{% endif %}
+    {% if next_cursor %}<a href="?cursor={{ next_cursor|urlencode }}#versions-title">Versions suivantes</a>{% endif %}
+  </nav>
+</section>
+{% endblock %}

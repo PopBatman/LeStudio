@@ -1,0 +1,20 @@
+# Inventaire et compatibilité du moteur commun
+
+**Cadrage du 19 novembre 2026.** La [carte ARCH-002](https://app.notion.com/p/41c49e23bbdb81cd9f76d83b6f00758e) fixe une instance indépendante par site. La lecture du dépôt permet de situer les points de raccordement et les vérifications à mener lors de la réalisation.
+
+| Existant observé | Conséquence pour ARCH-002 |
+|---|---|
+| L’image centrale utilise Python 3.12.16. Le verrou inclut Django 5.2.19, Psycopg 3.3.9 et Cotton 2.9.0. Wagtail est absent de ce verrou. [Dockerfile](../../../Dockerfile) · [Dépendances](../../../requirements.txt) | Préparer un verrou et une image propres au moteur commun. Une même révision d’image doit pouvoir démarrer les deux instances de démonstration. |
+| Compose définit le service web central et une base PostgreSQL 17.12, avec un volume persistant. Le port web est lié à la boucle locale. [Composition locale](../../../compose.yaml) | Ajouter un environnement de démonstration isolé avec des bases, des rôles, des configurations et des médias distincts. Les références de volumes et les sauvegardes doivent être attribuables à une instance. |
+| La route centrale de santé exécute une requête sur sa propre base et renvoie un statut minimal. Les autres routes servent la session opérateur, les assets, la galerie et le registre. [Routes centrales](../../../central/urls.py) | Le moteur doit fournir son propre contrat interne d’identité, de version et de disponibilité. Un contrôle réussi du Studio central ne renseigne pas sur l’état d’un site. |
+| Site possède un UUID, un client obligatoire et un domaine facultatif. Les mandats Site distinguent lecture et gestion. Les sélecteurs filtrent les fiches selon l’opérateur. [Modèles](../../../registre/models.py) · [Services](../../../registre/services.py) · [Bilan FEAT-002](../FEAT-002/REPORT.md) | Réutiliser l’UUID comme identité attendue et le droit de gestion pour la commande de raccordement. Une fiche existante peut rester sans instance. Les paramètres de connexion et les droits de l’éditeur Wagtail restent propres à son instance. |
+
+## Série de versions proposée
+
+Pour le moteur, retenir comme cible de qualification Wagtail **7.4 LTS**, Python **3.12**, Django **5.2** et PostgreSQL **17**. La matrice publiée par Wagtail inclut la combinaison Python/Django et Django 5.2 prend en charge PostgreSQL 14 ou supérieur. Cela établit une compatibilité de séries. Le rendu et l’isolation restent à éprouver sur l’image construite. [Matrice Wagtail 7.4](https://docs.wagtail.org/en/stable-7.4.x/releases/upgrading.html#compatible-django-python-versions) · [Backend PostgreSQL de Django 5.2](https://docs.djangoproject.com/en/5.2/ref/databases/#postgresql-notes)
+
+Au démarrage de la réalisation, relever le dernier correctif maintenu de la série 7.4 disponible sur l’index officiel, consulter ses notes de sécurité, résoudre ses dépendances pour la plateforme cible, puis figer versions exactes, empreintes des distributions et digest de l’image. Consigner la version réellement exécutée, la version applicative du moteur commun et celle du contrat d’API séparément. Le correctif mentionné dans le cadrage historique ARCH-001 reste une référence datée. [Publications Wagtail](https://pypi.org/project/wagtail/#history) · [Notes de version](https://docs.wagtail.org/en/stable-7.4.x/releases/index.html) · [Qualification ARCH-001](../ARCH-001/RESEARCH.md)
+
+## Qualification d’exécution à produire
+
+Construire l’image une fois, démarrer deux instances avec des données fictives, relever les versions et digests, puis vérifier migrations sur bases neuves et au second démarrage. Conserver des preuves distinctes du rendu attendu, de la séparation des contenus et médias, des habilitations et du comportement lorsqu’une instance devient indisponible. Mesurer consommation mémoire au repos et pendant le rendu, volume de disque et temps de démarrage sur la machine de qualification avant tout dimensionnement multi-instance. Tester sauvegarde et restauration sur une copie jetable identifiée, avec base et médias du même site. Le cadrage n’a démarré aucun moteur.

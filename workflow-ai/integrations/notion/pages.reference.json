@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "Repères documentaires de session ; aucune autorisation ni configuration REST.",
+  "pages": {
+    "home": "41c49e23-bbdb-8118-acf9-c75d6376f00a",
+    "process": "41c49e23-bbdb-8190-8102-c7b19464e258",
+    "architecture": "41c49e23-bbdb-815c-992c-f5895214db41",
+    "architecture_contracts": "41c49e23-bbdb-81c6-b0b8-da4703e4e0db"
+  },
+  "v1_publication": [
+    {
+      "title": "Workflow AI v1.0 — Installation et capacités",
+      "id": "41c49e23-bbdb-8102-a683-c18b993774f8",
+      "url": "https://app.notion.com/p/41c49e23bbdb8102a683c18b993774f8?pvs=204"
+    },
+    {
+      "title": "Workflow AI v1.0 — Processus de développement",
+      "id": "41c49e23-bbdb-81f3-b370-c08e69508ce1",
+      "url": "https://app.notion.com/p/41c49e23bbdb81f3b370c08e69508ce1?pvs=204"
+    },
+    {
+      "title": "Workflow AI v1.0 — Gouvernance et mémoire",
+      "id": "41c49e23-bbdb-8189-a321-e3af4587dff8",
+      "url": "https://app.notion.com/p/41c49e23bbdb8189a321e3af4587dff8?pvs=204"
+    },
+    {
+      "title": "ARCH-001 — Fondations du Studio central",
+      "id": "41c49e23-bbdb-8186-ba0b-cb800bd83e17",
+      "url": "https://app.notion.com/p/41c49e23bbdb8186ba0bcb800bd83e17?pvs=204"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "chromium": "156.0.8078.4",
+  "observations": [
+    "Fiche → Bibliothèque au clavier, catalogue partagé et local, sauvegarde/rechargement du thème de A, B conserve son espacement, conflit entre deux onglets, lecture seule sur téléphone.",
+    "Promotion d’un encart privé de A par deux opérateurs distincts, copie publique visible sur B sans le dossier ni le composant privé. Adoption explicite du bouton v2 sur une occurrence de A avec variante Contour, rechargement sur téléphone.",
+    "Média de démonstration attribué, affiché, révoqué et diagnostiqué, puis retiré explicitement du thème."
+  ],
+  "captures": [
+    "application-bibliotheque.png",
+    "application-apparence.png",
+    "application-conflit-mobile.png",
+    "application-lecture-mobile.png",
+    "application-promotion.png",
+    "application-occurrence-mobile.png",
+    "application-diagnostic.png"
+  ],
+  "erreurs": []
+}

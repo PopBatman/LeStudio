@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-18T17:53:20.117924+00:00",
+  "http": {
+    "/clients/": [
+      200,
+      "http://127.0.0.1:8000/connexion/?next=/clients/"
+    ],
+    "/sites/": [
+      200,
+      "http://127.0.0.1:8000/connexion/?next=/sites/"
+    ],
+    "/health/": [
+      200,
+      "http://127.0.0.1:8000/health/"
+    ],
+    "/assets/registre.css": [
+      200,
+      "http://127.0.0.1:8000/assets/registre.css"
+    ],
+    "/ui/": [
+      200,
+      "http://127.0.0.1:8000/ui/"
+    ]
+  },
+  "migrations": "registre\n [X] 0001_initial\n"
+}

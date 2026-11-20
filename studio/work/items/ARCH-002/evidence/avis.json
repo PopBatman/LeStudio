@@ -1,0 +1,5 @@
+{
+  "observed_at": "2026-11-19T08:13:00.875306+00:00",
+  "reviewer": "/root/arch002_reviewcode",
+  "conclusion": "Revue indépendante de réalisation par /root/arch002_reviewcode. Avis favorable sur AC1 à AC9. Les deux écarts relevés ont été corrigés et vérifiés : le frontal renvoie un refus d’authentification explicite pour un certificat invalide et le client distingue le dépassement de délai. Le laboratoire a confirmé le refus des écritures (HTTP 405), la continuité du site B et la restauration du site A."
+}

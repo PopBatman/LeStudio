@@ -1,0 +1,34 @@
+{
+  "site": "A fictif",
+  "revision_initiale": 7,
+  "gestion_revoquee": "403 sur lot valide, Enregistrer désactivé, aucune écriture",
+  "passerelle_arretee": "Brouillon enregistré, révision annoncée, navigateur de nouveau capable de lire le rendu après redémarrage",
+  "revision_finale": 8,
+  "echanges": [
+    {
+      "url": "visuel",
+      "status": 302
+    },
+    {
+      "url": "enregistrer",
+      "status": 403
+    },
+    {
+      "url": "visuel",
+      "status": 302
+    },
+    {
+      "url": "enregistrer",
+      "status": 200
+    },
+    {
+      "url": "visuel",
+      "status": 409
+    },
+    {
+      "url": "visuel",
+      "status": 302
+    }
+  ],
+  "erreurs_js": []
+}

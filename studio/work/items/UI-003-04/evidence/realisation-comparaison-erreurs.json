@@ -1,0 +1,12 @@
+{
+  "reference_2x": {
+    "png": "2400 × 1500",
+    "largeur_logique_du_rendu": 1200
+  },
+  "concurrence": "Deux décisions sur le même état initial : une enregistrée, HTTP 409 pour l’autre avec motif préservé. Rejeu identique après succès 302, une seule décision.",
+  "mandat": "Révocation à chaud : la page ouverte retire le contenu privé au contrôle et les octets sont inaccessibles.",
+  "recu_perime": 409,
+  "moteur": "Passerelle du moteur A arrêtée et redémarrée : erreur explicite, décision indisponible ; nouvelle préparation réussie sans révision supplémentaire.",
+  "effacement": "Remise du site B effacée : retrait dans l’onglet, ancienne image HTTP 404, état de provenance indisponible et édition canonique toujours accessible.",
+  "exceptions_js": []
+}

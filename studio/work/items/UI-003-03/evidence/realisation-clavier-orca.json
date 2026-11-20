@@ -1,0 +1,13 @@
+{
+  "outil": "Orca, AT-SPI et Chromium sous X11",
+  "gestes": "Ouvrir, ajouter une section, annuler. Parcours piloté au clavier.",
+  "sortie_vocale": [
+    "Modifier la page push button.",
+    "Rechercher un composant entry Titre, image…",
+    "Ajouter une section push button.",
+    "Section 2 push button.",
+    "Annuler push button.",
+    "Composition locale clickable."
+  ],
+  "statut_DOM_apres_annulation": "Geste annulé."
+}

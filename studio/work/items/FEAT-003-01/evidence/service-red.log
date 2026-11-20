@@ -1,0 +1,17 @@
+Creating test database for alias 'default'...
+Found 1 test(s).
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: test_read_unconnected_site_does_not_create_a_draft (tests.test_composition_services.DraftServicesTests.test_read_unconnected_site_does_not_create_a_draft)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_composition_services.py", line 17, in test_read_unconnected_site_does_not_create_a_draft
+    from composition.services import lire_brouillon
+ModuleNotFoundError: No module named 'composition'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...

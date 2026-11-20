@@ -1,0 +1,43 @@
+{
+  "navigateur": "Chromium 156.0.8078.4",
+  "machine": "AMD Ryzen 9 7950X, Docker PostgreSQL et Django sur la même machine",
+  "unite": "millisecondes mesurées dans Playwright, réponse et chargement inclus",
+  "echantillons": [
+    {
+      "noeuds": 6,
+      "ouverture": [
+        140,
+        36,
+        39
+      ],
+      "selection": [
+        69,
+        50,
+        64
+      ],
+      "depot": [
+        266,
+        258,
+        266
+      ]
+    },
+    {
+      "noeuds": 2000,
+      "ouverture": [
+        514,
+        542,
+        500
+      ],
+      "selection": [
+        536,
+        505,
+        496
+      ],
+      "depot": [
+        854,
+        871,
+        841
+      ]
+    }
+  ]
+}

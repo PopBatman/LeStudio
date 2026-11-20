@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-11-18T16:31:14.169870+00:00",
+  "commands": [
+    {
+      "command": "docker compose ps",
+      "exit": 0,
+      "output": "NAME                   IMAGE                                                                                             COMMAND                  SERVICE   CREATED             STATUS                       PORTS\nlestudio-local-db-1    postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536   \"docker-entrypoint.s…\"   db        About an hour ago   Up About an hour (healthy)   5432/tcp\nlestudio-local-web-1   lestudio-local-web                                                                                \"sh -ec 'python mana…\"   web       39 seconds ago      Up 27 seconds (healthy)      127.0.0.1:8000->8000/tcp\n"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py check",
+      "exit": 0,
+      "output": "System check identified no issues (0 silenced).\n"
+    },
+    {
+      "command": "docker compose exec -T web python manage.py migrate --check",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "command": "docker compose exec -T web python manage.py test -v 2",
+      "exit": 0,
+      "output": "Found 7 test(s).\nSkipping setup of unused database(s): default.\nSystem check identified no issues (0 silenced).\ntest_disabled_gallery_hides_page_and_assets (tests.test_gallery.GalleryTests.test_disabled_gallery_hides_page_and_assets) ... ok\ntest_enabled_gallery_renders_and_serves_compiled_assets (tests.test_gallery.GalleryTests.test_enabled_gallery_renders_and_serves_compiled_assets) ... ok\ntest_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) ... ok\ntest_database_failure_returns_only_status (tests.test_health.HealthTests.test_database_failure_returns_only_status) ... ok\ntest_unrecognized_host_is_rejected_before_database_access (tests.test_health.HealthTests.test_unrecognized_host_is_rejected_before_database_access) ... ok\ntest_write_method_is_rejected_before_database_access (tests.test_health.HealthTests.test_write_method_is_rejected_before_database_access) ... ok\ntest_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.167s\n\nOK\n"
+    },
+    {
+      "command": "docker compose exec -T web python -m pip check",
+      "exit": 0,
+      "output": "No broken requirements found.\nWARNING: The directory '/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+    }
+  ],
+  "http": {
+    "health/": {
+      "status": 200,
+      "sha256": "08e2c358ce13cb67f94ebb35b0f67c8763190a857c0db68da6eb196dfe9da46a"
+    },
+    "ui/": {
+      "status": 200,
+      "sha256": "f12a4fa4f863afc975b00e57d1254dd4303fce9ccc545c02bca64923dd36f8ca"
+    },
+    "ui/assets/gallery.css": {
+      "status": 200,
+      "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+    },
+    "ui/assets/gallery.js": {
+      "status": 200,
+      "sha256": "d7d104f5d5f09d1a54ee98a75fee5fbd4da8e3f81dca071667a3cb43fae2d92e"
+    },
+    "ui/assets/fonts/dm-sans-latin.woff2": {
+      "status": 200,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    }
+  }
+}

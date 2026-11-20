@@ -1,0 +1,26 @@
+{
+  "banc": "Deux sites de test et leurs instances Wagtail avec mTLS, fournisseur Figma simulé.",
+  "creation": "Site A, R1, frames bureau et mobile",
+  "ajout": "Site B sur modèle, frame mobile seule, R2",
+  "largeurs_logiques": [
+    1200,
+    390
+  ],
+  "largeurs_ecran": [
+    1440,
+    820,
+    390,
+    320
+  ],
+  "decisions": "Écart accepté au clavier sur titre R1. Nouvelle sauvegarde R2 impose de le réexaminer ; historique R1 conservé, nouvelle décision conforme. PNG remplacé, approbation à réexaminer et ancien fichier HTTP 404. Sur B, écart à corriger.",
+  "tache_interne": "Carte des étapes exclue présente dans la liste",
+  "edition": "Occurrence sélectionnée dans le même éditeur, saisie en contexte et rendu après enregistrement Wagtail",
+  "mobile": "Format sans frame, bascule des panneaux au clavier, 320px sans débordement",
+  "droits": {
+    "lecture_comparaison_A": 403,
+    "lecture_comparaison_B": 404,
+    "lecture_png_B": 404
+  },
+  "exceptions_js": [],
+  "hotes_externes": []
+}

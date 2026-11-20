@@ -1,0 +1,62 @@
+.ws-page:has(.cb-shell) { background: #f8f7f3; }
+.ws-page:has(.cb-shell) .ws-main { width: 100%; max-width: none; padding: 0; margin: 0; }
+.ws-page:has(.cb-shell) .ws-header-inner { max-width: none; }
+.cb-shell { color: #262724; font-family: 'DM Sans', system-ui, sans-serif; }
+.cb-shell [hidden] { display: none !important; }
+.cb-back, .cb-shell a { color: #90331f; text-underline-offset: 3px; }
+.cb-shell button, .cb-shell select { font: inherit; color: inherit; background: white; border: 1px solid #b9b9ad; border-radius: 6px; padding: .45rem .65rem; max-width: 100%; }
+.cb-shell button, .cb-shell summary { cursor: pointer; }
+.cb-shell :focus-visible { outline: 3px solid #91361e; outline-offset: 2px; }
+.cb-shell button:disabled { cursor: default; color: #73716b; background: #efeee8; }
+.cb-shell .cb-primary { background: #262724; border-color: #262724; color: white; }
+.cb-bar, .cb-page, .cb-actions { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+.cb-bar { background: #efeee8; border-bottom: 1px solid #d8d6cb; padding: .7rem clamp(.75rem, 2vw, 1.6rem); }
+.cb-site, .cb-source, .cb-shell dt, .cb-shell label { color: #565850; font-size: .875rem; }
+.cb-shell h1, .cb-shell h2, .cb-shell h3 { margin: 0; color: #262724; font-family: inherit; letter-spacing: -.025em; }
+.cb-shell h1 { font-size: 1.3rem; }.cb-shell h2 { font-size: 1.07rem; }.cb-shell h3 { font-size: 1rem; }
+.cb-revision { border-radius: 5px; background: #f8e6dc; color: #81351d; font-weight: 650; padding: .25rem .55rem; }
+.cb-layout { display: grid; grid-template-columns: minmax(185px, 16rem) minmax(0, 1fr) minmax(180px, 15rem); min-height: 72vh; }
+.cb-panel, .cb-stage { padding: clamp(.75rem, 1.6vw, 1.4rem); min-width: 0; overflow-wrap: anywhere; }
+.cb-panel { background: #faf9f5; }
+.cb-panel summary { font-weight: 700; }
+.cb-panel-body { margin-top: 1rem; }
+.cb-nav form { display: grid; gap: .35rem; margin-bottom: 1rem; }
+.cb-nav label, .cb-page label { font-weight: 600; }
+.cb-nav ul { list-style: none; padding: 0; margin: .5rem 0; }
+.cb-nav li { padding-inline-start: min(calc(var(--cb-depth,0) * .6rem), 2rem); margin-block: .3rem; }
+.cb-nav li button { width: 100%; text-align: left; overflow-wrap: anywhere; }
+.cb-nav button[aria-pressed=true] { border-color: #a2311a; background: #fbefe8; box-shadow: inset 3px 0 #a2311a; }
+.cb-stage { background: #e7e6df; border-inline: 1px solid #d8d6cb; }
+.cb-page { margin-bottom: .7rem; }
+.cb-stage p { margin: .55rem 0; }
+.cb-stage [role=status]:empty { margin: 0; }
+.cb-notice, .cb-fallback, .cb-empty { background: #fcf8ec; border-inline-start: 3px solid #99672a; padding: .8rem 1rem; }
+#canvas-surface { width: 100%; overflow: auto; }
+#canvas-paper { position: relative; width: 100%; background: white; overflow: hidden; }
+#canvas-frame { display: block; width: 100%; height: clamp(360px, 67vh, 720px); border: none; }
+#canvas-outline { position: absolute; pointer-events: none; box-shadow: inset 0 0 0 2px #a2311a, inset 0 0 0 3px white; }
+.cb-actions { justify-content: flex-start; margin-top: 1rem; font-size: .91rem; }
+.cb-inspector dd { margin: .2rem 0 .9rem; }
+#canvas-uuid { font-family: monospace; font-size: .86rem; }
+#canvas-closed { margin: 2rem; }
+@media (max-width: 900px) {
+  .cb-layout { grid-template-columns: minmax(150px, 12rem) minmax(0,1fr); }
+  .cb-inspector { grid-column: 1/-1; border-top: 1px solid #d8d6cb; }
+}
+@media (max-width: 620px) {
+  .cb-layout { display: flex; flex-direction: column; min-height: auto; }
+  .cb-stage { border: solid #d8d6cb; border-width: 1px 0; }
+  .cb-panel summary { padding-block: .3rem; }
+  #canvas-frame { height: 58vh; min-height: 330px; }
+}
+.cb-layer-index { color: #62645c; font-variant-numeric: tabular-nums; }
+.cb-nav li small { display: block; font-size: .81rem; color: #565850; }
+
+#canvas-palette {margin-block:1rem}
+#canvas-palette select, #canvas-drop-start {display:block; width:100%; margin-block:.45rem}
+#canvas-palette p {font-size:.875rem}
+#canvas-drop-start {touch-action:none; cursor:grab}
+#canvas-drop-plane {position:absolute; inset:0; cursor:crosshair; touch-action:none}
+#canvas-drop-line {position:absolute; pointer-events:none; box-shadow:inset 0 0 0 2px #a2311a; background:rgb(239 96 59 / 9%)}
+/* Le guide peut changer de libellé pendant le geste sans déplacer le rendu. */
+.cb-stage #canvas-status {height:2.8em; margin:.45rem 0; overflow:auto}

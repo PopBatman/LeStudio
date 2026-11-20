@@ -1,0 +1,31 @@
+{
+  "image": "sha256:f7e13c3a559f7de57b390d6dfa62498fe2ec06bc9697ccc6e0b3e8acfcd18541",
+  "mode": "coexistence",
+  "santé": {
+    "status": "ok"
+  },
+  "routes_anonymes": {
+    "": 302,
+    "visuel/": 302,
+    "articles/": 302,
+    "canvas/": 302
+  },
+  "avant": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "après": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "moteur_Tennis_AI_même_conteneur": true,
+  "contrôles": [
+    "migrate --check",
+    "makemigrations --check --dry-run",
+    "assets JavaScript servis identiques aux sources"
+  ]
+}

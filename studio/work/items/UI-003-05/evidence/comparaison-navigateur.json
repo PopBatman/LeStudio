@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-20T15:10:43.813Z",
+  "parcours": [
+    {
+      "origine": "vierge",
+      "format": "bureau",
+      "viewport": [
+        1440,
+        960
+      ],
+      "revision": 2,
+      "page": "53696930-90bf-4df8-96e0-aef349211057",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 1200,
+        "titre": "Accueil",
+        "blocs": 0
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "vierge",
+      "format": "tablette",
+      "viewport": [
+        820,
+        1060
+      ],
+      "revision": 2,
+      "page": "53696930-90bf-4df8-96e0-aef349211057",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 820,
+        "titre": "Accueil",
+        "blocs": 0
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "vierge",
+      "format": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "revision": 2,
+      "page": "53696930-90bf-4df8-96e0-aef349211057",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 390,
+        "titre": "Accueil",
+        "blocs": 0
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "modele",
+      "format": "bureau",
+      "viewport": [
+        1440,
+        960
+      ],
+      "revision": 3,
+      "page": "761f3abc-3119-4e9b-a50e-8d8a44ad71e4",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 1200,
+        "titre": "Accueil",
+        "blocs": 2
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "modele",
+      "format": "tablette",
+      "viewport": [
+        820,
+        1060
+      ],
+      "revision": 3,
+      "page": "761f3abc-3119-4e9b-a50e-8d8a44ad71e4",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 820,
+        "titre": "Accueil",
+        "blocs": 2
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "modele",
+      "format": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "revision": 3,
+      "page": "761f3abc-3119-4e9b-a50e-8d8a44ad71e4",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 390,
+        "titre": "Accueil",
+        "blocs": 2
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "figma",
+      "format": "bureau",
+      "viewport": [
+        1440,
+        960
+      ],
+      "revision": 3,
+      "page": "c18fe15a-a768-4790-a93f-dbafca7f9026",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 1200,
+        "titre": "Atlas du Sud",
+        "blocs": 4
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "figma",
+      "format": "tablette",
+      "viewport": [
+        820,
+        1060
+      ],
+      "revision": 3,
+      "page": "c18fe15a-a768-4790-a93f-dbafca7f9026",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 820,
+        "titre": "Atlas du Sud",
+        "blocs": 4
+      },
+      "debordement": 0
+    },
+    {
+      "origine": "figma",
+      "format": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "revision": 3,
+      "page": "c18fe15a-a768-4790-a93f-dbafca7f9026",
+      "v1": "Éditeur structuré",
+      "v2": "Canvas Wagtail",
+      "rendu": {
+        "largeur": 390,
+        "titre": "Atlas du Sud",
+        "blocs": 4
+      },
+      "debordement": 0
+    }
+  ],
+  "exceptions": [],
+  "hotessupplementaires": []
+}

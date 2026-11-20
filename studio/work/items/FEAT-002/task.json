@@ -1,0 +1,2485 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-002",
+  "kind": "feature",
+  "title": "Clients et sites",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-002/",
+      "registre/",
+      "central/",
+      "tests/",
+      "static/ui/",
+      "templates/",
+      "Dockerfile",
+      ".dockerignore",
+      "docs/REGISTRE.md",
+      "README.md",
+      "compose.yaml",
+      "requirements.txt",
+      "workspace/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Mandats utilisateur successifs de cadrage puis de développement de FEAT-002 dans studio/.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "813c67b97f2e1e5f0ce8bbc27d2de081e919b862257fe8d1b13cfce884b33730",
+      "observed_at": "2026-11-18T17:44:11.881Z",
+      "revision": "sha256:813c67b97f2e1e5f0ce8bbc27d2de081e919b862257fe8d1b13cfce884b33730",
+      "outcome": "illustrative"
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "d3e7e77ac9e77d1e4b54fc4da406e8d4fcef44d80243ca022e4861188741e473",
+      "observed_at": "2026-11-18T17:44:11.881Z",
+      "revision": "sha256:813c67b97f2e1e5f0ce8bbc27d2de081e919b862257fe8d1b13cfce884b33730",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-002/evidence/maquettes.html",
+          "sha256": "813c67b97f2e1e5f0ce8bbc27d2de081e919b862257fe8d1b13cfce884b33730"
+        }
+      ],
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/web-red.log",
+      "observed_at": "2026-11-18T17:47:59.717210+00:00",
+      "revision": "RED avant raccordement de /clients/",
+      "sha256": "c3decfedb1d62b7dd8e007b63f991bf27418389a0f5c2d604fcbc7e4bfe61ef5",
+      "active": false,
+      "outcome": "failed"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/postgresql.log",
+      "sha256": "e32d1224a0b8737e789ad51a93eafec31a50614dbeaab3c5c8a0629dc2aae499",
+      "observed_at": "2026-11-18T17:52:24.589036+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/sqlite.log",
+      "sha256": "f7604e6a8cc91767190b232a77d0e0386f7e3923ae014588767f25b5c96ff8bc",
+      "observed_at": "2026-11-18T17:52:28.558153+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/browser.json",
+      "sha256": "96d491410c08b42d81cabba965a0ef8f4ebff6da50bb4510e619598056154143",
+      "observed_at": "2026-11-18T17:52:33.026286+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/migration.log",
+      "sha256": "744bd5c861dcf032bb5b058a2ddf1c75fed049b5b6e4ada9dd4f20e53ec9437d",
+      "observed_at": "2026-11-18T17:50:38.782907+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste.json",
+      "sha256": "d65525e948d8385982d0f3bfa2ec9ea5b384e251801dbd058826c1d6a7f8e49a",
+      "observed_at": "2026-11-18T17:53:20.726697+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/privacy.json",
+      "sha256": "1c0c6f04b7d6ee790d8afb4910bb92cac0752305a71cfca53f2d8c56cce5ac53",
+      "observed_at": "2026-11-18T17:50:40.823967+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/fiche-desktop.png",
+      "sha256": "88e4150d64e8841aabe318d85beff0616ccfd61246414351effdffd32db3cb77",
+      "observed_at": "2026-11-18T17:52:31.733247+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/fiche-mobile.png",
+      "sha256": "88c95ffb14c34415a044ba34871c2f759b588bcec6e42dd7811365a65c893926",
+      "observed_at": "2026-11-18T17:52:31.903252+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue.md",
+      "sha256": "02451d074893fca0ed2bb611cdf70de99947a48ded2bc016736355e10777e68f",
+      "observed_at": "2026-11-18T17:52:45.580657+00:00",
+      "revision": "sha256:a365eb1b1db917d5fc1882d1ebeee1b19cc9fba6274ef8251a7c7f417a347115",
+      "contract_sha256": "404ad2b6f3745e23619d29e9dc5d5ac8aaada34b7c1f2842d1e2c4e19fd257cc",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "5686c37453aaed69411416429524c30fba7e2423111d872e9873a95ecba23654"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "552ff81da850c55ab60e13fef03bfc7aa7158ebd9e2341df9305b4081b967e78"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/gallery.py",
+          "sha256": "783c47032e0ab12f2ca1532edfc49d8de87a92168343a512439a274fa679fcce"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "9e5a11ed44086e41fabf21581a563d065d8b3a109f1f67be33d2b40f92f921e5"
+        },
+        {
+          "path": "central/test_settings.py",
+          "sha256": "e6c5b24059fbd719c47c937e36846c44ba6c5e26d5f4adf709323d9d6e29b018"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "f2488c55b8e4729f776d1ec5d51ab8fa70003d0e4cc6c4bbe8f11f90ff854779"
+        },
+        {
+          "path": "registre/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/apps.py",
+          "sha256": "c139d047ddbfa1bf4ab27f595c81cc4b422fc384a4ae894efbc05a567671b11c"
+        },
+        {
+          "path": "registre/forms.py",
+          "sha256": "cdda38fccad64b768688f3b553c0d6595ff328449f7913875edb5d52b5e60afe"
+        },
+        {
+          "path": "registre/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/management/commands/registre_access.py",
+          "sha256": "a5b6978f61b8f66cb8ead166bd705e3879903a8cecc81806166b4818f93546ee"
+        },
+        {
+          "path": "registre/migrations/0001_initial.py",
+          "sha256": "066ac3ad83b90fec72b6028c551f47e651302d872bcf3629e393f46bbdbc6935"
+        },
+        {
+          "path": "registre/migrations/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "registre/models.py",
+          "sha256": "52a00b6331d4e13c0b4e1640c1f12437928d0aaa702fe4b5ce680135fde9692f"
+        },
+        {
+          "path": "registre/services.py",
+          "sha256": "c9939b5348aec81a143dc2106e1d6b19c39bdbfd55b8a5f7ada2c266a920974a"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "2547f6f39759e9791cda4a1c09a29728f1623dee45552b86cfff0fde06d63b68"
+        },
+        {
+          "path": "registre/views.py",
+          "sha256": "544f3255afbb443cf6b7486f417d887843d9facff062d28ac66abe447b0fdb1f"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "b0cc019631463a35f1c8450907ee4a9b16d5267ed3d950b80fd942224ba8ffc1"
+        },
+        {
+          "path": "static/ui/gallery.css",
+          "sha256": "e369c20326225c375ec10213d41dc3a0037a6cfc7d94038b073827e7b078f69a"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "3c9ae76c95d6aca888d91b9f49f8220d4483f2a13681f5853d40e06d2e84d6a5"
+        },
+        {
+          "path": "static/ui/workspace.css",
+          "sha256": "d7de5ba295dbabd73d40f7428e76abe8e134ccef5cb304280b713f74d350519e"
+        },
+        {
+          "path": "templates/cotton/alert.html",
+          "sha256": "3559a782b3859e359240b668d3d729664902a370ca53d544cc46ff67f616e01d"
+        },
+        {
+          "path": "templates/cotton/badge.html",
+          "sha256": "f8d793579329aa1b0f488317f56bfd572525864632fcf5edb43b394602e2b1ce"
+        },
+        {
+          "path": "templates/cotton/button.html",
+          "sha256": "f60c0450de868321fb6795c27be7a598bc72218d9b5e2c5c597e4f8a579f0706"
+        },
+        {
+          "path": "templates/cotton/empty_state.html",
+          "sha256": "be94131eb95b6a81411b5630780c47b9d42f09c6140c3b902f1278b8ec51d3ec"
+        },
+        {
+          "path": "templates/cotton/field.html",
+          "sha256": "fbd73795c4effbc148c4a017677f320946177c7e430e2c5a8922d5997052ce24"
+        },
+        {
+          "path": "templates/cotton/table.html",
+          "sha256": "f285adb7fd25efb4c979a884c8692a006bae4874a506bc35b739e4f5cb947463"
+        },
+        {
+          "path": "templates/cotton/text_link.html",
+          "sha256": "cb23c0e6379f53c41f56634a859f253d82b487cd767b838eb4c9bb634793cb42"
+        },
+        {
+          "path": "templates/registre/archive.html",
+          "sha256": "44441e415bac0ea1c846848b40197db187a30d7bf91b18d47610fd0ccb30f7a5"
+        },
+        {
+          "path": "templates/registre/base.html",
+          "sha256": "7a49fc92533102c85b6245eb7d3c5182b4f0a88d185d39c753da2d09786786d3"
+        },
+        {
+          "path": "templates/registre/client.html",
+          "sha256": "35f173e7e818dde61b866889de12c6b03936b97c9237492e656326bce7eb95e3"
+        },
+        {
+          "path": "templates/registre/error.html",
+          "sha256": "a2f65b7de116ad825166ae98ac2cb1369ebd4d75e6add5a79c73c2306a266391"
+        },
+        {
+          "path": "templates/registre/feedback.html",
+          "sha256": "50c92571505dde34899ded9a2ef69c47d50884d277ca12458f232b4eceec0e6f"
+        },
+        {
+          "path": "templates/registre/form.html",
+          "sha256": "dc4bbd11d5f2679aa1b31f35b97b293c79ceb0bc0dc1ca10cf01feb4c772a8b9"
+        },
+        {
+          "path": "templates/registre/list.html",
+          "sha256": "eab23467ee82bc5519ce9372180c80c4d388f73276a0968882516a18999a7388"
+        },
+        {
+          "path": "templates/registre/search_error.html",
+          "sha256": "6caade324f1622863300dffdb66d0beb3053890c4d9d7fc439f4d4157c5fe50c"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "9f7a6e10bef5fba8bad1c0ab775f4d818b7c569e27b3df935ff3f1519954c618"
+        },
+        {
+          "path": "templates/ui/base.html",
+          "sha256": "73681dc27da82c7ce6f2ffcbc67c39ce250708d72ee7eb5106f435acabd99171"
+        },
+        {
+          "path": "templates/ui/gallery.html",
+          "sha256": "2f963707402cded07c68378509f95702b1fdcdf73949e1e2e966d28b46a15544"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "templates/workspace/base.html",
+          "sha256": "f5a23ad96a386406eb3c1c32e54e88c4e4c681aac5178b6cb08e0a564362a6a6"
+        },
+        {
+          "path": "templates/workspace/forbidden.html",
+          "sha256": "fcaae2a714233667e0793d16353d8465f3de4a4a03deceff6177ad2eabb4c6de"
+        },
+        {
+          "path": "templates/workspace/home.html",
+          "sha256": "ac0c5edce13b9ea16b822cb179973570da48945adef4aa7b39e74866daa6916c"
+        },
+        {
+          "path": "templates/workspace/illustration.html",
+          "sha256": "5987b348f39a3a7646b977ed40576a6b454e7a7aabfe248bd066a27c0520a5ba"
+        },
+        {
+          "path": "templates/workspace/login.html",
+          "sha256": "a0dd4022a3ebf997746a9bdb6a721c4f74383fcc81ee56ee1074641e36e36294"
+        },
+        {
+          "path": "templates/workspace/logout.html",
+          "sha256": "04acc0846e5f05f1b5cb807ee6dd60755b2f2c6363cb656a4fcbd2cf6845162e"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_create_operator.py",
+          "sha256": "6d139e41faf7d431643e22408ccdf9e615dec8bc2214a0a388383466b9e549d8"
+        },
+        {
+          "path": "tests/test_gallery.py",
+          "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_operator_access.py",
+          "sha256": "ee2cdd61ffa401ad9b3cdc17cc44e40903241f75db6850737ae5cc00ca652e74"
+        },
+        {
+          "path": "tests/test_registre.py",
+          "sha256": "b9531bfe5b757c92c93c63991d835d64f427535e3d916647899772b4139b942f"
+        },
+        {
+          "path": "tests/test_registre_grants.py",
+          "sha256": "b1fc8ad5764cea56d42615670a6ee0124c11e7d1fe0af35c70285e48530ab5cc"
+        },
+        {
+          "path": "tests/test_registre_web.py",
+          "sha256": "9dbb5cbad8b2a1ad63a668cdf6fcd6d5a94398cbe331349b8bf72da1408d4f94"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "workspace/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/access.py",
+          "sha256": "7e120a66ee9c6a70de90fa9a449b1575737ed1b780dc7d45266245540f30e51c"
+        },
+        {
+          "path": "workspace/management/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "workspace/management/commands/create_operator.py",
+          "sha256": "5ad64bf906b69751135cbceb638fb893293b587d604b2929cdd5204c62ebbfda"
+        },
+        {
+          "path": "workspace/views.py",
+          "sha256": "5f6986ad373a07ef9a926c70a3928a175af86cbde9b2f8dc30e76f3fb619617e"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/registre_revue",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

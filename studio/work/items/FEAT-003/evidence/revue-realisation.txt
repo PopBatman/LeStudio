@@ -1,0 +1,5 @@
+de la réalisation de l’atelier
+
+Le 20 novembre 2026, `/root/import_acceptance` a rapproché les critères transversaux de la spécification avec les rapports de livraison des lots 01 à 07 et la recette du lot 08. Le socle de révisions, les pages et menus, le catalogue, l’éditeur structuré, le canvas responsive, les références éditoriales et le portail de dépôt disposent chacun d’une recette de leur parcours. Le dernier sous-lot rattache les frames explicitement acceptées aux pages et occurrences du même document de composition. Les observations HTTPS simulées et les vérifications de création, d’ajout et d’édition sont conservées dans [la revue du lot 08](../FEAT-003-08/REVIEW.md).
+
+**Avis favorable à la clôture de la réalisation locale avec la recette Figma simulée demandée par l’utilisateur.** Le passage à un fichier Figma réel requiert le profil de son site et la qualification du fournisseur avec ce fichier. Le futur éditeur unifié relève de UI-003.

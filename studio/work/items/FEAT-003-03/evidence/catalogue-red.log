@@ -1,0 +1,20 @@
+Found 1 test(s).
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: test_catalogue (unittest.loader._FailedTest.test_catalogue)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_catalogue
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tests/test_catalogue.py", line 6, in <module>
+    from composition import catalogue
+ImportError: cannot import name 'catalogue' from 'composition' (/app/composition/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

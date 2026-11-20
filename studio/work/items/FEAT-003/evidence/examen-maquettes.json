@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-19T11:30:38.816Z",
+  "support": "Prototype HTML autonome, données fictives, aucune écriture produit",
+  "navigateur": "Chromium 156.0.8078.4",
+  "dimensions": [
+    {
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 320,
+      "height": 760
+    }
+  ],
+  "combinaisons_fiche_par_taille": 18,
+  "parcours": [
+    "fiche avec/sans brouillon et liaison absente/confirmée/échec ultérieur",
+    "lecture/gestion/aucun mandat",
+    "lien de saut et création au clavier",
+    "deux points de départ, sauvegarde et reprise",
+    "conflit, comparaison et reprise de la saisie",
+    "disponibilité Figma différée",
+    "projection des détails techniques et divulgation clavier"
+  ],
+  "debordement_horizontal": false,
+  "erreurs": [],
+  "requetes_http": [],
+  "captures": [
+    "fiche-bureau.png",
+    "atelier-bureau.png",
+    "fiche-mobile-lecture.png",
+    "creation-mobile.png"
+  ]
+}

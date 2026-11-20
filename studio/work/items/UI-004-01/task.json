@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "id": "UI-004-01",
+  "kind": "component",
+  "title": "T01 · Audit ciblé et référence produit",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-004-01/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Demande utilisateur : « Lance UI-004-01 — T01 · Audit ciblé et référence produit conformément au Notion et au Workflow AI. » Exécution de l’audit, références, scripts de vérification, revue et publication documentaire ; aucune modification applicative ou de données métier.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/comparaison-reference.html",
+      "sha256": "b574e09a885c440c410654c1005f24a20889fbc433dae31e84b4fc2ceefb71f2",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "illustrative",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/REFERENCE-PRODUIT.md",
+          "sha256": "c0fbd435e5065734d72ec224096b0207520246827041bfcfba4fc96ee1667ef5"
+        },
+        {
+          "path": "work/items/UI-004-01/VISUAL-REVIEW.md",
+          "sha256": "6914c9ac3c5dfa7de49e610d06e265858614fb0f3a1eaaa95da9eaa2c683db6b"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/page-reference.json",
+          "sha256": "3ea077173e8ca174e60029b8592f105bc220918ddd334c174cba31c98dabdadb"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-cibles-sqlite.log",
+      "sha256": "9eaaac63343c2c0904591873db98bc3980c4c033b9b9d7f2a3b04f31b3222929",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/tests-cibles-sqlite.json",
+          "sha256": "731b69c5661f180e09da9f1301a031f351cc50b2024d0accda3c9b28632fc5f8"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/validation-audit.json",
+      "sha256": "9d83b82edba0d16e728dde0c6a701211995e678ac02c669e60fe903bb9dd63d2",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/validate-audit.py",
+          "sha256": "0f61fd673f956a770d0c5f5d64f615c6b0153186f6a0e1d0a7461071e0ffd1ec"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/audit-browser.cjs",
+          "sha256": "a51ea97c01df566d52627a9c923f9efd67e88e4a1433a79effc7a20c72e8bf86"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/check-reference.cjs",
+          "sha256": "714546b676d8858906cfc5ffd8548003b152408706cbfbdad17a8a184ae9f856"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/collect-sources.py",
+          "sha256": "ac40870cb62a3cbf8c984e06bc29a22399a270645441d5077416959225385db4"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/audit-browser.json",
+      "sha256": "9fe92c000c2b8f8a71ff15c97f02e38a44e7af231efc9063a9f306985e47019e",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/audit-browser.cjs",
+          "sha256": "a51ea97c01df566d52627a9c923f9efd67e88e4a1433a79effc7a20c72e8bf86"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/page-reference.json",
+          "sha256": "3ea077173e8ca174e60029b8592f105bc220918ddd334c174cba31c98dabdadb"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/installe-edition-1440.png",
+      "sha256": "3f1b71c7b4652eacd028257785e995cdf980477125850c1ff3bb88a3d1e085d5",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/audit-browser.cjs",
+          "sha256": "a51ea97c01df566d52627a9c923f9efd67e88e4a1433a79effc7a20c72e8bf86"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/page-reference.json",
+          "sha256": "3ea077173e8ca174e60029b8592f105bc220918ddd334c174cba31c98dabdadb"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/installe-edition-390.png",
+      "sha256": "0ad874bced3e83f0acaacdc254c8a0bd0ba893055f377d22ea97b89d90fe733a",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/audit-browser.cjs",
+          "sha256": "a51ea97c01df566d52627a9c923f9efd67e88e4a1433a79effc7a20c72e8bf86"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/page-reference.json",
+          "sha256": "3ea077173e8ca174e60029b8592f105bc220918ddd334c174cba31c98dabdadb"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/check-reference.json",
+      "sha256": "b5b1951ce46faf29aae82bbacf43c4df0154fafc1df84411c047fa496a3dcd9c",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/evidence/check-reference.cjs",
+          "sha256": "714546b676d8858906cfc5ffd8548003b152408706cbfbdad17a8a184ae9f856"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/comparaison-reference.html",
+          "sha256": "b574e09a885c440c410654c1005f24a20889fbc433dae31e84b4fc2ceefb71f2"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-finale.md",
+      "sha256": "fcd704bc6063061eee32ab006bc7fbe8ea25398587ff81bffd2985b48e49b72a",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "passed",
+      "active": true,
+      "inputs": [
+        {
+          "path": "work/items/UI-004-01/SPEC.md",
+          "sha256": "196aa64255c31ea25afda221fe56011edb5dcf7534b6ef7ff62f46f5fefbeab8"
+        },
+        {
+          "path": "work/items/UI-004-01/TASKLIST.md",
+          "sha256": "08dce183fd4a29264530c584052f07963113828be4699f4d54249bfea1d0d055"
+        },
+        {
+          "path": "work/items/UI-004-01/ARCHITECTURE.md",
+          "sha256": "b7f4d12cb66358fdb3052bdf8a6ccd73e6d9f31ad941091ff5fe7d1b4813c464"
+        },
+        {
+          "path": "work/items/UI-004-01/SECURITY.md",
+          "sha256": "dce742c5a6f21a5a9cb0ab16c8808f183fbda90755f96c3a33b42fe344908d97"
+        },
+        {
+          "path": "work/items/UI-004-01/VISUAL-REVIEW.md",
+          "sha256": "6914c9ac3c5dfa7de49e610d06e265858614fb0f3a1eaaa95da9eaa2c683db6b"
+        },
+        {
+          "path": "work/items/UI-004-01/AUDIT.md",
+          "sha256": "20d6f85b19417a7936cdac2701f14267cf01bf420caf47173f48a8034d4147b9"
+        },
+        {
+          "path": "work/items/UI-004-01/INVENTAIRE-T21.md",
+          "sha256": "472c59ca294a9bd8a3db6aeaebcf62de980beb7911a5d3658495888f02821c99"
+        },
+        {
+          "path": "work/items/UI-004-01/REFERENCE-PRODUIT.md",
+          "sha256": "c0fbd435e5065734d72ec224096b0207520246827041bfcfba4fc96ee1667ef5"
+        },
+        {
+          "path": "work/items/UI-004-01/DECISION-FRONTEND.md",
+          "sha256": "5ed28a607c62a2110f1b8ce394d4f13af0165f3ef932bd28bb09346e13488df6"
+        },
+        {
+          "path": "work/items/UI-004-01/REPORT.md",
+          "sha256": "bcfdbf8ff41ff529608f234d5f9a131d61e67f34d96f0e03658fd6f774d77a5d"
+        },
+        {
+          "path": "work/items/UI-004-01/EVIDENCE.md",
+          "sha256": "7b565d0c17089475896286aaecbe141115da79560415b8a0296475b76ee4a473"
+        },
+        {
+          "path": "work/items/UI-004-01/evidence/manifest-sources.json",
+          "sha256": "91f6608d0bc1f306f83cdde26ff31aaaecdb629651cdcce60b64991a4acdd47d"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/audit-browser-premier-essai.json",
+      "sha256": "de025e83352de5de6480bcb6a25f87f1ea21cbff15f4abd45e55ad5ef8bb043e",
+      "observed_at": "2026-11-20T17:23:55.965655+00:00",
+      "revision": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+      "outcome": "failed",
+      "active": false,
+      "inputs": [],
+      "reason": "Premier essai cherchait un titre absent de R18. Remplacé par collecte du texte réellement présent, passée ; précondition titre/image documentée pour T03."
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md et evidence/revue-finale.md — /root/t01_revue, revue indépendante finale",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": "Livraison documentaire des résultats de l’audit T01 demandée par son lancement ; aucun déploiement ni publication de site.",
+    "actions": [
+      "release"
+    ]
+  }
+}

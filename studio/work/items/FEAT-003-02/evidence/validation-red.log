@@ -1,0 +1,56 @@
+EEEF
+======================================================================
+ERROR: test_copy_preserves_forward_references_external_urls_and_order (tests.test_navigation_validation.NavigationValidationTests.test_copy_preserves_forward_references_external_urls_and_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_validation.py", line 31, in test_copy_preserves_forward_references_external_urls_and_order
+    self.assertEqual(self.check(), original)
+                     ^^^^^^^^^^^^
+  File "/app/tests/test_navigation_validation.py", line 27, in check
+    return check_document(self.doc if doc is None else doc, self.site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/composition/validation.py", line 234, in check_document
+    raise ValidationError("Version du schéma de composition incompatible.", code="incompatible_schema")
+django.core.exceptions.ValidationError: ['Version du schéma de composition incompatible.']
+
+======================================================================
+ERROR: test_count_and_depth_boundaries (tests.test_navigation_validation.NavigationValidationTests.test_count_and_depth_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_validation.py", line 89, in test_count_and_depth_boundaries
+    self.check()
+  File "/app/tests/test_navigation_validation.py", line 27, in check
+    return check_document(self.doc if doc is None else doc, self.site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/composition/validation.py", line 234, in check_document
+    raise ValidationError("Version du schéma de composition incompatible.", code="incompatible_schema")
+django.core.exceptions.ValidationError: ['Version du schéma de composition incompatible.']
+
+======================================================================
+ERROR: test_external_destination_policy (tests.test_navigation_validation.NavigationValidationTests.test_external_destination_policy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_validation.py", line 75, in test_external_destination_policy
+    self.check()
+  File "/app/tests/test_navigation_validation.py", line 27, in check
+    return check_document(self.doc if doc is None else doc, self.site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/composition/validation.py", line 234, in check_document
+    raise ValidationError("Version du schéma de composition incompatible.", code="incompatible_schema")
+django.core.exceptions.ValidationError: ['Version du schéma de composition incompatible.']
+
+======================================================================
+FAIL: test_integrity_errors_report_invalid_document (tests.test_navigation_validation.NavigationValidationTests.test_integrity_errors_report_invalid_document)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_navigation_validation.py", line 65, in test_integrity_errors_report_invalid_document
+    self.assertEqual(caught.exception.code, "invalid_document")
+AssertionError: 'incompatible_schema' != 'invalid_document'
+- incompatible_schema
++ invalid_document
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=1, errors=3)

@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-11-18T16:44:25.244365+00:00",
+  "reviewer": "/root/operator_review",
+  "independent": true,
+  "verdict": "favorable",
+  "revision": "sha256:1fe5913edeb9f90318e40b437e0afd3eb105f05fd0d8ee9ad7c6a1d3d3060697",
+  "observations": "19 tests SQLite rejoués, contrôle HTTP et du premier focus, cinq captures et sept largeurs de fenêtre examinées."
+}

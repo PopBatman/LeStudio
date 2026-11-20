@@ -1,0 +1,147 @@
+{
+  "certificat_lecture": {
+    "diagnostic": 200,
+    "préparation": 403
+  },
+  "a": {
+    "status": "ok",
+    "manifest": {
+      "site_id": "10b38342-5add-4a8f-a289-9f2e17ac5738",
+      "instance_id": "05de840e-f0c6-4768-bdad-cbc53da84455",
+      "revision_id": "55080c6f-fbae-4e0c-9242-84546d8dd074",
+      "revision_number": 3,
+      "page_id": "35e1428f-b9ab-4aaa-9fe5-58828438e227",
+      "sha256": "63c9bc5c1aef08b9451ac201503109ad3342d8fb21511fff72215856399be433",
+      "image_digest": "sha256:2db6b1f778c4340dbb2f1b4c70a10542eaa4761531e43fb1e6c66ae4fb995d60",
+      "engine_version": "1.0.0",
+      "wagtail_version": "7.4.4",
+      "block_ids": [
+        "0011efb0-c1a7-4474-bad1-ba0d4ded540d",
+        "cf1461e3-0568-4ba8-8d3a-4bd2ecf9cdcf",
+        "3690023e-c4fd-454b-96f0-7f525d91ad6a",
+        "5a835286-362d-42d4-ab6e-b658e603ab7a",
+        "f2cefd4f-daac-4714-adc9-684f59cd9260"
+      ],
+      "definitions": [
+        {
+          "key": "heading",
+          "renderer": "heading",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "text",
+          "renderer": "text",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "container",
+          "renderer": "container",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "image",
+          "renderer": "image",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "article",
+          "renderer": "article",
+          "scope": "global",
+          "version": 1
+        }
+      ],
+      "articles": {
+        "0fe4c9a5-409e-4340-b17c-18cf9d714611": {
+          "page_id": 4,
+          "published_revision_id": "2"
+        }
+      },
+      "media": {
+        "a9875909-803c-4374-8c80-b110a11fb60c": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+      },
+      "html_sha256": "b40d32793f48e17346422e7faa013775db9899e5433a99f654f69321ac3cd883",
+      "renderer_sha256": "9a09a9723b6d051d04001541ed86b65f3d2f13ec11e44b63d82c66202246f71f",
+      "css_sha256": "ffaff0cd3f18b746f989804205d65162252bd8f4097d8ae49ec2bcba01342826",
+      "fonts": {
+        "dm-sans": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    }
+  },
+  "b": {
+    "status": "ok",
+    "manifest": {
+      "site_id": "7ecf2d70-8ec4-4917-8823-f36c02c5b379",
+      "instance_id": "001507df-30fc-4dac-b5b8-bb64ffd9360f",
+      "revision_id": "442dc489-9902-42e5-ab90-addffb8cf69f",
+      "revision_number": 3,
+      "page_id": "b80e8e41-fac3-4744-9a21-437aae731263",
+      "sha256": "34ef72f27e4ed927a7c1a8326498a12c734843c33263b30ec58018737a05e7fb",
+      "image_digest": "sha256:2db6b1f778c4340dbb2f1b4c70a10542eaa4761531e43fb1e6c66ae4fb995d60",
+      "engine_version": "1.0.0",
+      "wagtail_version": "7.4.4",
+      "block_ids": [
+        "0bbaee07-e40e-4737-a563-0bd351892529",
+        "bc1552d4-3ec2-434d-9817-62bf1035cae6",
+        "ad21b8cc-5cdb-4788-9f4b-1255a7eaab4e",
+        "168c85e6-1d06-4574-b9c1-b1643afd1334",
+        "eda9a080-97d9-4fda-9d0d-502e3e1f888c"
+      ],
+      "definitions": [
+        {
+          "key": "heading",
+          "renderer": "heading",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "text",
+          "renderer": "text",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "container",
+          "renderer": "container",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "image",
+          "renderer": "image",
+          "scope": "global",
+          "version": 1
+        },
+        {
+          "key": "article",
+          "renderer": "article",
+          "scope": "global",
+          "version": 1
+        }
+      ],
+      "articles": {
+        "0448d890-9900-4c83-838a-8ed661186f48": {
+          "page_id": 4,
+          "published_revision_id": "2"
+        }
+      },
+      "media": {
+        "e3ad0a95-d065-4e80-93a2-1d3c29a11f30": "c82f87e90c485351da7b318b1a7f514d060c09799e42d6a9febddaf810861087"
+      },
+      "html_sha256": "7cd45e35920d037c9c34bed5aca916cb4be962a84f7eafd639003df497c86db1",
+      "renderer_sha256": "9a09a9723b6d051d04001541ed86b65f3d2f13ec11e44b63d82c66202246f71f",
+      "css_sha256": "8b9c09d8d0d671bfc963f5c50285c3a4b011fff39632e69572821724adf6196c",
+      "fonts": {
+        "dm-sans": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      }
+    }
+  },
+  "restriction_article": "inaccessible",
+  "retrait_media": "inaccessible",
+  "coupure": "unavailable",
+  "reprise": "même manifeste après rétablissement",
+  "observed_at": "2026-11-20T08:50:37.679596+00:00"
+}

@@ -1,0 +1,32 @@
+{
+    "demo_a": {
+        "consultation": 200,
+        "editeur_present": true,
+        "post_lot_vide": 422
+    },
+    "demo_b": {
+        "consultation": 200,
+        "editeur_present": true,
+        "post_lot_vide": 422
+    },
+    "collab_a": {
+        "consultation": 200,
+        "editeur_present": true,
+        "post_lot_vide": 422
+    },
+    "collab_b": {
+        "consultation": 404,
+        "editeur_present": false,
+        "post_lot_vide": 404
+    },
+    "lecture_a": {
+        "consultation": 200,
+        "editeur_present": false,
+        "post_lot_vide": 403
+    },
+    "lecture_b": {
+        "consultation": 404,
+        "editeur_present": false,
+        "post_lot_vide": 404
+    }
+}

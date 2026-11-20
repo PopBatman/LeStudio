@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "studio-project",
+      "title": "Studio — projet",
+      "path": "project/PROJECT.md",
+      "scope": "studio"
+    },
+    {
+      "id": "studio-scope",
+      "title": "Workflow AI — mandat de livraison",
+      "path": "docs/SESSION-SCOPE.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "studio-decisions",
+      "title": "Studio — décisions",
+      "path": "project/DECISIONS.md",
+      "scope": "studio"
+    },
+    {
+      "id": "studio-stack",
+      "title": "Studio — direction technologique",
+      "path": "project/STACK.md",
+      "scope": "studio"
+    },
+    {
+      "id": "architecture-contracts",
+      "title": "Studio — contrats feature, connecteur et UI",
+      "path": "docs/ARCHITECTURE-CONTRACTS.md",
+      "scope": "studio"
+    },
+    {
+      "id": "workflow-installation",
+      "title": "Workflow AI — installation",
+      "path": "docs/INSTALLATION.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-capabilities",
+      "title": "Workflow AI — capacités réelles",
+      "path": "docs/CAPABILITIES.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-memory",
+      "title": "Workflow AI — mémoire",
+      "path": "docs/MEMORY-MODEL.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-common",
+      "title": "Workflow AI — cycle commun",
+      "path": "workflows/FEATURE-WORKFLOW.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-planning",
+      "title": "Workflow AI — planification",
+      "path": "workflows/FEATURE-PLANNING.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-tdd",
+      "title": "Workflow AI — TDD",
+      "path": "workflows/FEATURE-TDD.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-visual",
+      "title": "Workflow AI — revue visuelle",
+      "path": "workflows/FEATURE-VISUAL-REVIEW.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-connectors",
+      "title": "Workflow AI — connecteurs",
+      "path": "workflows/CONNECTOR-WORKFLOW.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "workflow-components",
+      "title": "Workflow AI — composants UX/UI",
+      "path": "workflows/COMPONENT-WORKFLOW.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-execution",
+      "title": "Workflow AI — exécution",
+      "path": "governance/EXECUTION-POLICY.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-permissions",
+      "title": "Workflow AI — permissions",
+      "path": "governance/AGENT-PERMISSIONS.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-quality",
+      "title": "Workflow AI — contrôles qualité",
+      "path": "governance/QUALITY-GATES.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-testing",
+      "title": "Workflow AI — stratégie de test",
+      "path": "governance/TESTING-POLICY.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-security",
+      "title": "Workflow AI — sécurité",
+      "path": "governance/SECURITY-POLICY.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "governance-consistency",
+      "title": "Workflow AI — concordance documentaire",
+      "path": "governance/DOCUMENT-CONSISTENCY.md",
+      "scope": "workflow-ai"
+    },
+    {
+      "id": "architecture-first-lot",
+      "title": "Studio — premier lot d’architecture",
+      "path": "docs/FIRST-ARCHITECTURE-LOT.md",
+      "scope": "studio"
+    },
+    {
+      "id": "arch-001-spec",
+      "title": "ARCH-001 — spécification",
+      "path": "work/items/ARCH-001/SPEC.md",
+      "scope": "studio"
+    },
+    {
+      "id": "arch-001-tasklist",
+      "title": "ARCH-001 — tasklist",
+      "path": "work/items/ARCH-001/TASKLIST.md",
+      "scope": "studio"
+    }
+  ]
+}

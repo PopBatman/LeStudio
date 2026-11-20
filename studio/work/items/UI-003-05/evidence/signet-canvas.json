@@ -1,0 +1,15 @@
+{
+  "mode": "compatibility",
+  "site": "B",
+  "revision": 3,
+  "ancienne_revision": 2,
+  "largeur_apres_preparation": 455,
+  "selection_apres_preparation": true,
+  "bloc_historique": true,
+  "section_historique": true,
+  "ancienne_revision_lecture_seule": true,
+  "cible_absente": true,
+  "formulaire_perime": 409,
+  "repli_page_et_occurrence": true,
+  "revision_inchangee": true
+}

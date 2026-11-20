@@ -1,0 +1,39 @@
+[
+  {
+    "observed_at": "2026-11-20T17:05:56.749683+00:00",
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "command": [
+      "/usr/bin/python3",
+      "workflow-ai/scripts/workflow.py",
+      "check",
+      "--id",
+      "UI-004",
+      "--phase",
+      "planning"
+    ],
+    "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"PLANNED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 3,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "observed_at": "2026-11-20T17:05:56.776034+00:00",
+    "cwd": "/home/admincsd/Documents/LeStudio",
+    "command": [
+      "/usr/bin/python3",
+      "workflow-ai/scripts/workflow.py",
+      "fingerprint",
+      "--id",
+      "UI-004"
+    ],
+    "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "exit_code": 0,
+    "stdout": "{\n  \"task\": \"UI-004\",\n  \"contract_sha256\": \"041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "check": "Liens locaux, marqueurs incomplets, 14 tâches uniques, empreintes des 29 sources et documents du cadrage",
+    "outcome": "PASS",
+    "errors": []
+  }
+]

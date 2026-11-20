@@ -1,0 +1,15 @@
+Avant intégration de la section. SQLite en mémoire, ancienne image Studio.
+Creating test database for alias 'default'...
+Found 8 test(s).
+System check identified no issues (0 silenced).
+FAIL: test_consultation_is_read_only_for_all_requests (tests.test_site_connection_web.SiteConnectionPageTests.test_consultation_is_read_only_for_all_requests)
+FAIL: test_current_then_expired_attempt_uses_its_start (tests.test_site_connection_web.SiteConnectionPageTests.test_current_then_expired_attempt_uses_its_start) (label='Vérification en cours')
+FAIL: test_current_then_expired_attempt_uses_its_start (tests.test_site_connection_web.SiteConnectionPageTests.test_current_then_expired_attempt_uses_its_start) (label='Dernière vérification expirée')
+FAIL: test_empty_site_without_domain (tests.test_site_connection_web.SiteConnectionPageTests.test_empty_site_without_domain)
+FAIL: test_failure_before_first_success_and_incomplete_success (tests.test_site_connection_web.SiteConnectionPageTests.test_failure_before_first_success_and_incomplete_success) (code='incompatible')
+FAIL: test_failure_before_first_success_and_incomplete_success (tests.test_site_connection_web.SiteConnectionPageTests.test_failure_before_first_success_and_incomplete_success) (code='connected')
+FAIL: test_manager_sees_persisted_versions_identity_and_local_dates (tests.test_site_connection_web.SiteConnectionPageTests.test_manager_sees_persisted_versions_identity_and_local_dates)
+FAIL: test_reader_sees_last_failure_and_keeps_last_success (tests.test_site_connection_web.SiteConnectionPageTests.test_reader_sees_last_failure_and_keeps_last_success)
+FAIL: test_unknown_diagnostic_partial_versions_and_malformed_values (tests.test_site_connection_web.SiteConnectionPageTests.test_unknown_diagnostic_partial_versions_and_malformed_values)
+Ran 8 tests in 0.056s
+FAILED (failures=9)

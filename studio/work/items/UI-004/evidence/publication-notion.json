@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-20",
+  "page_id": "41e49e23bbdb81eab216e51aec661753",
+  "page_url": "https://app.notion.com/p/41e49e23bbdb81eab216e51aec661753",
+  "contract_sha256": "041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+  "attachment_id": "41e49e23-bbdb-8106-be9e-00b2048e6e1e",
+  "content_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"page_id\":\"41e49e23-bbdb-81ea-b216-e51aec661753\"}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "properties_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"page_id\":\"41e49e23-bbdb-81ea-b216-e51aec661753\"}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "properties": {
+    "Étape workflow": "PLANNED",
+    "Action Codex": "Aucune",
+    "Constat": "État rapproché du dépôt",
+    "Bloqué": "__NO__",
+    "Motif du blocage": "",
+    "Dossier local": "studio/work/items/UI-004/",
+    "Dernier retour": "20/11/2026 — Cadrage parent v1 terminé et relu : 14 sous-lots / 21 tâches globales ; T21 intégré, séquence T19→T21→T20. Plan et dossier joints ; prochaine unité T01 à cadrer. Aucun nouvel éditeur déclaré livré.",
+    "Révision examinée": "Contrat SHA-256 041ed40d5123dff30b451866d3239eef670ec68a122ea5bec72dab7009ea66df",
+    "Rapport et preuves": "studio/work/items/UI-004/REPORT.md ; SPEC/TASKLIST/ARCHITECTURE/SECURITY/VISUAL-REVIEW/RESEARCH ; REVIEW.md et EVIDENCE.md. Dossier de cadrage joint à la carte ; planning PASS, revue indépendante favorable. Captures du prototype simulé, pas du nouvel éditeur.",
+    "Exécution en cours": ""
+  },
+  "note": "Mises à jour ciblées réussies sans avertissement ; contenu préexistant et dépendances préservés. Aucun autre lot modifié."
+}

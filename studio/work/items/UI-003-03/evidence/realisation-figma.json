@@ -1,0 +1,11 @@
+{
+  "site": "B fictif",
+  "origine": "Remise FEAT-003-08 effectivement confirmée en append via imports.confirm sur fournisseur simulé",
+  "page": "Collection Figma",
+  "revision_avant": 5,
+  "revision_apres": 6,
+  "meme_uuid_occurrence": true,
+  "rendu_wagtail": "Texte sauvegardé observé dans document privé sur moteur B",
+  "page_modele_initiale_identique": true,
+  "erreurs_js": []
+}

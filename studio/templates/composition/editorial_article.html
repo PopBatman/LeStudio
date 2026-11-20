@@ -1,0 +1,17 @@
+<h3>Article édité dans Wagtail</h3>
+<p>Le corps et la publication de l’article se gèrent dans Wagtail. Le brouillon Studio conserve son emplacement et la révision publiée choisie.</p>
+{% if article %}
+<dl class="rg-dl ed-values">
+{% if article.page_number %}<div><dt>Page Wagtail référencée</dt><dd>{{ article.page_number }}</dd></div>{% endif %}
+{% if article.expected_revision %}<div><dt>Révision Wagtail conservée dans Studio</dt><dd>{{ article.expected_revision }}</dd></div>{% endif %}
+</dl>
+{% if not proposal %}
+{% if article.status == 'concordant' %}<p>La dernière vérification correspond à la référence conservée.</p>
+{% elif article.status == 'divergent' %}<p>Une autre révision publiée a été observée.</p>{% if manage and not action %}<a href="?format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}&amp;page={{ page_id }}&amp;section={{ section_id }}&amp;node={{ node_id }}&amp;action=article_reference&amp;comparer=1#inspecteur">Comparer les révisions</a>{% endif %}
+{% else %}<p>Référence à vérifier.</p>{% endif %}
+{% if article.status == 'unavailable' and not article.observation %}<p>Vérification éditoriale indisponible. Vérifiez le raccordement et la compatibilité du moteur.</p>{% endif %}
+{% include 'composition/editorial_observation.html' with result=article.observation %}
+{% endif %}
+{% elif not proposal %}<p>Aucune référence associée. Pour vérifier un article, le site doit être raccordé à une instance Wagtail compatible.</p>{% endif %}
+{% if proposal %}<div id="ed-observation" class="rg-feedback" role="status" tabindex="-1">{% include 'composition/editorial_observation.html' with result=proposal %}</div>{% endif %}
+{% if manage %}{% if admin_url %}<a href="{{ admin_url }}" target="_blank" rel="noopener noreferrer">Ouvrir l’administration Wagtail (nouvel onglet)</a>{% else %}<p>Pour rédiger, ouvrez votre administration Wagtail habituelle avec votre compte éditorial.</p>{% endif %}{% endif %}

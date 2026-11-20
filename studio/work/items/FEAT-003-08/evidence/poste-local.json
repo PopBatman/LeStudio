@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-20T09:12:12.871236+00:00",
+  "avant": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "après": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte": "2f301b6d7a7ec2de18bd6a19fd0503e6775e6ebd65019348e3fea5b37f12020a",
+    "raccordements": 1
+  },
+  "santé": "ok",
+  "même_instance_wagtail": true,
+  "fichiers_app_images_testee_et_installee_identiques": true,
+  "données_fictives": "laboratoire isolé uniquement"
+}

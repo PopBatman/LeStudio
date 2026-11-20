@@ -1,0 +1,10 @@
+# Revue indépendante de réalisation · UI-003-02
+20 novembre 2026 · /root/u302_real_review
+
+Le parcours depuis la fiche Site prépare un reçu d’aperçu pour l’opérateur, la session, le site, la révision et la page. Dans le code revu, le canvas utilise le résultat revérifié de FEAT-004. L’instrumentation est ajoutée à une enveloppe reconnue, après validation du rendu. La politique du document autorise le seul module Studio par empreinte. L’iframe garde une origine opaque et une politique sans connexion sortante. La coque vérifie la fenêtre, la liaison de l’ouverture et les identités du document avant de traiter les mesures par canal dédié. L’inspecteur détermine l’identité d’après le brouillon du site.
+
+J’ai comparé indépendamment les pixels RGB des trois paires de captures collectées dans le laboratoire. Les captures de référence et de canvas sont identiques à 1200 × 637, 820 × 637 et 390 × 551 px. Le relevé navigateur retrouve les mêmes 17 occurrences, les styles et la géométrie sur ces vues. Il trace la sélection d’un enfant imbriqué, le défilement vers le dernier bloc au clavier, la consultation sur un second moteur et les deux refus HTTP 404 hors contexte. Les états avant/après consignés dans non-publication.json et pages-publiees.json sont identiques.
+
+Le traitement de l’échéance du document instrumenté a été corrigé pendant la revue. L’en-tête Refresh du document est désormais borné à la durée de vie restante du reçu, comme dans l’aperçu de référence. La coque masque également le rendu à l’échéance et vérifie de nouveau l’accès après un changement de visibilité. J’ai rejoué les cinq tests tests.test_builder_canvas dans un conteneur sans réseau, SQLite en mémoire, sur les sources corrigées. Tous passent, y compris le contrôle de cet en-tête, la révocation pendant un échec du moteur, le reçu historique et le repli protégé.
+
+Avis favorable pour le canvas de consultation. Les mesures de parité portent sur les pages, les formats et la version Chromium du laboratoire. Le délai d’observation d’une révocation dans un onglet ouvert dépend du contrôle périodique de la coque (15 secondes entre vérifications) et de la réponse du serveur.

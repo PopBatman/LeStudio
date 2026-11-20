@@ -1,0 +1,11 @@
+{
+  "navigateur": "156.0.8078.4",
+  "fenetre": 390,
+  "methode": "Événements tactiles Chromium via CDP, serveur Django et base PostgreSQL de recette fictive.",
+  "observations": [
+    "Annulation native touchCancel : ordre conservé, zéro POST.",
+    "Glissement de la deuxième occurrence devant la première, aucun POST intermédiaire, un seul POST au relâchement.",
+    "Ordre conservé après rechargement.",
+    "Zoom 100 % activé au toucher, largeur logique de 390 px avec défilement local."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "socle": "Image Studio locale de FEAT-003-05, SQLite migrée en mémoire, réseau désactivé",
+  "révision_initiale": 1,
+  "dernière_révision": 5,
+  "schéma_final": 4,
+  "geste_vérifié": [
+    "Titre modifié, bouton HTTPS et image attribuée avec alternative relus",
+    "Identité et largeur mobile du titre conservées",
+    "URL HTTP, image de site étranger et base de révision obsolète refusées, tête intacte",
+    "Révision initiale relue à l’identique",
+    "Résolveur local wagtail_content indisponible"
+  ]
+}

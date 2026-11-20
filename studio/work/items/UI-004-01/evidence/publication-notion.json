@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-20",
+  "page_id": "41e49e23bbdb81a2b7e5e3f522012be7",
+  "url": "https://app.notion.com/p/41e49e23bbdb81a2b7e5e3f522012be7",
+  "state": "DONE",
+  "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+  "attachments": [
+    "41e49e23-bbdb-8161-aea5-00b280cd6d52",
+    "41e49e23-bbdb-81ea-87f2-00b2ba3a619b"
+  ],
+  "content_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"page_id\":\"41e49e23-bbdb-81a2-b7e5-e3f522012be7\"}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "properties_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"page_id\":\"41e49e23-bbdb-81a2-b7e5-e3f522012be7\"}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "parent_updated": true,
+  "note": "Écritures ciblées réussies sans avertissement ; cases de travail et AC cochées sur preuves ; prochaine action T02, pas de lancement automatique."
+}

@@ -1,0 +1,5 @@
+<c-vars variant="success" title />
+<div class="alert {% if variant == 'warning' %}alert-warning{% else %}alert-success{% endif %}" {{ attrs }}>
+  <strong>{{ title }}</strong>
+  <p>{{ slot }}</p>
+</div>

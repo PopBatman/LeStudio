@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-20T09:09:18.267Z",
+  "chromium": "156.0.8078.4",
+  "source": "Réponses Figma simulées au transport sur un site de recette éphémère. Application, profil par site, normalisation, décisions, révision et atelier Django réels.",
+  "largeurs": [
+    1280,
+    320
+  ],
+  "actions": [
+    "remise puis inventaire au clavier",
+    "sélection d’une frame mobile",
+    "correction titre vers texte et encre #23344B",
+    "DM Sans accepté",
+    "motif inconnu écarté",
+    "choix des pages, confirmation R1 et réouverture de la page dans l’atelier",
+    "relecture du résultat"
+  ],
+  "debordement_mobile": false,
+  "erreurs_js": [],
+  "origines_externes_contactees": []
+}

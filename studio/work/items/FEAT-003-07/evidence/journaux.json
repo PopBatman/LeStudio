@@ -1,0 +1,11 @@
+{
+  "pile": "Studio et frontal NGINX isolés",
+  "requêtes_remise_et_reçu_observées": true,
+  "marqueurs_vérifiés": [
+    "codes d’invitation",
+    "valeurs de sessions Studio",
+    "commentaire fictif",
+    "URL et identifiants Figma"
+  ],
+  "apparitions_marqueurs": 0
+}

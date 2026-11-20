@@ -1,0 +1,20 @@
+{
+  "origine": "Canvas privé Wagtail de recette",
+  "gestes": [
+    {
+      "mode": "double",
+      "selection": "Titre · Atelier des encres · B",
+      "status": ""
+    },
+    {
+      "mode": "click",
+      "selection": "Bouton · En savoir plus",
+      "status": "Composant inséré."
+    },
+    {
+      "mode": "drag",
+      "selection": "Bouton · En savoir plus",
+      "status": "Composant inséré."
+    }
+  ]
+}

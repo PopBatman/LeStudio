@@ -1,0 +1,15 @@
+services:
+  admin-local:
+    extends:
+      file: instance.yaml
+      service: engine
+    environment:
+      DJANGO_SETTINGS_MODULE: cmengine.admin_settings
+      ENGINE_ALLOWED_HOSTS: 127.0.0.1,localhost
+      ENGINE_ADMIN_ORIGIN: http://127.0.0.1:${ENGINE_ADMIN_PORT:?}
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000", "--noreload", "--insecure"]
+    ports:
+      - "127.0.0.1:${ENGINE_ADMIN_PORT:?}:8000"
+    networks: [browser]
+networks:
+  browser: {}

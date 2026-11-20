@@ -1,0 +1,52 @@
+{
+  "chromium": "156.0.8078.4",
+  "parcours": [
+    {
+      "largeur": 1440,
+      "hauteur": 900,
+      "observations": [
+        "lien de saut et activation clavier",
+        "modèle, départ vierge, Figma indisponible",
+        "insertion de section et de composant",
+        "édition, ordre et reprise en mémoire",
+        "erreur de champ et annulation",
+        "comparaison après conflit et seconde sauvegarde explicite",
+        "lecture seule, refus de site et largeur du document"
+      ]
+    },
+    {
+      "largeur": 390,
+      "hauteur": 844,
+      "observations": [
+        "lien de saut et activation clavier",
+        "modèle, départ vierge, Figma indisponible",
+        "insertion de section et de composant",
+        "édition, ordre et reprise en mémoire",
+        "erreur de champ et annulation",
+        "comparaison après conflit et seconde sauvegarde explicite",
+        "lecture seule, refus de site et largeur du document"
+      ]
+    },
+    {
+      "largeur": 320,
+      "hauteur": 760,
+      "observations": [
+        "lien de saut et activation clavier",
+        "modèle, départ vierge, Figma indisponible",
+        "insertion de section et de composant",
+        "édition, ordre et reprise en mémoire",
+        "erreur de champ et annulation",
+        "comparaison après conflit et seconde sauvegarde explicite",
+        "lecture seule, refus de site et largeur du document"
+      ]
+    }
+  ],
+  "captures": [
+    "editeur-bureau.png",
+    "conflit-bureau.png",
+    "creation-mobile.png",
+    "erreur-mobile.png"
+  ],
+  "erreurs": [],
+  "requetes_http": []
+}

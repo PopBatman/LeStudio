@@ -1,0 +1,11 @@
+{
+  "migration": "composition.0004_editorial",
+  "avant": {
+    "revisions": 1,
+    "empreinte": "96e08eb11a583e2747e95b2df53ca72eccde2948f8da059a75f9a215d51d9858"
+  },
+  "apres": {
+    "revisions": 1,
+    "empreinte": "96e08eb11a583e2747e95b2df53ca72eccde2948f8da059a75f9a215d51d9858"
+  }
+}

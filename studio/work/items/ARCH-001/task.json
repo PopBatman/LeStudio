@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "id": "ARCH-001",
+  "kind": "architecture",
+  "title": "Fondations locales du Studio central",
+  "state": "DONE",
+  "ui_required": false,
+  "scope": {
+    "allowed_paths": [
+      "manage.py",
+      "central/",
+      "tests/",
+      "infra/",
+      "scripts/",
+      "requirements.txt",
+      "Dockerfile",
+      "compose.yaml",
+      ".dockerignore",
+      ".gitignore",
+      ".gitlab-ci.yml",
+      "local.env.example",
+      "README.md",
+      "project/",
+      "docs/FIRST-ARCHITECTURE-LOT.md",
+      "work/items/ARCH-001/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Instruction utilisateur du 18 novembre 2026 « Lance ARCHI-001 dans studio/ », en réponse au lancement proposé de ARCH-001.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "test",
+      "path": "evidence/configuration-red.json",
+      "sha256": "bf0da76985ca79dbb9ce96afbf455c8c4749d420f6fb8a6d0cb3d97651701c84",
+      "observed_at": "2026-11-18T15:15:31.243979+00:00",
+      "revision": "sha256:d0897a710d100748e16c48e1bba4a441a10484b71defdeea653cc0cd46453ee7",
+      "outcome": "failed",
+      "inputs": [
+        {
+          "path": "manage.py",
+          "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "dbd3701217736b0290cfdb4b14d7aafc5efeee0092f084e1da42b4bb170637bd"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "06375ec2cb258edd0b21e7e38b105e9bd24dd2492084fbe6ac81138f719d5db6"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+        }
+      ],
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/integration.json",
+      "sha256": "f696907458ecac19a7708f3f41525be478f2b9c391c4833f7db1dd27c929d17b",
+      "observed_at": "2026-11-18T15:18:44.677915+00:00",
+      "revision": "sha256:3eb1e56c0f7ae24a399d9a57666b484d9aa99d5960dcc32f5d0b5a0d0c1b6a92",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "96ecfa6b860e7b3155fafaf83ff61136b3ad6df11e60f0b3388499917c4f1cca"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "bd194a64a3b3c2d57a33af9d7e7816023a59806f1f0cf8e2affed1c8f9bbdb0c"
+        },
+        {
+          "path": ".gitlab-ci.yml",
+          "sha256": "b18b6b6ea317eed242830a2cc30aff359b3bdb513f5b03969f0d33c7f451640b"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6f3c956996040c41ce9d9283765dbaabde2b4e3ce1f19386d0c61c5a25d06b3b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "293013a59c9ee373bde921dd4f2449cad97cbef6e9ac4b982f7e9d69bb93f8f9"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "69b7394352f29ae2761676e9dd69eae70dd88038993af7020c6252eac7f0b66a"
+        },
+        {
+          "path": "infra/init-db.sql",
+          "sha256": "f9535cc7cc88f7045e92c8d9fd95b69fc40c16ec8491185e5d97a0808cd4bde6"
+        },
+        {
+          "path": "local.env.example",
+          "sha256": "00b068a1e2da7e5249bd1742ed7d3425a503beeece5c823732dca1d3fc891846"
+        },
+        {
+          "path": "manage.py",
+          "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+        },
+        {
+          "path": "scripts/init_env.py",
+          "sha256": "56e53c20811c0e73f9cef41bdda65511ff222dd9ee400b14cf8413fc388d3038"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        }
+      ],
+      "contract_sha256": "326432675a2b405cd227f819ccd2eac70e11ee9871e9d50d9fe51401e72a510d"
+    },
+    {
+      "kind": "test",
+      "path": "evidence/ci.json",
+      "sha256": "54ad44110cbd02b08890d26205dd2efbcaa9dbb1fa0007aaccca527b0274c7a0",
+      "observed_at": "2026-11-18T15:17:46.111528+00:00",
+      "revision": "sha256:3eb1e56c0f7ae24a399d9a57666b484d9aa99d5960dcc32f5d0b5a0d0c1b6a92",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "96ecfa6b860e7b3155fafaf83ff61136b3ad6df11e60f0b3388499917c4f1cca"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "bd194a64a3b3c2d57a33af9d7e7816023a59806f1f0cf8e2affed1c8f9bbdb0c"
+        },
+        {
+          "path": ".gitlab-ci.yml",
+          "sha256": "b18b6b6ea317eed242830a2cc30aff359b3bdb513f5b03969f0d33c7f451640b"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6f3c956996040c41ce9d9283765dbaabde2b4e3ce1f19386d0c61c5a25d06b3b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "293013a59c9ee373bde921dd4f2449cad97cbef6e9ac4b982f7e9d69bb93f8f9"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "69b7394352f29ae2761676e9dd69eae70dd88038993af7020c6252eac7f0b66a"
+        },
+        {
+          "path": "infra/init-db.sql",
+          "sha256": "f9535cc7cc88f7045e92c8d9fd95b69fc40c16ec8491185e5d97a0808cd4bde6"
+        },
+        {
+          "path": "local.env.example",
+          "sha256": "00b068a1e2da7e5249bd1742ed7d3425a503beeece5c823732dca1d3fc891846"
+        },
+        {
+          "path": "manage.py",
+          "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+        },
+        {
+          "path": "scripts/init_env.py",
+          "sha256": "56e53c20811c0e73f9cef41bdda65511ff222dd9ee400b14cf8413fc388d3038"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        }
+      ],
+      "contract_sha256": "326432675a2b405cd227f819ccd2eac70e11ee9871e9d50d9fe51401e72a510d"
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste.json",
+      "sha256": "2c7f83316413cb637bcd5dfb9129bf3545e8bf8c7c87b01f1d93237714d7ad35",
+      "observed_at": "2026-11-18T15:18:30.356860+00:00",
+      "revision": "sha256:3eb1e56c0f7ae24a399d9a57666b484d9aa99d5960dcc32f5d0b5a0d0c1b6a92",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "96ecfa6b860e7b3155fafaf83ff61136b3ad6df11e60f0b3388499917c4f1cca"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "bd194a64a3b3c2d57a33af9d7e7816023a59806f1f0cf8e2affed1c8f9bbdb0c"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6f3c956996040c41ce9d9283765dbaabde2b4e3ce1f19386d0c61c5a25d06b3b"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "69b7394352f29ae2761676e9dd69eae70dd88038993af7020c6252eac7f0b66a"
+        },
+        {
+          "path": "infra/init-db.sql",
+          "sha256": "f9535cc7cc88f7045e92c8d9fd95b69fc40c16ec8491185e5d97a0808cd4bde6"
+        },
+        {
+          "path": "local.env.example",
+          "sha256": "00b068a1e2da7e5249bd1742ed7d3425a503beeece5c823732dca1d3fc891846"
+        },
+        {
+          "path": "manage.py",
+          "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+        },
+        {
+          "path": "scripts/init_env.py",
+          "sha256": "56e53c20811c0e73f9cef41bdda65511ff222dd9ee400b14cf8413fc388d3038"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        }
+      ],
+      "contract_sha256": "326432675a2b405cd227f819ccd2eac70e11ee9871e9d50d9fe51401e72a510d"
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue.json",
+      "sha256": "e52067b3a3e67bc9236a515c0b00871f8e65b134b994ef8a33100be04cd198d7",
+      "observed_at": "2026-11-18T15:20:17.293640+00:00",
+      "revision": "sha256:3eb1e56c0f7ae24a399d9a57666b484d9aa99d5960dcc32f5d0b5a0d0c1b6a92",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": ".dockerignore",
+          "sha256": "96ecfa6b860e7b3155fafaf83ff61136b3ad6df11e60f0b3388499917c4f1cca"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "bd194a64a3b3c2d57a33af9d7e7816023a59806f1f0cf8e2affed1c8f9bbdb0c"
+        },
+        {
+          "path": ".gitlab-ci.yml",
+          "sha256": "b18b6b6ea317eed242830a2cc30aff359b3bdb513f5b03969f0d33c7f451640b"
+        },
+        {
+          "path": "Dockerfile",
+          "sha256": "6f3c956996040c41ce9d9283765dbaabde2b4e3ce1f19386d0c61c5a25d06b3b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "293013a59c9ee373bde921dd4f2449cad97cbef6e9ac4b982f7e9d69bb93f8f9"
+        },
+        {
+          "path": "central/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "central/settings.py",
+          "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+        },
+        {
+          "path": "compose.yaml",
+          "sha256": "69b7394352f29ae2761676e9dd69eae70dd88038993af7020c6252eac7f0b66a"
+        },
+        {
+          "path": "infra/init-db.sql",
+          "sha256": "f9535cc7cc88f7045e92c8d9fd95b69fc40c16ec8491185e5d97a0808cd4bde6"
+        },
+        {
+          "path": "local.env.example",
+          "sha256": "00b068a1e2da7e5249bd1742ed7d3425a503beeece5c823732dca1d3fc891846"
+        },
+        {
+          "path": "manage.py",
+          "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+        },
+        {
+          "path": "scripts/init_env.py",
+          "sha256": "56e53c20811c0e73f9cef41bdda65511ff222dd9ee400b14cf8413fc388d3038"
+        },
+        {
+          "path": "tests/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "tests/test_health.py",
+          "sha256": "06ea12fc2c9734613e86c0470ce044aac5f572812ab0067aa6db58abcda0eaa1"
+        },
+        {
+          "path": "tests/test_settings.py",
+          "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+        },
+        {
+          "path": "work/items/ARCH-001/SPEC.md",
+          "sha256": "08f70558250a2daa8c4b775611954ce0eef46d441b3be656606be10c5c2973e7"
+        },
+        {
+          "path": "work/items/ARCH-001/ARCHITECTURE.md",
+          "sha256": "118cdf27634bbc74d9413f930ce3ff4b9fda96dfc9fa2c64963606e0c466fceb"
+        },
+        {
+          "path": "work/items/ARCH-001/SECURITY.md",
+          "sha256": "c76f52b6eac63406053031e7441c0f55c5163952eb759b00d04e0b9c5f8a9588"
+        },
+        {
+          "path": "work/items/ARCH-001/EVIDENCE.md",
+          "sha256": "10ea4f778abb8150c9033c4ac621e77f619d8c32df2629ca355d81d69e31bedd"
+        },
+        {
+          "path": "work/items/ARCH-001/REPORT.md",
+          "sha256": "0d9082831bf0e204f94028024fc251b590778d502709833e4d8a0a848c5a3a0b"
+        },
+        {
+          "path": "work/items/ARCH-001/REVIEW.md",
+          "sha256": "0a12a51de9df294f39728f20fd90120dc96164c4417c23d62fa5d9605075ab39"
+        },
+        {
+          "path": "work/items/ARCH-001/evidence/integration.json",
+          "sha256": "f696907458ecac19a7708f3f41525be478f2b9c391c4833f7db1dd27c929d17b"
+        },
+        {
+          "path": "work/items/ARCH-001/evidence/ci.json",
+          "sha256": "54ad44110cbd02b08890d26205dd2efbcaa9dbb1fa0007aaccca527b0274c7a0"
+        },
+        {
+          "path": "work/items/ARCH-001/evidence/poste.json",
+          "sha256": "2c7f83316413cb637bcd5dfb9129bf3545e8bf8c7c87b01f1d93237714d7ad35"
+        },
+        {
+          "path": "work/items/ARCH-001/evidence/configuration-red.json",
+          "sha256": "bf0da76985ca79dbb9ce96afbf455c8c4749d420f6fb8a6d0cb3d97651701c84"
+        }
+      ],
+      "contract_sha256": "326432675a2b405cd227f819ccd2eac70e11ee9871e9d50d9fe51401e72a510d"
+    }
+  ],
+  "review": {
+    "reference": "work/items/ARCH-001/REVIEW.md — /root/revue_arch",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

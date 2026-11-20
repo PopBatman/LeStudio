@@ -1,0 +1,24 @@
+{
+  "site": "Tennis AI",
+  "avant": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte_revisions": "457f1e213b38ac3eaa565e13496d41597819ce1597f713594f7f05b706aa072a",
+    "raccordements": 1
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 16,
+    "empreinte_revisions": "457f1e213b38ac3eaa565e13496d41597819ce1597f713594f7f05b706aa072a",
+    "raccordements": 1
+  },
+  "meme_processus_moteur": true,
+  "privé": {
+    "fiche": 200,
+    "historique": 200
+  },
+  "invitation_reelle_creee": false,
+  "depots_reels": 0,
+  "origine_portail": "http://127.0.0.1:8000",
+  "purge_compose": "démarrage observé, zéro remise échue"
+}

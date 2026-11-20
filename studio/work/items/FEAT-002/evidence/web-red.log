@@ -1,0 +1,17 @@
+Creating test database for alias 'default'...
+F
+======================================================================
+FAIL: test_anonymous_and_operator_entry (tests.test_registre_web.RegistryPageTests.test_anonymous_and_operator_entry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/admincsd/Documents/LeStudio/studio/tests/test_registre_web.py", line 9, in test_anonymous_and_operator_entry
+    self.assertEqual(self.client.get("/clients/").status_code, 302)
+AssertionError: 404 != 302
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...
+Found 1 test(s).
+System check identified no issues (0 silenced).

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clients et sites · Maquettes FEAT-002</title>
+<style>
+:root{color-scheme:light;--ink:#262724;--paper:#f8f7f3;--line:#d6d3c8;--soft:#eeece4;--red:#9a301c;--verm:#ef603b}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.45 system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:var(--red);text-underline-offset:.24em} a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.skip{position:absolute;top:0;left:0;transform:translateY(-130%);background:white;padding:.5rem;z-index:9}.skip:focus{transform:none}
+header{border-bottom:1px solid var(--line)}
+.bar{max-width:72rem;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem clamp(1rem,4vw,3rem)}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:730;letter-spacing:-.055em;font-size:1.5rem}.brand i{position:relative;width:1.8rem;height:1.8rem;background:var(--verm);border-radius:.35rem}.brand i:after{content:"";position:absolute;inset:7px 9px;border:2px solid var(--ink);transform:skewY(-18deg)}
+details{position:relative;font-size:.86rem}summary{cursor:pointer;text-decoration:underline;text-underline-offset:.2em}details nav{position:absolute;z-index:2;right:0;top:2rem;background:white;box-shadow:0 .3rem 1rem #0002;border:1px solid var(--line);border-radius:.5rem;padding:.8rem;display:grid;gap:.5rem;width:min(18rem,83vw);max-height:70vh;overflow:auto}
+main{max-width:68rem;margin:clamp(2rem,5vw,4rem) auto;padding:0 clamp(1rem,4vw,3rem);overflow-wrap:anywhere}
+.screen{display:none}.screen:target,.screen.start{display:block}body:has(.screen:target) .screen.start:not(:target){display:none}
+.crumb,.note{font-size:.85rem;color:#595a52}.crumb{margin:0 0 1.4rem}.head,.row,.tabs,.acts,.fields{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}.head,.row{justify-content:space-between}
+h1,h2,p{margin:0}h1{font-size:clamp(2.1rem,5vw,4rem);letter-spacing:-.065em;line-height:1.05;margin-bottom:.25rem}h2{font-size:1.25rem;letter-spacing:-.03em}
+.box{margin-top:1.1rem;border:1px solid var(--line);border-radius:.6rem;background:white;overflow:hidden}
+.boxinner,.row{padding:1.1rem clamp(1rem,3vw,1.6rem)}.row+.row{border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.row strong,.row small{display:block}.row small{color:#565751;margin-top:.25rem}
+.tabs,.acts,.fields{margin:.95rem 0}.tabs a,.btn{display:inline-flex;align-items:center;padding:.62rem .95rem;min-height:2.6rem;border:1px solid var(--line);border-radius:.35rem;color:var(--ink);background:white;text-decoration:none;font-weight:600}
+.tabs [aria-current],.btn.primary{background:var(--ink);color:white;border-color:var(--ink)}
+.dot{display:inline-block;background:#e8f0df;color:#34492e;padding:.22rem .6rem;border-radius:1rem;font-size:.8rem}.dot.muted{background:var(--soft);color:#534c43}
+.form{max-width:43rem}.field{display:block;margin:.95rem 0 .3rem;font-weight:650}input,select,textarea{width:100%;font:inherit;color:var(--ink);border:1px solid #85847b;background:white;border-radius:.35rem;padding:.65rem .75rem}
+.fields{align-items:start}.fields>div{flex:1 1 14rem;min-width:0}.hint,.error{font-size:.88rem}.hint{color:#52554e}.error{color:var(--red);font-weight:600}.errorbox{border-inline-start:4px solid var(--red);padding:.85rem;background:#fceee7;margin:1rem 0}
+.ok{border-inline-start:4px solid #507446;background:#edf5e9;padding:.85rem;margin-top:1.25rem}.blank{padding:2rem 1.5rem;text-align:center}
+@media(max-width:43rem){.grid{grid-template-columns:1fr;gap:0}.fields{display:block}.row{align-items:start}.head{align-items:start}.tabs a,.btn{padding:.55rem .7rem}.bar{gap:.5rem}}
+</style></head>
+<body><a class="skip" href="#contenu">Aller au contenu</a><header><div class="bar"><span class="brand"><i aria-hidden="true"></i>Le Studio</span>
+<details><summary>Parcours de la maquette</summary><nav aria-label="Scénarios illustratifs"><a href="#actifs">Clients actifs</a>
+<a href="#archives">Clients archivés</a>
+<a href="#fiche-archive">Fiche client archivée</a>
+<a href="#premier">Première utilisation</a>
+<a href="#vide">Recherche sans résultat</a>
+<a href="#fiche">Fiche client</a>
+<a href="#client">Créer un client</a>
+<a href="#modifier-client">Modifier le client</a>
+<a href="#contact">Ajouter un contact</a>
+<a href="#modifier-contact">Modifier le contact</a>
+<a href="#contact-erreur">Erreur sur les coordonnées</a>
+<a href="#sites">Mes sites · opérateur limité</a>
+<a href="#fiche-site">Site · gestion</a>
+<a href="#site-seul">Site · lecture seule</a>
+<a href="#sites-gestion">Mes sites · gestionnaire limité</a>
+<a href="#site-seul-gestion">Fiche site · gestionnaire limité</a>
+<a href="#gestion-edition">Édition du site · gestionnaire limité</a>
+<a href="#gestion-enregistree">Confirmation · gestionnaire limité</a>
+<a href="#site">Créer un site</a>
+<a href="#modifier-site">Modifier le site</a>
+<a href="#archiver">Archiver le client</a>
+<a href="#reactiver">Réactiver le client</a>
+<a href="#succes">Enregistrement</a>
+<a href="#refus">Action refusée</a>
+<a href="#introuvable">Fiche hors périmètre</a></nav></details></div></header>
+<main id="contenu" tabindex="-1">
+<section class="screen start" id="actifs" tabindex="-1" aria-labelledby="t-actifs">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-actifs">Clients</h1><a href="#client" class="btn primary">Créer un client</a></div>
+<nav class="tabs" aria-label="État administratif"><a href="#actifs" aria-current="page">Actifs</a><a href="#archives">Archivés</a></nav><div class="box form"><div class="boxinner"><div class="fields"><div><label class="field" for="recherche-actifs">Rechercher un client</label><input id="recherche-actifs" type="text" value="" placeholder="Nom du client"></div><div><label class="field" for="type-filtre">Type de client</label><select id="type-filtre"><option>Tous les types</option><option>Entreprise</option><option>Association</option><option>Particulier</option></select></div></div><div class="acts"><a href="#vide">Examiner la recherche sans résultat</a></div></div></div><div class="box"><div class="row"><div><strong><a href="#fiche">Atelier Ardoise</a></strong><small>Entreprise</small></div><span class="dot">Actif</span></div><div class="row"><div><strong>Les Ateliers de la Traverse et des métiers du bois</strong><small>Association</small></div><span class="dot">Actif</span></div><div class="row"><div><strong>Camille Exemple</strong><small>Particulier</small></div><span class="dot">Actif</span></div></div>
+</section>
+<section class="screen" id="archives" tabindex="-1" aria-labelledby="t-archives">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-archives">Clients</h1></div>
+<nav class="tabs" aria-label="État administratif"><a href="#actifs">Actifs</a><a href="#archives" aria-current="page">Archivés</a></nav><div class="box"><div class="row"><div><strong><a href="#fiche-archive">Atelier Ardoise</a></strong><small>Entreprise</small></div><span class="dot muted">Archivé</span></div></div>
+</section>
+<section class="screen" id="fiche-archive" tabindex="-1" aria-labelledby="t-fiche-archive">
+<p class="crumb"><a href="#archives">Clients archivés</a></p>
+<div class="head"><h1 id="t-fiche-archive">Atelier Ardoise</h1><a href="#reactiver" class="btn">Réactiver le client</a></div>
+<p>Entreprise · <span class="dot muted">Archivé</span></p><div class="box"><div class="row"><div><h2>Contacts</h2></div></div><div class="row"><div><strong>Lou Exemple</strong><small>Coordination · lou@example.invalid</small></div></div></div><div class="box"><div class="row"><div><h2>Sites accessibles</h2></div></div><div class="row"><div><a href="#fiche-site">L’atelier</a></div></div></div>
+</section>
+<section class="screen" id="premier" tabindex="-1" aria-labelledby="t-premier">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-premier">Clients</h1></div>
+<nav class="tabs" aria-label="État administratif"><a href="#actifs" aria-current="page">Actifs</a><a href="#archives">Archivés</a></nav><div class="box"><div class="blank"><h2>Aucun client actif à afficher</h2><p>Les fiches auxquelles vous avez accès apparaîtront ici.</p><div class="acts"><a href="#client" class="btn primary">Créer un client</a></div></div></div>
+</section>
+<section class="screen" id="vide" tabindex="-1" aria-labelledby="t-vide">
+<p class="crumb"><a href="#actifs">Clients</a></p>
+<div class="head"><h1 id="t-vide">Clients</h1></div>
+<nav class="tabs" aria-label="État administratif"><a href="#actifs" aria-current="page">Actifs</a><a href="#archives">Archivés</a></nav><div class="box form"><div class="boxinner"><label class="field" for="recherche-vide">Rechercher un client</label><input id="recherche-vide" type="text" value="Parallaxe" ></div></div><div class="box"><div class="blank"><h2>Aucun résultat</h2><p>Essayez un autre nom ou effacez la recherche.</p><div class="acts"><a href="#actifs">Effacer la recherche</a></div></div></div>
+</section>
+<section class="screen" id="fiche" tabindex="-1" aria-labelledby="t-fiche">
+<p class="crumb"><a href="#actifs">Clients</a></p>
+<div class="head"><h1 id="t-fiche">Atelier Ardoise</h1><a href="#modifier-client" class="btn">Modifier le client</a></div>
+<p>Entreprise · <span class="dot">Actif</span></p><div class="grid"><div class="box"><div class="row"><div><h2>Contacts</h2></div><a href="#contact">Ajouter un contact</a></div><div class="row"><div><strong>Lou Exemple</strong><small>Coordination · lou@example.invalid</small></div><a href="#modifier-contact">Modifier</a></div></div><div class="box"><div class="row"><div><h2>Sites accessibles</h2></div><a href="#site">Ajouter un site</a></div><div class="row"><div><strong><a href="#fiche-site">L’atelier</a></strong><small>atelier.example</small></div></div><div class="row"><div><strong>Collection de printemps</strong><small>Domaine à renseigner</small></div></div></div></div><div class="acts"><a href="#archiver">Archiver le client</a></div>
+</section>
+<section class="screen" id="client" tabindex="-1" aria-labelledby="t-client">
+<p class="crumb"><a href="#actifs">Clients</a></p>
+<div class="head"><h1 id="t-client">Créer un client</h1></div>
+<div class="box form"><div class="boxinner"><label class="field" for="client-nom">Nom du client</label><input id="client-nom" type="text" value="" required><label class="field" for="client-type">Type de client</label><select id="client-type"><option>Entreprise</option><option>Association</option><option>Particulier</option></select><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#actifs">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="modifier-client" tabindex="-1" aria-labelledby="t-modifier-client">
+<p class="crumb"><a href="#actifs">Clients</a></p>
+<div class="head"><h1 id="t-modifier-client">Modifier le client</h1></div>
+<div class="box form"><div class="boxinner"><label class="field" for="modifier-client-nom">Nom du client</label><input id="modifier-client-nom" type="text" value="Atelier Ardoise" required><label class="field" for="modifier-client-type">Type de client</label><select id="modifier-client-type"><option>Entreprise</option><option>Association</option><option>Particulier</option></select><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="contact" tabindex="-1" aria-labelledby="t-contact">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-contact">Ajouter un contact</h1></div>
+<div class="box form"><div class="boxinner"><label class="field" for="contact-nom">Nom du contact</label><input id="contact-nom" type="text" value="" required><label class="field" for="contact-role">Rôle principal</label><input id="contact-role" type="text" value="" required><p class="hint">Renseignez au moins un courriel ou un téléphone.</p><div class="fields"><div><label class="field" for="contact-email">Courriel</label><input id="contact-email" type="email" value="" ></div><div><label class="field" for="contact-tel">Téléphone</label><input id="contact-tel" type="tel" value="" ></div></div><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="modifier-contact" tabindex="-1" aria-labelledby="t-modifier-contact">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-modifier-contact">Modifier le contact</h1></div>
+<div class="box form"><div class="boxinner"><label class="field" for="modifier-contact-nom">Nom du contact</label><input id="modifier-contact-nom" type="text" value="Lou Exemple" required><label class="field" for="modifier-contact-role">Rôle principal</label><input id="modifier-contact-role" type="text" value="Coordination" required><p class="hint">Renseignez au moins un courriel ou un téléphone.</p><div class="fields"><div><label class="field" for="modifier-contact-email">Courriel</label><input id="modifier-contact-email" type="email" value="lou@example.invalid" ></div><div><label class="field" for="modifier-contact-tel">Téléphone</label><input id="modifier-contact-tel" type="tel" value="" ></div></div><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="contact-erreur" tabindex="-1" aria-labelledby="t-contact-erreur">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-contact-erreur">Modifier le contact</h1></div>
+<div class="box form"><div class="boxinner"><p class="errorbox" role="alert">Vérifiez les coordonnées du contact.</p><label class="field" for="contact-erreur-nom">Nom du contact</label><input id="contact-erreur-nom" type="text" value="Lou Exemple" required><label class="field" for="contact-erreur-role">Rôle principal</label><input id="contact-erreur-role" type="text" value="Coordination" required><p class="hint">Renseignez au moins un courriel ou un téléphone.</p><div class="fields"><div><label class="field" for="contact-erreur-email">Courriel</label><input id="contact-erreur-email" type="email" value="" aria-invalid="true" aria-describedby="erreur-coord"></div><div><label class="field" for="contact-erreur-tel">Téléphone</label><input id="contact-erreur-tel" type="tel" value="" aria-invalid="true" aria-describedby="erreur-coord"></div></div><p class="error" id="erreur-coord">Ajoutez une coordonnée pour enregistrer le contact.</p><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="sites" tabindex="-1" aria-labelledby="t-sites">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-sites">Mes sites</h1></div>
+<div class="box"><div class="row"><div><strong><a href="#site-seul">L’atelier</a></strong><small>atelier.example</small></div></div></div>
+</section>
+<section class="screen" id="fiche-site" tabindex="-1" aria-labelledby="t-fiche-site">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-fiche-site">L’atelier</h1><a href="#modifier-site" class="btn">Modifier le site</a></div>
+<div class="box"><div class="row"><div><strong>Domaine</strong></div>atelier.example</div><div class="row"><div><strong>Type</strong></div>Vitrine</div><div class="row"><div><strong>Description</strong></div>Présentation des collections.</div></div>
+</section>
+<section class="screen" id="site-seul" tabindex="-1" aria-labelledby="t-site-seul">
+<p class="crumb"><a href="#sites">Mes sites</a></p>
+<div class="head"><h1 id="t-site-seul">L’atelier</h1></div>
+<div class="box"><div class="row"><div><strong>Domaine</strong></div>atelier.example</div><div class="row"><div><strong>Type</strong></div>Vitrine</div><div class="row"><div><strong>Description</strong></div>Présentation des collections.</div></div>
+</section>
+<section class="screen" id="sites-gestion" tabindex="-1" aria-labelledby="t-sites-gestion">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-sites-gestion">Mes sites</h1></div>
+<div class="box"><div class="row"><div><strong><a href="#site-seul-gestion">L’atelier</a></strong><small>atelier.example</small></div></div></div>
+</section>
+<section class="screen" id="site-seul-gestion" tabindex="-1" aria-labelledby="t-site-seul-gestion">
+<p class="crumb"><a href="#sites-gestion">Mes sites</a></p>
+<div class="head"><h1 id="t-site-seul-gestion">L’atelier</h1><a href="#gestion-edition" class="btn">Modifier le site</a></div>
+<div class="box"><div class="row"><div><strong>Domaine</strong></div>atelier.example</div><div class="row"><div><strong>Type</strong></div>Vitrine</div><div class="row"><div><strong>Description</strong></div>Présentation des collections.</div></div>
+</section>
+<section class="screen" id="gestion-edition" tabindex="-1" aria-labelledby="t-gestion-edition">
+<p class="crumb"><a href="#sites-gestion">Mes sites</a> / <a href="#site-seul-gestion">L’atelier</a></p>
+<div class="head"><h1 id="t-gestion-edition">Modifier le site</h1></div>
+<div class="box form"><div class="boxinner"><label class="field" for="gestion-nom">Nom du site</label><input id="gestion-nom" type="text" value="L’atelier" required><label class="field" for="gestion-domaine">Domaine (facultatif)</label><input id="gestion-domaine" type="text" value="atelier.example" ><label class="field" for="gestion-type">Type de site (facultatif)</label><input id="gestion-type" type="text" value="Vitrine" ><label class="field" for="gestion-desc">Description (facultative)</label><textarea id="gestion-desc" rows="2">Présentation des collections.</textarea><div class="acts"><a href="#gestion-enregistree" class="btn primary">Enregistrer</a><a href="#site-seul-gestion">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="gestion-enregistree" tabindex="-1" aria-labelledby="t-gestion-enregistree">
+<p class="crumb"><a href="#sites-gestion">Mes sites</a></p>
+<div class="head"><h1 id="t-gestion-enregistree">Site enregistré</h1></div>
+<p class="ok" role="status">La fiche de L’atelier a été mise à jour.</p><div class="acts"><a href="#site-seul-gestion">Revenir à la fiche du site</a><a href="#sites-gestion">Mes sites</a></div>
+</section>
+<section class="screen" id="site" tabindex="-1" aria-labelledby="t-site">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-site">Créer un site</h1></div>
+<div class="box form"><div class="boxinner"><p>Client de rattachement <strong>Atelier Ardoise</strong></p><label class="field" for="site-nom">Nom du site</label><input id="site-nom" type="text" value="" required><label class="field" for="site-domaine">Domaine (facultatif)</label><input id="site-domaine" type="text" value="" ><label class="field" for="site-type">Type de site (facultatif)</label><input id="site-type" type="text" value="" ><label class="field" for="site-desc">Description (facultative)</label><textarea id="site-desc" rows="2"></textarea><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="modifier-site" tabindex="-1" aria-labelledby="t-modifier-site">
+<p class="crumb"><a href="#actifs">Clients</a> / <a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-modifier-site">Modifier le site</h1></div>
+<div class="box form"><div class="boxinner"><p>Client de rattachement <strong>Atelier Ardoise</strong></p><label class="field" for="modifier-site-nom">Nom du site</label><input id="modifier-site-nom" type="text" value="L’atelier" required><label class="field" for="modifier-site-domaine">Domaine (facultatif)</label><input id="modifier-site-domaine" type="text" value="atelier.example" ><label class="field" for="modifier-site-type">Type de site (facultatif)</label><input id="modifier-site-type" type="text" value="Vitrine" ><label class="field" for="modifier-site-desc">Description (facultative)</label><textarea id="modifier-site-desc" rows="2">Présentation des collections.</textarea><div class="acts"><a href="#succes" class="btn primary">Enregistrer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="archiver" tabindex="-1" aria-labelledby="t-archiver">
+<p class="crumb"><a href="#fiche">Atelier Ardoise</a></p>
+<div class="head"><h1 id="t-archiver">Archiver le client</h1></div>
+<div class="box form"><div class="boxinner"><h2>Atelier Ardoise</h2><p>Atelier Ardoise quittera la liste des clients actifs. Ses sites conserveront leur fonctionnement et leurs accès.</p><div class="acts"><a href="#archive-ok" class="btn primary">Confirmer</a><a href="#fiche">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="reactiver" tabindex="-1" aria-labelledby="t-reactiver">
+<p class="crumb"><a href="#archives">Clients archivés</a></p>
+<div class="head"><h1 id="t-reactiver">Réactiver le client</h1></div>
+<div class="box form"><div class="boxinner"><h2>Atelier Ardoise</h2><p>Atelier Ardoise apparaîtra de nouveau dans la liste des clients actifs.</p><div class="acts"><a href="#reactive-ok" class="btn primary">Confirmer</a><a href="#archives">Annuler</a></div></div></div>
+</section>
+<section class="screen" id="succes" tabindex="-1" aria-labelledby="t-succes">
+<p class="crumb">Registre</p>
+<div class="head"><h1 id="t-succes">Enregistrement</h1></div>
+<p class="ok" role="status">La fiche a été enregistrée.</p><div class="acts"><a href="#fiche">Revenir à la fiche client</a></div>
+</section>
+<section class="screen" id="archive-ok" tabindex="-1" aria-labelledby="t-archive-ok">
+<p class="crumb">Registre</p>
+<div class="head"><h1 id="t-archive-ok">Client archivé</h1></div>
+<p class="ok" role="status">Atelier Ardoise figure dans les archives.</p><div class="acts"><a href="#archives">Voir les clients archivés</a></div>
+</section>
+<section class="screen" id="reactive-ok" tabindex="-1" aria-labelledby="t-reactive-ok">
+<p class="crumb">Registre</p>
+<div class="head"><h1 id="t-reactive-ok">Client réactivé</h1></div>
+<p class="ok" role="status">Atelier Ardoise figure dans les clients actifs.</p><div class="acts"><a href="#actifs">Voir les clients actifs</a></div>
+</section>
+<section class="screen" id="refus" tabindex="-1" aria-labelledby="t-refus">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-refus">Action indisponible</h1></div>
+<div class="box form"><div class="boxinner"><p>Votre habilitation ne permet pas cette action.</p><div class="acts"><a href="#sites">Retrouver mes sites</a></div></div></div>
+</section>
+<section class="screen" id="introuvable" tabindex="-1" aria-labelledby="t-introuvable">
+<p class="crumb">Espace de travail</p>
+<div class="head"><h1 id="t-introuvable">Fiche introuvable</h1></div>
+<div class="box form"><div class="boxinner"><p>Vous pouvez revenir aux fiches accessibles depuis votre espace.</p><div class="acts"><a href="#sites">Retrouver mes sites</a></div></div></div>
+</section>
+</main></body></html>

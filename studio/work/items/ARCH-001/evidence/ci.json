@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-11-18T15:17:46.111528+00:00",
+  "mode": "Commandes du job studio-test extraites du YAML et exécutées dans son image sur un réseau Docker local isolé ; authentification et orchestration GitLab distantes non exercées.",
+  "commands": [
+    "test -n \"$STUDIO_CI_POSTGRES_PASSWORD\"",
+    "apt-get update -qq && apt-get install -y -qq --no-install-recommends postgresql-client",
+    "python -m pip install --only-binary=:all: --require-hashes -r requirements.txt",
+    "export DJANGO_SECRET_KEY=\"$(python -c 'import secrets; print(secrets.token_urlsafe(48))')\"",
+    "export STUDIO_DB_PASSWORD=\"$(python -c 'import secrets; print(secrets.token_urlsafe(48))')\"",
+    "PGPASSWORD=\"$POSTGRES_PASSWORD\" psql -X -v ON_ERROR_STOP=1 -h db -U postgres -d studio_db -f infra/init-db.sql",
+    "unset POSTGRES_PASSWORD STUDIO_CI_POSTGRES_PASSWORD",
+    "python manage.py check",
+    "python manage.py migrate --noinput",
+    "python manage.py migrate --check",
+    "python manage.py migrate --noinput",
+    "python manage.py test",
+    "python manage.py shell -c \"from django.test import Client; r = Client().get('/health/', HTTP_HOST='localhost'); assert r.status_code == 200 and r.json() == {'status':'ok'}\""
+  ],
+  "exit": 0,
+  "stdout_summary": [
+    "CREATE ROLE",
+    "ALTER DATABASE",
+    "System check identified no issues (0 silenced).",
+    "  Applying contenttypes.0001_initial... OK",
+    "  Applying contenttypes.0002_remove_content_type_name... OK",
+    "  No migrations to apply.",
+    "Found 4 test(s).",
+    "System check identified no issues (0 silenced).",
+    "CI locale terminée"
+  ],
+  "job_sha256": "b18b6b6ea317eed242830a2cc30aff359b3bdb513f5b03969f0d33c7f451640b"
+}

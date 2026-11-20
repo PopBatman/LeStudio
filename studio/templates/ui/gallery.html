@@ -1,0 +1,92 @@
+{% extends "ui/base.html" %}
+{% block title %}Galerie de composants · Le Studio{% endblock %}
+{% block scripts %}<script defer src="/ui/assets/gallery.js"></script>{% endblock %}
+{% block sidebar %}{% include "ui/nav.html" %}{% endblock %}
+{% block mobile_sidebar %}{% include "ui/nav.html" %}{% endblock %}
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="#haut">Le Studio</a><span aria-hidden="true">/</span><span aria-current="page">Bibliothèque</span></nav>
+{% endblock %}
+{% block content %}
+<header class="page-heading">
+  <div><h1>Galerie de composants</h1><p>Les fondations visuelles et les composants interactifs du Studio.</p></div>
+  <div class="hero-art" aria-hidden="true"><i></i><i></i><i></i></div>
+</header>
+
+<section class="gallery-section" id="fondations" aria-labelledby="titre-fondations" tabindex="-1">
+  <div class="section-title"><h2 id="titre-fondations">Fondations</h2></div>
+  <div class="foundation-grid">
+    <article class="specimen-card">
+      <header class="card-heading"><h3>Couleurs</h3></header>
+      <div class="palette-preview" aria-hidden="true"><span class="swatch ink"></span><span class="swatch orange"></span><span class="swatch sand"></span><span class="swatch paper"></span></div>
+      <dl class="palette-key">
+        <div><dt>Encre</dt><dd>#262724</dd></div>
+        <div><dt>Vermillon</dt><dd>#EF603B</dd></div>
+        <div><dt>Sable</dt><dd>#DDD8C9</dd></div>
+        <div><dt>Papier</dt><dd>#F6F3EB</dd></div>
+      </dl>
+    </article>
+    <article class="specimen-card">
+      <header class="card-heading"><h3>Typographie</h3></header>
+      <div class="type-preview" aria-hidden="true"><span class="type-sample">Aa</span><span class="type-detail">Aa Bb Cc<br>0123456789</span></div>
+      <dl class="type-key"><div><dt>Interface</dt><dd>DM Sans</dd></div><div><dt>Spécimen</dt><dd>Georgia Italique</dd></div></dl>
+    </article>
+  </div>
+</section>
+
+<section class="gallery-section" id="actions" aria-labelledby="titre-actions" tabindex="-1">
+  <div class="section-title"><h2 id="titre-actions">Actions</h2></div>
+  <div class="demo-grid">
+    <article class="demo-card"><h3>Boutons</h3>
+      <div class="demo-row">
+        <c-button id="demo-primary">Tester l’action</c-button>
+        <c-button id="demo-reset" variant="secondary">Réinitialiser</c-button>
+        <c-button variant="secondary" disabled>Indisponible</c-button>
+      </div>
+      <p class="demo-result" id="action-result" role="status"></p>
+    </article>
+    <article class="demo-card"><h3>Liens</h3><c-text-link href="#formulaires">Voir les formulaires</c-text-link></article>
+  </div>
+</section>
+
+<section class="gallery-section" id="formulaires" aria-labelledby="titre-formulaires" tabindex="-1">
+  <div class="section-title"><h2 id="titre-formulaires">Formulaires</h2></div>
+  <div class="demo-grid">
+    <article class="demo-card"><h3>Champ de saisie</h3>
+      <form id="name-form" novalidate>
+        <c-field id="site-name" label="Nom du site" placeholder="Atelier Horizon" help="Saisissez un nom fictif de 2 à 80 caractères." maxlength="80" required />
+        <c-button type="submit">Vérifier le nom</c-button>
+        <p class="demo-result" id="name-result" role="status"></p>
+      </form>
+    </article>
+    <article class="demo-card"><h3>Champ indisponible</h3>
+      <c-field id="site-address" label="Adresse du site" value="atelier.example" help="Ce champ illustre un réglage indisponible." disabled />
+    </article>
+  </div>
+</section>
+
+<section class="gallery-section" id="retours" aria-labelledby="titre-retours" tabindex="-1">
+  <div class="section-title"><h2 id="titre-retours">Retours</h2></div>
+  <div class="demo-grid">
+    <article class="demo-card"><h3>Alertes</h3>
+      <c-alert title="Aperçu disponible">Le site de démonstration est prêt à être consulté.</c-alert>
+      <c-alert variant="warning" title="Information manquante">Ajoutez un titre avant de continuer.</c-alert>
+    </article>
+    <article class="demo-card"><h3>Badges</h3><div class="demo-row"><c-badge variant="success">Publié</c-badge><c-badge>Brouillon</c-badge><c-badge variant="warning">À vérifier</c-badge></div></article>
+  </div>
+</section>
+
+<section class="gallery-section" id="donnees" aria-labelledby="titre-donnees" tabindex="-1">
+  <div class="section-title"><h2 id="titre-donnees">Données</h2></div>
+  <article class="demo-card"><h3>Tableau de sites fictifs</h3>
+    <c-field id="site-filter" type="search" label="Filtrer les sites" placeholder="Nom ou état du site" />
+    <p class="field-help" id="filter-count" role="status">3 sites</p>
+    <c-table id="site-table" caption="Sites fictifs et états de publication">
+      <c-slot name="headings"><th scope="col">Site</th><th scope="col">État</th></c-slot>
+      <tr><th scope="row">Atelier Horizon</th><td><c-badge variant="success">Publié</c-badge></td></tr>
+      <tr><th scope="row">Les Jardins de la Manufacture et des Ateliers Réunis</th><td><c-badge>Brouillon</c-badge></td></tr>
+      <tr><th scope="row">Maison Lisière</th><td><c-badge variant="warning">À vérifier</c-badge></td></tr>
+    </c-table>
+    <c-empty-state id="table-empty" title="Aucun site trouvé" hidden>Modifiez votre recherche ou <button type="button" class="text-link" id="clear-filter">effacez le filtre</button>.</c-empty-state>
+  </article>
+</section>
+{% endblock %}

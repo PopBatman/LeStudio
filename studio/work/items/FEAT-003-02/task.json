@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "id": "FEAT-003-02",
+  "kind": "feature",
+  "title": "Pages, arborescence et navigation autonome",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/FEAT-003-02/",
+      "composition/",
+      "tests/",
+      "registre/",
+      "templates/",
+      "static/ui/",
+      "docs/",
+      "central/urls.py",
+      ".dockerignore",
+      "Dockerfile"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Lancement explicite de FEAT-003-02 par l’utilisateur après cadrage READY",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/chemins-bureau.png",
+      "sha256": "b1850d920c9e44b524bf1806ef254fc060a08ac29e56b1a11f954b57a62b93c1",
+      "observed_at": "2026-11-19T11:52:30.557461+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/examen-maquettes.json",
+      "sha256": "c4fc9a926b1cc1281fdc580ad87bdc8bad3c07206b87c3a2b01508f2b0107319",
+      "observed_at": "2026-11-19T11:52:32.296508+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquettes.html",
+      "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75",
+      "observed_at": "2026-11-19T11:52:29.980445+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/menus-mobile.png",
+      "sha256": "b782558ca976a2f740e92908ce383bc40b01d0eeb818300176cbbf7fc9489392",
+      "observed_at": "2026-11-19T11:52:31.094475+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "manual",
+      "path": "evidence/navigation-v2.json",
+      "sha256": "33010c7d87b7c8f250c1f09a423e55bac2e981f8e8cbb2eeb2e4bea55c88677c",
+      "observed_at": "2026-11-19T11:50:35.086319+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/ARCHITECTURE.md",
+          "sha256": "b0d283afae47abfd718a75a139563fc0941f600f86db3530305608de1ed01bbe"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/pages-bureau.png",
+      "sha256": "888d17665ed919faf7bc67167b97c4401d5ffe9d55e96eca707d6e82fb6bda11",
+      "observed_at": "2026-11-19T11:52:30.474458+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/suppression-mobile.png",
+      "sha256": "501f63e8098be41964fe76aae46ac3fcc8a0b7776d3723e7261a7277a8b9bf38",
+      "observed_at": "2026-11-19T11:52:31.333482+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "illustrative",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/evidence/maquettes.html",
+          "sha256": "87e8c41d591cca888156e661a7a2445f5986577d02a39d1f67bcc3d68e2d0f75"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-conflit-mobile.png",
+      "sha256": "bde86a09d4de46fc7b4683c9c4d96814be26d583c5a5449c9e4e4c01a09874b3",
+      "observed_at": "2026-11-19T12:01:00.324631+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-impact-bureau.png",
+      "sha256": "a6ea9635e9081f19e64cd52e1ff2c3ded2913aede9f4d8251206a2302b5ffcee",
+      "observed_at": "2026-11-19T12:00:59.258601+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-menus-mobile.png",
+      "sha256": "cde88ca40b9ec2c824e1dfd937711775d758bb1ec1b352e34323148a82fec65c",
+      "observed_at": "2026-11-19T12:00:59.475607+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/application-navigateur.json",
+      "sha256": "d525720f3329e32742780ba9f621424965442db127f321ccf592ef71124930e0",
+      "observed_at": "2026-11-19T12:01:00.674641+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/application-pages-bureau.png",
+      "sha256": "540364ee45d153a2c6683f81af1ee70a1b0b9cf0b4db8e896f331e51b2f09b05",
+      "observed_at": "2026-11-19T12:00:59.051595+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/poste-local.json",
+      "sha256": "a8a119d14dee744f95437688ccdc95d14d7a56aedb5dd310faa0e0c779bb6614",
+      "observed_at": "2026-11-19T12:01:34.937605+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/review.txt",
+      "sha256": "acf344a0dd39ca6397441fb2273553b8c8a095daf6fb88e7bddde8b2db5c104a",
+      "observed_at": "2026-11-19T12:01:47.764966+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "work/items/FEAT-003-02/REVIEW.md",
+          "sha256": "acf344a0dd39ca6397441fb2273553b8c8a095daf6fb88e7bddde8b2db5c104a"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/services-green.log",
+      "sha256": "fcfb037c987c576af4339818dfa55caa7702bca3b325c29af0a6eb6e21c57289",
+      "observed_at": "2026-11-19T11:59:09.292515+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/services-red.log",
+      "sha256": "a3c67b00a32b6110487a4fa3a68d7f462d971e19309e9e1c9ef89926b048c909",
+      "observed_at": "2026-11-19T11:56:06.443414+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-postgresql.log",
+      "sha256": "961251b38203c2de79a324c5cff9b8225f891a1dd69ff63adb37fa2a45366f50",
+      "observed_at": "2026-11-19T12:00:44.397183+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/tests-sqlite.log",
+      "sha256": "00c1aa41a909038eb06807f727ef234ad35b9c8fdb5e1e1895dcafd4a7043411",
+      "observed_at": "2026-11-19T12:00:49.325322+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/validation-green.log",
+      "sha256": "0236801eafe908a5e0fa6be9134b1141285c31b06b4cc614ba7dc9457e151451",
+      "observed_at": "2026-11-19T11:56:27.932011+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/validation-red.log",
+      "sha256": "6fb0d339812ceb530abbf9fb767ec1b2c605e49952a0f588d5d5b9da28a0a240",
+      "observed_at": "2026-11-19T11:55:37.712617+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "failed",
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/web-green.log",
+      "sha256": "d724e5158963febc1c7ae80b1411576828c08c13d2f28f0bbaa46ea74fabd3fd",
+      "observed_at": "2026-11-19T12:00:29.905776+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "passed",
+      "contract_sha256": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "inputs": [
+        {
+          "path": "central/urls.py",
+          "sha256": "c4bdd6081a2d20bdaa99ebae201bc1b807fbba64f0284c45347e4dc0da48a1d5"
+        },
+        {
+          "path": "composition/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "composition/models.py",
+          "sha256": "13e6df758bfd4522c11ff97f7f974c3a3eb648c087b5a9cf18a23a39a149d6db"
+        },
+        {
+          "path": "composition/navigation.py",
+          "sha256": "965cada6e07ee250cfc303e1bb3d45caa24d61b2bbd436a6df1ba2599eabfa0d"
+        },
+        {
+          "path": "composition/navigation_forms.py",
+          "sha256": "e05e7a92b317411c36c110aa705cca541d30613545f5d744d9620bffe28a8936"
+        },
+        {
+          "path": "composition/services.py",
+          "sha256": "21debfc53004302b905b9c432149cfa0aa1162ee84ecc37e17d6805b38222d09"
+        },
+        {
+          "path": "composition/validation.py",
+          "sha256": "ac35589835a5359e42b388730b2e0fcb87a79f45386df320cb4532c80712e16f"
+        },
+        {
+          "path": "composition/views.py",
+          "sha256": "fc1e1d8a98d314525663f4be65e6a9c8e17d964621a4594291f2f993f8a56d6d"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "84751d6b4e2be54be80321354b3b9c501286e2ee1ea143daf34626419bc8a5b6"
+        },
+        {
+          "path": "static/ui/registre.css",
+          "sha256": "80c00885179de7f4ea80debe10d0fc78bbf573924fe1e7cb3d969c2f207ce297"
+        },
+        {
+          "path": "templates/composition/navigation.html",
+          "sha256": "beb64f3bec435f7ff7880c630acafe0a85af3f6ca2fd7ae25a27bcfb64840c57"
+        },
+        {
+          "path": "templates/registre/site.html",
+          "sha256": "333669cadb88f1435cd5ba70737e7cfbc6c374bb444993526dcf610e974b2829"
+        },
+        {
+          "path": "templates/ui/nav.html",
+          "sha256": "c709476497f1ba70046514ff7f5cb2f040211290b6df93fe1b8a83d6101948fe"
+        },
+        {
+          "path": "tests/test_navigation_services.py",
+          "sha256": "0c93a6e6534a739554296477dd56a93400ae6c889d078ab23264cfeb18a67ebf"
+        },
+        {
+          "path": "tests/test_navigation_validation.py",
+          "sha256": "d7d6f55939cfd0ddd010023fe181ec94f0d3ec182e59f10a0b0d42ae88a44f63"
+        },
+        {
+          "path": "tests/test_navigation_web.py",
+          "sha256": "fc5a3ccb38d6cfe693af84dc299529a427156a4cafdd0a64349f7ff4aeab973b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/web-red.log",
+      "sha256": "fbc8bb1869c3093d99260b1b218eea747e91c04e2a21c90aed64226c829ec547",
+      "observed_at": "2026-11-19T11:56:05.610391+00:00",
+      "revision": "e45206155abe853ccfd8bf524c8a1065918e312b4b4a54007db6bc0eb6808cdc",
+      "outcome": "failed",
+      "active": false
+    }
+  ],
+  "review": {
+    "reference": "REVIEW.md — /root/navigation_release_review, revue indépendante de réalisation",
+    "independent": true
+  },
+  "release_authorization": {
+    "reference": null,
+    "actions": []
+  }
+}

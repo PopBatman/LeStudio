@@ -1,0 +1,859 @@
+{
+  "observed_at": "2026-11-20T17:41:19.157474+00:00",
+  "purpose": "Comparaison workspace courant avec manifeste de T01 ; image Docker non réinterrogée",
+  "compared": [
+    {
+      "path": "central/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "central/gallery.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "central/portal.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "central/settings.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "central/test_settings.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "central/urls.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/appearance.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/appearance_contract.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/builder_batch.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/builder_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/canvas_format.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/canvas_forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/canvas_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/catalogue.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/catalogue_forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/catalogue_v1.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/catalogue_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editor.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editor_forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editor_navigation.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editor_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editorial.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/editorial_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/figma_mapping.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/management/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/management/commands/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/management/commands/catalogue.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/management/commands/purge_apercus.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0001_initial.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0002_catalogue.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0003_standard_components.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0004_editorial.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0005_preview_ticket.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/0006_builder_save.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/migrations/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/models.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/navigation.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/navigation_forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/placement.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/preview.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/preview_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/structure.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/validation.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "composition/views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/comparison.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/comparison_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/figma.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/import_forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/import_views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/imports.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/management/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/management/commands/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/management/commands/purge_depots.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/migrations/0001_initial.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/migrations/0002_figma_review.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/migrations/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/models.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/provenance.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/public.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/public_urls.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "depots/staff.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/apps.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/forms.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/management/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/management/commands/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/management/commands/registre_access.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/migrations/0001_initial.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/migrations/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/models.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/raccordement.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/urls.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "registre/views.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder-drop.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder-edit-model.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder-edit.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder-edit.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder-frame.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/builder.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/canvas.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/canvas.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/depot-public.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/depot-public.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/depot-staff.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/editor.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/figma-compare.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/figma-compare.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/gallery.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/gallery.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/preview.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/preview.js",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/registre.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "static/ui/workspace.css",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/builder.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/builder_edit.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/canvas_parent.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/canvas_surface.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/catalogue.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor_article.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor_definition.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor_inspector.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor_observation.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editor_resume.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editorial.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editorial_article.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/editorial_observation.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/figma_compare.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/navigation.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/preview_prepare.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/preview_view.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/composition/sample.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/alert.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/badge.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/button.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/empty_state.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/field.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/table.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/cotton/text_link.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/import_node.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/import_review.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/public.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/public_limit.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_cursor_error.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_erase.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_history.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_issued.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_revoke.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_submission.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/depots/staff_time.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/archive.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/base.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/client.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/error.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/feedback.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/form.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/list.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/search_error.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/registre/site.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/ui/base.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/ui/gallery.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/ui/nav.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/base.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/forbidden.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/home.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/illustration.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/login.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "templates/workspace/logout.html",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/catalogue_fixture.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_appearance.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_builder_batch.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_builder_canvas.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_builder_edit_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_builder_parity.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_canvas_domain.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_canvas_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_catalogue.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_catalogue_concurrency.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_catalogue_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_comparison_service.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_composition_services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_composition_validation.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_create_operator.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_depot_public.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_depot_staff.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_depots_domain.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editor_concurrency.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editor_services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editor_transition.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editor_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editorial_builder_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editorial_services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editorial_services_concurrency.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editorial_transport.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_editorial_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_engine_transport.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_figma_compare_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_figma_imports.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_figma_mapping.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_figma_provenance.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_figma_reader.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_gallery.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_health.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_import_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_navigation_services.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_navigation_validation.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_navigation_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_operator_access.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_portal_host.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_preview_bridge.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_preview_cleanup.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_preview_transport.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_preview_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_raccordement.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_registre.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_registre_grants.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_registre_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_settings.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "tests/test_site_connection_web.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/access.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/management/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/management/commands/__init__.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/management/commands/create_operator.py",
+      "same_as_t01": true
+    },
+    {
+      "path": "workspace/views.py",
+      "same_as_t01": true
+    }
+  ],
+  "changed": []
+}

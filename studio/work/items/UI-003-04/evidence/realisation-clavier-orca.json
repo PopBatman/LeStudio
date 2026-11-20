@@ -1,0 +1,12 @@
+{
+  "outil": "Orca / AT-SPI, Chromium sous X11",
+  "site": "B de recette, format tablette sans frame",
+  "gestes": "Au clavier, ouvrir le rendu mobile, puis ouvrir l’éditeur commun.",
+  "sortie_vocale": [
+    "Rendu Wagtail toggle button not pressed.",
+    "Comparaison indisponible",
+    "pressed",
+    "Modifier dans l’atelier link.",
+    "Rechercher un composant entry Titre, image…"
+  ]
+}

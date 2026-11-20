@@ -1,0 +1,16 @@
+# Revue visuelle du cadrage
+
+La [maquette interactive](evidence/maquette.html) reprend les couleurs, la typographie et le site fictif Atlas du Sud du prototype approuvé en UI-003-01. Le gestionnaire retrouve la frame de référence et le rendu de la page dans deux panneaux identifiés. La source de chaque panneau est visible. La provenance du PNG, les correspondances confirmées et la tâche associée au composant inconnu se déplient à la demande. Sur un écran étroit, deux boutons basculent entre référence et rendu en conservant le format logique choisi.
+
+| Parcours sur la maquette | Résultat observé dans Chromium 156.0.8078.4 |
+| --- | --- |
+| [Comparer sur ordinateur](evidence/comparaison-bureau.png) | À 1 440 × 940, la frame bureau v12 et le brouillon R8 se lisent côte à côte. Le diagnostic identifie le titre, sa différence de taille et la portée de la décision. |
+| [Approuver sur la tablette](evidence/decision-tablette.png) | La saisie d’un motif, Tab puis Entrée consignent la décision pour R8, bureau et v12. Le focus revient à l’historique. L’image a été capturée à 820 × 1 080. Le titre a ensuite été modifié dans le parcours simulé de l’atelier. La comparaison de R9 exige une nouvelle décision et l’historique garde R8. |
+| [Consulter le mobile sans frame correspondante](evidence/reference-mobile-absente.png) | À 390 × 844, le panneau Référence affiche le diagnostic du format absent. Entrée sur Rendu Wagtail affiche le brouillon mobile, puis Entrée sur Référence restitue le diagnostic au même format. L’approbation de l’écart bureau est indisponible dans cette vue. La page tient aussi dans une largeur de 320 pixels. |
+| Référence indisponible et composant inconnu | En bureau, le scénario « Référence visuelle indisponible » retire le visuel et l’approbation. L’accès à l’atelier demeure. Le détail du composant « Carte des étapes » montre la tâche d’implémentation interne associée. |
+
+Le test utilise le fichier HTML autonome ouvert localement. Il a observé zéro exception JavaScript et zéro requête HTTP(S). Les deux visuels, les décisions et le passage à R9 sont illustratifs et conservés en mémoire durant la séance. La comparaison de rendus réels, l’isolement du PNG privé, sa durée de conservation, la révocation des droits, les historiques importés et la concurrence relèvent de la recette applicative. Ce contrôle au clavier et en navigateur est une revue technique de la maquette. L’approbation humaine consignée dans UI-003-01 porte sur la direction artistique et les trois parcours examinés à l’époque.
+
+## Interface servie par Studio
+
+La recette Chromium a utilisé le rendu privé de deux moteurs raccordés. Les captures montrent la [comparaison sur ordinateur](evidence/realisation-comparaison-bureau.png), la [décision sur tablette](evidence/realisation-decision-tablette.png) et le [format sans référence sur mobile](evidence/realisation-reference-absente-mobile.png). La largeur logique du rendu est conservée dans l’iframe même lorsqu’un export haute densité est réduit pour tenir à l’écran. La [vérification au lecteur d’écran](evidence/realisation-clavier-orca.json) a observé les annonces du changement de panneau et de l’ouverture de l’atelier au clavier.

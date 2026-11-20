@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Le Studio{% endblock %}</title>
+  <link rel="stylesheet" href="/ui/assets/gallery.css">
+  {% block scripts %}{% endblock %}
+</head>
+<body id="haut">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="studio-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#haut"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Le Studio</span></a>
+      <div class="desktop-nav">{% block sidebar %}{% endblock %}</div>
+      <details class="mobile-nav">
+        <summary>Sommaire</summary>
+        {% block mobile_sidebar %}{% endblock %}
+      </details>
+      <div class="sidebar-footer"><span class="local-dot" aria-hidden="true"></span> Environnement local</div>
+    </aside>
+    <main class="main" id="contenu" tabindex="-1">
+      <header class="topbar">{% block breadcrumbs %}{% endblock %}</header>
+      <div class="page-content">{% block content %}{% endblock %}</div>
+    </main>
+  </div>
+</body>
+</html>

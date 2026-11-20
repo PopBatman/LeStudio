@@ -1,0 +1,16 @@
+{
+  "sites": 2,
+  "remises": 2,
+  "tiers_sans_compte": true,
+  "recu_recharge": true,
+  "lien_nettoye": true,
+  "lecture_sans_gestion": true,
+  "autre_site": 404,
+  "recu_apres_revocation": "indisponible",
+  "largeurs": [
+    320,
+    1280
+  ],
+  "appels_externes": 0,
+  "erreurs_javascript": 0
+}

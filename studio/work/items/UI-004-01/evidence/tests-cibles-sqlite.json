@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-11-20T17:12:55.303737+00:00",
+  "finished_at": "2026-11-20T17:12:56.579237+00:00",
+  "cwd": "/home/admincsd/Documents/LeStudio",
+  "command": [
+    "docker",
+    "compose",
+    "-f",
+    "studio/compose.yaml",
+    "exec",
+    "-T",
+    "web",
+    "python",
+    "manage.py",
+    "test",
+    "tests.test_builder_batch",
+    "tests.test_builder_canvas",
+    "tests.test_builder_edit_web",
+    "tests.test_builder_parity",
+    "-v",
+    "2"
+  ],
+  "database": "central.test_settings SQLite :memory: via manage.py test",
+  "exit_code": 0,
+  "scope": "Contrats existants composition/permissions/batch/canvas/parité ; pas de geste UI-004 nouveau."
+}

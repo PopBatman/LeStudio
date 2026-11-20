@@ -1,0 +1,20 @@
+{
+  "command": "python manage.py test tests.test_gallery",
+  "observed_at": "2026-11-18T16:25:48.664503+00:00",
+  "exit": 1,
+  "output": ".FFF\n======================================================================\nFAIL: test_enabled_gallery_renders_and_serves_compiled_assets (tests.test_gallery.GalleryTests.test_enabled_gallery_renders_and_serves_compiled_assets)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/arch001-backend.rZdHgg/venv/lib/python3.12/site-packages/django/test/utils.py\", line 456, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admincsd/Documents/LeStudio/studio/tests/test_gallery.py\", line 14, in test_enabled_gallery_renders_and_serves_compiled_assets\n    self.assertEqual(page.status_code, 200)\nAssertionError: 404 != 200\n\n======================================================================\nFAIL: test_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) (path='/ui/')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/admincsd/Documents/LeStudio/studio/tests/test_gallery.py\", line 30, in test_gallery_is_read_only_and_exposes_only_its_assets\n    self.assertEqual(self.client.post(path, HTTP_HOST=\"localhost\").status_code, 405)\nAssertionError: 404 != 405\n\n======================================================================\nFAIL: test_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) (path='/ui/assets/gallery.js')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/admincsd/Documents/LeStudio/studio/tests/test_gallery.py\", line 30, in test_gallery_is_read_only_and_exposes_only_its_assets\n    self.assertEqual(self.client.post(path, HTTP_HOST=\"localhost\").status_code, 405)\nAssertionError: 404 != 405\n\n----------------------------------------------------------------------\nRan 3 tests in 0.004s\n\nFAILED (failures=3)\nFound 3 test(s).\nSystem check identified no issues (0 silenced).\n",
+  "inputs": [
+    {
+      "path": "central/urls.py",
+      "sha256": "f543852ffce478ee14280da4c67ead046759134b236a931a12ffc84f7b94c683"
+    },
+    {
+      "path": "central/settings.py",
+      "sha256": "583e032c7094c0522b243ceaa00364b0941071148073ae81d0f548eff007eb46"
+    },
+    {
+      "path": "tests/test_gallery.py",
+      "sha256": "c552893542d31ee04990b0d8935c1cef6e76cdc5e63ee23188e05e6aae807c59"
+    }
+  ]
+}

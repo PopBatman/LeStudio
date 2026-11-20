@@ -1,0 +1,15 @@
+{% extends "registre/base.html" %}
+{% block title %}Révoquer l’invitation · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:site-depots' site.pk %}">← Dépôts Figma · {{ site.name }}</a>
+<header class="rg-head"><h1>Révoquer l’invitation</h1></header>
+<section class="rg-panel rg-editor"><h2>Invitation {{ invitation.id|stringformat:"s"|slice:":8" }}</h2>
+  {% if invitation.active %}
+    <p>Cette action ferme le lien de dépôt, y compris pour un formulaire déjà ouvert. Les versions reçues restent consultables.</p>
+    <form method="post">{% csrf_token %}<div class="rg-actions">
+      <a href="{% url 'registre:site-depots' site.pk %}">Garder l’invitation</a>
+      <button class="btn btn-primary">Confirmer la révocation</button>
+    </div></form>
+  {% else %}<p>L’invitation est déjà fermée.</p>{% endif %}
+</section>
+{% endblock %}

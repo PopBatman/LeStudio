@@ -1,0 +1,11 @@
+Studio sha256:1e4a3cf2b07c4fb279d84f326dd9f67427e56cd28b0336805da6c2479237a863 · SQLite en mémoire · conteneur éphémère isolé
+manage.py test tests.test_builder_canvas tests.test_catalogue tests.test_editor_services tests.test_canvas_domain tests.test_appearance --settings=central.test_settings
+Creating test database for alias 'default'...
+Found 30 test(s).
+System check identified no issues (0 silenced).
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 0.417s
+
+OK
+Destroying test database for alias 'default'...

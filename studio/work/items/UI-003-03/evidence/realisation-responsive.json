@@ -1,0 +1,20 @@
+{
+  "site": "A · page Collections et B · page modèle",
+  "mobile": {
+    "position": "absolute",
+    "gauche": "20%",
+    "haut": "30px",
+    "largeur": "55%"
+  },
+  "depassement_refuse": "Le bloc dépasse les limites de son parent.",
+  "formats_controles": [
+    "Mobile libre",
+    "Tablette en flux",
+    "Bureau en flux",
+    "Retour Mobile libre",
+    "Hériter du bureau rétablit le flux"
+  ],
+  "guide_refus": "Un conteneur ne peut pas rejoindre sa descendance.",
+  "enregistrement": "Aucune révision supplémentaire",
+  "erreurs_js": []
+}

@@ -1,0 +1,13 @@
+# Avis de recette indépendante du canvas · 20 novembre 2026
+
+Exécutant /root/canvas_qual. Deux instances Django/Wagtail, deux bases de sites et un Studio PostgreSQL ont été créés dans des projets Compose dédiés. Chaque site fictif possède une page de 17 occurrences, un article publié et une deuxième page vide dans sa révision R4. Deux sessions Studio ont servi à vérifier le périmètre du reçu.
+
+| Critère | Observation |
+| --- | --- |
+| Fidélité du rendu | Le canvas et l’aperçu FEAT-004 de la même page et du même reçu présentent les mêmes identités, dimensions CSS, texte et styles dans Chromium. Les captures aux largeurs internes de 1 200, 820 et 390 px sont identiques pixel par pixel, une fois les cadres alignés sur la grille physique de l’écran et le contour de sélection retiré. [Mesures](comparaison-pixels.json) |
+| Sélection | Le pointeur et le tactile ont bien ciblé l’image dans le conteneur. Au clavier, sélectionner le dernier des 17 blocs a fait défiler le document. Deux textes portant le même libellé restent sélectionnables individuellement. Sur le second site, le contour mesuré correspond au rectangle de l’occurrence après défilement, changement de largeur et zoom visuel à 125 %. [Rectangles](contour-occurrences.json) |
+| Identité et frontières | Une deuxième session et un autre site reçoivent 404 sur la livraison du reçu voisin. L’instance B renvoie son propre article, ses propres occurrences et son propre marqueur. Chromium a exécuté le module épinglé dans le cadre isolé ; l’aperçu de référence conserve sa politique de document sans script. [Parcours observés](recette-canvas-reel.json) |
+| Échec et reprise | Une page vide se rend correctement. Retirée intentionnellement de la tête R5, elle reste identifiable en R4. Un reçu expiré renvoie 410, la structure autorisée reste consultable. Le retrait d’un média fait refuser le rendu avec 409. Après révocation du mandat, les livraisons du rendu et du repli sont refusées et le navigateur masque la surface privée déjà ouverte. [Incidents](recette-canvas-incidents.json) |
+| Effets sur les sites | Les compteurs de révisions, renditions, pointeurs live et empreintes de rendus sont égaux avant et après le parcours de consultation sur les deux instances. Les GET HTTP des articles publics sont identiques avant et après. La nouvelle révision de la fixture A pour le test de péremption n’a été créée qu’après cette comparaison. [Bases](non-publication.json) · [Pages publiques](pages-publiees.json) |
+
+Avis favorable au titre de cette recette sur sites fictifs. Les valeurs de parité concernent les pages, ressources, zoom et tailles observés. L’écoute humaine au lecteur d’écran et la qualification sur des navigateurs supplémentaires restent distinctes de ces mesures.

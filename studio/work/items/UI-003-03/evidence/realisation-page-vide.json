@@ -1,0 +1,18 @@
+{
+  "site": "A fictif",
+  "page": "Collections",
+  "revision_avant": 6,
+  "revision_apres": 7,
+  "section_initiale": 0,
+  "composants": [
+    "Titre",
+    "Texte"
+  ],
+  "gestes": [
+    "Ajout de section au clavier",
+    "Insertion des composants au clavier avec choix de destination",
+    "Déplacement tactile via événements Chromium et contrôle de l’ordre final",
+    "Enregistrement et relecture Wagtail"
+  ],
+  "erreurs_js": []
+}

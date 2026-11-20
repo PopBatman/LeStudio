@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "pages": [
+    {
+      "id": "383b1f01-47e5-4db6-8757-ab5432aea51e",
+      "parent_id": null,
+      "slug": "",
+      "title": "Accueil",
+      "sections": [
+        {
+          "id": "2dd22fe1-b385-4747-b448-5b273bb94701",
+          "layout": {
+            "base": {
+              "display": "grid",
+              "columns": 2,
+              "gap": 24
+            },
+            "mobile": {
+              "display": "stack",
+              "columns": 1,
+              "gap": 12
+            }
+          },
+          "blocks": [
+            {
+              "id": "d9d57cbc-f726-4e9a-96d7-77f27a294371",
+              "definition": {
+                "scope": "global",
+                "key": "heading",
+                "version": 1
+              },
+              "props": {
+                "text": "La maison des dunes",
+                "level": 1
+              },
+              "children": []
+            },
+            {
+              "id": "80dc336a-7e07-4585-9e00-ce2c83dcb0b8",
+              "definition": {
+                "scope": "global",
+                "key": "text",
+                "version": 1
+              },
+              "props": {
+                "text": "Découvrez le programme des ateliers."
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34fc41f4-b342-4c74-8cac-589547d6c3a5",
+      "parent_id": "383b1f01-47e5-4db6-8757-ab5432aea51e",
+      "slug": "ateliers",
+      "title": "Les ateliers",
+      "sections": []
+    },
+    {
+      "id": "6dd67b39-778c-5a29-9614-c99464cfd482",
+      "parent_id": "34fc41f4-b342-4c74-8cac-589547d6c3a5",
+      "slug": "dessin",
+      "title": "Dessin",
+      "sections": []
+    },
+    {
+      "id": "cbb51636-5a64-52f7-aa23-10db4d53ccc4",
+      "parent_id": "383b1f01-47e5-4db6-8757-ab5432aea51e",
+      "slug": "invitation",
+      "title": "Sur invitation",
+      "sections": []
+    }
+  ],
+  "menus": [
+    {
+      "id": "5d851354-8e58-50c2-b10c-b92258a5d1ae",
+      "label": "Principal",
+      "items": [
+        {
+          "id": "3536b93d-c1fa-51e4-b359-f2aae7711633",
+          "parent_id": null,
+          "label": "Accueil",
+          "target": {
+            "kind": "page",
+            "page_id": "383b1f01-47e5-4db6-8757-ab5432aea51e"
+          },
+          "visibility": [
+            "desktop",
+            "tablet",
+            "mobile"
+          ]
+        },
+        {
+          "id": "4a3360a7-045f-53a0-9ca1-5faad44924f2",
+          "parent_id": null,
+          "label": "Programme",
+          "target": {
+            "kind": "group"
+          },
+          "visibility": [
+            "desktop",
+            "tablet",
+            "mobile"
+          ]
+        },
+        {
+          "id": "97052a91-f915-5bae-b122-4c45c3557541",
+          "parent_id": "4a3360a7-045f-53a0-9ca1-5faad44924f2",
+          "label": "Cours de dessin",
+          "target": {
+            "kind": "page",
+            "page_id": "6dd67b39-778c-5a29-9614-c99464cfd482"
+          },
+          "visibility": [
+            "desktop",
+            "tablet",
+            "mobile"
+          ]
+        },
+        {
+          "id": "23a0fe97-3d29-5dc3-98a0-e66f9120c784",
+          "parent_id": "4a3360a7-045f-53a0-9ca1-5faad44924f2",
+          "label": "Billetterie partenaire",
+          "target": {
+            "kind": "external",
+            "url": "https://billetterie.example.org/programme/"
+          },
+          "visibility": [
+            "desktop",
+            "tablet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6d1c683e-1e03-5944-9b7f-5a2e23476e0e",
+      "label": "Secondaire",
+      "items": [
+        {
+          "id": "5f544d49-c2ad-5b81-90a3-e3f39cbf3f5c",
+          "parent_id": null,
+          "label": "Toutes les sessions",
+          "target": {
+            "kind": "page",
+            "page_id": "34fc41f4-b342-4c74-8cac-589547d6c3a5"
+          },
+          "visibility": [
+            "desktop",
+            "tablet",
+            "mobile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "749c92f7-cc2c-551a-b609-490c1b34cc0b",
+      "label": "Pied de page",
+      "items": [
+        {
+          "id": "729cf7e6-05e2-59e3-9a83-c40dae5465b5",
+          "parent_id": null,
+          "label": "Découvrir le dessin",
+          "target": {
+            "kind": "page",
+            "page_id": "6dd67b39-778c-5a29-9614-c99464cfd482"
+          },
+          "visibility": [
+            "desktop",
+            "tablet",
+            "mobile"
+          ]
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "accent": "#235965",
+    "gap": 16
+  }
+}

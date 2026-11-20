@@ -1,0 +1,1390 @@
+{
+  "schema_version": 1,
+  "id": "UI-003-04",
+  "kind": "component",
+  "title": "Reprise et édition des compositions Figma",
+  "state": "DONE",
+  "ui_required": true,
+  "scope": {
+    "allowed_paths": [
+      "work/items/UI-003-04/",
+      "work/items/UI-003/REPORT.md",
+      "composition/builder_views.py",
+      "depots/",
+      "tests/",
+      "registre/urls.py",
+      "templates/",
+      "static/ui/",
+      "central/urls.py",
+      "requirements.txt",
+      ".dockerignore",
+      "docs/"
+    ],
+    "forbidden_paths": [
+      ".git/**",
+      ".env",
+      ".env.*"
+    ]
+  },
+  "authorization": {
+    "reference": "Mandat de lancement UI-003-04 du 20 novembre 2026. Développement, recette et livraison dans Studio local.",
+    "actions": [
+      "plan",
+      "implement",
+      "test",
+      "review",
+      "publish_docs"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "mockup",
+      "path": "evidence/comparaison-bureau.png",
+      "sha256": "20c83442013896ac345937de7bd4ece030528fabf86b045ed6b08a5ac56026be",
+      "observed_at": "2026-11-20T14:27:13.844384+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-04/evidence/maquette.html",
+          "sha256": "303fe3585a8f26266c7b56724ed0fdac9b281834dca4c87ae86ba8e28129cebc"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/decision-tablette.png",
+      "sha256": "15beb6573e944b530ad8519f945e5b1ea94a75fdd873ff8db00468d6c2632813",
+      "observed_at": "2026-11-20T14:27:13.935387+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-04/evidence/maquette.html",
+          "sha256": "303fe3585a8f26266c7b56724ed0fdac9b281834dca4c87ae86ba8e28129cebc"
+        }
+      ]
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/maquette.html",
+      "sha256": "303fe3585a8f26266c7b56724ed0fdac9b281834dca4c87ae86ba8e28129cebc",
+      "observed_at": "2026-11-20T14:27:13.484373+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "illustrative",
+      "inputs": []
+    },
+    {
+      "kind": "mockup",
+      "path": "evidence/reference-mobile-absente.png",
+      "sha256": "df9c21c65ba5e7d68d060b86b816c5cf0a677809ffc9461710301e00305aca76",
+      "observed_at": "2026-11-20T14:27:14.004389+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "illustrative",
+      "inputs": [
+        {
+          "path": "work/items/UI-003-04/evidence/maquette.html",
+          "sha256": "303fe3585a8f26266c7b56724ed0fdac9b281834dca4c87ae86ba8e28129cebc"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/socle-postgresql.log",
+      "sha256": "6a0e911aa631da64e8020e839c208f648582a779014e9c38c24618011b1c9217",
+      "observed_at": "2026-11-20T14:25:31.679301+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "passed",
+      "inputs": [],
+      "active": false
+    },
+    {
+      "kind": "test",
+      "path": "evidence/socle-sqlite.log",
+      "sha256": "cdfbd4a7d7fc297f168a5754c4adb8589fc94b180c2389dcded6112c3bae3a66",
+      "observed_at": "2026-11-20T14:25:30.892277+00:00",
+      "revision": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "contract_sha256": "000eee50fae65f714718faca619f6f96c3717899b5a852a59aa2bd849846fcd4",
+      "outcome": "passed",
+      "inputs": [],
+      "active": false
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/non-publication.json",
+      "sha256": "0f066380bcd7eea26498137e1a3b9d2f436f5c997deade548bf53f9fb8b5e597",
+      "observed_at": "2026-11-20T14:42:53.838373+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/pages-publiees.json",
+      "sha256": "ebc9aac1ade1cf5a9b0bf33b858a48d9aac3edb8286f0289a71f1bef561490fd",
+      "observed_at": "2026-11-20T14:42:51.628308+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/realisation-clavier-orca.json",
+      "sha256": "4e22c44b187cad8c7c4b0a90a334d417cedf1a6448a668a6f37db1db2161d456",
+      "observed_at": "2026-11-20T14:42:23.636480+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/realisation-comparaison-bureau.png",
+      "sha256": "0be985232019efc941b4c9e0a4a099b5c10277f10b5f3936d4b54e1af6031b56",
+      "observed_at": "2026-11-20T14:41:24.018715+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/realisation-comparaison-erreurs.json",
+      "sha256": "a07f7e9475a107b40718f47d9115580cd3bb8e199c3420c669184361509f8488",
+      "observed_at": "2026-11-20T14:42:24.886517+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/realisation-decision-tablette.png",
+      "sha256": "05ed941b761c7fbefe6931b6fe70d589718f261edc09eb6d6fc73837a9e9123e",
+      "observed_at": "2026-11-20T14:41:24.439727+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "integration",
+      "path": "evidence/realisation-parcours.json",
+      "sha256": "3adbcfc6ccd7fbbd1fee676cc75d9a58553e238683e1cd7f9400551585fdb224",
+      "observed_at": "2026-11-20T14:41:29.101865+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "deployment",
+      "path": "evidence/realisation-poste-local.json",
+      "sha256": "c0e51c69f7c050da45566817430e9e52f5b7fa836985259d32f60443dbaf4794",
+      "observed_at": "2026-11-20T14:43:56.014213+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        },
+        {
+          "path": "docs/MOTEUR-WAGTAIL.md",
+          "sha256": "3789e6ea05c28834d96d7bd700cbf02107e6fece49bb6751f2b357e5cd6db324"
+        }
+      ]
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/realisation-reference-absente-mobile.png",
+      "sha256": "7a1389bc2740831692e023be9da6d6067f14a7b4c8da7d7304cada831150041a",
+      "observed_at": "2026-11-20T14:41:24.600732+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/realisation-tests-postgresql.log",
+      "sha256": "3eef3b5e36ffa4710c9a33ee563aea97e8db7f162d3e65068b46f44f06dda717",
+      "observed_at": "2026-11-20T14:42:50.765283+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        }
+      ]
+    },
+    {
+      "kind": "test",
+      "path": "evidence/realisation-tests-sqlite.log",
+      "sha256": "6963f8166d81c13099834e24803964104a7b72bf5bcb374ac867acc36b5911f5",
+      "observed_at": "2026-11-20T14:42:46.889168+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/recette-navigateur.md",
+      "sha256": "44c43dfdfdc27642c981a87f1f874fdd95c6112e094e5c4552ff702ad8610025",
+      "observed_at": "2026-11-20T14:42:53.843374+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-integration.md",
+      "sha256": "a701939d93e48479521487adaaf91bd59708d2c75c3056ff1431c3b0aa26e4a7",
+      "observed_at": "2026-11-20T14:40:16.881726+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "path": "evidence/revue-service.md",
+      "sha256": "4a49b37b148bc258b42498f726824efd6d1aba175542c379d884c404d76a73f4",
+      "observed_at": "2026-11-20T14:40:49.654697+00:00",
+      "revision": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "contract_sha256": "3f912fff98451da715a4e0a0b7bf041086c26f43741cf59eb05bb9c5d87da7e3",
+      "outcome": "passed",
+      "inputs": [
+        {
+          "path": "depots/comparison.py",
+          "sha256": "3c24ba32fb92a959eb669915d03af1b52b5e989dd6234be19ac11af2501dac45"
+        },
+        {
+          "path": "depots/provenance.py",
+          "sha256": "eb06db9e17a1b270c0f1e11892f634198574dc464a9838a02efa1d5ea268832b"
+        },
+        {
+          "path": "depots/models.py",
+          "sha256": "e9179ddf8f2aa69f5846c4d76a2c7d857d93b8c2972b7713556f8aa41ddb75f6"
+        },
+        {
+          "path": "depots/services.py",
+          "sha256": "5a2af9ad33c1097463127ecf5e220acd5fffecc2848827379ceec598df8dd50b"
+        },
+        {
+          "path": "depots/import_views.py",
+          "sha256": "5718ecaf88f021ee9b9c505336aaccae120a0326cbd9ccb27ddc205c83e7d190"
+        },
+        {
+          "path": "depots/migrations/0003_framereference_comparisondecision_and_more.py",
+          "sha256": "f39d645ee269b5f36c406232889b15cf0033521af3c66929c8cc1b0348949cf1"
+        },
+        {
+          "path": "depots/comparison_views.py",
+          "sha256": "cb2a38934543c6ca6526841cd0301d33c751091cefaac496d38b0d80a7c45fbe"
+        },
+        {
+          "path": "tests/test_figma_compare_web.py",
+          "sha256": "6f127d5664da1330ee0a613155cbbdc3914da9d5df7e15d293777525d5437ad6"
+        },
+        {
+          "path": "tests/test_figma_provenance.py",
+          "sha256": "6854ec6b846f939ee25660240794092226d40b7d83f136714d9dd087120e910e"
+        },
+        {
+          "path": "tests/test_comparison_service.py",
+          "sha256": "a1f3687e024c5481dde99d44c3ccb0d23fa44a5f050ddc81d880794971fb5d48"
+        },
+        {
+          "path": "registre/urls.py",
+          "sha256": "979b898edcb6613305f0a1a907be0bd83b2df1141bd6d42d436c500116d5fe05"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "76ad642f516bfec3b7e6d01d2e322ffce95026b2324b6e85a234ad712a1d8e8d"
+        },
+        {
+          "path": "composition/builder_views.py",
+          "sha256": "155c0b9dd6cb1e07158eb49e044ec70be0c5be8717cdb892457a7b830a8ccb03"
+        },
+        {
+          "path": "static/ui/builder-edit.js",
+          "sha256": "11d89b4df27efb75e3712e7c8fceeed1caf0a71f176ce6f3a70ceab1118f7972"
+        },
+        {
+          "path": "static/ui/figma-compare.js",
+          "sha256": "19b7a582bbb690db15a48986f35ae2a7ac8e4a7fcb3208720fad92da1b5d910b"
+        },
+        {
+          "path": "static/ui/figma-compare.css",
+          "sha256": "888b7cec4330b9a27740bfb920abf1129b43aa43084f81307b825d75f8ffa16b"
+        },
+        {
+          "path": "templates/composition/builder.html",
+          "sha256": "4ce5c093ba498be251d62c55393b3c7bf2d8b9de9a18b9a43ea20a27205f75f7"
+        },
+        {
+          "path": "templates/depots/import_review.html",
+          "sha256": "e9460496ea9f4be7694f3c152ba41938b01f2ae06d130fa7c69228abdc6c6dbe"
+        },
+        {
+          "path": "templates/composition/figma_compare.html",
+          "sha256": "76afd8256bed35c712f39067936f8a04161363e8c1ad54cb42ecd586a1bcff7a"
+        },
+        {
+          "path": "central/urls.py",
+          "sha256": "0beb81dd852e21e159daf364b8b35c544eef5c690c4375177010a01073ea1f08"
+        },
+        {
+          "path": ".dockerignore",
+          "sha256": "3017a86e26c16d359f923c7fe5e732bdf079079af979c5bef45bdfbe33795d2b"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "independent": true,
+    "reference": "Revues croisées /root/u304_service (intégration) et /root/u304_source (service). Recette navigateur /root/u304_browser."
+  },
+  "release_authorization": {
+    "reference": "Mandat de lancement UI-003-04 dans Studio local, 20 novembre 2026.",
+    "actions": [
+      "release"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "base": 7,
+  "revision_confirmee": 8,
+  "requetes_sauvegarde": 2,
+  "meme_cle_et_commandes": true,
+  "nombre_revisions_creees": 1,
+  "lecture_wagtail": "Édition retrouvée après une réponse interrompue",
+  "ticket_expire": 410,
+  "document_expire": 410,
+  "moteur_indisponible": "Rendu refusé, aucune écriture supplémentaire ; même titre Wagtail relu après redémarrage de la passerelle.",
+  "exceptions": []
+}

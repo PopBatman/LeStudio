@@ -1,0 +1,17 @@
+Found 1 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+F
+======================================================================
+FAIL: test_entry_resumes_current_revision_for_manager_and_reader (tests.test_site_connection_web.SiteConnectionPageTests.test_entry_resumes_current_revision_for_manager_and_reader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_site_connection_web.py", line 83, in test_entry_resumes_current_revision_for_manager_and_reader
+    self.assertIn(entry + "canvas/", PageMarkup(response).links)
+AssertionError: '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/atelier/canvas/' not found in ['#contenu', '/', '/', '/clients/', '/sites/', '/sites/', '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/atelier/', '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/pages/', '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/menus/', '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/bibliotheque/', '/sites/06b74e97-0fde-4c9a-8da2-bb2c0e528cfe/apparence/']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.029s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...

@@ -1,0 +1,19 @@
+{
+  "sante": "ok",
+  "avant": {
+    "sites": 1,
+    "revisions": 0,
+    "raccordement": {
+      "SiteConnection": 1
+    }
+  },
+  "apres": {
+    "sites": 1,
+    "revisions": 0,
+    "raccordement": {
+      "SiteConnection": 1
+    }
+  },
+  "moteur_wagtail_meme_conteneur_et_demarrage": true,
+  "migrations_en_attente": false
+}

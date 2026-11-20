@@ -1,0 +1,6 @@
+{% if result.status == 'ok' %}
+<p>Article · Page Wagtail {{ result.page_number }} · Révision publiée observée {{ result.published_revision }}</p>
+{% elif result.status == 'inaccessible' %}<p>Référence à vérifier. La source demandée est inaccessible.</p>
+{% elif result.status == 'unavailable' %}<p>Vérification éditoriale indisponible. Vérifiez le raccordement et la compatibilité du moteur.</p>{% endif %}
+{% if result.checked_at %}<p>Vérifié le {{ result.checked_at|date:"d/m/Y à H:i T"|default:result.checked_at }}.</p>{% endif %}
+{% if result.status != 'ok' and result.last_success_at %}<p>Dernière vérification réussie le {{ result.last_success_at|date:"d/m/Y à H:i T" }}.</p>{% endif %}

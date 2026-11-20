@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-20T15:17:04.520287+00:00",
+  "ressources_compose_restantes": {
+    "conteneurs": 0,
+    "réseaux": 0,
+    "volumes": 0
+  },
+  "socle": "Trois projets Compose de ce banc : Studio laboratoire et deux moteurs Wagtail.",
+  "secrets": "Dossier éphémère, certificats, profil, identifiants de recette et journaux bruts Orca retirés."
+}

@@ -1,0 +1,15 @@
+{
+  "image": "sha256:1e4a3cf2b07c4fb279d84f326dd9f67427e56cd28b0336805da6c2479237a863",
+  "web": "healthy",
+  "worker": "running",
+  "revisions_preservees": 16,
+  "raccordements_preserves": 1,
+  "moteur_client_identique": true,
+  "controles_http": {
+    "/health/": 200,
+    "canvas privé sans session": 302,
+    "/assets/builder.js": 200,
+    "/assets/builder.css": 200,
+    "/assets/builder-frame.js": 404
+  }
+}

@@ -1,0 +1,26 @@
+{% extends "registre/base.html" %}
+{% block title %}Articles Wagtail · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{{ return_url }}">← Revenir à l’atelier visuel{% if target %} · {{ target.label }}{% endif %}</a>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ site.name }}{% if revision %} · Révision {{ revision.number }}{% endif %}</p><h1>Articles Wagtail</h1></div>
+{% if not manage %}<p>Lecture seule{% if historical %} · Révision historique{% endif %}</p>{% endif %}</header>
+{% if error %}<div class="rg-errors" role="alert"><p>{{ error }}</p>{% if reload_url %}<a href="{{ reload_url }}">Relire la sélection</a>{% endif %}</div>{% endif %}
+{% if not revision %}<p>Aucun brouillon sur ce site.</p>{% elif revision.status != 'ok' %}<p>La version du brouillon est incompatible.</p>{% endif %}
+{% if page %}
+<div class="rg-grid"><nav class="rg-panel" aria-label="Pages et emplacements éditoriaux"><h2>Pages</h2>
+<ul>{% for item in pages %}<li><a href="?page={{ item.id }}{% if historical %}&amp;revision={{ revision.id }}{% endif %}" {% if page.id == item.id %}aria-current="page"{% endif %}>{{ item.title }}</a></li>{% endfor %}</ul>
+<h2>Emplacements · {{ page.title }}</h2><ul>{% for item in targets %}<li><a href="?page={{ page.id }}&amp;selection={{ item.id }}{% if historical %}&amp;revision={{ revision.id }}{% endif %}" {% if target.id == item.id %}aria-current="true"{% endif %}>{{ item.label }}</a></li>{% empty %}<li>Cette page ne contient aucune section.</li>{% endfor %}</ul></nav>
+<section class="rg-panel"><h2>{{ target.label|default:"Référence éditoriale" }}</h2>
+{% if target %}{% include 'composition/editorial_article.html' %}
+{% if manage %}
+<form method="post" class="lib-form">{% csrf_token %}
+<input type="hidden" name="page" value="{{ page.id }}"><input type="hidden" name="selection" value="{{ target.id }}"><input type="hidden" name="base" value="{{ revision.id }}">
+{% if proposal.status == 'ok' %}<input type="hidden" name="observation" value="{{ proposal.token }}">
+{% if article.page_number == proposal.page_number and article.expected_revision == proposal.published_revision %}<p>La référence conservée correspond à la publication observée.</p>
+{% else %}<button class="btn btn-primary" name="intent" value="confirm">{% if not article.page_number %}Associer l’article{% elif article.page_number == proposal.page_number %}Adopter la révision publiée {{ proposal.published_revision }}{% else %}Remplacer la référence{% endif %}</button>{% endif %}
+<a href="{{ return_url }}">{% if article.page_number %}Conserver la référence{% else %}Annuler{% endif %}</a>
+{% else %}{{ form.as_p }}<button class="btn btn-primary" name="intent" value="verify">Vérifier la source</button>{% endif %}</form>{% endif %}
+{% else %}<p>Choisissez une section, un conteneur ou un article dans la liste des emplacements.</p>{% endif %}</section></div>
+{% if diagnostics %}<section class="rg-panel"><h2>Diagnostics du brouillon</h2><ul>{% for item in diagnostics %}<li>{{ item.message }} {% if item.block_id and not historical %}<a href="{% url 'registre:site-catalogue' site.pk %}?block={{ item.block_id }}">Examiner l’occurrence</a>{% endif %}</li>{% endfor %}</ul></section>{% endif %}
+{% endif %}
+{% endblock %}

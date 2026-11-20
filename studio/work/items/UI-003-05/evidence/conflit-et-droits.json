@@ -1,0 +1,12 @@
+{
+  "utilisateurs": "Deux gestionnaires A, un lecteur A sans mandat sur B",
+  "revision_commune": 2,
+  "ecriture_v1": 3,
+  "revisions_creees": 1,
+  "refus_v2": "Conflit de révision\n\nLe brouillon a changé. Relisez la dernière révision.\n\nExaminer la dernière sauvegarde\nGestes locaux\nReprendre sur la dernière sauvegarde",
+  "proposition_locale_conservee": true,
+  "retrait_gestion": "403 au dépôt et aucune révision créée",
+  "lecture_site_A": 200,
+  "lecture_site_B": 404,
+  "exception_js": []
+}

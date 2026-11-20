@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-20T17:23:55.965655+00:00",
+  "contract_sha256": "97e500e9fda824f80ae368e7ee45e63dd9ffebaad996ac8dee89f41748fd809f",
+  "documents": [
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "b7f4d12cb66358fdb3052bdf8a6ccd73e6d9f31ad941091ff5fe7d1b4813c464"
+    },
+    {
+      "path": "AUDIT.md",
+      "sha256": "20d6f85b19417a7936cdac2701f14267cf01bf420caf47173f48a8034d4147b9"
+    },
+    {
+      "path": "DECISION-FRONTEND.md",
+      "sha256": "5ed28a607c62a2110f1b8ce394d4f13af0165f3ef932bd28bb09346e13488df6"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "sha256": "7b565d0c17089475896286aaecbe141115da79560415b8a0296475b76ee4a473"
+    },
+    {
+      "path": "INVENTAIRE-T21.md",
+      "sha256": "472c59ca294a9bd8a3db6aeaebcf62de980beb7911a5d3658495888f02821c99"
+    },
+    {
+      "path": "REFERENCE-PRODUIT.md",
+      "sha256": "c0fbd435e5065734d72ec224096b0207520246827041bfcfba4fc96ee1667ef5"
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "bcfdbf8ff41ff529608f234d5f9a131d61e67f34d96f0e03658fd6f774d77a5d"
+    },
+    {
+      "path": "RESEARCH.md",
+      "sha256": "615fa5f41db67f09fde7ba79d3929c939a262d67fd05d232f2695bc4185aca6b"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "fcd704bc6063061eee32ab006bc7fbe8ea25398587ff81bffd2985b48e49b72a"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "dce742c5a6f21a5a9cb0ab16c8808f183fbda90755f96c3a33b42fe344908d97"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "196aa64255c31ea25afda221fe56011edb5dcf7534b6ef7ff62f46f5fefbeab8"
+    },
+    {
+      "path": "TASKLIST.md",
+      "sha256": "08dce183fd4a29264530c584052f07963113828be4699f4d54249bfea1d0d055"
+    },
+    {
+      "path": "VISUAL-REVIEW.md",
+      "sha256": "6914c9ac3c5dfa7de49e610d06e265858614fb0f3a1eaaa95da9eaa2c683db6b"
+    }
+  ]
+}

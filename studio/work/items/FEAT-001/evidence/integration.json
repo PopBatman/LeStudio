@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-11-18T16:42:31.614702+00:00",
+  "environnement": "PostgreSQL jetable, galerie désactivée, volume de qualification distinct",
+  "commands": [
+    {
+      "command": "exec -T web python manage.py check",
+      "exit": 0,
+      "output": "System check identified no issues (0 silenced).\n"
+    },
+    {
+      "command": "exec -T web python manage.py migrate --check",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "command": "exec -T web python manage.py makemigrations --dry-run --check",
+      "exit": 0,
+      "output": "No changes detected\n"
+    },
+    {
+      "command": "exec -T web python manage.py test -v 2",
+      "exit": 0,
+      "output": "Found 19 test(s).\nOperations to perform:\n  Synchronize unmigrated apps: django_cotton, workspace\n  Apply all migrations: auth, contenttypes, sessions\nSynchronizing apps without migrations:\n  Creating tables...\n    Running deferred SQL...\nRunning migrations:\n  Applying contenttypes.0001_initial... OK\n  Applying contenttypes.0002_remove_content_type_name... OK\n  Applying auth.0001_initial... OK\n  Applying auth.0002_alter_permission_name_max_length... OK\n  Applying auth.0003_alter_user_email_max_length... OK\n  Applying auth.0004_alter_user_username_opts... OK\n  Applying auth.0005_alter_user_last_login_null... OK\n  Applying auth.0006_require_contenttypes_0002... OK\n  Applying auth.0007_alter_validators_add_error_messages... OK\n  Applying auth.0008_alter_user_username_max_length... OK\n  Applying auth.0009_alter_user_last_name_max_length... OK\n  Applying auth.0010_alter_group_name_max_length... OK\n  Applying auth.0011_update_proxy_permissions... OK\n  Applying auth.0012_alter_user_first_name_max_length... OK\n  Applying sessions.0001_initial... OK\nSystem check identified no issues (0 silenced).\nCreating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...\ntest_creates_only_a_regular_active_operator_with_a_hashed_password (tests.test_create_operator.CreateOperatorTests.test_creates_only_a_regular_active_operator_with_a_hashed_password) ... ok\ntest_existing_user_is_never_granted_access_or_reset (tests.test_create_operator.CreateOperatorTests.test_existing_user_is_never_granted_access_or_reset) ... ok\ntest_failed_confirmation_or_weak_password_creates_no_user (tests.test_create_operator.CreateOperatorTests.test_failed_confirmation_or_weak_password_creates_no_user) ... ok\ntest_membership_failure_rolls_back_account_creation (tests.test_create_operator.CreateOperatorTests.test_membership_failure_rolls_back_account_creation) ... ok\ntest_rejects_invalid_name_without_prompting (tests.test_create_operator.CreateOperatorTests.test_rejects_invalid_name_without_prompting) ... ok\ntest_expired_session_returns_to_login (tests.test_operator_access.OperatorSessionTests.test_expired_session_returns_to_login) ... ok\ntest_login_refusals_share_one_error (tests.test_operator_access.OperatorSessionTests.test_login_refusals_share_one_error) ... ok\ntest_login_uses_workspace_and_logout_ends_access (tests.test_operator_access.OperatorSessionTests.test_login_uses_workspace_and_logout_ends_access) ... ok\ntest_removing_membership_immediately_forbids_workspace (tests.test_operator_access.OperatorSessionTests.test_removing_membership_immediately_forbids_workspace) ... ok\ntest_disabled_gallery_hides_page_and_assets (tests.test_gallery.GalleryTests.test_disabled_gallery_hides_page_and_assets) ... ok\ntest_enabled_gallery_renders_and_serves_compiled_assets (tests.test_gallery.GalleryTests.test_enabled_gallery_renders_and_serves_compiled_assets) ... ok\ntest_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) ... ok\ntest_database_failure_returns_only_status (tests.test_health.HealthTests.test_database_failure_returns_only_status) ... ok\ntest_unrecognized_host_is_rejected_before_database_access (tests.test_health.HealthTests.test_unrecognized_host_is_rejected_before_database_access) ... ok\ntest_write_method_is_rejected_before_database_access (tests.test_health.HealthTests.test_write_method_is_rejected_before_database_access) ... ok\ntest_anonymous_visitor_reaches_login (tests.test_operator_access.WorkspaceEntryTests.test_anonymous_visitor_reaches_login) ... ok\ntest_existing_read_only_endpoints_keep_rejecting_writes (tests.test_operator_access.WorkspaceEntryTests.test_existing_read_only_endpoints_keep_rejecting_writes) ... ok\ntest_login_styles_are_available_with_gallery_disabled (tests.test_operator_access.WorkspaceEntryTests.test_login_styles_are_available_with_gallery_disabled) ... ok\ntest_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 3.227s\n\nOK\nDestroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...\n"
+    },
+    {
+      "command": "exec -T web python manage.py test --keepdb --settings=central.settings -v 2",
+      "exit": 0,
+      "output": "Found 19 test(s).\nOperations to perform:\n  Synchronize unmigrated apps: django_cotton, workspace\n  Apply all migrations: auth, contenttypes, sessions\nSynchronizing apps without migrations:\n  Creating tables...\n    Running deferred SQL...\nRunning migrations:\n  Applying contenttypes.0001_initial... OK\n  Applying contenttypes.0002_remove_content_type_name... OK\n  Applying auth.0001_initial... OK\n  Applying auth.0002_alter_permission_name_max_length... OK\n  Applying auth.0003_alter_user_email_max_length... OK\n  Applying auth.0004_alter_user_username_opts... OK\n  Applying auth.0005_alter_user_last_login_null... OK\n  Applying auth.0006_require_contenttypes_0002... OK\n  Applying auth.0007_alter_validators_add_error_messages... OK\n  Applying auth.0008_alter_user_username_max_length... OK\n  Applying auth.0009_alter_user_last_name_max_length... OK\n  Applying auth.0010_alter_group_name_max_length... OK\n  Applying auth.0011_update_proxy_permissions... OK\n  Applying auth.0012_alter_user_first_name_max_length... OK\n  Applying sessions.0001_initial... OK\nSystem check identified no issues (0 silenced).\nUsing existing test database for alias 'default' ('test_studio_db')...\ntest_creates_only_a_regular_active_operator_with_a_hashed_password (tests.test_create_operator.CreateOperatorTests.test_creates_only_a_regular_active_operator_with_a_hashed_password) ... ok\ntest_existing_user_is_never_granted_access_or_reset (tests.test_create_operator.CreateOperatorTests.test_existing_user_is_never_granted_access_or_reset) ... ok\ntest_failed_confirmation_or_weak_password_creates_no_user (tests.test_create_operator.CreateOperatorTests.test_failed_confirmation_or_weak_password_creates_no_user) ... ok\ntest_membership_failure_rolls_back_account_creation (tests.test_create_operator.CreateOperatorTests.test_membership_failure_rolls_back_account_creation) ... ok\ntest_rejects_invalid_name_without_prompting (tests.test_create_operator.CreateOperatorTests.test_rejects_invalid_name_without_prompting) ... ok\ntest_expired_session_returns_to_login (tests.test_operator_access.OperatorSessionTests.test_expired_session_returns_to_login) ... ok\ntest_login_refusals_share_one_error (tests.test_operator_access.OperatorSessionTests.test_login_refusals_share_one_error) ... ok\ntest_login_uses_workspace_and_logout_ends_access (tests.test_operator_access.OperatorSessionTests.test_login_uses_workspace_and_logout_ends_access) ... ok\ntest_removing_membership_immediately_forbids_workspace (tests.test_operator_access.OperatorSessionTests.test_removing_membership_immediately_forbids_workspace) ... ok\ntest_disabled_gallery_hides_page_and_assets (tests.test_gallery.GalleryTests.test_disabled_gallery_hides_page_and_assets) ... ok\ntest_enabled_gallery_renders_and_serves_compiled_assets (tests.test_gallery.GalleryTests.test_enabled_gallery_renders_and_serves_compiled_assets) ... ok\ntest_gallery_is_read_only_and_exposes_only_its_assets (tests.test_gallery.GalleryTests.test_gallery_is_read_only_and_exposes_only_its_assets) ... ok\ntest_database_failure_returns_only_status (tests.test_health.HealthTests.test_database_failure_returns_only_status) ... ok\ntest_unrecognized_host_is_rejected_before_database_access (tests.test_health.HealthTests.test_unrecognized_host_is_rejected_before_database_access) ... ok\ntest_write_method_is_rejected_before_database_access (tests.test_health.HealthTests.test_write_method_is_rejected_before_database_access) ... ok\ntest_anonymous_visitor_reaches_login (tests.test_operator_access.WorkspaceEntryTests.test_anonymous_visitor_reaches_login) ... ok\ntest_existing_read_only_endpoints_keep_rejecting_writes (tests.test_operator_access.WorkspaceEntryTests.test_existing_read_only_endpoints_keep_rejecting_writes) ... ok\ntest_login_styles_are_available_with_gallery_disabled (tests.test_operator_access.WorkspaceEntryTests.test_login_styles_are_available_with_gallery_disabled) ... ok\ntest_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 3.157s\n\nOK\nPreserving test database for alias 'default' ('test_studio_db')...\n"
+    }
+  ],
+  "operator_creation": "Commande interactive réussie, saisie masquée via pseudo-terminal.",
+  "operator_rights": "Actif, groupe Opérateurs Studio, aucun droit staff ou superutilisateur.",
+  "http": {
+    "/health/": {
+      "status": 200,
+      "destination": "/health/"
+    },
+    "/ui/": {
+      "status": 404,
+      "destination": "/ui/"
+    },
+    "/assets/workspace.css": {
+      "status": 200,
+      "destination": "/assets/workspace.css"
+    },
+    "/assets/gallery.css": {
+      "status": 200,
+      "destination": "/assets/gallery.css"
+    },
+    "/assets/fonts/dm-sans-latin.woff2": {
+      "status": 200,
+      "destination": "/assets/fonts/dm-sans-latin.woff2"
+    },
+    "/connexion/": {
+      "status": 200,
+      "destination": "/connexion/"
+    },
+    "/": {
+      "status": 200,
+      "destination": "/connexion/?next=/"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Socle avant développement UI-003-04. Base et réseau de test isolés.
+Image Studio sha256:58e848c47b1e9b2601f768c56d608501f3716c93ddd65d554a96d63691b011ac
+Modules : tests.test_figma_imports, test_figma_mapping, test_figma_reader, test_import_web, test_builder_edit_web, test_builder_batch, test_builder_canvas
+Using existing test database for alias 'default'...
+Found 35 test(s).
+System check identified no issues (0 silenced).
+...................................
+----------------------------------------------------------------------
+Ran 35 tests in 1.102s
+
+OK
+Preserving test database for alias 'default'...

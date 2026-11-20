@@ -1,0 +1,134 @@
+{
+  "observed_at": "2026-11-19T08:10:17.271280+00:00",
+  "confirmed": {
+    "a": {
+      "status": "connected",
+      "confirmed": {
+        "at": "2026-11-19T08:10:17.821154+00:00",
+        "instance_id": "5db29632-67f0-4f56-8221-05083854bc05",
+        "profile": "a",
+        "image_digest": "sha256:4978b1f66622e6524a38ea636476ed952abe71878b748689086499ffdcc79582",
+        "contract_major": 1,
+        "contract_minor": 0,
+        "engine_version": "1.0.0",
+        "wagtail_version": "7.4.4"
+      },
+      "attempt": {
+        "id": "f189395f-7554-4e9d-8c3d-c039d484ada3",
+        "started_at": "2026-11-19T08:10:17.770698+00:00",
+        "finished_at": "2026-11-19T08:10:17.821154+00:00"
+      }
+    },
+    "b": {
+      "status": "connected",
+      "confirmed": {
+        "at": "2026-11-19T08:10:18.401956+00:00",
+        "instance_id": "aa217b04-62cf-4846-85de-41f1076a4219",
+        "profile": "b",
+        "image_digest": "sha256:4978b1f66622e6524a38ea636476ed952abe71878b748689086499ffdcc79582",
+        "contract_major": 1,
+        "contract_minor": 0,
+        "engine_version": "1.0.0",
+        "wagtail_version": "7.4.4"
+      },
+      "attempt": {
+        "id": "5fcf3ea6-3235-4884-aa0f-7e437bf80839",
+        "started_at": "2026-11-19T08:10:18.358700+00:00",
+        "finished_at": "2026-11-19T08:10:18.401956+00:00"
+      }
+    }
+  },
+  "gateway": {
+    "render_mean_ms": 10.9,
+    "samples": 5,
+    "write_status": 405,
+    "outside_contract": 404
+  },
+  "isolation": {
+    "image_config_digest": "sha256:4978b1f66622e6524a38ea636476ed952abe71878b748689086499ffdcc79582",
+    "image_manifest_digest": "sha256:4978b1f66622e6524a38ea636476ed952abe71878b748689086499ffdcc79582",
+    "checks": [
+      "Bases et rôles distincts",
+      "Contenu et médias homonymes distincts",
+      "Éditeurs Wagtail et sessions isolés",
+      "Réseaux de données privés"
+    ]
+  },
+  "refusals": {
+    "identité croisée": "CommandError: identity",
+    "version incompatible": "CommandError: incompatible",
+    "marqueur voisin": "CommandError: render",
+    "certificat voisin": "CommandError: authentication"
+  },
+  "rotation_old_certificate": "CommandError: authentication",
+  "unavailable_a": "CommandError: unavailable",
+  "b_during_a_outage": "connected",
+  "unreachable_a": "CommandError: communication",
+  "restore": "Contenu publié et média restaurés et comparés sur une copie isolée.",
+  "a": {
+    "startup_seconds": 10.4,
+    "database_bytes": 12072627,
+    "stats": [
+      {
+        "Name": "arch002-9f49814961-a-engine-1",
+        "CPUPerc": "0.01%",
+        "MemUsage": "126.1MiB / 124.9GiB",
+        "BlockIO": "0B / 0B"
+      },
+      {
+        "Name": "arch002-9f49814961-a-db-1",
+        "CPUPerc": "0.01%",
+        "MemUsage": "29.48MiB / 124.9GiB",
+        "BlockIO": "0B / 61.6MB"
+      },
+      {
+        "Name": "arch002-9f49814961-a-gateway-1",
+        "CPUPerc": "0.00%",
+        "MemUsage": "2.633MiB / 124.9GiB",
+        "BlockIO": "0B / 12.3kB"
+      }
+    ]
+  },
+  "b": {
+    "startup_seconds": 10.28,
+    "database_bytes": 12072627,
+    "stats": [
+      {
+        "Name": "arch002-9f49814961-a-engine-1",
+        "CPUPerc": "0.01%",
+        "MemUsage": "126.2MiB / 124.9GiB",
+        "BlockIO": "0B / 0B"
+      },
+      {
+        "Name": "arch002-9f49814961-a-db-1",
+        "CPUPerc": "3.32%",
+        "MemUsage": "30.5MiB / 124.9GiB",
+        "BlockIO": "0B / 62.3MB"
+      },
+      {
+        "Name": "arch002-9f49814961-a-gateway-1",
+        "CPUPerc": "0.00%",
+        "MemUsage": "2.633MiB / 124.9GiB",
+        "BlockIO": "0B / 12.3kB"
+      },
+      {
+        "Name": "arch002-9f49814961-b-engine-1",
+        "CPUPerc": "0.01%",
+        "MemUsage": "126.4MiB / 124.9GiB",
+        "BlockIO": "0B / 0B"
+      },
+      {
+        "Name": "arch002-9f49814961-b-db-1",
+        "CPUPerc": "0.01%",
+        "MemUsage": "29.5MiB / 124.9GiB",
+        "BlockIO": "0B / 61.5MB"
+      },
+      {
+        "Name": "arch002-9f49814961-b-gateway-1",
+        "CPUPerc": "0.00%",
+        "MemUsage": "2.625MiB / 124.9GiB",
+        "BlockIO": "0B / 12.3kB"
+      }
+    ]
+  }
+}

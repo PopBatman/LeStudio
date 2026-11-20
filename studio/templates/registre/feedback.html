@@ -1,0 +1,4 @@
+{% if request.GET.resultat == 'homonyme' %}<c-alert title="Fiche enregistrée" variant="warning" role="status">Une autre fiche accessible porte déjà ce nom. Les deux fiches restent distinctes.</c-alert>
+{% elif request.GET.resultat == 'enregistre' %}<p class="rg-feedback" role="status">Les informations ont été enregistrées.</p>
+{% elif request.GET.resultat == 'archive' %}<p class="rg-feedback" role="status">Le client a été archivé.</p>
+{% elif request.GET.resultat == 'reactive' %}<p class="rg-feedback" role="status">Le client a été réactivé.</p>{% endif %}

@@ -1,0 +1,77 @@
+{
+  "started_at": "2026-11-20T17:18:23.705Z",
+  "command": "node studio/work/items/UI-004-01/evidence/audit-browser.cjs",
+  "node": "v24.19.0",
+  "steps": [
+    {
+      "action": "Ouvrir aperçu installé",
+      "result": "iframe Wagtail visible",
+      "revision": 18,
+      "url": "http://127.0.0.1:8000/sites/<id>/atelier/visuel/<id>/"
+    },
+    {
+      "action": "Sélectionner par UUID puis modifier",
+      "editable": "884f1547-70f2-4abb-b075-8a3a30cf4020",
+      "wagtail_hidden": true,
+      "local_nodes": 7
+    },
+    {
+      "action": "Texte long local confirmé puis undo",
+      "result": "texte initial retrouvé, aucune sauvegarde",
+      "text_length": 115
+    },
+    {
+      "action": "Format mobile",
+      "result": "390 px dans projection locale"
+    },
+    {
+      "action": "Largeur du rendu Wagtail",
+      "width": 1200,
+      "measured_width": 1200
+    },
+    {
+      "action": "Largeur du rendu Wagtail",
+      "width": 820,
+      "measured_width": 820
+    },
+    {
+      "action": "Largeur du rendu Wagtail",
+      "width": 390,
+      "measured_width": 390
+    }
+  ],
+  "errors": [],
+  "blocked_writes": [],
+  "context": {
+    "site": "59177d82-095d-4e5b-b095-7b73c220de4b",
+    "operator": 1,
+    "revision": "04fd242a-17a9-464f-8a09-ad18d58be4d4",
+    "number": 18,
+    "page": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+    "title": "Accueil",
+    "document_sha256": "6759473f611215bf3e09c3e3800391efe6ebf99b4859047c9181ef1ab49405bd"
+  },
+  "browser": "156.0.8078.4",
+  "render_snapshot_sha256": "0f3207e3693f40f76497f43e9dca4a97452c3b56dec87e949e1d3e0b1f590dd2",
+  "pages": [
+    {
+      "id": "cbf41f07-a35b-4043-81df-98e91c8118a5",
+      "title": "Accueil",
+      "sections": 2
+    },
+    {
+      "id": "145b6d32-3a68-456a-a76b-db47fd1bf07b",
+      "title": "A propos",
+      "sections": 0
+    }
+  ],
+  "original_text": "xqqsx",
+  "after": {
+    "revision": "04fd242a-17a9-464f-8a09-ad18d58be4d4",
+    "number": 18,
+    "digest": "6759473f611215bf3e09c3e3800391efe6ebf99b4859047c9181ef1ab49405bd"
+  },
+  "result": "passed",
+  "session_cleanup": true,
+  "finished_at": "2026-11-20T17:18:27.232Z"
+}

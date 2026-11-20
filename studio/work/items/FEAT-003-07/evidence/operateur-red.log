@@ -1,0 +1,7 @@
+Found 3 test(s).
+Creating test database for alias 'default'...
+ERROR: test_detail_and_latest_are_scoped_and_cursor_is_checked (tests.test_depot_staff.StaffDepositTests.test_detail_and_latest_are_scoped_and_cursor_is_checked)
+ERROR: test_revocation_requires_confirmation_and_current_management (tests.test_depot_staff.StaffDepositTests.test_revocation_requires_confirmation_and_current_management)
+FAIL: test_site_entry_and_single_disclosure (tests.test_depot_staff.StaffDepositTests.test_site_entry_and_single_disclosure)
+Ran 3 tests in 0.021s
+FAILED (failures=1, errors=2)

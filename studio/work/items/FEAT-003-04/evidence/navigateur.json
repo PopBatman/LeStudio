@@ -1,0 +1,16 @@
+{
+  "navigateur": "Chromium",
+  "formats": [
+    1440,
+    390,
+    320
+  ],
+  "checks": [
+    "Départ vierge et ajout de section au clavier, relecture mobile.",
+    "Modèle, conteneur et déplacement du texte dans le conteneur retrouvés après rechargement.",
+    "Conflit entre deux fenêtres, comparaison et enregistrement explicite de la proposition.",
+    "Annulation du retrait et consultation en lecture seule à 320 px.",
+    "Erreur HTTPS reliée au champ, résumé focalisé, conservation de la saisie et correction sur téléphone."
+  ],
+  "erreurs_javascript": []
+}

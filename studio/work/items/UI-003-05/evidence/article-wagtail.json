@@ -1,0 +1,10 @@
+{
+  "scenario": "Site B fictif, moteur Wagtail raccordé en mTLS",
+  "page": "Atlas du Sud",
+  "revision_avant": 2,
+  "apres_verification": 2,
+  "apres_confirmation": 3,
+  "observation": "Article · Page Wagtail 4 · Révision publiée observée 2\n\nVérifié le 20/11/2026 à 09:10 CST.",
+  "retour_occurrence": true,
+  "catalogue": true
+}

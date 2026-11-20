@@ -1,0 +1,29 @@
+{% extends "workspace/base.html" %}
+{% block title %}Espace de travail{% endblock %}
+{% block navigation %}
+<nav class="ws-nav" aria-label="Navigation principale">
+  <a href="{% url 'workspace' %}" aria-current="page">Accueil</a>
+  <a href="{% url 'registre:clients' %}">Clients</a>
+  <a href="{% url 'registre:sites' %}">Mes sites</a>
+</nav>
+{% endblock %}
+{% block content %}
+<header class="ws-heading">
+  <div class="ws-kicker">Studio local</div>
+  <h1>Espace de travail</h1>
+</header>
+<div class="ws-account">
+  <section class="ws-account-panel" aria-labelledby="mon-acces">
+    <div class="ws-section-heading">
+      <h2 id="mon-acces" tabindex="-1">Mon accès</h2>
+      <c-badge variant="success">Session active</c-badge>
+    </div>
+    <dl class="ws-profile">
+      <div><dt>Identifiant</dt><dd>{{ request.user.get_username }}</dd></div>
+      <div><dt>Rôle</dt><dd>Opérateur</dd></div>
+    </dl>
+    {% include "workspace/logout.html" %}
+  </section>
+  {% include "workspace/illustration.html" %}
+</div>
+{% endblock %}

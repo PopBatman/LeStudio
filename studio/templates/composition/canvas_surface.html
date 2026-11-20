@@ -1,0 +1,36 @@
+<section class="rg-panel cv-panel" aria-labelledby="structure" data-manage="{{ manage|yesno:'true,false' }}">
+  <header class="cv-heading">
+    <div><h2 id="structure" tabindex="-1">Canvas</h2><p>{{ page.title }} · {{ canvas_width }} px</p></div>
+    <div class="cv-tools">{% if canvas_sections %}<button id="cv-zoom" type="button" class="btn btn-secondary" aria-pressed="false">Zoom 100 %</button>{% endif %}<a href="#inspecteur">Aller à l’inspecteur</a></div>
+  </header>
+  {% if canvas_sections %}
+  {% if manage %}<p class="cv-hint">Glissez un bloc pour le déplacer. La poignée du coin inférieur droit règle sa taille.</p>{% endif %}
+  <div class="cv-paper-area">
+    <div id="cv-frame">
+      <div id="cv-stage" style="--cv-width:{{ canvas_width }}px">
+        {% for branch in canvas_sections %}
+        <section class="cv-section" data-section="{{ branch.id }}">
+          <a class="cv-section-title" href="?page={{ page_id }}&amp;section={{ branch.id }}&amp;format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}#inspecteur"{% if section_id == branch.id and not node_id %} aria-current="true"{% endif %}>{{ branch.label }}</a>
+          {% include 'composition/canvas_parent.html' with group=branch %}
+        </section>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <details class="cv-outline"{% if not node_id and not section_id %} open{% endif %}>
+    <summary>Sélectionner dans la structure</summary>
+    <ul>{% for branch in sections %}<li><a href="?page={{ page_id }}&amp;section={{ branch.id }}&amp;format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}#inspecteur">{{ branch.label }}</a>
+      {% if branch.rows %}<ul>{% for row in branch.rows %}<li style="--depth:{{ row.depth }}"><a href="?page={{ page_id }}&amp;section={{ branch.id }}&amp;node={{ row.id }}&amp;format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}#inspecteur"{% if row.id == node_id %} aria-current="true"{% endif %}>{{ row.label }} · {{ row.index }}{% if row.summary %} · {{ row.summary|truncatechars:60 }}{% endif %}</a></li>{% endfor %}</ul>{% endif %}
+    </li>{% endfor %}</ul>
+  </details>
+  <details class="cv-issues" hidden><summary>Contenu qui dépasse le cadre</summary><ul></ul></details>
+  {% else %}
+  <p class="rg-empty">Cette page ne contient aucune section.</p>
+  {% endif %}
+  {% if manage %}
+  <a class="btn cv-add" href="?page={{ page_id }}&amp;format={{ format }}{% if custom_width %}&amp;largeur={{ custom_width }}{% endif %}&amp;action=section_add#inspecteur">Ajouter une section</a>
+  <form id="cv-gesture" action="{{ request.path }}" method="post" hidden>{% csrf_token %}
+    {% if custom_width %}<input type="hidden" name="largeur" value="{{ custom_width }}">{% endif %}<input type="hidden" name="base" value="{{ base }}"><input type="hidden" name="page" value="{{ page_id }}"><input type="hidden" name="format" value="{{ format }}">
+  </form>
+  {% endif %}
+</section>

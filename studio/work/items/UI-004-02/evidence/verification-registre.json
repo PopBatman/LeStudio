@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "studio/work/items/UI-004-02/evidence/check-planning.py"
+  ],
+  "cwd": "/home/admincsd/Documents/LeStudio",
+  "observed_at": "2026-11-20T17:43:30.219079+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"task\": \"UI-004-02\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"PLANNED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 2,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\",\n  \"control\": \"complémentaire local, identité/type adaptés en mémoire\",\n  \"contract_sha256\": \"a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea\",\n  \"additional_documents_checked\": 7\n}\n",
+  "stderr": "",
+  "purpose": "Registre de preuves et contrat final vérifiés, sans exécution métier"
+}

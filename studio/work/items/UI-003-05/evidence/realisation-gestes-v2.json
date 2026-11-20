@@ -1,0 +1,47 @@
+{
+  "site": "a3c121ae-639e-4862-876c-3c83a1e4a81c",
+  "page": "53696930-90bf-4df8-96e0-aef349211057",
+  "observations": [
+    "Supprimer Section 1 ?\n1 descendant(s) : Texte · Nouveau texte",
+    {
+      "width": 320,
+      "computed": {
+        "width": "233.266px",
+        "minHeight": "auto",
+        "height": "140px"
+      }
+    },
+    {
+      "width": 768,
+      "computed": {
+        "width": "572.312px",
+        "minHeight": "auto",
+        "height": "100px"
+      }
+    },
+    {
+      "width": 1024,
+      "computed": {
+        "width": "763.094px",
+        "minHeight": "auto",
+        "height": "100px"
+      }
+    },
+    {
+      "width": 1920,
+      "computed": {
+        "width": "1451.52px",
+        "minHeight": "auto",
+        "height": "100px"
+      }
+    },
+    "Section et bloc historiques sélectionnés en lecture ; UUID conservé après remplacement Texte → Titre, taille en flux et ancien document conservés."
+  ],
+  "base": "9822b1b7-04a4-4004-935f-01909b299dc1",
+  "revision": "ee2f4dc7-472f-4347-9d3f-af427f36d45b",
+  "number": 4,
+  "section": "ae9e0db5-c87f-461e-a988-2e1258b624ac",
+  "block": "6a082fec-cada-4c06-91bf-42faa8bf45e0",
+  "replacement": "ac773a26-85e5-4ffa-8ad4-70a11357205a",
+  "replacementNumber": 5
+}

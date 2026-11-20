@@ -1,0 +1,2 @@
+{% for item in items %}<li id="n{{ item.id }}">{% if item.target.kind == 'page' %}<a data-studio-page-id="{{ item.target.page_id }}" aria-disabled="true">{{ item.label }}</a>{% else %}<span>{{ item.label }}</span>{% endif %}
+{% if item.children %}<ul>{% include "reference/preview_menu.html" with items=item.children only %}</ul>{% endif %}</li>{% endfor %}

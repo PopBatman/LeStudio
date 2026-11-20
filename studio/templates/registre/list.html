@@ -1,0 +1,20 @@
+{% extends "registre/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block registry %}
+<header class="rg-head"><h1>{{ title }}</h1>{% if create %}<a class="btn btn-primary" href="{% url 'registre:client-new' %}">Créer un client</a>{% endif %}</header>
+{% if client_list %}<nav class="rg-tabs" aria-label="État administratif"><a href="{% url 'registre:clients' %}" {% if not archived %}aria-current="page"{% endif %}>Actifs</a><a href="?etat=archives" {% if archived %}aria-current="page"{% endif %}>Archivés</a></nav>{% endif %}
+<form method="post" class="rg-panel">{% csrf_token %}
+<div class="rg-filters">
+  <label>Rechercher {% if client_list %}un client{% else %}un site{% endif %}<input type="search" name="q" maxlength="160" value="{{ q }}" placeholder="{% if client_list %}Nom du client{% else %}Nom ou domaine{% endif %}"></label>
+  {% if client_list %}<label>Type de client<select name="type"><option value="">Tous les types</option>{% for value,label in types %}<option value="{{ value }}" {% if kind == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>{% endif %}
+  <c-button type="submit" variant="secondary">Rechercher</c-button>
+</div>
+{% if page.object_list %}
+<table><thead><tr><th scope="col">{% if client_list %}Nom du client{% else %}Nom du site{% endif %}</th><th scope="col">{% if client_list %}Type{% else %}Domaine{% endif %}</th></tr></thead><tbody>
+{% for item in page %}<tr>{% if client_list %}<th scope="row"><a href="{% url 'registre:client' item.pk %}">{{ item.display_name }}</a></th><td>{{ item.get_client_type_display }}</td>{% else %}<th scope="row"><a href="{% url 'registre:site' item.pk %}">{{ item.name }}</a></th><td>{{ item.domain|default:"Non renseigné" }}</td>{% endif %}</tr>{% endfor %}</tbody></table>
+{% else %}
+<div class="rg-empty"><h2>{% if q or kind %}Aucun résultat{% elif client_list %}Aucun client {% if archived %}archivé{% else %}actif{% endif %} à afficher{% else %}Aucun site à afficher{% endif %}</h2><p>{% if q or kind %}Essayez un autre nom ou réinitialisez la recherche.{% elif client_list %}Les clients auxquels vous avez accès apparaîtront ici.{% else %}Les sites qui vous sont confiés apparaîtront ici.{% endif %}</p>{% if q or kind %}<a href="{{ request.path }}{% if archived %}?etat=archives{% endif %}">Réinitialiser la recherche</a>{% endif %}</div>
+{% endif %}
+{% if page.has_other_pages %}<nav class="rg-actions" aria-label="Pagination">{% if page.has_previous %}<button class="btn btn-secondary" name="page" value="{{ page.previous_page_number }}">Précédent</button>{% endif %}<span>Page {{ page.number }} sur {{ page.paginator.num_pages }}</span>{% if page.has_next %}<button class="btn btn-secondary" name="page" value="{{ page.next_page_number }}">Suivant</button>{% endif %}</nav>{% endif %}
+</form>
+{% endblock %}

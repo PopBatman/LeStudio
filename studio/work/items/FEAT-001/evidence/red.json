@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-18T16:40:23.256155+00:00",
+  "command": "python manage.py test tests.test_operator_access",
+  "exit": 1,
+  "output": "Found 1 test(s).\nSystem check identified no issues (0 silenced).\nF\n======================================================================\nFAIL: test_anonymous_visitor_reaches_login (tests.test_operator_access.WorkspaceEntryTests.test_anonymous_visitor_reaches_login)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/admincsd/Documents/LeStudio/studio/tests/test_operator_access.py\", line 7, in test_anonymous_visitor_reaches_login\n    self.assertEqual(response.status_code, 302)\nAssertionError: 404 != 302\n\n----------------------------------------------------------------------\nRan 1 test in 0.003s\n\nFAILED (failures=1)\n",
+  "inputs": [
+    {
+      "path": "central/settings.py",
+      "sha256": "0d94081b37760cd6a2f927594d1e337c5918a24bb42576d07ab5ca077ef752cd"
+    },
+    {
+      "path": "central/urls.py",
+      "sha256": "352475e6d87fc31660bb29c435d703b75ecf6633c353f9b7a0c6b0e56cc82108"
+    },
+    {
+      "path": "tests/test_operator_access.py",
+      "sha256": "b1f512dec3da58b1af6707955ab1af2d5cac2249e386aba4dd00f3205d5a061b"
+    }
+  ]
+}

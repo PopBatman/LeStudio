@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-20",
+  "sortie": "ok 156.0.8078.4",
+  "sha256_prototype": "d307ded1b709ee8e781a0e8b462c964ab888eeead0ca3f94df9a8451d562748d",
+  "controles": [
+    {
+      "controle": "Vierge, mobile 360 × 800",
+      "observation": "Trajet complet sans souris. Insertion, saisie en place, enregistrement R2, lecture de la même valeur en aperçu et retour du focus à sa commande. Inspecteur puis Échap, retour au déclencheur et à la fiche."
+    },
+    {
+      "controle": "Modèle, bureau 1440 × 950",
+      "observation": "Édition inline, Annuler, Rétablir, déplacement puis retour par Monter/Descendre, sauvegarde et aperçu R9 au clavier."
+    },
+    {
+      "controle": "Page longue",
+      "observation": "30 blocs créés dans la fixture. La commande du dernier calque donne le focus au bloc 30 et le fait défiler dans la fenêtre."
+    },
+    {
+      "controle": "États du moteur",
+      "observation": "Les trois messages de chargement, indisponibilité et péremption sont distincts. Chaque état empêche l’ouverture de l’aperçu simulé. Son bouton de reprise rétablit la disponibilité."
+    },
+    {
+      "controle": "Figma, tablette 820 × 1080",
+      "observation": "Même édition, sauvegarde et aperçu R9 au clavier, média manquant isolé, aperçu périmé R8 sur brouillon R9. Un conflit bloque la sauvegarde, conserve la saisie à l’annulation et recharge sur confirmation la révision R10 simulée."
+    },
+    {
+      "controle": "Écran de 320 px",
+      "observation": "Absence de débordement horizontal du document, panneau Navigation accessible au clavier, Échap restitue le focus au bouton."
+    },
+    {
+      "controle": "Couverture des neuf combinaisons",
+      "observation": "Chaque origine a été ouverte depuis la fiche puis prévisualisée et quittée au clavier à 360, 820 et 1440 px, sans débordement horizontal général."
+    },
+    {
+      "controle": "Arbre d’accessibilité et isolation",
+      "observation": "Chromium expose la région principale et les champs de bloc nommés. Aucune exception JavaScript ni requête HTTP(S) pendant la recette. Aucun essai de synthèse vocale avec une personne."
+    }
+  ],
+  "resultat": "Observations identiques au relevé indépendant du cadrage."
+}

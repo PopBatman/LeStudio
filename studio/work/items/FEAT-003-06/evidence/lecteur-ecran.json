@@ -1,0 +1,10 @@
+{
+  "lecteur": "Orca, Chrome, AT-SPI",
+  "parcours": "Vérification au clavier sur le canvas du site fictif B",
+  "annonces": [
+    "Identifiant de la page Wagtail : 0 spin button required.",
+    "Vérifier la source push button.",
+    "Vérification de la source Wagtail en cours…",
+    "Référence à vérifier. La source demandée est inaccessible."
+  ]
+}

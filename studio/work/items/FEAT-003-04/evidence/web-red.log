@@ -1,0 +1,50 @@
+Creating test database for alias 'default'...
+Found 4 test(s).
+System check identified no issues (0 silenced).
+FFFF
+======================================================================
+FAIL: test_conflict_requires_comparison_then_fresh_post (tests.test_editor_web.EditorWebTests.test_conflict_requires_comparison_then_fresh_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_editor_web.py", line 85, in test_conflict_requires_comparison_then_fresh_post
+    page = self.create("template")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tests/test_editor_web.py", line 26, in create
+    self.assertEqual(response.status_code, 302)
+AssertionError: 404 != 302
+
+======================================================================
+FAIL: test_creation_choices_and_permissions (tests.test_editor_web.EditorWebTests.test_creation_choices_and_permissions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_editor_web.py", line 30, in test_creation_choices_and_permissions
+    self.assertContains(self.client.get(self.url), "Figma")
+AssertionError: 404 != 200 : Couldn't retrieve content: Response code was 404 (expected 200)
+
+======================================================================
+FAIL: test_invalid_fields_and_stale_proposal_when_target_disappears (tests.test_editor_web.EditorWebTests.test_invalid_fields_and_stale_proposal_when_target_disappears)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_editor_web.py", line 69, in test_invalid_fields_and_stale_proposal_when_target_disappears
+    page = self.create("template")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tests/test_editor_web.py", line 26, in create
+    self.assertEqual(response.status_code, 302)
+AssertionError: 404 != 302
+
+======================================================================
+FAIL: test_template_edit_move_and_reload (tests.test_editor_web.EditorWebTests.test_template_edit_move_and_reload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_editor_web.py", line 50, in test_template_edit_move_and_reload
+    page = self.create("template")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tests/test_editor_web.py", line 26, in create
+    self.assertEqual(response.status_code, 302)
+AssertionError: 404 != 302
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.018s
+
+FAILED (failures=4)
+Destroying test database for alias 'default'...

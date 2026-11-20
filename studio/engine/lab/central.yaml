@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536
+    environment:
+      POSTGRES_DB: studio_db
+      POSTGRES_PASSWORD: ${PG_ADMIN}
+      STUDIO_DB_PASSWORD: ${STUDIO_DB_PASSWORD}
+    volumes:
+      - centraldata:/var/lib/postgresql/data
+      - ../../infra/init-db.sql:/docker-entrypoint-initdb.d/10-studio.sql:ro
+    networks: [data]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "studio_db"]
+      interval: 2s
+      timeout: 3s
+      retries: 45
+  studio:
+    build: ../..
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_KEY}
+      STUDIO_DB_PASSWORD: ${STUDIO_DB_PASSWORD}
+      STUDIO_ENGINE_PROFILES: /run/studio/profiles.json
+    volumes:
+      - ${PROFILE_DIR}:/run/studio:ro
+    networks: [data, management_a, management_b]
+networks:
+  data: {internal: true}
+  management_a: {internal: true}
+  management_b: {internal: true}
+volumes:
+  centraldata:

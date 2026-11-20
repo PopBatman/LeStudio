@@ -1,0 +1,51 @@
+.be-start,.be-bar,.be-status,.be-layout,.be-stage-bar {font-family:'DM Sans',system-ui,sans-serif}
+.cb-shell.be-active > .cb-layout {display:none}
+.be-start {margin:.5rem clamp(.8rem,2vw,2rem);font-weight:650}
+#be-work {background:#f8f7f3;color:#262724}
+.be-bar,.be-actions,.be-stage-bar {display:flex;align-items:center;flex-wrap:wrap;gap:.45rem}
+.be-bar,.be-stage-bar {justify-content:space-between}
+.be-bar {padding:.65rem 1rem;background:#fff;border-block:1px solid #d8d6cb}
+#be-rev {display:block;color:#635e53;font-size:.86rem}
+.be-layout {display:grid;grid-template-columns:minmax(160px,15rem) minmax(0,1fr) minmax(185px,16rem)}
+.be-panel,.be-stage {padding:clamp(.65rem,1.4vw,1.2rem);min-width:0;overflow-wrap:anywhere}
+.be-panel {background:#faf9f5}
+#be-work h2 {font-size:1.02rem;margin:.4rem 0 .8rem}
+#be-work label {display:block;margin:.5rem 0;font-size:.86rem}
+#be-work input:not([type=checkbox]),#be-work select,#be-work textarea {display:block;width:100%;min-width:0;max-width:100%;font:inherit;background:#fff;color:inherit;padding:.4rem;border:1px solid #aba99c;border-radius:4px}
+#be-work textarea {min-height:4.5rem;resize:vertical}
+#be-work fieldset {min-width:0;margin:.5rem 0;padding:.45rem;border:1px solid #ccc9bf}
+#be-work input[type=checkbox] {margin-inline-start:.5rem}
+#be-work summary {font-weight:600;margin-block:.8rem .35rem}
+#be-work .be-primary {background:#282b25;color:white}
+#be-work .be-primary:disabled {background:#eceae2;color:#68675f}
+#be-catalog,#be-layers {display:grid;gap:.35rem;margin:.45rem 0}
+.be-card {display:flex;align-items:center;gap:.5rem;text-align:left;touch-action:none}
+.be-sample {display:grid;place-items:center;width:2rem;height:2rem;border-radius:3px;background:#eee8df;color:#75402a;font:600 1.25rem Georgia,serif;flex-shrink:0}
+.be-card small {display:block;color:#5d5c53}.be-card:disabled {opacity:.73}
+#be-layers button {font-size:.83rem;text-align:left}
+#be-layers button[aria-pressed=true] {border-color:#91361e}
+.be-stage {background:#e8e7df}
+.be-stage-bar {margin-bottom:.6rem}
+.be-stage-bar label {display:flex!important;align-items:center;gap:.45rem}
+.be-scroll {overflow:auto;max-width:100%}
+#be-paper {box-sizing:border-box;padding:clamp(.55rem,1.5vw,1.4rem);background:white;margin:0 auto .7rem;min-height:13rem;box-shadow:0 1px 7px #3332}
+#be-paper {width:1200px}
+.be-node {position:relative;min-width:0;padding:.4rem;margin:.3rem 0;border:1px solid #d9d6ca;background:white}
+.be-node[data-selected=true] {outline:2px solid #a2311a;outline-offset:-1px}
+#be-work .be-title,#be-work .be-grip {font-size:.77rem;padding:.2rem .4rem}
+.be-grip {touch-action:none;cursor:grab!important;margin-left:.3rem}
+.be-node[data-guide] {outline:2px solid #275c45;z-index:1}
+.be-node[data-guide=avant] {box-shadow:0 -4px #275c45}
+.be-node[data-guide=après] {box-shadow:0 4px #275c45}
+.be-node[data-guide=refus] {outline:3px dashed #a2311a}
+.be-node[data-guide]::before {content:attr(data-guide);position:absolute;top:0;right:0;background:#244f3c;color:#fff;font-size:.8rem;padding:.1rem .4rem}
+.be-children {position:relative;display:flex;flex-direction:column;margin-top:.3rem}
+.be-content {cursor:text}.be-content :is(h1,h2,h3,h4,h5,h6,p){margin:.5rem 0!important}
+.be-content img {max-width:100%;max-height:220px;object-fit:contain}
+.be-preview-button {display:inline-block;margin-top:.4rem;border-radius:4px;background:var(--be-accent);color:var(--be-background);border:2px solid var(--be-accent);padding:.3rem .7rem}
+.be-node[data-variant=secondary] > .be-content .be-preview-button {background:transparent;color:var(--be-accent)}
+.be-empty {color:#68665f;font-size:.86rem}
+.be-status:not(:empty),#be-conflict,#be-destination {padding:.65rem 1rem;background:#fff4de;border-inline-start:3px solid #986828;margin:.4rem 0}
+#be-status:empty {margin:0}#be-work details form button {margin:.35rem .2rem 0 0}
+@media(max-width:900px){.be-layout {grid-template-columns:minmax(150px,11rem) minmax(0,1fr)}.be-layout>:last-child {grid-column:1/-1}}
+@media(max-width:620px){.be-layout {display:flex;flex-direction:column}#be-catalog {grid-template-columns:repeat(2,minmax(0,1fr))}#be-layers {max-height:9rem;overflow:auto}.be-card {overflow-wrap:anywhere}.be-stage-bar label {max-width:60%}}

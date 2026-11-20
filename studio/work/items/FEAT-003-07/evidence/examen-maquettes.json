@@ -1,0 +1,26 @@
+{
+  "type": "Exercice du prototype en mémoire",
+  "navigateur": "Chromium 156.0.8078.4",
+  "date": "2026-11-19T16:33:20.181Z",
+  "formats_px": [
+    1280,
+    320
+  ],
+  "resultats": {
+    "lien_de_saut_au_clavier": true,
+    "ouverture_par_clavier": true,
+    "erreur_associee_au_champ_et_focus": true,
+    "saisie_conservee": true,
+    "deux_depots_une_seule_vue": true,
+    "commentaire_facultatif": true,
+    "signal_persistant_sur_fiche_site": true,
+    "numerotation_par_invitation": true,
+    "notification_et_ordre_decroissant": true,
+    "lecteur_sans_commande": true,
+    "annulation_et_revocation": true,
+    "meme_refus_public_pour_trois_cas": true,
+    "sans_debordement_sur_captures": true
+  },
+  "requetes_http": 0,
+  "erreurs_javascript": []
+}

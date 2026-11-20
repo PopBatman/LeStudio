@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/assets/builder-edit.css">
+<div id="be-root">
+{{ builder_edit|json_script:"be-data" }}
+<button type="button" class="be-start" id="be-open">Modifier la page</button>
+<section id="be-work" hidden aria-label="Composition de page">
+<header class="be-bar"><div><strong id="be-page"></strong><span id="be-rev"></span></div><div class="be-actions">
+<button type="button" id="be-undo">Annuler</button><button type="button" id="be-redo">Rétablir</button><button type="button" id="be-save" class="be-primary">Enregistrer</button><button type="button" id="be-close">Revenir au canvas</button>
+</div></header>
+<div id="be-conflict" hidden role="alert"><strong id="be-conflict-label"></strong><p id="be-conflict-text"></p><a id="be-compare" target="_blank" rel="noopener" hidden>Examiner la dernière sauvegarde</a><details id="be-journal" hidden><summary>Gestes locaux</summary><ol></ol></details><button type="button" id="be-resume">Reprendre sur la dernière sauvegarde</button></div>
+<p id="be-status" class="be-status" role="status" aria-live="polite"></p>
+<div class="be-layout">
+<aside class="be-panel"><h2>Bibliothèque</h2><label for="be-search">Rechercher un composant</label><input type="search" id="be-search" placeholder="Titre, image…"><label for="be-category">Catégorie</label><select id="be-category"><option value="">Toutes les catégories</option><option>Contenu</option><option>Action</option><option>Structure</option></select><div id="be-catalog"></div>
+<details open><summary>Calques</summary><div id="be-layers"></div></details></aside>
+<div class="be-stage"><div class="be-stage-bar"><h2>Vue de travail</h2><label>Format <select id="be-format"><option value="base">Bureau</option><option value="tablet">Tablette</option><option value="mobile">Mobile</option></select></label><label>Largeur (px) <input id="be-width" type="number" min="320" max="1920" step="1" value="1200" required></label></div>
+<div id="be-destination" hidden><label for="be-target">Destination</label><select id="be-target"></select><button type="button" id="be-place">Placer ici</button><button type="button" id="be-cancel-drop">Annuler le placement</button></div>
+<div class="be-scroll"><div id="be-paper" tabindex="-1" aria-label="Composition locale"></div></div><button type="button" id="be-section">Ajouter une section</button></div>
+<aside class="be-panel"><h2>Inspecteur</h2><p id="be-selection">Sélectionnez un bloc.</p><div id="be-tools" hidden>
+<div class="be-actions"><button type="button" id="be-edit">Modifier le contenu</button><button type="button" id="be-move">Déplacer</button><button type="button" id="be-copy">Dupliquer</button><button type="button" id="be-remove">Supprimer</button></div>
+<button type="button" id="be-before" hidden>Insérer une section avant</button><div id="be-related"></div><div id="be-style"></div></div></aside>
+</div>
+</section>
+</div>
+<script src="/assets/builder-edit-model.js" defer></script>
+<script src="/assets/builder-edit.js" defer></script>

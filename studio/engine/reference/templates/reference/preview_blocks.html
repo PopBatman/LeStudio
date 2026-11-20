@@ -1,0 +1,8 @@
+{% for block in blocks %}<div id="n{{ block.id }}" data-studio-block-id="{{ block.id }}" class="block {{ block.renderer }} {{ block.variant }}">
+{% if block.renderer == 'heading' %}<h{{ block.props.level }}>{{ block.props.text }}</h{{ block.props.level }}>
+{% elif block.renderer == 'text' or block.renderer == 'signature' %}<p>{{ block.props.text }}</p>
+{% elif block.renderer == 'button' %}<a aria-disabled="true">{{ block.props.label }}</a>
+{% elif block.renderer == 'container' %}{% include "reference/preview_blocks.html" with blocks=block.children only %}
+{% elif block.renderer == 'image' %}<img src="{{ block.src }}" alt="{{ block.props.alt }}">
+{% elif block.renderer == 'article' %}{% include "reference/article_content.html" with page=block.article only %}
+{% endif %}</div>{% endfor %}

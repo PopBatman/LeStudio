@@ -1,0 +1,13 @@
+{
+  "lecteur": "46.1",
+  "environnement": "Chromium / AT-SPI2 / Xvfb ; bus et session de recette isolés.",
+  "parcours": "Préparer le rendu, activer le premier calque au clavier, vérifier son UUID dans l’inspecteur, changer de format.",
+  "observations": [
+    "Afficher le rendu push button.",
+    "1. Titre Atelier des encres · B toggle button not pressed.",
+    "Bloc sélectionné · 1. Titre Atelier des encres · B",
+    "Vue combo box.",
+    "Mobile · 390 px."
+  ],
+  "methode": "Énoncés générés par Orca, pilotage clavier automatisé."
+}

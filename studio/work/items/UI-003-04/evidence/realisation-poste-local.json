@@ -1,0 +1,25 @@
+{
+  "sante": 200,
+  "assets": {
+    "figma-compare.js": 200,
+    "figma-compare.css": 200,
+    "builder-edit.js": 200
+  },
+  "snapshot_avant": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "snapshot_apres": {
+    "sites": 1,
+    "revisions": 17,
+    "empreinte": "eb2cc516778806da7c4fa6faff03d825394b06afaccf330cef755909ec4772ff",
+    "raccordements": 1
+  },
+  "moteur_tennis_identique": true,
+  "imports_confirmes_tennis": 0,
+  "image": "sha256:2eb9adeffe00d56b58cd41fb8f725f3599885683ec546f48c3673afa5d6238c0",
+  "migrations": "migrate --check et makemigrations --check réussis, depots.0003 appliquée",
+  "route_anonyme": "connexion"
+}

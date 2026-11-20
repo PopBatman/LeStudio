@@ -1,0 +1,30 @@
+{
+  "navigateur": "Chromium 156.0.8078.4",
+  "observe_le": "2026-11-20T08:37:09.001Z",
+  "nature": "Maquette HTML locale, données simulées",
+  "checks": [
+    {
+      "width": 1280,
+      "height": 970,
+      "mode": "Bureau",
+      "parcours": "préparation au clavier, rendu R12, comparaison R11, sept diagnostics, nouvelle préparation R13 et retour",
+      "debordement": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mode": "Tablette",
+      "parcours": "préparation au clavier, rendu R12, comparaison R11, sept diagnostics, nouvelle préparation R13 et retour",
+      "debordement": false
+    },
+    {
+      "width": 320,
+      "height": 850,
+      "mode": "Mobile",
+      "parcours": "préparation au clavier, rendu R12, comparaison R11, sept diagnostics, nouvelle préparation R13 et retour",
+      "debordement": false
+    }
+  ],
+  "erreurs_js": [],
+  "requetes_http": []
+}

@@ -1,0 +1,10 @@
+{% extends "workspace/base.html" %}
+{% block styles %}<link rel="stylesheet" href="/assets/registre.css">{% endblock %}
+{% block navigation %}
+<nav class="ws-nav" aria-label="Navigation principale">
+  <a href="{% url 'workspace' %}">Accueil</a>
+  <a href="{% url 'registre:clients' %}" {% if request.resolver_match.url_name == 'clients' %}aria-current="page"{% endif %}>Clients</a>
+  <a href="{% url 'registre:sites' %}" {% if request.resolver_match.url_name == 'sites' %}aria-current="page"{% endif %}>Mes sites</a>
+</nav>
+{% endblock %}
+{% block content %}<div class="registry">{% block registry %}{% endblock %}</div>{% endblock %}

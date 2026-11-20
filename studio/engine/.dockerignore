@@ -1,0 +1,13 @@
+*
+!requirements.txt
+!manage.py
+!cmengine/
+!cmengine/*.py
+!reference/
+!reference/**/
+!reference/**/*.py
+**/__pycache__/
+!reference/templates/reference/*.html
+!reference/assets/preview.css
+!reference/assets/dm-sans-latin.woff2
+!reference/assets/DM-Sans-LICENSE.txt

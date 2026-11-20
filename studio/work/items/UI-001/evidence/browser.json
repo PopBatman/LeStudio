@@ -1,0 +1,147 @@
+{
+  "observed_at": "2026-11-18T16:31:14.330Z",
+  "origin": "http://127.0.0.1:8000",
+  "checks": [
+    {
+      "name": "desktop largeur",
+      "detail": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "name": "desktop polices",
+      "detail": [
+        {
+          "family": "DM Sans",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "name": "desktop premier tab",
+      "detail": {
+        "name": "Aller au contenu",
+        "href": "#contenu",
+        "outline": "solid"
+      }
+    },
+    {
+      "name": "desktop cible saut",
+      "detail": "MAIN#contenu"
+    },
+    {
+      "name": "desktop formulaire",
+      "detail": "Nom valide : Atelier Lumière."
+    },
+    {
+      "name": "desktop nom de 80 lettres sans espace",
+      "detail": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "name": "desktop action",
+      "detail": "Action exécutée dans la galerie."
+    },
+    {
+      "name": "desktop tableau",
+      "detail": "3 → 1 → 0 puis 3 lignes, état vide vérifié"
+    },
+    {
+      "name": "mobile largeur",
+      "detail": [
+        390,
+        390
+      ]
+    },
+    {
+      "name": "mobile polices",
+      "detail": [
+        {
+          "family": "DM Sans",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "name": "mobile premier tab",
+      "detail": {
+        "name": "Aller au contenu",
+        "href": "#contenu",
+        "outline": "solid"
+      }
+    },
+    {
+      "name": "mobile cible saut",
+      "detail": "MAIN#contenu"
+    },
+    {
+      "name": "mobile formulaire",
+      "detail": "Nom valide : Atelier Lumière."
+    },
+    {
+      "name": "mobile nom de 80 lettres sans espace",
+      "detail": [
+        390,
+        390
+      ]
+    },
+    {
+      "name": "mobile action",
+      "detail": "Action exécutée dans la galerie."
+    },
+    {
+      "name": "mobile tableau",
+      "detail": "3 → 1 → 0 puis 3 lignes, état vide vérifié"
+    }
+  ],
+  "accessibility": {
+    "desktop": {
+      "version": "4.14.1",
+      "pass": 26,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".type-sample"
+            ],
+            [
+              ".type-detail"
+            ],
+            [
+              ".text-link[href$=\"#formulaires\"] > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "violations": []
+    },
+    "mobile": {
+      "version": "4.14.1",
+      "pass": 27,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".type-sample"
+            ],
+            [
+              ".type-detail"
+            ],
+            [
+              ".text-link[href$=\"#formulaires\"] > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "violations": []
+    }
+  },
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "result": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-18T17:52:29.895Z",
+  "observations": [
+    {
+      "screen": "fiche-desktop",
+      "violations": []
+    },
+    {
+      "screen": "fiche-mobile",
+      "violations": []
+    }
+  ],
+  "parcours": [
+    "Création client, contact avec erreur puis correction, site sans domaine",
+    "Archive et réactivation ; site toujours consultable",
+    "Mandat client retiré ; édition du site et refus du client"
+  ],
+  "result": "PASS"
+}

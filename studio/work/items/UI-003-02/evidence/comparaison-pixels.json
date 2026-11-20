@@ -1,0 +1,29 @@
+{
+  "methode": "Même reçu privé, même session, largeur et hauteur internes mesurées dans le canvas réel et reproduites dans le témoin FEAT-004. Captures écran Chromium du contenu iframe après chargement des polices et images. Cadres alignés sur une origine écran entière pendant la prise pour éliminer la phase sous-pixel de la coque. Comparaison exhaustive RGB hors contour de sélection. Les géométries internes sont également comparées avant cet alignement.",
+  "comparaisons": [
+    {
+      "format": "bureau",
+      "largeur": 1200,
+      "hauteur": 637,
+      "pixels_differents": 0,
+      "sha256_canvas": "452ac253d65b07d9675710e88cc7edee4c36da8e216425b51fc9d21c6613b6b5",
+      "sha256_wagtail": "452ac253d65b07d9675710e88cc7edee4c36da8e216425b51fc9d21c6613b6b5"
+    },
+    {
+      "format": "tablette",
+      "largeur": 820,
+      "hauteur": 637,
+      "pixels_differents": 0,
+      "sha256_canvas": "4a0913446a7175fcda9957cbee3d3f57d8fc23b9514366b2a14e0e365e588f67",
+      "sha256_wagtail": "4a0913446a7175fcda9957cbee3d3f57d8fc23b9514366b2a14e0e365e588f67"
+    },
+    {
+      "format": "mobile",
+      "largeur": 390,
+      "hauteur": 551,
+      "pixels_differents": 0,
+      "sha256_canvas": "42c9136d8062de200b81b3cd7f25b3f1f73b1ccae136fb5adf42583cd11e8626",
+      "sha256_wagtail": "42c9136d8062de200b81b3cd7f25b3f1f73b1ccae136fb5adf42583cd11e8626"
+    }
+  ]
+}

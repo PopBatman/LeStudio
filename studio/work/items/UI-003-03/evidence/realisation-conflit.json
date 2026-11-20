@@ -1,0 +1,16 @@
+{
+  "sessions": "demo et collab gestionnaires du site A fictif",
+  "revision_commune": 5,
+  "tete_confirmee": 6,
+  "seconde_sauvegarde": {
+    "url": "enregistrer",
+    "status": 409
+  },
+  "saisie_locale_conservee": true,
+  "revision_premier_operateur_conservee": true,
+  "viewport_mobile": {
+    "view": 390,
+    "width": 390
+  },
+  "erreurs_js": []
+}

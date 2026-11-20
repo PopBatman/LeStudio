@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-18T13:34:56.550870+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "workflow-ai-studio",
+  "python": "3.12.14",
+  "returncode": 0,
+  "log": "tests.log",
+  "log_sha256": "276891800d729115041c04bd2e6b6dadee9346315ddb4f44668aa37f3b933d66",
+  "source_sha256": {
+    "install.py": "ca290e6c677eb172bf0f8337621f0aa24bd2d2aee7d7f615dc162aed253c1871",
+    "scripts/workflow.py": "b3e730900670edf20c5616e3c811584049de593d37992dc22e04cb7183228346",
+    "scripts/validate_workspace.py": "d26463ce6050a776daf5a57eb4e9790b0a5287764646f6ef252ffde27c294aed",
+    "integrations/notion/sync.py": "c43673092ecf457771ffd1dedfdb0743bcd0f861d0582dc94b7edad6c1cd0e8c",
+    "tests/test_install.py": "fce2289f34da5ffc83356f21312fed77e1abf392e1da6b98f80f58ab467107ae",
+    "tests/test_workflow.py": "f83cc199b14fe5aebfa798a88f464c536420367c9f81884f0b5d33697fb2c78a",
+    "tests/test_notion_sync.py": "9f9ac35eb925f81b99c20be13cf0632de57525a38e731818a450b9672b5a6984"
+  }
+}

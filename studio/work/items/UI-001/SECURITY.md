@@ -1,0 +1,2 @@
+# Exposition et données
+La galerie s’active par un réglage explicite dans la configuration Compose locale. Elle accepte la consultation et présente uniquement du contenu fictif. Les démonstrations s’exécutent côté navigateur, sans envoi de formulaire ni écriture en base. Le port est lié à la boucle locale. Les ressources de présentation sont distinctes des sources de configuration et secrets. L’authentification de FEAT-001 reste à construire.

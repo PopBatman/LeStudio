@@ -1,0 +1,74 @@
+{% extends "registre/base.html" %}
+{% block title %}{% if tab == "pages" %}Pages{% else %}Menus{% endif %} · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:site' site.pk %}">← Fiche Site · {{ site.name }}</a>
+<header class="rg-head"><div><p class="rg-eyebrow">{{ site.name }} · Brouillon</p><h1>{% if tab == "pages" %}Pages{% else %}Menus{% endif %}</h1></div>
+{% if head %}<p>Révision {{ head.number }}{% if not manage %} · Lecture seule{% endif %}</p>{% endif %}</header>
+<nav class="rg-tabs" aria-label="Composition du brouillon">
+<a href="{% url 'registre:site-pages' site.pk %}" {% if tab == "pages" %}aria-current="page"{% endif %}>Pages</a>
+<a href="{% url 'registre:site-menus' site.pk %}" {% if tab == "menus" %}aria-current="page"{% endif %}>Menus</a>
+<a href="{% url 'registre:site-catalogue' site.pk %}">Bibliothèque</a>
+<a href="{% url 'registre:site-appearance' site.pk %}">Apparence</a>
+</nav>
+{% if request.GET.resultat == "enregistre" %}<p class="rg-feedback" role="status">Brouillon enregistré.</p>{% endif %}
+{% if error %}<div class="rg-errors" role="alert"><p>{{ error }}</p>{% for key,value in previous %}<p>{{ key }} · {{ value }}</p>{% endfor %}</div>{% endif %}
+{% if not head %}<section class="rg-panel"><h2>Aucun brouillon</h2><p>Les pages et les menus de {{ site.name }} seront préparés ici.</p>
+{% if manage %}<form method="post">{% csrf_token %}<input type="hidden" name="action" value="blank"><button class="btn btn-primary">Créer un brouillon vierge</button></form>{% endif %}</section>
+{% elif head.status != "ok" %}<section class="rg-panel"><h2>Format de brouillon incompatible</h2><p>La révision {{ head.number }} utilise une version que cet atelier ne peut pas ouvrir.</p></section>
+{% elif form %}
+<section class="rg-panel rg-editor"><h2>{{ action_title }}</h2>
+{% if editing %}<p>{% firstof editing.title editing.label %}</p>{% endif %}
+{% if action == "page_delete" %}<p>Examiner les pages de cette branche et les entrées de menu qui les ciblent avant de confirmer.</p>{% elif action == "menu_delete" %}<p>Ce menu et toutes ses entrées seront retirés du brouillon.</p>{% elif action == "item_delete" %}<p>Cette entrée sera retirée du menu {{ menu.label }}.</p>{% endif %}
+<form method="post" action="{{ request.path }}">{% csrf_token %}
+<input type="hidden" name="action" value="{{ action }}"><input type="hidden" name="base" value="{{ base }}">
+{% if editing %}<input type="hidden" name="id" value="{{ editing.id }}">{% endif %}
+{% if menu and tab == "menus" %}<input type="hidden" name="menu_id" value="{{ menu.id }}">{% endif %}
+{% if conflict %}<div class="rg-errors" role="alert" tabindex="-1" autofocus><h3>Le brouillon a changé</h3><p>Votre proposition est conservée. Relisez la révision courante avant de la soumettre à nouveau.</p></div>{% endif %}
+{% if reloaded %}<aside class="rg-feedback" role="status"><h3>Révision courante · {{ head.number }}</h3>
+{% if editing %}<p>{% firstof editing.title editing.label %} {% if editing.path %}· {{ editing.path }}{% endif %}{% if editing.destination %}· {{ editing.destination }} · {{ editing.formats }}{% endif %}</p>{% endif %}
+<p>Vérifiez les valeurs proposées ci-dessous avant de les soumettre.</p></aside>{% endif %}
+{% if previous_decisions and not impact %}<div class="rg-row"><h3>Décisions proposées</h3>
+<ul>{% for key,label,value,decision in previous_decisions %}<li>{{ label }} · {{ decision }}{% if not reloaded %}<input type="hidden" name="resolution_{{ key }}" value="{{ value }}">{% endif %}</li>{% endfor %}</ul></div>{% endif %}
+{{ form.non_field_errors }}
+{% for field in form %}<div class="rg-field">{% if field.name == "visibility" %}<fieldset><legend>{{ field.label }}</legend>{{ field }}</fieldset>{% else %}{{ field.label_tag }}{{ field }}{% endif %}
+{% if field.help_text %}<small id="{{ field.auto_id }}_helptext">{{ field.help_text }}</small>{% endif %}{{ field.errors }}</div>{% endfor %}
+{% if impact %}
+<div class="rg-impact"><h3 tabindex="-1" autofocus>Examiner {% if action == "page_delete" or action == "menu_delete" or action == "item_delete" %}la suppression{% else %}les chemins{% endif %}</h3>
+<ul>{% for row in impact.pages %}<li><strong>{{ row.title }}</strong> · {{ row.old_path }} → {{ row.new_path|default:"supprimée" }}</li>{% endfor %}</ul>
+<h3>Entrées de menu concernées</h3>
+{% for row in impact.entries %}<div class="rg-row"><strong>{{ row.menu }} · {{ row.label }}</strong>
+{% if action != "page_delete" %}<p>{{ row.old_path }} → {{ row.new_path }}</p>{% else %}
+<label>Décision pour {{ row.label }}<select name="resolution_{{ row.id }}" required>
+<option value="">Choisir une décision</option>
+{% if row.children %}<option value="remove_branch" {% if row.choice == "remove_branch" %}selected{% endif %}>Retirer l’entrée et ses sous-entrées</option>
+{% else %}<option value="remove" {% if row.choice == "remove" %}selected{% endif %}>Retirer l’entrée</option>{% endif %}
+{% for survivor in survivors %}<option value="{{ survivor.id }}" {% if row.choice == survivor.id %}selected{% endif %}>Recibler vers {{ survivor.path }}</option>{% endfor %}
+</select></label>{% endif %}</div>{% empty %}<p>Aucune entrée concernée.</p>{% endfor %}
+{% if impact.removed_entries %}<h3>Entrées retirées</h3><ul>{% for row in impact.removed_entries %}<li>{{ row.menu }} · {{ row.label }}</li>{% endfor %}</ul>{% endif %}
+{% if impact.complete %}<input type="hidden" name="confirmation" value="{{ impact.token }}">{% endif %}
+</div>{% endif %}
+<div class="rg-actions">{% if conflict %}<button class="btn btn-primary" name="relire" value="1" formnovalidate>Relire la révision courante</button>
+{% elif impact.complete %}<button class="btn btn-primary">Confirmer les modifications</button>
+{% elif impact %}<button class="btn btn-primary">Examiner les décisions</button>
+{% elif action == "page_delete" or action == "page_move" or action == "page_edit" %}<button class="btn btn-primary">Examiner et enregistrer</button>
+{% else %}<button class="btn btn-primary">{% if action == "menu_delete" or action == "item_delete" %}Confirmer le retrait{% else %}Enregistrer{% endif %}</button>{% endif %}
+<a href="{{ request.path }}{% if tab == 'pages' and page %}?selection={{ page.id }}{% elif menu %}?menu={{ menu.id }}{% endif %}">Annuler</a></div>
+</form></section>
+{% elif tab == "pages" %}
+<div class="rg-grid nav-grid"><section class="rg-panel"><header class="rg-section"><h2>Arborescence</h2>
+{% if manage %}<a href="?action=page_add&amp;selection={{ page.id }}">Créer une page</a>{% endif %}</header>
+<ul class="nav-tree">{% for row in pages %}<li style="--depth:{{ row.depth }}"><a href="?selection={{ row.id }}" {% if page.id == row.id %}aria-current="true"{% endif %}>{{ row.title }}</a><small>{{ row.path }}</small></li>{% endfor %}</ul></section>
+<section class="rg-panel"><h2>{{ page.title }}</h2><p>{{ page.path }}</p>
+<div class="rg-row"><h3>Présence dans les menus</h3>{% for menu_label, item_label in references %}<p>{{ menu_label }} · {{ item_label }}</p>{% empty %}<p>Hors menu</p>{% endfor %}</div>
+{% if manage %}<nav class="rg-actions" aria-label="Actions sur la page"><a href="?action=page_edit&amp;id={{ page.id }}">Modifier la page</a>
+{% if page.parent_id %}<a href="?action=page_move&amp;id={{ page.id }}">Déplacer la page</a><a href="?action=page_delete&amp;id={{ page.id }}">Supprimer la branche</a>{% endif %}</nav>{% endif %}</section></div>
+{% else %}
+<div class="rg-grid nav-grid"><section class="rg-panel"><header class="rg-section"><h2>Menus du site</h2>{% if manage %}<a href="?action=menu_add">Créer un menu</a>{% endif %}</header>
+<ul class="nav-tree">{% for row in menus %}<li><a href="?menu={{ row.id }}" {% if menu.id == row.id %}aria-current="true"{% endif %}>{{ row.label }}</a></li>{% empty %}<li>Aucun menu.</li>{% endfor %}</ul></section>
+{% if menu %}<section class="rg-panel"><h2>{{ menu.label }}</h2>
+{% if manage %}<nav class="rg-actions" aria-label="Actions sur le menu"><a href="?action=item_add&amp;menu={{ menu.id }}">Ajouter une entrée</a>
+<a href="?action=menu_edit&amp;id={{ menu.id }}">Renommer le menu</a><a href="?action=menu_delete&amp;id={{ menu.id }}">Supprimer le menu</a></nav>{% endif %}
+<ul class="nav-tree">{% for row in items %}<li style="--depth:{{ row.depth }}"><h3>{{ row.label }}</h3><p>{{ row.destination }}{% if row.target.kind == "external" %} · Externe{% endif %}</p><small>{{ row.formats }}</small>
+{% if manage %}<nav class="rg-actions" aria-label="Actions pour {{ row.label }}"><a href="?action=item_edit&amp;menu={{ menu.id }}&amp;id={{ row.id }}">Modifier</a>
+<a href="?action=item_move&amp;menu={{ menu.id }}&amp;id={{ row.id }}">Déplacer</a><a href="?action=item_delete&amp;menu={{ menu.id }}&amp;id={{ row.id }}">Retirer</a></nav>{% endif %}</li>{% empty %}<li>Aucune entrée dans ce menu.</li>{% endfor %}</ul></section>{% endif %}</div>
+{% endif %}{% endblock %}

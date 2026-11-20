@@ -1,0 +1,9 @@
+# T01 — Audit et référence produit · 20 novembre 2026
+
+- **Version et cible** — Audit v1 de Studio local, image web f7e13c3a559f, Tennis AI/Accueil R18 schéma 4. Pas de dépôt Git exploitable ; sources et artefacts identifiés par SHA-256.
+- **Résultat utilisable** — [Audit des capacités et écarts](AUDIT.md), [inventaire V1/V2 pour T21](INVENTAIRE-T21.md), [contrat UX/pages/scénarios](REFERENCE-PRODUIT.md) et [décision frontend](DECISION-FRONTEND.md). Organisation retenue par l’auteur d’audit : JavaScript natif modulaire sur Django, avec réemploi du modèle et du pont ; aucun React/TypeScript introduit pour J1.
+- **Démonstration** — [Installé/cible sur la même page R18](evidence/comparaison-reference.html). La cible est illustrative autour d’une copie du rendu enregistré ; les captures de l’installé sont réelles. La saisie longue locale puis undo n’a changé ni R18 ni son empreinte.
+- **Revue** — Avis indépendant favorable de /root/t01_revue, aucun constat restant ; réemploi des gestes V1 précisé avant retrait. [Revue](REVIEW.md).
+- **Vérifications** — 17 tests ciblés sur SQLite mémoire : 16 réussites, 1 cas de concurrence ignoré. Navigateur Chromium : sélection par UUID, édition locale/undo, largeurs 1200/820/390 mesurées ; rapport de comparaison éprouvé au clavier. [Index des preuves](EVIDENCE.md).
+- **Limites et suite** — Le rendu de travail reste distinct de Wagtail ; T02 doit définir geste atomique/voisins, conversion de parent, boîte et formats. R18 ne contient ni titre ni image et sa bibliothèque n’a aucun média disponible : préparer ces données contrôlées en T03. La concurrence PostgreSQL, les gestes futurs, les performances et le lecteur d’écran ne sont pas qualifiés ici.
+- **Pilotage** — [Carte T01](https://app.notion.com/p/41e49e23bbdb81a2b7e5e3f522012be7), parent UI-004. Aucune suppression V1/V2 ni modification du produit par cet audit ; T21 garde le retrait physique et la requalification après T19.

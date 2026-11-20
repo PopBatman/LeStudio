@@ -1,0 +1,17 @@
+{
+  "navigateur": "156.0.8078.4",
+  "environnement": "Django et PostgreSQL isolés, données fictives",
+  "observations": [
+    "Fiche, navigation clavier, page hors menu, bilan parent et descendant sur trois menus, confirmation puis rechargement.",
+    "Lecture seule sur téléphone, menu et visibilité, sans débordement.",
+    "Suppression du sous-arbre, deux retraits et un reciblage explicites ; relecture du pied de page.",
+    "Conflit réel entre deux lectures, saisie conservée à 320 px, comparaison puis sauvegarde ; ordre des entrées conservé après rechargement."
+  ],
+  "captures": [
+    "application-pages-bureau.png",
+    "application-impact-bureau.png",
+    "application-menus-mobile.png",
+    "application-conflit-mobile.png"
+  ],
+  "erreurs": []
+}

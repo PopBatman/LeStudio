@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-20",
+  "lot": "UI-004-02",
+  "state": "PLANNED",
+  "page": "https://app.notion.com/p/41e49e23bbdb817695efdccd260a063f",
+  "contract_sha256": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+  "child": {
+    "attachment": {
+      "file_upload_id": "41e49e23-bbdb-81ad-aecc-00b26590a56e",
+      "filename": "UI-004-02-cadrage-v1-2026-11-20.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "content_length": 44846,
+      "status": "uploaded",
+      "markdown_source": "file-upload://41e49e23-bbdb-81ad-aecc-00b26590a56e",
+      "suggested_markdown": "<file source=\"file-upload://41e49e23-bbdb-81ad-aecc-00b26590a56e\" />"
+    },
+    "content": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"page_id\":\"41e49e23-bbdb-8176-95ef-dccd260a063f\"}"
+        }
+      ],
+      "structuredContent": null,
+      "isError": false
+    },
+    "properties": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"page_id\":\"41e49e23-bbdb-8176-95ef-dccd260a063f\"}"
+        }
+      ],
+      "structuredContent": null,
+      "isError": false
+    }
+  },
+  "parent": {
+    "content": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"page_id\":\"41e49e23-bbdb-81ea-b216-e51aec661753\"}"
+        }
+      ],
+      "structuredContent": null,
+      "isError": false
+    },
+    "properties": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"page_id\":\"41e49e23-bbdb-81ea-b216-e51aec661753\"}"
+        }
+      ],
+      "structuredContent": null,
+      "isError": false
+    }
+  },
+  "roadmap": "Inchangée : aucun jalon, ordre ou dépendance modifié.",
+  "scope": "Restitution documentaire du cadrage uniquement ; aucun lancement"
+}

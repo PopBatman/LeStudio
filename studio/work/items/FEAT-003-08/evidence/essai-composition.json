@@ -1,0 +1,11 @@
+{
+  "portee": "Services existants, SQLite en mémoire et réseau désactivé. Résolveur fictif de proposition approuvée.",
+  "remise_lisible_sur_site_source": 1,
+  "meme_remise_autre_site": 404,
+  "schema": 4,
+  "origine": "figma",
+  "uuid_page_remappe": true,
+  "revision_initiale": 1,
+  "revision_apres_ajout_manuel": 2,
+  "racine_et_historique_preserves": true
+}

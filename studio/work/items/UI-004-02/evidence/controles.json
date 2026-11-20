@@ -1,0 +1,125 @@
+{
+  "purpose": "Contrôles documentaires uniquement ; aucun test applicatif",
+  "contract_sha256": "a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "workflow-ai/scripts/workflow.py",
+        "check",
+        "--id",
+        "UI-004-02",
+        "--phase",
+        "planning"
+      ],
+      "cwd": "/home/admincsd/Documents/LeStudio",
+      "observed_at": "2026-11-20T17:40:27.438957+00:00",
+      "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "{\"status\": \"FAIL\", \"error\": \"Identifiant attendu : FEAT-001, CONN-001, UI-001 ou ARCH-001.\", \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "studio/work/items/UI-004-02/evidence/check-planning.py"
+      ],
+      "cwd": "/home/admincsd/Documents/LeStudio",
+      "observed_at": "2026-11-20T17:40:27.463000+00:00",
+      "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "exit_code": 0,
+      "stdout": "{\n  \"task\": \"UI-004-02\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"PLANNED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 0,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\",\n  \"control\": \"complémentaire local, identité/type adaptés en mémoire\",\n  \"contract_sha256\": \"011c8ccfc0e5d5702ba311bceb145fd7e90ea18ca4f241d8ae7c3b3601122b6e\",\n  \"additional_documents_checked\": 7\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "studio/work/items/UI-004-02/evidence/check-planning.py"
+      ],
+      "cwd": "/home/admincsd/Documents/LeStudio",
+      "observed_at": "2026-11-20T17:42:15.472359+00:00",
+      "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "exit_code": 0,
+      "stdout": "{\n  \"task\": \"UI-004-02\",\n  \"phase\": \"planning\",\n  \"status\": \"PASS\",\n  \"state_unchanged\": \"PLANNED\",\n  \"documents_checked\": [\n    \"SPEC.md\",\n    \"TASKLIST.md\"\n  ],\n  \"evidence_checked\": 0,\n  \"notice\": \"Contrôle documentaire local : les références d’autorisation et d’indépendance sont déclaratives. Ce résultat n’authentifie personne, ne change aucun état et ne bloque pas les accès directs du runtime.\",\n  \"control\": \"complémentaire local, identité/type adaptés en mémoire\",\n  \"contract_sha256\": \"a799ac6eeb5564308b5bf723a6e8b63fe0110a48f95b29c84db18d400638d4ea\",\n  \"additional_documents_checked\": 7\n}\n",
+      "stderr": ""
+    }
+  ],
+  "local_links": [
+    {
+      "source": "REVIEW.md",
+      "target": "evidence/revue-cadrage.md",
+      "exists": true
+    },
+    {
+      "source": "VISUAL-REVIEW.md",
+      "target": "../UI-004/evidence/prototype-adopte.html",
+      "exists": true
+    },
+    {
+      "source": "VISUAL-REVIEW.md",
+      "target": "../UI-004-01/REFERENCE-PRODUIT.md",
+      "exists": true
+    },
+    {
+      "source": "VISUAL-REVIEW.md",
+      "target": "../UI-004-01/evidence/comparaison-reference.html",
+      "exists": true
+    },
+    {
+      "source": "REPORT.md",
+      "target": "SPEC.md",
+      "exists": true
+    },
+    {
+      "source": "REPORT.md",
+      "target": "CONTRAT-PROPOSE.md",
+      "exists": true
+    },
+    {
+      "source": "REPORT.md",
+      "target": "TASKLIST.md",
+      "exists": true
+    },
+    {
+      "source": "REPORT.md",
+      "target": "EVIDENCE.md",
+      "exists": true
+    },
+    {
+      "source": "REPORT.md",
+      "target": "REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "TASKLIST.md",
+      "target": "SPEC.md",
+      "exists": true
+    },
+    {
+      "source": "SPEC.md",
+      "target": "RESEARCH.md",
+      "exists": true
+    },
+    {
+      "source": "SPEC.md",
+      "target": "evidence/sources-notion.json",
+      "exists": true
+    },
+    {
+      "source": "SPEC.md",
+      "target": "CONTRAT-PROPOSE.md",
+      "exists": true
+    },
+    {
+      "source": "RESEARCH.md",
+      "target": "evidence/sources-notion.json",
+      "exists": true
+    },
+    {
+      "source": "ARCHITECTURE.md",
+      "target": "CONTRAT-PROPOSE.md",
+      "exists": true
+    }
+  ],
+  "status": "PASS complémentaire ; incompatibilité standard attendue conservée"
+}

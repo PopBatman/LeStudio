@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-20T13:15:37.615321+00:00",
+  "comparaison": "Réponse HTTP Wagtail avant et après le parcours navigateur",
+  "avant": {
+    "a": {
+      "status": 200,
+      "url": "/pages/carnet/",
+      "sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014"
+    },
+    "b": {
+      "status": 200,
+      "url": "/pages/carnet/",
+      "sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de"
+    }
+  },
+  "après": {
+    "a": {
+      "status": 200,
+      "url": "/pages/carnet/",
+      "sha256": "a9cef7a994198173330a27d52e48cbf957d214e01451154ebf1028b75e93d014"
+    },
+    "b": {
+      "status": 200,
+      "url": "/pages/carnet/",
+      "sha256": "57e189976d1e0ee603dcfcf8f7d60ae399109deef4d9ef967253d88b7e9485de"
+    }
+  }
+}

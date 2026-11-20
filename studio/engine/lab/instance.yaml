@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536
+    environment:
+      POSTGRES_DB: ${SITE_DB}
+      POSTGRES_PASSWORD: ${PG_ADMIN}
+      SITE_ROLE: ${SITE_ROLE}
+      SITE_PASSWORD: ${SITE_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/10-site.sql:ro
+    networks: [data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d $$POSTGRES_DB"]
+      interval: 2s
+      timeout: 3s
+      retries: 45
+  engine:
+    image: ${ENGINE_IMAGE}
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_DB: ${SITE_DB}
+      POSTGRES_USER: ${SITE_ROLE}
+      POSTGRES_PASSWORD: ${SITE_PASSWORD}
+      STUDIO_SITE_ID: ${SITE_ID}
+      ENGINE_INSTANCE_ID: ${INSTANCE_ID}
+      ENGINE_IMAGE_DIGEST: ${IMAGE_DIGEST}
+      ENGINE_MARKER: ${MARKER}
+      DJANGO_SECRET_KEY: ${DJANGO_KEY}
+      ENGINE_ALLOWED_HOSTS: localhost
+      ENGINE_PREVIEW_ENABLED: ${ENGINE_PREVIEW_ENABLED:-0}
+      EDITORIAL_WAGTAIL_SITE_ID: ${EDITORIAL_WAGTAIL_SITE_ID:-}
+    volumes: [media:/app/media]
+    networks: [data, app]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('127.0.0.1',8000),2).close()"]
+      interval: 2s
+      timeout: 3s
+      retries: 60
+  gateway:
+    image: nginx:stable-alpine@sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94
+    depends_on:
+      engine: {condition: service_healthy}
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${TLS_DIR}:/run/tls:ro
+    networks:
+      app:
+      management:
+        aliases: ["${API_HOST}"]
+networks:
+  app: {internal: true}
+  data: {internal: true}
+  management:
+    external: true
+    name: ${MGMT_NET}
+volumes:
+  pgdata:
+  media:

@@ -1,0 +1,113 @@
+{
+  "site": "Recette article B",
+  "transport": "HTTP sur la pile PostgreSQL isolée, session gestionnaire et CSRF",
+  "etapes": [
+    {
+      "action": "titre",
+      "revision_avant": 8,
+      "revision_apres": 9,
+      "uuid_occurrence": "54c3ec72-9131-4ff0-b781-c20d12d30f5f",
+      "relecture_autre_vue": 200,
+      "valeur_relue": "Atelier B — titre modifié",
+      "document_complet_conserve_hors_proprietes_de_cette_occurrence": true,
+      "nouvelle_soumission_identique_sans_revision": true
+    },
+    {
+      "action": "image",
+      "revision_avant": 9,
+      "revision_apres": 10,
+      "uuid_occurrence": "2e54aeef-52b5-45be-b492-3f0fb5ebd41c",
+      "relecture_autre_vue": 200,
+      "valeur_relue": "Nuancier de la collection B",
+      "document_complet_conserve_hors_proprietes_de_cette_occurrence": true,
+      "nouvelle_soumission_identique_sans_revision": true
+    },
+    {
+      "action": "bouton",
+      "revision_avant": 10,
+      "revision_apres": 11,
+      "uuid_occurrence": "ce3870a9-17c9-4380-9d56-e799bbc494f6",
+      "relecture_autre_vue": 200,
+      "valeur_relue": "Ouvrir le catalogue B",
+      "document_complet_conserve_hors_proprietes_de_cette_occurrence": true,
+      "nouvelle_soumission_identique_sans_revision": true
+    }
+  ],
+  "url_invalide": {
+    "http": 422,
+    "saisie_conservee": true,
+    "historique_identique": true
+  },
+  "media_revoque": {
+    "affichage_du_media_http": 404,
+    "enregistrement_http": 422,
+    "texte_conserve": true,
+    "historique_identique": true,
+    "attribution_retablie": true
+  },
+  "media_qualifie": "Nuancier, unique média prévu par le catalogue du site. Sélection du média attribué et changement du texte alternatif.",
+  "menu_conserve": true,
+  "placements": [
+    {
+      "base": {},
+      "mobile": {
+        "width": 75
+      }
+    },
+    {
+      "base": {},
+      "mobile": {
+        "width": 75
+      }
+    },
+    {
+      "base": {},
+      "mobile": {
+        "width": 75
+      }
+    }
+  ],
+  "historique_avant_preserve": true,
+  "publication_wagtail_avant": {
+    "pages": [
+      [
+        1,
+        null
+      ],
+      [
+        2,
+        null
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        null
+      ]
+    ],
+    "revisions": 2
+  },
+  "publication_wagtail_apres": {
+    "pages": [
+      [
+        1,
+        null
+      ],
+      [
+        2,
+        null
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        null
+      ]
+    ],
+    "revisions": 2
+  }
+}

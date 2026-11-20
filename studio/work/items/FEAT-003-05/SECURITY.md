@@ -1,0 +1,9 @@
+# Permissions et intégrité du brouillon
+
+L’acteur provient de la session Django et le site de la route autorisée. Un GET, la sélection d’un bloc, le changement de largeur et le tracé du geste sont des lectures. Pour chaque POST protégé par CSRF, recontrôler le mandat de gestion et la tête sous verrou. Résoudre page, parent, frère, définition/version et média dans le site autorisé. Un lecteur peut inspecter les valeurs. Après révocation des droits, le renvoi du formulaire échoue sans divulguer le contenu d’un autre site.
+
+Les commandes acceptent des champs et des nombres typés, finis et bornés. Le serveur valide à nouveau l’arbre complet, les trois dispositions effectives, les cycles, la profondeur, le nombre de nœuds, la taille et les versions de composants. Le moteur de rendu utilise une liste fermée de propriétés CSS et de composants livrés. Échapper le texte, contrôler les médias et les URL selon les règles du catalogue. L’interface permet de sélectionner un lien ou un bouton du brouillon sans déclencher sa destination. Un bloc libre reste limité au contexte d’empilement de son parent, à l’écart des commandes opérateur.
+
+Un échec de validation ou une base périmée conserve la révision. Les erreurs de champ nomment le format, le bloc et la règle à corriger ; les coordonnées ou identités étrangères obtiennent une réponse générique. La relecture après conflit impose une nouvelle action avant toute sauvegarde. Une double soumission reçoit au plus une révision fille pour la même base. Une ancienne version reste lisible dans son état historique ; une version future inconnue reçoit le diagnostic d’incompatibilité.
+
+Les données et pièces de recette sont fictives. Pour la réalisation, observer les requêtes réseau, comparer les révisions avant/après les essais refusés et contrôler séparément le site actif. La seule intégration nécessaire est le service local de composition du Studio. [Règles d’accès à l’atelier](../FEAT-003-04/SECURITY.md)

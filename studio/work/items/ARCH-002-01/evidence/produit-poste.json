@@ -1,0 +1,18 @@
+{
+    "observed_at": "2026-11-19T10:18:27.238225+00:00",
+    "site": "tennis-ai",
+    "database": "PostgreSQL, transaction en lecture seule",
+    "source": "Vue r\u00e9solue dans le conteneur web du Studio local",
+    "http_status": 200,
+    "state": "connected",
+    "wagtail": "7.4.4",
+    "confirmation": "2026-11-19T09:55:36.727484+00:00",
+    "matches": [
+        "instance",
+        "alias",
+        "version Wagtail",
+        "date du succ\u00e8s",
+        "date de la tentative"
+    ],
+    "health": "ok"
+}

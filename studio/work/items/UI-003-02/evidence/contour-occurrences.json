@@ -1,0 +1,34 @@
+{
+  "navigateur": "156.0.8078.4",
+  "site": "241367a2-8179-461d-9934-cd1c2d964760",
+  "revision": "b3792faa-54f6-4190-a062-9a66f98fd08d",
+  "unite": "pixels CSS du viewport, origine réelle du cadre et rectangle de la véritable occurrence",
+  "observations": [
+    {
+      "etape": "avant-zoom",
+      "id": "7e6c7858-ea7e-4066-8b99-467096da2351",
+      "ecart_max_px": 0
+    },
+    {
+      "etape": "occurrence identique 1",
+      "id": "d512ed12-89a1-4716-bb82-35c8bac24455",
+      "ecart_max_px": 0
+    },
+    {
+      "etape": "occurrence identique 2",
+      "id": "0f8d2ded-ad65-45e1-9f40-5dc387004e6a",
+      "ecart_max_px": 0
+    },
+    {
+      "etape": "après redimensionnement et défilement",
+      "id": "0f8d2ded-ad65-45e1-9f40-5dc387004e6a",
+      "ecart_max_px": 0
+    },
+    {
+      "etape": "zoom visuel",
+      "echelle": 1.25,
+      "id": "0f8d2ded-ad65-45e1-9f40-5dc387004e6a",
+      "ecart_max_px": 0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-20T08:51:28.710Z",
+  "chromium": "156.0.8078.4",
+  "site": "10b38342-5add-4a8f-a289-9f2e17ac5738",
+  "revision": "55080c6f-fbae-4e0c-9242-84546d8dd074",
+  "screens": [
+    {
+      "name": "Bureau",
+      "screen": 1440,
+      "frame": 1200,
+      "ids": [
+        "0011efb0-c1a7-4474-bad1-ba0d4ded540d",
+        "cf1461e3-0568-4ba8-8d3a-4bd2ecf9cdcf",
+        "3690023e-c4fd-454b-96f0-7f525d91ad6a",
+        "5a835286-362d-42d4-ab6e-b658e603ab7a",
+        "f2cefd4f-daac-4714-adc9-684f59cd9260"
+      ]
+    },
+    {
+      "name": "Tablette",
+      "screen": 900,
+      "frame": 820,
+      "ids": [
+        "0011efb0-c1a7-4474-bad1-ba0d4ded540d",
+        "cf1461e3-0568-4ba8-8d3a-4bd2ecf9cdcf",
+        "3690023e-c4fd-454b-96f0-7f525d91ad6a",
+        "5a835286-362d-42d4-ab6e-b658e603ab7a",
+        "f2cefd4f-daac-4714-adc9-684f59cd9260"
+      ]
+    },
+    {
+      "name": "Mobile",
+      "screen": 320,
+      "frame": 320,
+      "ids": [
+        "0011efb0-c1a7-4474-bad1-ba0d4ded540d",
+        "cf1461e3-0568-4ba8-8d3a-4bd2ecf9cdcf",
+        "3690023e-c4fd-454b-96f0-7f525d91ad6a",
+        "5a835286-362d-42d4-ab6e-b658e603ab7a",
+        "f2cefd4f-daac-4714-adc9-684f59cd9260"
+      ]
+    }
+  ],
+  "erreurs": [],
+  "hotes_externes": [],
+  "article": "Épreuve Wagtail A",
+  "observations": [
+    "fiche Site et préparation au clavier",
+    "image et police chargées",
+    "comparaison R3 et R2",
+    "refus autre session 404",
+    "coupure et reprise",
+    "fermeture du reçu et refus ultérieur"
+  ]
+}

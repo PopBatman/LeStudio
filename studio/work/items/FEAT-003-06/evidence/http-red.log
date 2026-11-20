@@ -1,0 +1,18 @@
+Premier passage avant le branchement HTTP (extrait).
+Found 2 test(s).
+test_permissions_csrf_and_validation: AssertionError: 404 != 422
+test_section_offers_editorial_reference_and_labels_local_fields: Couldn't find 'Associer un article Wagtail'
+Ran 2 tests in 0.034s
+FAILED (failures=2)
+
+Régression des archives reproduite lors de la revue indépendante (extrait).
+  File "/app/composition/editor_views.py", line 131, in inspector
+    ctx["article"] = editorial.lire_article(ctx["actor"], ctx["site"].pk, reference.get("ref_id"))
+                                                                          ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...

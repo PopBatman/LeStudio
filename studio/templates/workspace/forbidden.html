@@ -1,0 +1,13 @@
+{% extends "workspace/base.html" %}
+{% block title %}Accès refusé{% endblock %}
+{% block content %}
+<div class="ws-access">
+  <section class="ws-form-panel" aria-labelledby="refus-title">
+    <div class="ws-kicker">Accès opérateur</div>
+    <h1 id="refus-title">Accès refusé</h1>
+    <p class="ws-intro">Ce compte n’a pas accès à l’espace de travail. Déconnectez-vous pour utiliser un compte opérateur.</p>
+    {% include "workspace/logout.html" %}
+  </section>
+  {% include "workspace/illustration.html" %}
+</div>
+{% endblock %}

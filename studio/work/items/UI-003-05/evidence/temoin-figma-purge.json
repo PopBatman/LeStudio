@@ -1,0 +1,10 @@
+{
+  "source": "PNG fictif, remise du site A de laboratoire",
+  "export_prive": 200,
+  "retour_edition": "Même page et travail éditable",
+  "export_apres_purge": 404,
+  "contenu_prive_supprime_de_la_page": true,
+  "numero_revision_avant_et_apres": 8,
+  "site_public": "Voir pages-publiees.json",
+  "erreurs_js": []
+}

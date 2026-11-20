@@ -1,0 +1,13 @@
+{% extends "registre/base.html" %}
+{% block title %}Effacer le dépôt · {{ site.name }}{% endblock %}
+{% block registry %}
+<a class="rg-back" href="{% url 'registre:depot-submission' site.pk row.pk %}">← Version {{ row.version }}</a>
+<header class="rg-head"><h1>Effacer le dépôt</h1></header>
+<section class="rg-panel rg-editor"><h2>Version {{ row.version }} · Invitation {{ row.invitation_id|stringformat:"s"|slice:":8" }}</h2>
+  <p>Le lien Figma et le commentaire seront effacés définitivement. Cette version disparaîtra de la fiche Site et de l’historique des dépôts.</p>
+  <form method="post">{% csrf_token %}<div class="rg-actions">
+    <a href="{% url 'registre:depot-submission' site.pk row.pk %}">Conserver le dépôt</a>
+    <button class="btn btn-primary">Confirmer l’effacement</button>
+  </div></form>
+</section>
+{% endblock %}

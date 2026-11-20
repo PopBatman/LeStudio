@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-11-18T15:15:31.243979+00:00",
+  "command": "python -m unittest tests.test_settings",
+  "environment": "Python 3.12, venv temporaire avec les dépendances de requirements.txt",
+  "exit": 1,
+  "summary": "Avant la validation, manage.py check acceptait les cinq réglages invalides. Le GREEN courant remplace cette preuve historique.",
+  "inputs": [
+    {
+      "path": "manage.py",
+      "sha256": "ef25c629ac38889733af20c93389d13a3807727848544d5ba9d857ebaadcd826"
+    },
+    {
+      "path": "central/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "central/settings.py",
+      "sha256": "dbd3701217736b0290cfdb4b14d7aafc5efeee0092f084e1da42b4bb170637bd"
+    },
+    {
+      "path": "central/urls.py",
+      "sha256": "06375ec2cb258edd0b21e7e38b105e9bd24dd2492084fbe6ac81138f719d5db6"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_settings.py",
+      "sha256": "d52283e546b9149c1be0508b6634e24c4bec68c0ee1abb6d4a6e7ee4c06bb8cb"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "418977b890446a3b5f4b58876cda570478f1c3dba1efd9d1943559528b321e94"
+    }
+  ],
+  "output": "FFFFF\n======================================================================\nFAIL: test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) (key='DJANGO_SECRET_KEY', missing=True)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"tests/test_settings.py\", line 30, in test_invalid_settings_refused_without_disclosing_values\n    self.assertNotEqual(proc.returncode, 0)\nAssertionError: 0 == 0\n\n======================================================================\nFAIL: test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) (key='DJANGO_SECRET_KEY', missing=False)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"tests/test_settings.py\", line 30, in test_invalid_settings_refused_without_disclosing_values\n    self.assertNotEqual(proc.returncode, 0)\nAssertionError: 0 == 0\n\n======================================================================\nFAIL: test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) (key='STUDIO_DB_PASSWORD', missing=True)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"tests/test_settings.py\", line 30, in test_invalid_settings_refused_without_disclosing_values\n    self.assertNotEqual(proc.returncode, 0)\nAssertionError: 0 == 0\n\n======================================================================\nFAIL: test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) (key='STUDIO_DB_PASSWORD', missing=False)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"tests/test_settings.py\", line 30, in test_invalid_settings_refused_without_disclosing_values\n    self.assertNotEqual(proc.returncode, 0)\nAssertionError: 0 == 0\n\n======================================================================\nFAIL: test_invalid_settings_refused_without_disclosing_values (tests.test_settings.ConfigurationTests.test_invalid_settings_refused_without_disclosing_values) (key='STUDIO_DB_HOST', missing=False)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"tests/test_settings.py\", line 30, in test_invalid_settings_refused_without_disclosing_values\n    self.assertNotEqual(proc.returncode, 0)\nAssertionError: 0 == 0\n\n----------------------------------------------------------------------\nRan 1 test in 0.824s\n\nFAILED (failures=5)\n"
+}

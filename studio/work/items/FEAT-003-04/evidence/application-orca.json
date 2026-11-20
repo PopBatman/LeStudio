@@ -1,0 +1,27 @@
+{
+  "lecteur": "Orca 46.1",
+  "environnement": "Chromium, AT-SPI2 et Xephyr sur bus de session isolé. Application Django avec le site fictif C préexistant.",
+  "méthode": "Pilotage clavier du navigateur avec Playwright et relevé des énoncés générés par Orca. La synthèse du lecteur utilise les rôles en anglais.",
+  "parcours": "Lien de saut, sélection du composant texte, modification, enregistrement, retour à la structure.",
+  "énoncés": [
+    "Aller au contenu link.",
+    "Texte · v1 · Position 1 · Niveau 1 Les ateliers de saison link.",
+    "Inspecteur.",
+    "Texte : entry Les ateliers de saison required.",
+    "Enregistrer push button.",
+    "Enregistrement en cours…",
+    "Brouillon enregistré · Révision 2",
+    "Revenir à la structure link.",
+    "Structure de la page heading level 2 clickable.",
+    "Vérifiez votre saisie Texte · Ce champ est obligatoire."
+  ],
+  "focus_après_enregistrement": "inspecteur",
+  "focus_après_retour": "structure",
+  "contrastes_calculés_sRGB": {
+    "Encre sur papier": 13.55,
+    "Texte secondaire sur papier": 5.42,
+    "Lien sur papier": 6.33,
+    "Bouton principal": 15.02
+  },
+  "focus_après_erreur": "ed-error"
+}
