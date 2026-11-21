@@ -16,9 +16,9 @@ Les chemins relatifs ci-dessous désignent le dossier local studio/work/items/UI
 # Cadrage T02 · 20 novembre 2026
 
 - **Version et cible** — Cadrage v1 de UI-004-02, type Architecture, contrat de disposition et gestes ; code et références Notion rapprochés. Pas de Git exploitable ; manifeste des sources dans evidence/.
-- **Résultat utilisable** — [Spécification](SPEC.md), [options de contrat](CONTRAT-PROPOSE.md), [tasklist](TASKLIST.md), architecture/risques, compatibilité et références de démonstration préparés. Le point principal est le geste atomique cible/voisins, distinct du lot de sauvegarde.
+- **Résultat utilisable** — [Spécification](../SPEC.md), [options de contrat](../CONTRAT-PROPOSE.md), [tasklist](../TASKLIST.md), architecture/risques, compatibilité et références de démonstration préparés. Le point principal est le geste atomique cible/voisins, distinct du lot de sauvegarde.
 - **Choix proposés** — Comparer flux/grille et libre borné si nécessaire ; version 5 uniquement si les champs ou nouvelles sémantiques le justifient. Préserver la lecture 1–4 et migrer explicitement une copie. Corriger la parité parent/before du placement local lors de la réalisation.
-- **Vérifications** — Lecture des consommateurs, contrôle documentaire complémentaire, liens et empreintes ; résultat et revue indépendante dans [EVIDENCE.md](EVIDENCE.md) et [REVIEW.md](REVIEW.md). Les contrôles partagés ne supportent pas directement cet identifiant/type ; aucune extension globale du workflow.
+- **Vérifications** — Lecture des consommateurs, contrôle documentaire complémentaire, liens et empreintes ; résultat et revue indépendante dans [EVIDENCE.md](../EVIDENCE.md) et [REVIEW.md](../REVIEW.md). Les contrôles partagés ne supportent pas directement cet identifiant/type ; aucune extension globale du workflow.
 - **Limites et suite** — Aucun code applicatif, migration, manipulation de données, nouvel écran ou test métier exécuté. AC1–AC4 restent à démontrer au lancement T02 ; le parcours Tennis AI/historique/autosave minimal appartient à T03. Relire carte/références et mandat avant tout lancement.
 - **Pilotage** — [Carte T02](https://app.notion.com/p/41e49e23bbdb817695efdccd260a063f). PLANNED décrit le cadrage achevé, sans lancement ni nouvelle approbation technique humaine.
 
@@ -36,7 +36,7 @@ Version de cadrage : 1 · 20 novembre 2026 · état visé : PLANNED.
 
 Préparer le document canonique et les commandes permettant de déplacer et redimensionner réellement titre/image, conserver cette intention après enregistrement et la rendre avec Wagtail. La demande utilisateur « Cadre UI-004-02 — T02 · Contrat des gestes et modèle de disposition conformément au Notion et au Workflow AI » autorise ce cadrage, sa revue et sa restitution documentaire sur la carte existante. Elle ne lance pas la réalisation de T02, T03 ou une migration de données.
 
-Carte : https://app.notion.com/p/41e49e23bbdb817695efdccd260a063f ; parent UI-004, audit T01 DONE, vision et prototype adoptés le 20 novembre. [Sources relues](RESEARCH.md), [instantané Notion](evidence/sources-notion.json). Risque STANDARD : transformation de brouillons, erreurs de placement, contenu masqué, isolement et concurrence. Aucune nouvelle validation humaine des options techniques n’est enregistrée.
+Carte : https://app.notion.com/p/41e49e23bbdb817695efdccd260a063f ; parent UI-004, audit T01 DONE, vision et prototype adoptés le 20 novembre. [Sources relues](../RESEARCH.md), [instantané Notion](sources-notion.json). Risque STANDARD : transformation de brouillons, erreurs de placement, contenu masqué, isolement et concurrence. Aucune nouvelle validation humaine des options techniques n’est enregistrée.
 
 ## Résultat à livrer lors de T02
 
@@ -57,7 +57,7 @@ T02 possède le modèle, la sémantique du geste atomique et leur vérification 
 
 ## Contrat proposé à éprouver
 
-[CONTRAT-PROPOSE.md](CONTRAT-PROPOSE.md) fixe les options de travail, unités, règles de voisins, conversion de parent, annulation et migration. Il distingue l’existant des ajouts proposés. La grille à 12 colonnes et les coordonnées du prototype ne sont pas une décision de production. La décision finale est prise et documentée après les essais T02-02/03 ; toute réduction de la liberté produit requiert un arbitrage utilisateur.
+[CONTRAT-PROPOSE.md](../CONTRAT-PROPOSE.md) fixe les options de travail, unités, règles de voisins, conversion de parent, annulation et migration. Il distingue l’existant des ajouts proposés. La grille à 12 colonnes et les coordonnées du prototype ne sont pas une décision de production. La décision finale est prise et documentée après les essais T02-02/03 ; toute réduction de la liberté produit requiert un arbitrage utilisateur.
 
 ## Critères et preuve attendue
 
@@ -153,7 +153,7 @@ Les trois origines vierge/template/Figma accepté consomment ce même document. 
 
 # T02 — Tasklist ordonnée
 
-Version 1 · [SPEC.md](SPEC.md). Cadrage mandaté uniquement ; toutes les tâches de réalisation ci-dessous restent à faire.
+Version 1 · [SPEC.md](../SPEC.md). Cadrage mandaté uniquement ; toutes les tâches de réalisation ci-dessous restent à faire.
 
 | ID | Résultat | Dépend de | Zones prévues | Vérification / critères | Exécutant |
 |---|---|---|---|---|---|
@@ -207,7 +207,7 @@ Version 1 · cadrage ; les chemins ci-dessous sont les zones de réalisation fut
 
 ## Interfaces
 
-Voir [contrat proposé](CONTRAT-PROPOSE.md). Transport versionné, entrées bornées, acteur/site/base explicites. Réutiliser le reçu idempotent et le mapping UUID. Erreurs : document/commande/format invalide, cible incompatible, collision, ressource/composant indisponible, clé réutilisée, base périmée, moteur incompatible ou indisponible. Conserver leurs codes existants quand applicables ; nouveaux codes et statuts HTTP documentés avec les tests du transport au lancement.
+Voir [contrat proposé](../CONTRAT-PROPOSE.md). Transport versionné, entrées bornées, acteur/site/base explicites. Réutiliser le reçu idempotent et le mapping UUID. Erreurs : document/commande/format invalide, cible incompatible, collision, ressource/composant indisponible, clé réutilisée, base périmée, moteur incompatible ou indisponible. Conserver leurs codes existants quand applicables ; nouveaux codes et statuts HTTP documentés avec les tests du transport au lancement.
 
 Un batch atomique existant n’est pas un groupe de geste : la validation intermédiaire dans _command est l’écart principal. La parité JS/serveur doit inclure block_place avec parent/before, que le modèle local actuel ne traite pas comme le serveur. Ne pas déplacer une validation uniquement dans le navigateur.
 
@@ -265,7 +265,7 @@ Le cadrage est documentaire. Les tests de sécurité ci-dessus sont planifiés ;
 
 Version 1 · lot d’architecture, UI requise = non dans Notion. Le cadrage ne modifie aucun écran ; il ne nécessite pas de nouvelle maquette de coque ni de captures d’implémentation. Ce document fixe les observations visuelles nécessaires à la réalisation du modèle.
 
-Références réemployées : [prototype adopté du parent](../UI-004/evidence/prototype-adopte.html), [contrat UX T01](../UI-004-01/REFERENCE-PRODUIT.md), [comparaison installée/cible R18](../UI-004-01/evidence/comparaison-reference.html). Le prototype est simulé ; la cible de T01 est illustrative ; aucune de ces pièces ne prouve le nouveau modèle.
+Références réemployées : [prototype adopté du parent](../../UI-004/evidence/prototype-adopte.html), [contrat UX T01](../../UI-004-01/REFERENCE-PRODUIT.md), [comparaison installée/cible R18](../../UI-004-01/evidence/comparaison-reference.html). Le prototype est simulé ; la cible de T01 est illustrative ; aucune de ces pièces ne prouve le nouveau modèle.
 
 | Composition | Variantes à comparer | Observation attendue |
 |---|---|---|
@@ -291,7 +291,7 @@ En réalisation T02 : utiliser données fictives et média autorisé sur le banc
 
 ## Notion relu avant cadrage
 
-Les pages complètes relues figurent dans [sources-notion.json](evidence/sources-notion.json) : carte T02, parent UI-004, T01, règle de relecture « 03 — Workflow, tasklist et preuves », guide de prise de lot, vision produit, roadmap, socle FEAT-003-01, catalogue FEAT-003-03, aperçu FEAT-004 et futur parcours T03. Leurs dates d’édition ne valent pas approbation. La carte T02 initiale est DRAFT, type Architecture, UI requise non ; T01 est DONE, parent PLANNED.
+Les pages complètes relues figurent dans [sources-notion.json](sources-notion.json) : carte T02, parent UI-004, T01, règle de relecture « 03 — Workflow, tasklist et preuves », guide de prise de lot, vision produit, roadmap, socle FEAT-003-01, catalogue FEAT-003-03, aperçu FEAT-004 et futur parcours T03. Leurs dates d’édition ne valent pas approbation. La carte T02 initiale est DRAFT, type Architecture, UI requise non ; T01 est DONE, parent PLANNED.
 
 Décisions humaines reprises : manipulation directe/prototype adoptés et retrait physique V1/V2 imposé dans le plan courant du 20 novembre. Choix frontend : décision technique de l’auteur T01, JS natif sur Django. Aucun choix de grille, schéma ou protocole de rendu immédiat n’est présenté comme accepté par l’utilisateur.
 
@@ -335,7 +335,7 @@ Le CLI partagé ne reconnaît que des identifiants sans suffixe et lie Architect
 
 # T02 — Revue du cadrage
 
-Avis indépendant favorable de /root/t02_revue, distinct de l’auteur /root et de l’inspecteur /root/t02_existant. Aucun constat de fond restant. [Compte rendu indépendant](evidence/revue-cadrage.md), empreintes des pièces et limites incluses.
+Avis indépendant favorable de /root/t02_revue, distinct de l’auteur /root et de l’inspecteur /root/t02_existant. Aucun constat de fond restant. [Compte rendu indépendant](revue-cadrage.md), empreintes des pièces et limites incluses.
 
 La revue porte sur le cadrage PLANNED, sa fidélité aux sources, les scénarios AC1–AC4 et le découpage T02/T03. Elle ne valide ni une réalisation des gestes ni un schéma 5 définitif. Aucun test métier, lecture de tête courante ou appel Notion effectué par le reviewer.
 
