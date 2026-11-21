@@ -25,3 +25,8 @@ Si l’indépendance requise n’est pas disponible, conserver la revue ouverte 
 
 Utiliser [REVIEW.md](../templates/REVIEW.md). Toute livraison suit sa [procédure dédiée](FEATURE-RELEASE.md).
 
+## Vérification d'indépendance
+
+Le reviewer déclare l'identité et l'identifiant du run, le fournisseur/modèle utilisé, la révision examinée, ses éventuelles contributions aux spécifications, au code, aux tests et aux preuves, et les liens vers les runs producteurs. La revue indépendante requise ne peut être satisfaite par une personne ou exécution qui a produit les changements ou les preuves qu'elle valide. Si le reviewer a contribué à une partie du travail, cette partie exige une autre revue distincte. Une nouvelle session du même modèle réduit la continuité de contexte, sans garantir une diversité de modèles ni l'absence d'erreurs communes.
+
+Le système de vérification doit corroborer les identifiants et traces lorsque le runtime le permet. Un formulaire rempli et une déclaration d'indépendance ne prouvent pas à eux seuls l'absence de contribution. En cas de doute substantiel, QG-11 reste ouvert.
