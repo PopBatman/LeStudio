@@ -11,13 +11,13 @@ Un contrôle qualité apporte une preuve ; il n’accorde pas de permission. Cha
 | QG-05 | Risques et sécurité | Risques utiles au lot, données et contrôles prévus | Avant READY |
 | QG-06 | Tasklist | Ordre, dépendances, fichiers, tests et conditions de fin | PLANNED |
 | QG-07 | Conception frontend | Maquette ou référence, états et statut d’examen | Avant READY si UI |
-| QG-08 | Construction et TDD pertinent | Comportements testés, RED/GREEN observés lorsqu’applicables | IMPLEMENTING |
+| QG-08 | Construction et TDD pertinent | Comportements testés et [preuves du cycle TDD](../workflows/FEATURE-TDD.md) lorsqu’il s’applique | IMPLEMENTING |
 | QG-09 | Vérification UI réelle | Navigateur, clavier, états, captures et écarts | Avant VERIFIED si UI |
-| QG-10 | Intégration | Tests et parcours exécutés sur les entrées identifiées | VERIFIED |
-| QG-11 | Revue | Exécutant, constats, preuves examinées et écarts traités | REVIEWED |
+| QG-10 | Intégration | Tests et parcours exécutés sur les entrées identifiées, résultats de [CI](TESTING-POLICY.md#ci-déterministe) lorsqu’elle est applicable | VERIFIED |
+| QG-11 | Revue | Exécutant, constats, preuves examinées et écarts traités selon la [procédure de revue](../workflows/FEATURE-REVIEW.md) | REVIEWED |
 | QG-12 | Livraison | Cible, artefact, compatibilité, reprise et mandat | Si une livraison est demandée |
 
-Les preuves sont actives par défaut. Pour chaque type requis par une phase du CLI, toutes les preuves actives doivent être réussies et liées au contrat et aux sources courants. Une réussite ne masque pas un échec actif. Les preuves historiques marquées `active: false` restent conservées et contrôlées comme artefacts, sans satisfaire le contrôle ni imposer la relecture des anciennes sources. Documenter leur remplacement selon [EVIDENCE.md](../templates/EVIDENCE.md).
+Appliquer les [règles de preuve](TESTING-POLICY.md#preuves) pour déterminer quels résultats satisfont les contrôles du CLI.
 
 ## Proportionner les contrôles
 
@@ -29,9 +29,9 @@ Les preuves sont actives par défaut. Pour chaque type requis par une phase du C
 
 La classification dépend des effets du changement. Une correction de sécurité peut être critique malgré peu de lignes modifiées.
 
-QG-07 et QG-09 sont non applicables pour un travail sans frontend. QG-08 ne force pas un test artificiel pour une retouche de texte ou de style. QG-12 reste non applicable lorsqu’aucune livraison n’appartient au lot.
+QG-07 et QG-09 sont non applicables pour un travail sans frontend. Pour QG-08, justifier les contrôles retenus selon la [politique de tests](TESTING-POLICY.md#choisir-une-vérification-utile). QG-12 reste non applicable lorsqu’aucune livraison n’appartient au lot.
 
 Une maquette peut être examinée dans le mandat déjà donné. Ne pas inventer un accord visuel, ni imposer une confirmation nouvelle à chaque sous-tâche lorsqu’elle n’est pas nécessaire. Les arbitrages produit encore ouverts sont distingués des détails d’implémentation couverts.
 
-`READY` ne vaut pas autorisation. `DONE` n’implique aucune mise en production. Voir [workflow](../workflows/FEATURE-WORKFLOW.md).
+Les [états du workflow](../workflows/FEATURE-WORKFLOW.md) décrivent l’avancement. La [politique d’exécution](EXECUTION-POLICY.md) régit le mandat et la [procédure de livraison](../workflows/FEATURE-RELEASE.md) régit le déploiement.
 

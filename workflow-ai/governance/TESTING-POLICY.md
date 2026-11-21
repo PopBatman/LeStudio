@@ -13,11 +13,19 @@
 
 Les tests s’exécutent dans l’environnement pertinent. Pour Studio, PostgreSQL est le choix exprimé ; un résultat obtenu sur une autre base ne qualifie pas silencieusement PostgreSQL.
 
-## Cycle TDD
+## Tests de référence
 
-Pour un nouveau comportement testable : écrire le scénario depuis l’exigence, constater un échec pour la raison attendue, implémenter le comportement, puis vérifier après un refactor utile. Un import manquant ou un environnement cassé ne constitue pas le RED métier attendu.
+Les tests de référence traduisent les critères d’acceptation de la spécification versionnée. Les assertions portent sur des résultats observables.
 
-Modifier un test est légitime lorsqu’une exigence change explicitement ou lorsqu’un test est erroné. Documenter la raison ; ne pas réduire les critères pour faire disparaître un défaut.
+Modifier un test de référence uniquement pour corriger une erreur démontrée au regard de la spécification ou pour appliquer un changement de critère explicitement décidé par une personne habilitée selon le mandat. Avant la modification, consigner le motif, le critère et sa version, les assertions touchées et, si le critère change, la référence de la décision. Soumettre le diff à la [revue](../workflows/FEATURE-REVIEW.md), avec les vérifications rejouées et les preuves remplacées. Lorsqu’une ambiguïté implique un changement de critère, la faire trancher avant de modifier le test concerné.
+
+Aucun rôle ne peut modifier silencieusement un critère ni affaiblir, supprimer, ignorer ou marquer comme échec attendu un test de référence pour obtenir un GREEN. Un écart de l’implémentation à la spécification se corrige dans l’implémentation.
+
+## CI déterministe
+
+La CI exécute des commandes définies pour la révision contrôlée. À mêmes sources et mêmes entrées, le verdict repose sur les mêmes règles et codes de sortie. Maîtriser les versions d’outils et de dépendances, isoler les données de test et fixer les sources de variabilité utiles (heure, aléa, ordre, services externes). Isoler les qualifications qui exigent un service réel et consigner leur résultat séparément.
+
+La CI n’utilise aucun verdict d’agent ou de modèle et ne réécrit ni la spécification, ni les tests, ni le code. Consigner la révision, les commandes, l’environnement et les résultats selon les règles de preuve ci-dessous. La gouvernance des accès relève de la [politique d’exécution](EXECUTION-POLICY.md).
 
 ## Preuves
 

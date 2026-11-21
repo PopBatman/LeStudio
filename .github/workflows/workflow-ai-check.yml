@@ -1,0 +1,33 @@
+name: Workflow AI - Validation
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Workflow AI - tests et manifeste
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Configure Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Tests du Workflow AI
+        run: python3 -m unittest discover -s workflow-ai/tests -v
+
+      - name: Manifeste et simulation installateur
+        run: python3 workflow-ai/install.py --target "$RUNNER_TEMP/workflow-ai-install-check"
+
+      - name: Integrite de la documentation
+        run: python3 workflow-ai/scripts/validate_workspace.py

@@ -20,3 +20,16 @@ Une auto-revue est nommée comme telle. Une conclusion favorable ne donne pas de
 
 Pour les contrôles locaux, la preuve de revue inclut les empreintes des entrées et du contrat concerné. L’authenticité du reviewer reste à établir par le runtime ou le système de revue utilisé.
 
+## Provenance et séparation de la revue
+
+| Information | Valeur à renseigner |
+|---|---|
+| Identifiant du run reviewer | Référence technique observable |
+| Fournisseur / modèle | Modèle utilisé et limites de diversité par rapport aux contributeurs |
+| Runs contributeurs | Identifiants auteur code, QA tests et autres auteurs des preuves |
+| Contributions du reviewer | Fichiers/tests/preuves auxquels le reviewer a contribué, ou aucune connue |
+| Révision examinée | SHA exact et critères/spec/version |
+| Indépendance par zone | Zones examinées sans contribution du reviewer ; éventuels contrôles restant ouverts |
+| Vérification de provenance | Source des identifiants, limites de corroboration |
+
+Ne pas considérer une nouvelle session comme indépendante des fichiers ou preuves auxquels le même exécutant a contribué ; obtenir une revue distincte lorsque QG-11 l'exige.
