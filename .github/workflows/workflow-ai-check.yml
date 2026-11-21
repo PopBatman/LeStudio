@@ -6,13 +6,6 @@ on:
       - "workflow-ai/**"
       - "studio/work/**"
       - ".github/workflows/workflow-ai-check.yml"
-  push:
-    branches:
-      - "automation/auto-001-sdd-tdd"
-    paths:
-      - "workflow-ai/**"
-      - "studio/work/**"
-      - ".github/workflows/workflow-ai-check.yml"
   workflow_dispatch:
 
 permissions:
