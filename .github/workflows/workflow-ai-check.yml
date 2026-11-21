@@ -27,6 +27,40 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Calculer le manifeste attendu sans modifier le depot
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import json
+          import os
+          root = Path.cwd()
+          source = root / "workflow-ai" / "MANIFEST.json"
+          manifest = json.loads(source.read_text(encoding="utf-8"))
+          changes = []
+          for key, folder in (("files", "workflow-ai"), ("project_files", "studio")):
+              for entry in manifest[key]:
+                  path = root / folder / entry["path"]
+                  data = path.read_bytes()
+                  digest = hashlib.sha256(data).hexdigest()
+                  if entry["sha256"] != digest or entry["size_bytes"] != len(data):
+                      changes.append(f"{folder}/{entry['path']}")
+                  entry["sha256"] = digest
+                  entry["size_bytes"] = len(data)
+          output = Path(os.environ["RUNNER_TEMP"]) / "manifest-proposed.json"
+          output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print("Manifest entries needing refresh:", len(changes))
+          for item in changes:
+              print(item)
+          PY
+
+      - name: Publier le manifeste propose pour reconciliation
+        uses: actions/upload-artifact@v6
+        with:
+          name: workflow-ai-manifest-candidate
+          path: ${{ runner.temp }}/manifest-proposed.json
+          retention-days: 7
+
       - name: Tests du Workflow AI
         run: python3 -m unittest discover -s workflow-ai/tests -v
 
