@@ -40,8 +40,8 @@
     },
     {
       "path": "agents/developer.md",
-      "sha256": "90c7370f64f989cc06e7083b1d2f5911fcd35c3bdfe40c5b162af462136ba8ae",
-      "size_bytes": 1072
+      "sha256": "a73bdfb7032e63822cbf98402fd094c3e2d9c0d05bb9fed9e4cee52a9e295370",
+      "size_bytes": 1355
     },
     {
       "path": "agents/devops.md",
