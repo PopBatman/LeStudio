@@ -26,3 +26,10 @@ Chaque sous-tâche reçoit un périmètre de fichiers et d’actions, ses interf
 
 Voir [modèle de délégation](../templates/DELEGATION.md) et [revue](../workflows/FEATURE-REVIEW.md).
 
+## Séparation opérationnelle des responsabilités
+
+Pour les nouveaux comportements métier de niveau STANDARD ou CRITICAL nécessitant le TDD, une exécution QA distincte du développeur est requise avant GREEN. Pour les changements LIGHT et les travaux sans comportement testable, la spécification indique si un RED externe est pertinent ; une dispense de séparation QA est une décision du mandat, jamais une auto-dérogation du développeur. L'absence de Claude Code n'autorise pas à déclarer une étape QA externe accomplie.
+
+Lors de la délégation, enregistrer le rôle, l'identifiant d'exécution réel, la version de la spécification, le commit de départ, les chemins autorisés à écrire, le commit de tests RED et le compte rendu de passation. Les tests de référence sont écrits par le Test Engineer ; le développeur écrit le code produit et, si autorisé, des tests complémentaires. Une correction des tests de référence suit [TESTING-POLICY.md](TESTING-POLICY.md#tests-de-référence) et ne peut être décidée unilatéralement par le développeur.
+
+Lorsque la séparation requise ne peut pas être assurée, le travail peut être préparé et ses résultats étiquetés « mode dégradé », mais QG-08 et la clôture dépendante restent ouverts. Seule une autorité explicitement identifiée dans le mandat peut autoriser un changement de niveau ou accepter une dispense, avec décision datée, motif et risque résiduel. Le responsable d'exécution ne s'accorde pas cette exception.
