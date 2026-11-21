@@ -2,10 +2,6 @@ name: Workflow AI - Validation
 
 on:
   pull_request:
-    paths:
-      - "workflow-ai/**"
-      - "studio/work/**"
-      - ".github/workflows/workflow-ai-check.yml"
   workflow_dispatch:
 
 permissions:
