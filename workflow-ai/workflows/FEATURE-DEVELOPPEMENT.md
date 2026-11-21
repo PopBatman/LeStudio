@@ -35,3 +35,8 @@ Appliquer les [règles de délégation](../governance/AGENT-PERMISSIONS.md#dél�
 
 Ne pas engager un changement de périmètre, un coût ou un effet externe non autorisé pour finir plus vite. Préparer le résultat concret puis exposer seulement la décision manquante.
 
+## Contrat de passation QA vers développement
+
+Le Test Engineer remet : identifiant de son exécution, référence de mandat, révision de la spécification, commit de base, commit RED, chemins des tests attribués, correspondance test → critère, commande et environnement de test, résultat RED et emplacement de la sortie conservée. Le diff entre base et RED doit montrer uniquement les tests et leurs prérequis autorisés, et non une implémentation anticipée. Codex vérifie la cohérence de cette passation avant de commencer GREEN.
+
+La [matrice des permissions](../governance/AGENT-PERMISSIONS.md#séparation-opérationnelle-des-responsabilités) définit quand cette passation est obligatoire et comment qualifier un mode dégradé. La vérification de la passation et la preuve du RED doivent être observables ; aucun agent ne peut faire passer son propre rapport pour une autorisation de dérogation.
