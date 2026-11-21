@@ -21,3 +21,8 @@ Le passage à GREEN conserve la sortie RED et son résultat d’origine. Enregis
 - Migration et conservation des données lorsque le lot les modifie.
 - Intégration des formulaires et réponses serveur.
 
+## Provenance et blocage du RED
+
+Pour chaque test RED requis, relier l'identifiant réel du run QA, le mandat, la version de spécification, le critère couvert, le commit de base, le commit de tests, le diff base → RED, l'environnement, la commande exécutée, l'horodatage et la sortie conservée. Vérifier que le diff introduit les tests et leurs seuls prérequis sans introduire l'implémentation attendue. Le statut RED correspond à l'échec métier attendu constaté, pas à un simple échec de processus.
+
+Si l'exécution QA distincte, le commit, la sortie ou la vérification du diff manque alors que le RED externe est requis, conserver QG-08 comme BLOQUÉ ou À FAIRE. Ni le GREEN ni la revue favorable ne transforment rétroactivement un RED non prouvé en succès. Seule une décision de dispense conforme aux [permissions](../governance/AGENT-PERMISSIONS.md#séparation-opérationnelle-des-responsabilités) peut modifier cette exigence.
