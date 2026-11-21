@@ -10,8 +10,8 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "7b2697579ba4c42580055fc90e758fe2e7310775cdce28f3da3048c55dbd4366",
-      "size_bytes": 4596
+      "sha256": "e63ac027c3ae5c376ecace81b88c4411729d70a8f05e489ef89a2cf52ec5e789",
+      "size_bytes": 4899
     },
     {
       "path": "CHANGELOG.md",
@@ -140,8 +140,8 @@
     },
     {
       "path": "governance/AGENT-PERMISSIONS.md",
-      "sha256": "fefd0d78d079a1192fd7556255545c35868c7f058637a2a09842ca291628641b",
-      "size_bytes": 2428
+      "sha256": "d61615002d198ec679a4426b1f980e7dcb5a7924ba89050abc269839ec745841",
+      "size_bytes": 2945
     },
     {
       "path": "governance/DOCUMENT-CONSISTENCY.md",
@@ -155,8 +155,8 @@
     },
     {
       "path": "governance/QUALITY-GATES.md",
-      "sha256": "050b47c0eba4ba636998b0524f379f6d0793715a8efb0a5fbc5899fa40d3a9b6",
-      "size_bytes": 3303
+      "sha256": "6cc12464632d329f243b357776b6399fd92781ee95fdffae14e3251be31a26ac",
+      "size_bytes": 3296
     },
     {
       "path": "governance/SECURITY-POLICY.md",
@@ -165,8 +165,8 @@
     },
     {
       "path": "governance/TESTING-POLICY.md",
-      "sha256": "8bc8cca34b2d0d372b26c8ac88cc39f4acf9fe6f6532b8c7862216debc8b4592",
-      "size_bytes": 2629
+      "sha256": "bd312a9b616fc57a6cf04e94a737dc9d263f5f90ab1e3a1dfef08c3fe4387e98",
+      "size_bytes": 3976
     },
     {
       "path": "install.py",
@@ -335,8 +335,8 @@
     },
     {
       "path": "workflows/FEATURE-DEVELOPPEMENT.md",
-      "sha256": "de03314847d80a1f196703d0735e45039af6955bd2a0f492060f6a59a861b78e",
-      "size_bytes": 1613
+      "sha256": "7134bf47c0fae19d461062a717dd2c190325cdeb35b9d29bc2032017f632dff9",
+      "size_bytes": 2805
     },
     {
       "path": "workflows/FEATURE-DISCOVERY.md",
@@ -365,13 +365,13 @@
     },
     {
       "path": "workflows/FEATURE-REVIEW.md",
-      "sha256": "32eb1594411675b474a427338991e9f943c659bb4a8a76dd5a4db32ec17d8ff2",
-      "size_bytes": 1500
+      "sha256": "30e222e727ca424bf545ca7bcba27a87d2b7e90605ca2b31108abbb23fff2cc5",
+      "size_bytes": 2044
     },
     {
       "path": "workflows/FEATURE-TDD.md",
-      "sha256": "a6d4771b53e3649c1b3ecbdff103b896aa1a43bd2da16f51d5fe7fa3bfd5a519",
-      "size_bytes": 1974
+      "sha256": "dff9c1f22835816d873b53ab22759fc4820f27e0ee52501094d0056e8be93fb7",
+      "size_bytes": 2437
     },
     {
       "path": "workflows/FEATURE-VISUAL-REVIEW.md",
