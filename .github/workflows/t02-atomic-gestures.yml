@@ -68,6 +68,13 @@ jobs:
           python3 manage.py check
           python3 manage.py migrate --noinput
           python3 manage.py migrate --check
+      - name: JS gesture model parity (no browser, no secrets)
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          node tests/js/test_builder_atomic_group.cjs
       - name: Run full Django regression against PostgreSQL
         working-directory: studio
         shell: bash
