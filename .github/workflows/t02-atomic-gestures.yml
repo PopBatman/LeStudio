@@ -1,0 +1,76 @@
+name: LeStudio - T02 Atomic Gesture Contract
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  t02-atomic-gestures:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17.12-bookworm@sha256:40865bc877a289da75963d97d72b59633f639fc5af7a4e856bfa3714cae5b536
+        env:
+          POSTGRES_DB: studio_db
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: synthetic-ci-postgres-only
+        options: >-
+          --health-cmd "pg_isready -U postgres -d studio_db"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+        ports:
+          - 5432:5432
+    env:
+      STUDIO_DB_HOST: 127.0.0.1
+      STUDIO_DB_PASSWORD: synthetic-ci-app-only
+      STUDIO_PORTAL_ORIGIN: http://127.0.0.1:8000
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install hash-locked project dependencies
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --only-binary=:all: --require-hashes -r requirements.txt
+      - name: Bootstrap disposable PostgreSQL test roles
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import psycopg
+          with psycopg.connect(
+              "host=127.0.0.1 dbname=studio_db user=postgres password=synthetic-ci-postgres-only",
+              autocommit=True,
+          ) as db:
+              db.execute("CREATE ROLE studio_app LOGIN PASSWORD 'synthetic-ci-app-only'")
+              db.execute("ALTER DATABASE studio_db OWNER TO studio_app")
+              db.execute("CREATE DATABASE test_studio_db OWNER studio_app")
+          PY
+          echo "DJANGO_SECRET_KEY=$(python3 -c 'import secrets; print(secrets.token_urlsafe(48))')" >> "$GITHUB_ENV"
+      - name: Check Django models and migrate empty disposable database
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 manage.py check
+          python3 manage.py migrate --noinput
+          python3 manage.py migrate --check
+      - name: Run T02 group RED GREEN with full batch and canvas regression
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 manage.py test             tests.test_builder_batch             tests.test_canvas_domain             tests.test_builder_parity             tests.test_editor_services             --noinput --verbosity 2
