@@ -98,6 +98,26 @@ a validé la parité sur des fixtures fictives :
 - **27 tests ciblés**, 1 ignoré ;
 - test JavaScript Node du modèle, déplacement et retour arrière : **PASS**.
 
+## Preuve du vrai renderer Wagtail sur une composition fictive
+
+La [CI #45064784828](https://github.com/PopBatman/LeStudio/actions/runs/45064784828)
+a exécuté deux jobs indépendants sur PostgreSQL éphémère :
+
+- `t02-atomic-gestures` : **254 tests Django complets** (16 ignorés),
+  **28 tests ciblés** (1 ignoré), parité JavaScript Node PASS.
+- `t02-wagtail-render` : **5 tests Wagtail** dans le vrai projet
+  `studio/engine`, dont le nouveau
+  `test_grouped_final_positions_are_rendered_without_publishing`.
+  Le rendu compare deux titres et leurs placements libres
+  `x=0` et `x=55` après échange, préserve leurs UUID,
+  produit un nouveau hash HTML et constate que le nombre de
+  révisions Wagtail ainsi que la révision publiée restent inchangés.
+
+Il s'agit d'une **preuve de rendu du document final synthétique**, pas
+d'une interaction de navigateur avec Wagtail, ni d'une édition de la
+vraie page Tennis AI. Les tests du backend sont responsables de la
+transition atomique ; Wagtail rend la composition finale reçue.
+
 ## Conditions de continuation T02 (non acquises)
 
 - Comparer réellement les solutions flux/grille et documenter le placement
