@@ -68,6 +68,12 @@ jobs:
           python3 manage.py check
           python3 manage.py migrate --noinput
           python3 manage.py migrate --check
+      - name: Run full Django regression against PostgreSQL
+        working-directory: studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 manage.py test --noinput --verbosity 1
       - name: Run T02 group RED GREEN with full batch and canvas regression
         working-directory: studio
         shell: bash
