@@ -75,7 +75,12 @@ class BuilderWorkingPage {
   }
 
   commit(command, selection) {
-    if (this.cursor >= 128) throw Error('Enregistrez vos modifications avant de continuer.');
+    const nextSize = this.snapshot().reduce((count, current) =>
+      count + (current.action === 'gesture_group' && Array.isArray(current.steps)
+        ? current.steps.length : 1), 0) +
+      (command.action === 'gesture_group' && Array.isArray(command.steps)
+        ? command.steps.length : 1);
+    if (nextSize > 128) throw Error('Enregistrez vos modifications avant de continuer.');
     const original = this.page;
     this.page = structuredClone(original);
     try {
@@ -98,7 +103,30 @@ class BuilderWorkingPage {
     return this.history[this.cursor - 1]?.selection || null;
   }
 
-  apply(cmd) {
+  apply(cmd, { deferPlacementCheck = false } = {}) {
+    if (cmd?.action === 'gesture_group') {
+      if (!Array.isArray(cmd.steps) || cmd.steps.length < 2 || cmd.steps.length > 8 ||
+          Object.keys(cmd).some(key => !['action', 'steps'].includes(key))) {
+        throw Error('Le geste groupé doit comprendre entre 2 et 8 placements.');
+      }
+      const originals = new Map();
+      for (const step of cmd.steps) {
+        if (!step || step.action !== 'block_place' || step.overlap === true ||
+            !step.id || originals.has(step.id)) {
+          throw Error('Groupe incompatible ou occurrence dupliquée.');
+        }
+        const row = this.rows().get(step.id);
+        if (!row || row.node.blocks) throw Error('Occurrence du groupe indisponible.');
+        originals.set(step.id, this.collisions(row));
+      }
+      // Model only: intermediate overlap is allowed until all neighbours
+      // reach their final positions. The backend independently revalidates.
+      for (const step of cmd.steps) this.apply(step, { deferPlacementCheck: true });
+      for (const [id, collisions] of originals) {
+        this.checkPlacement(id, false, collisions);
+      }
+      return;
+    }
     const rows = this.rows();
     const row = rows.get(cmd.id);
     const node = row?.node;
@@ -179,7 +207,19 @@ class BuilderWorkingPage {
         if (cmd.format!=='base' && !Object.keys(delta).length) delete placement[cmd.format];
         if (placement.base.mode==='flow') delete placement.base.mode;
         if (!Object.keys(placement.base).length && Object.keys(placement).length===1) delete node.placement;
-        this.checkPlacement(node.id, Boolean(cmd.overlap), previous);
+        if ('parent' in cmd) {
+          // Preserve parity with Django block_place: the destination and
+          // its before anchor are structural, not a DOM-only reordering.
+          this.drop(cmd.parent, cmd.before, node.id);
+          if (cmd.before !== node.id) {
+            row.siblings.splice(row.siblings.indexOf(node), 1);
+            const destination = this.drop(cmd.parent, cmd.before, node.id);
+            destination.list.splice(destination.index, 0, node);
+          }
+        } else if ('before' in cmd) {
+          throw Error('Choisissez le parent de destination.');
+        }
+        if (!deferPlacementCheck) this.checkPlacement(node.id, Boolean(cmd.overlap), previous);
         break;
       }
       default: throw Error('Commande inconnue.');

@@ -16,6 +16,7 @@ from .validation import MAX_BYTES, MAX_NODES, _check_document, _object, _uuid
 
 
 MAX_COMMANDS = 128
+MAX_GROUP_STEPS = 8
 
 
 def _fingerprint(payload):
@@ -27,6 +28,14 @@ def _fingerprint(payload):
     commands = payload["commands"]
     if not isinstance(commands, list) or len(commands) > MAX_COMMANDS:
         raise ValidationError("Nombre de gestes invalide (128 au maximum).")
+    expanded = sum(
+        len(cmd["steps"])
+        if type(cmd) is dict and cmd.get("action") == "gesture_group"
+        and type(cmd.get("steps")) is list else 1
+        for cmd in commands
+    )
+    if expanded > MAX_COMMANDS:
+        raise ValidationError("Nombre total d'opérations invalide (128 au maximum).")
     try:
         raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), allow_nan=False,
                          ensure_ascii=False).encode("utf-8")
@@ -97,7 +106,7 @@ def _collisions(page, identity):
     return collisions
 
 
-def _command(document, page_id, site_id, raw, mapping, known, previous):
+def _command(document, page_id, site_id, raw, mapping, known, previous, *, deferred=False):
     action = raw.get("action") if isinstance(raw, dict) else None
     if not isinstance(action, str) or action not in (*_FIELDS, "block_duplicate"):
         raise ValidationError("Commande de composition inconnue.")
@@ -117,7 +126,7 @@ def _command(document, page_id, site_id, raw, mapping, known, previous):
     page = _member(document["pages"], page_id)
     document["schema_version"] = max(3, document["schema_version"])
     moving = action in ("block_place", "block_move")
-    before = _collisions(page, command["id"]) if moving else {}
+    before = _collisions(page, command["id"]) if moving and not deferred else {}
     overlap = command.pop("overlap", False)
     if type(overlap) is not bool or (overlap and
             (not isinstance(command["patch"], dict) or type(command["patch"].get("z")) is not int)):
@@ -133,6 +142,11 @@ def _command(document, page_id, site_id, raw, mapping, known, previous):
         if adding:
             _remember(mapping, known, command["local_id"], selected)
 
+    # Inside one gesture, intermediate placements may collide or be
+    # incomplete. All permissions, final geometry and conflicts are checked
+    # on the complete group's final state before ANY revision is saved.
+    if deferred:
+        return document, selected
     checked = _check_document(document, site_id, None, None, {}, previous, preserve=True)
     if moving or action == "block_duplicate":
         after = _collisions(_member(checked["pages"], page_id), selected)
@@ -144,6 +158,63 @@ def _command(document, page_id, site_id, raw, mapping, known, previous):
             if (new_overlap and not overlap) or lost_layer:
                 raise ValidationError(f"Superposition en {FORMAT_NAMES[fmt]} entre {selected} et {other}.",
                                       code="collision")
+    return checked, selected
+
+
+def _gesture_group(document, page_id, site_id, raw, mapping, known, previous):
+    """One bounded, atomic placement intent covering target AND neighbours.
+
+    V1 commands remain unchanged. A group is deliberately restricted to
+    distinct block_place operations. No deletes, additions, new components,
+    nested groups or implicit overlaps are allowed. A future T02 decision
+    will separately qualify additional gesture operations and the renderer.
+    """
+    _object(raw, "geste groupé", ("action", "steps"))
+    steps = raw["steps"]
+    if (
+        type(steps) is not list or
+        not 2 <= len(steps) <= MAX_GROUP_STEPS
+    ):
+        raise ValidationError("Le geste groupé contient entre 2 et 8 placements.")
+    page = _member(document["pages"], page_id)
+    before = {}
+    for step in steps:
+        if (
+            type(step) is not dict
+            or step.get("action") != "block_place"
+            or step.get("overlap") is not None
+            and step.get("overlap") is not False
+        ):
+            raise ValidationError("Seuls des placements sans superposition sont groupables.")
+        identity = step.get("id")
+        _uuid(identity, "occurrence du groupe")
+        identity = mapping.get(identity, identity)
+        if identity in before:
+            raise ValidationError("Une occurrence ne peut être déplacée qu'une fois par groupe.")
+        before[identity] = _collisions(page, identity)
+
+    selected = None
+    for step in steps:
+        document, selected = _command(
+            document, page_id, site_id, step, mapping, known,
+            previous, deferred=True,
+        )
+    checked = _check_document(
+        document, site_id, None, None, {}, previous, preserve=True,
+    )
+    final_page = _member(checked["pages"], page_id)
+    for identity, original in before.items():
+        after = _collisions(final_page, identity)
+        for (fmt, other), order in after.items():
+            old_order = original.get((fmt, other))
+            newly_colliding = old_order is None
+            lost_layer = (order[0] == order[1] and
+                          (newly_colliding or old_order[0] != old_order[1]))
+            if newly_colliding or lost_layer:
+                raise ValidationError(
+                    f"Superposition en {FORMAT_NAMES[fmt]} entre {identity} et {other}.",
+                    code="collision",
+                )
     return checked, selected
 
 
@@ -172,7 +243,14 @@ def save_batch(actor, site_id, payload):
     selected = None
     for index, cmd in enumerate(payload["commands"], 1):
         try:
-            document, selected = _command(document, page_id, site.pk, cmd, mapping, known, head.document)
+            if type(cmd) is dict and cmd.get("action") == "gesture_group":
+                document, selected = _gesture_group(
+                    document, page_id, site.pk, cmd, mapping, known, head.document,
+                )
+            else:
+                document, selected = _command(
+                    document, page_id, site.pk, cmd, mapping, known, head.document,
+                )
         except ValidationError as exc:
             raise ValidationError(f"Geste {index} · {' '.join(exc.messages)}",
                                   code=getattr(exc, "code", "invalid_command")) from exc
