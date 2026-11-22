@@ -75,6 +75,29 @@ puis le code a passé la suite ciblée sur
 [CI GREEN](https://github.com/PopBatman/LeStudio/actions/runs/45063269211).
 Ces contrôles sont observés sur des données jetables et non sur Tennis AI.
 
+## Modèle de gestes local (incrément JS)
+
+La projection locale `static/ui/builder-edit-model.js` reconnaît désormais
+`gesture_group` dans son modèle en mémoire. Un groupe unique peut être
+prévisualisé, confirmé, annulé et rétabli sans exposer les collisions
+intermédiaires aux interactions UI. Le moteur local applique également
+`parent` et `before` de `block_place` pour se rapprocher du serveur,
+avec refus d'un déplacement dans sa descendance.
+
+Cette projection JS **n'est pas une autorité** : Django continue d'appliquer
+les contrôles de site, les permissions, la validation multiformat,
+l'atomicité SQL et l'idempotence. L'interface visuelle de manipulation
+directe, le pont Wagtail et la sauvegarde automatique seront qualifiés
+dans T03/T04/T08 ; aucun nouveau bouton ni déploiement n'a été ajouté.
+
+La [CI JS RED](https://github.com/PopBatman/LeStudio/actions/runs/45063818689)
+observait le refus « Commande inconnue », puis la
+[CI JS GREEN + Django](https://github.com/PopBatman/LeStudio/actions/runs/45063893529)
+a validé la parité sur des fixtures fictives :
+- **253 tests Django** sur PostgreSQL, 16 ignorés ;
+- **27 tests ciblés**, 1 ignoré ;
+- test JavaScript Node du modèle, déplacement et retour arrière : **PASS**.
+
 ## Conditions de continuation T02 (non acquises)
 
 - Comparer réellement les solutions flux/grille et documenter le placement
