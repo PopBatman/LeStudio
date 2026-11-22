@@ -213,8 +213,49 @@ class BatchTests(CatalogueTestCase):
         for candidate in attempts:
             with self.subTest(candidate=candidate), self.assertRaises(ValidationError):
                 self.save(self.payload(candidate))
+        with self.assertRaises(ValidationError):
+            self.save(self.payload(*([
+                {"action": "gesture_group", "steps": [step, other]}
+            ] * 65)))
         self.assertEqual(BuilderSave.objects.count(), 0)
         self.assertEqual(CompositionRevision.objects.count(), 1)
+
+    def test_group_reparents_a_block_and_preserves_every_occurrence_id(self):
+        a, b, first = self._free_pair()
+        local_section = uid()
+        created = self.save(self.payload(
+            {"action": "section_add", "local_id": local_section},
+            base=first["revision"],
+        ))
+        second_section = created["mapping"][local_section]
+        moved = self.save(self.payload({
+            "action": "gesture_group",
+            "steps": [
+                {"action": "block_place", "id": a, "format": "base",
+                 "patch": {}, "parent": second_section, "before": None},
+                {"action": "block_place", "id": b, "format": "base",
+                 "patch": {"x": 0}, "parent": self.section["id"], "before": None},
+            ],
+        }, base=created["revision"]))
+        sections = CompositionRevision.objects.get(
+            pk=moved["revision"],
+        ).document["pages"][0]["sections"]
+        self.assertEqual(
+            [n["id"] for n in sections[0]["blocks"] if n["id"] in (a, b)], [b],
+        )
+        self.assertEqual([n["id"] for n in sections[-1]["blocks"]], [a])
+        self.assertEqual(CompositionRevision.objects.count(), 4)
+        with self.assertRaises(ValidationError):
+            self.save(self.payload({
+                "action": "gesture_group",
+                "steps": [
+                    {"action": "block_place", "id": a, "format": "base",
+                     "patch": {}, "parent": uid()},
+                    {"action": "block_place", "id": b, "format": "base",
+                     "patch": {"width": 38}},
+                ],
+            }, base=moved["revision"]))
+        self.assertEqual(CompositionRevision.objects.count(), 4)
 
     def test_group_failure_rolls_back_other_commands_in_same_batch(self):
         a, b = [n["id"] for n in self.section["blocks"][:2]]
