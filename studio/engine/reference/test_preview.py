@@ -96,6 +96,55 @@ class PreviewTests(TestCase):
                      f'data-studio-page-id="{self.page["id"]}"', 'Accueil', 'min-height:58px;'):
             self.assertIn(text, result['html'])
 
+    def test_grouped_final_positions_are_rendered_without_publishing(self):
+        # This is a real Wagtail preview of a synthetic final document,
+        # not the client-side simulation or an application of the draft.
+        # The editor batch tests separately prove the atomic transition.
+        other = {
+            'id': uid(), 'definition': dict(self.block['definition']),
+            'props': {'text': 'Second titre', 'level': 3}, 'children': [],
+        }
+        self.payload['definitions'] = [dict(self.block['definition'], renderer='heading')]
+        self.page['sections'][0]['blocks'].append(other)
+        first = self.block
+        a = {'mode': 'free', 'x': 0, 'y': 8, 'width': 40, 'height': 100}
+        b = {'mode': 'free', 'x': 55, 'y': 8, 'width': 40, 'height': 100}
+        first['placement'] = {'base': dict(a)}
+        other['placement'] = {'base': dict(b)}
+        before = (Revision.objects.count(),
+                  ReferencePage.objects.get().live_revision_id)
+        initial = self.render()
+        self.assertEqual(initial.status_code, 200)
+        self.assertIn('left:0%;top:8px;width:40%', initial.json()['html'])
+        self.assertIn('left:55%;top:8px;width:40%', initial.json()['html'])
+        # The grouped backend gesture now produces this final state in
+        # one atomic batch. Wagtail observes the same UUIDs, only positions
+        # exchanged; it does not execute or publish the SDD.
+        first['placement']['base']['x'] = 55
+        other['placement']['base']['x'] = 0
+        changed = self.render()
+        self.assertEqual(changed.status_code, 200)
+        html = changed.json()['html']
+        for label in ('Titre enregistré', 'Second titre'):
+            self.assertIn(label, html)
+        self.assertEqual(
+            changed.json()['manifest']['block_ids'],
+            [first['id'], other['id']],
+        )
+        self.assertNotEqual(
+            sha256(initial.json()['html'].encode()).hexdigest(),
+            sha256(html.encode()).hexdigest(),
+        )
+        self.assertEqual(
+            changed.json()['manifest']['html_sha256'],
+            sha256(html.encode()).hexdigest(),
+        )
+        self.assertEqual(
+            before,
+            (Revision.objects.count(),
+             ReferencePage.objects.get().live_revision_id),
+        )
+
     def test_rejects_unresolved_or_unsupported_dependencies(self):
         self.block['definition']['version'] = 2
         self.assertEqual(self.render().status_code, 422)
