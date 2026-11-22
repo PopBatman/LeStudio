@@ -143,6 +143,96 @@ class BatchTests(CatalogueTestCase):
         self.assertEqual(CompositionRevision.objects.count(), 2)
 
 
+    def _free_pair(self):
+        a, b = self.section["blocks"][:2]
+        basic = {
+            "action": "block_place", "format": "base",
+            "patch": {"mode": "free", "y": 12, "width": 40, "height": 80, "z": 0},
+        }
+        first = self.save(self.payload(
+            {**basic, "id": a["id"], "patch": {**basic["patch"], "x": 0}},
+            {**basic, "id": b["id"], "patch": {**basic["patch"], "x": 55}},
+        ))
+        return a["id"], b["id"], first
+
+    def test_grouped_swap_checks_only_final_positions_and_saves_once(self):
+        a, b, first = self._free_pair()
+        intent = self.payload({
+            "action": "gesture_group",
+            "steps": [
+                {"action": "block_place", "id": a, "format": "base", "patch": {"x": 55}},
+                {"action": "block_place", "id": b, "format": "base", "patch": {"x": 0}},
+            ],
+        }, base=first["revision"])
+        result = self.save(intent)
+        self.assertEqual(result["number"], first["number"] + 1)
+        self.assertEqual(result["selection"], b)
+        self.assertEqual(self.save(intent), result)
+        self.assertEqual(BuilderSave.objects.count(), 2)
+        self.assertEqual(CompositionRevision.objects.count(), 3)
+        previous = CompositionRevision.objects.get(pk=first["revision"]).document
+        current = CompositionRevision.objects.get(pk=result["revision"]).document
+        earlier = previous["pages"][0]["sections"][0]["blocks"][:2]
+        revised = current["pages"][0]["sections"][0]["blocks"][:2]
+        self.assertEqual([n["placement"]["base"]["x"] for n in earlier], [0, 55])
+        self.assertEqual([n["placement"]["base"]["x"] for n in revised], [55, 0])
+        self.assertEqual([n["id"] for n in revised], [a, b])
+        self.grant.level = "read"
+        self.grant.save()
+        with self.assertRaises(PermissionDenied):
+            self.save(intent)
+
+    def test_group_with_invalid_final_collision_rolls_back_all_steps(self):
+        a, b, first = self._free_pair()
+        command = {"action": "gesture_group", "steps": [
+            {"action": "block_place", "id": a, "format": "base", "patch": {"x": 55}},
+            {"action": "block_place", "id": b, "format": "base", "patch": {"x": 55}},
+        ]}
+        with self.assertRaises(ValidationError) as error:
+            self.save(self.payload(command, base=first["revision"]))
+        self.assertEqual(error.exception.code, "collision")
+        self.assertEqual(CompositionRevision.objects.count(), 2)
+        self.assertEqual(BuilderSave.objects.count(), 1)
+
+    def test_group_limits_and_forbidden_steps_preserve_history(self):
+        a, b = [n["id"] for n in self.section["blocks"][:2]]
+        step = {"action": "block_place", "id": a, "format": "base", "patch": {"width": 50}}
+        other = {**step, "id": b}
+        attempts = [
+            {"action": "gesture_group", "steps": [step]},
+            {"action": "gesture_group", "steps": [step] * 9},
+            {"action": "gesture_group", "steps": [step, step]},
+            {"action": "gesture_group", "steps": [step, {
+                "action": "block_remove", "id": b, "confirmed": True,
+            }]},
+            {"action": "gesture_group", "steps": [step, {
+                "action": "gesture_group", "steps": [other, step],
+            }]},
+            {"action": "gesture_group", "steps": [step, other], "extra": True},
+        ]
+        for candidate in attempts:
+            with self.subTest(candidate=candidate), self.assertRaises(ValidationError):
+                self.save(self.payload(candidate))
+        self.assertEqual(BuilderSave.objects.count(), 0)
+        self.assertEqual(CompositionRevision.objects.count(), 1)
+
+    def test_group_failure_rolls_back_other_commands_in_same_batch(self):
+        a, b = [n["id"] for n in self.section["blocks"][:2]]
+        packet = self.payload(
+            {"action": "section_add", "local_id": uid()},
+            {"action": "gesture_group", "steps": [
+                {"action": "block_place", "id": a, "format": "base",
+                 "patch": {"mode": "free", "x": 95, "y": 0, "width": 40, "height": 50}},
+                {"action": "block_place", "id": b, "format": "base",
+                 "patch": {"mode": "free", "x": 0, "y": 0, "width": 20, "height": 50}},
+            ]},
+        )
+        with self.assertRaises(ValidationError):
+            self.save(packet)
+        self.assertEqual(CompositionRevision.objects.count(), 1)
+        self.assertEqual(BuilderSave.objects.count(), 0)
+
+
 @skipUnlessDBFeature("has_select_for_update")
 class BatchConcurrencyTests(TransactionTestCase):
     def test_simultaneous_retry_and_distinct_stale_request(self):
